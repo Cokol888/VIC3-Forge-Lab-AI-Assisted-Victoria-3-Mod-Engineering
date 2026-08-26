@@ -1,5 +1,13 @@
 # Changelog
 
+## Military Operations discovery — 2026-08-27
+
+- Preserved `beta18.1-pre1.1` as `RUNTIME_PENDING`; no runtime claims were promoted.
+- Confirmed existing Cheat Menu Pro script-side Army enumeration can collect exact Army formation scopes into variable lists.
+- Confirmed a Victoria 3 1.13-compatible GUI pattern for scope-backed lists and `Scope.GetMilitaryFormation` promotion.
+- Added `engineering/gates/beta18.1-pre2.0-army-list-projection-contract.md` as a next-milestone contract candidate for a self-contained Army picker without guessed GUI accessors.
+- Kept beta18 Final Navy semantics frozen and unchanged.
+
 ## Workspace migration — 2026-08-27
 
 - Created normalized `mods/cheat-menu-pro/` engineering workspace.
