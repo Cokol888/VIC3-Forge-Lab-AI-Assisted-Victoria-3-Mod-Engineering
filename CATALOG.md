@@ -8,6 +8,15 @@
 - Entry: `prompts/system/vic3-forge/current.md`
 - Version index: `prompts/system/vic3-forge/v0.2-rc1.md`
 
+## Skills
+
+### VIC3 Forge Engineering
+
+- Source: `skills/vic3-forge-engineering/`
+- Status: `release-candidate`
+- Purpose: bootstrap live GitHub project context and apply VIC3 Forge evidence/state discipline during Victoria 3 design, implementation, debugging, migration, QA, and continuation work.
+- Machine catalog: `catalog/skills.yml`
+
 ## Active Mods
 
 ### Cheat Menu Pro
@@ -37,6 +46,7 @@ Reusable state/evidence/gate templates live under `prompts/templates/`.
 
 - `catalog/prompts.yml`
 - `catalog/mods.yml`
+- `catalog/skills.yml`
 - `catalog/compatibility.yml`
 - `catalog/releases.yml`
 
