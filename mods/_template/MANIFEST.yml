@@ -1,0 +1,21 @@
+schema_version: 1
+project:
+  id: replace-me
+  name: Replace Me
+status:
+  state: DISCOVERY
+prompt:
+  system: vic3-forge
+  version: 0.2-rc1
+victoria3:
+  target_version:
+  checksum:
+repository:
+  branch: main
+  commit:
+engineering:
+  active_gate:
+  next_milestone:
+  queued_roadmap: []
+evidence:
+  revalidation_required: false
