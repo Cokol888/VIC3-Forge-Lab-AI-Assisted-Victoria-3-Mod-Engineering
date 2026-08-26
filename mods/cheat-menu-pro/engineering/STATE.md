@@ -21,6 +21,7 @@ Continue the post-beta18 Military Operations line without modifying the frozen N
 - The imported `beta18.1-pre1.1` build has passed its recorded static validation suite.
 - `pre1.1` is intentionally read-only for the Army scope proof and adds no new gameplay writes.
 - The legacy build registry records `STATIC_PASS_RUNTIME_PENDING`.
+- Discovery evidence now supports a contract candidate for a self-contained Army picker without inventing a country GUI Army accessor: existing script-side Army enumeration can feed a dedicated scope list, while 1.13-compatible GUI/docs support `Scope.GetList(...)` and `Scope.GetMilitaryFormation` promotion. This composition remains unimplemented and requires proof.
 
 ## Not yet confirmed
 
@@ -28,6 +29,7 @@ Continue the post-beta18 Military Operations line without modifying the frozen N
 - Runtime A/B selection isolation.
 - Negative Fleet/no-selection behavior.
 - Persistence and regression behavior required by the runtime checklist.
+- Runtime viability of the proposed Army-list projection composition.
 
 ## Active Gate
 
@@ -38,6 +40,8 @@ See `engineering/gates/beta18.1-pre1.1-army-scope-runtime.md`.
 ## Next Milestone
 
 `beta18.1-pre2.0-readiness-contract-proof`
+
+Army-list projection discovery sub-gate: `CONTRACT_CANDIDATE_READY` — see `engineering/gates/beta18.1-pre2.0-army-list-projection-contract.md`.
 
 ## Queued Roadmap
 
