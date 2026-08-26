@@ -1,2 +1,20 @@
 schema_version: 1
-mods: []
+mods:
+  - id: cheat-menu-pro
+    name: Cheat Menu Pro
+    workspace: mods/cheat-menu-pro
+    status: development
+    source_model: legacy-upstream-plus-normalized-workspace
+    upstream:
+      distribution: steam-workshop
+      workshop_id: "3717461054"
+      license_status: unverified
+    prompt: vic3-forge@0.2-rc1
+    build: 0.3-beta18.1-pre1.1
+    target_game_version: 1.13.10
+    target_checksum: "2964"
+    engineering_state: RUNTIME_PENDING
+    active_gate: beta18.1-pre1.1-army-scope-runtime
+    next_milestone: beta18.1-pre2.0-readiness-contract-proof
+    frozen_contracts:
+      - beta18-final-navy
