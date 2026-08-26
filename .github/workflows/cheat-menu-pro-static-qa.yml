@@ -1,0 +1,57 @@
+name: Cheat Menu Pro Static QA
+
+on:
+  push:
+    paths:
+      - "mods/Bilds/cheat_menu_pro_v0.3_beta18_1_pre1_1_army_scope_proof_ru/3717461054/**"
+      - "mods/cheat-menu-pro/**"
+      - ".github/workflows/cheat-menu-pro-static-qa.yml"
+  pull_request:
+    paths:
+      - "mods/Bilds/cheat_menu_pro_v0.3_beta18_1_pre1_1_army_scope_proof_ru/3717461054/**"
+      - "mods/cheat-menu-pro/**"
+      - ".github/workflows/cheat-menu-pro-static-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: mods/Bilds/cheat_menu_pro_v0.3_beta18_1_pre1_1_army_scope_proof_ru/3717461054
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify deterministic generators
+        run: |
+          python tools/generate_build_identity.py --check
+          python tools/generate_workspace_shell.py --check
+
+      - name: Validate registry coverage
+        run: python tools/validate_registry_coverage.py
+
+      - name: Validate Army Final
+        run: python tools/validate_army_final.py
+
+      - name: Validate Navy freeze
+        run: python tools/validate_navy_freeze.py
+
+      - name: Validate Military Operations pre1
+        run: python tools/validate_military_operations_pre1.py
+
+      - name: Validate UI accessibility
+        run: python tools/validate_ui_accessibility.py
+
+      - name: Validate release
+        run: python tools/validate_release.py
