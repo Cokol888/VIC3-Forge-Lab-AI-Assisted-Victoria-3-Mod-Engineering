@@ -1,0 +1,9 @@
+schema_version: 1
+skills:
+  - id: vic3-forge-engineering
+    name: VIC3 Forge Engineering
+    path: skills/vic3-forge-engineering
+    status: release-candidate
+    connector: github
+    repository: Cokol888/VIC3-Forge-Lab-AI-Assisted-Victoria-3-Mod-Engineering
+    purpose: live-repository context bootstrap and evidence-driven Victoria 3 engineering
