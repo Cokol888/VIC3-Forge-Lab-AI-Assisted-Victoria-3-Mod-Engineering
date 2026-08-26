@@ -1,0 +1,34 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Victoria 3 installation/reference files
+references/local-game/
+references/script-docs/generated/
+
+# Local saves, logs, dumps and launcher state
+*.log
+*.dmp
+*.sav
+*.zip
+*.7z
+
+# Temporary/test output
+.tmp/
+tmp/
+build/
+dist/
+coverage/
+
+# Python/tooling caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets / local environment
+.env
+.env.*
+!.env.example
