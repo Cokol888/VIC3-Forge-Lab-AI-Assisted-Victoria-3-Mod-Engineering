@@ -1,5 +1,15 @@
 schema_version: 1
-compatibility: []
+compatibility:
+  - prompt: vic3-forge@0.2-rc1
+    mod: cheat-menu-pro@0.3-beta18.1-pre1.1
+    game_version: 1.13.10
+    checksum: "2964"
+    status: partial
+    evidence:
+      static: PASS
+      runtime: PENDING
+      regression: NOT_STARTED
+    notes: Imported legacy build; beta18 Final Navy is a separately frozen project-recorded Runtime PASS contract. The active beta18.1-pre1.1 Army Scope Proof still requires runtime verification.
 
 # Compatibility is recorded per prompt/mod/game environment.
 # Do not infer global compatibility from a single verified build.
