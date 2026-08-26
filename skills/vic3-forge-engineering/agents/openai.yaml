@@ -1,0 +1,3 @@
+interface:
+  display_name: "VIC3 Forge Engineering"
+  short_description: "Live-repo Victoria 3 engineering copilot"
