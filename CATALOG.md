@@ -2,31 +2,44 @@
 
 ## System Prompts
 
-- **VIC3 Forge v0.2 RC1** — current production candidate.
+### VIC3 Forge — Systems & Mechanics Engineering Copilot
 
-## Component Prompts
-
-- Game Systems Architect
-- Script Implementation Engineer
-- Iteration & Progress Controller
-- QA / Regression / Balance Analyst
+- Current candidate: `v0.2 RC1`
+- Entry: `prompts/system/vic3-forge/current.md`
+- Version index: `prompts/system/vic3-forge/v0.2-rc1.md`
 
 ## Active Mods
 
-No mod workspaces registered yet.
+### Cheat Menu Pro
 
-## Stable Mods
+- Workspace: `mods/cheat-menu-pro/`
+- Imported build: `0.3-beta18.1-pre1.1`
+- Build ID: `CMP-0.3-B18-1-PRE1-1-20260823`
+- Target Victoria 3: `1.13.10` / checksum `2964`
+- Engineering state: `RUNTIME_PENDING`
+- Active Gate: `beta18.1-pre1.1 — Army Scope Runtime Verification`
+- Next Milestone: `beta18.1-pre2.0 — Readiness Contract Proof`
+- Frozen contract: `beta18 Final Navy`
+- Upstream Workshop ID: `3717461054`
+- Upstream license status: `UNVERIFIED`
 
-None yet.
+Historical Workshop-shaped source remains under `mods/Bilds/` as legacy provenance. New work must use the normalized workspace.
 
-## Experimental Mods
+## Component Prompts
 
-None yet.
+Component behavior is currently composed under `prompts/system/vic3-forge/components/`.
 
-## Victoria 3 Compatibility
+## Engineering Templates
 
-Compatibility is tracked per mod and per evidence record. No global compatibility claim is assumed.
+Reusable state/evidence/gate templates live under `prompts/templates/`.
 
-## Archived Projects
+## Machine-Readable Catalogs
 
-None yet.
+- `catalog/prompts.yml`
+- `catalog/mods.yml`
+- `catalog/compatibility.yml`
+- `catalog/releases.yml`
+
+## Third-Party Provenance
+
+See `THIRD_PARTY_NOTICES.md` before redistributing upstream Workshop material.
