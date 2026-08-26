@@ -1,0 +1,18 @@
+schema_version: 1
+upstream:
+  name: Cheat Menu Pro
+  workshop_id: "3717461054"
+  supported_game_version: "1.13.*"
+  source_channel: Steam Workshop
+  license_status: unverified
+
+snapshot:
+  legacy_path: mods/Bilds/cheat_menu_pro_v0.3_beta18_1_pre1_1_army_scope_proof_ru/3717461054
+  archive_name: 529340(2).zip
+  archive_sha256: e224c417004058f7c7bb7a7a7488e128e560d1ac520c2fcd65437dc6b00246af
+  file_count: 194
+  uncompressed_bytes: 59260589
+  canonical_tree_sha256: 14e8cf28554629c535ded123cfa83824227b4e4d3659de343533eb056ead8792
+  canonical_tree_algorithm: sha256(relative-path-normalized sha256sum lines sorted by absolute source path)
+
+provenance_source: legacy:baseline_manifest.json
