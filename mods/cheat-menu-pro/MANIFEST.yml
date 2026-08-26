@@ -1,0 +1,41 @@
+schema_version: 1
+project:
+  id: cheat-menu-pro
+  name: Cheat Menu Pro
+  workspace_status: active
+
+upstream:
+  distribution: steam-workshop
+  workshop_id: "3717461054"
+  license_status: unverified
+  legacy_snapshot: mods/Bilds/cheat_menu_pro_v0.3_beta18_1_pre1_1_army_scope_proof_ru/3717461054
+
+build:
+  version: 0.3-beta18.1-pre1.1
+  build_id: CMP-0.3-B18-1-PRE1-1-20260823
+  parent_version: 0.3-beta18.1-pre1
+
+prompt:
+  system: vic3-forge
+  version: 0.2-rc1
+
+victoria3:
+  target_version: 1.13.10
+  checksum: "2964"
+
+engineering:
+  state: RUNTIME_PENDING
+  static_status: PASS
+  runtime_status: PENDING
+  regression_status: NOT_STARTED
+  active_gate: beta18.1-pre1.1-army-scope-runtime
+  next_milestone: beta18.1-pre2.0-readiness-contract-proof
+  frozen_contracts:
+    - beta18-final-navy
+
+evidence:
+  baseline_manifest: legacy:baseline_manifest.json
+  build_registry: legacy:registry/build.json
+  mechanics_audit: legacy:MECHANICS_AUDIT.md
+  static_qa: legacy:QA_REPORT.json
+  revalidation_required: false
