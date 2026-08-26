@@ -1,0 +1,5 @@
+schema_version: 1
+compatibility: []
+
+# Compatibility is recorded per prompt/mod/game environment.
+# Do not infer global compatibility from a single verified build.
