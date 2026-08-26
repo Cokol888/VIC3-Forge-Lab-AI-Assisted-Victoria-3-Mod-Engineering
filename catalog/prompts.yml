@@ -1,0 +1,13 @@
+schema_version: 1
+prompts:
+  - id: vic3-forge
+    name: VIC3 Forge — Systems & Mechanics Engineering Copilot
+    current: 0.2-rc1
+    type: system
+    status: production-candidate
+    path: prompts/system/vic3-forge/v0.2-rc1.md
+    lineage:
+      - game-systems-architect
+      - script-implementation-engineer
+      - iteration-progress-controller
+      - qa-regression-balance-analyst
