@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "counts": {
+    "buildings": 92,
+    "resource_capable": 19,
+    "presets": 4,
+    "amounts": 6,
+    "generated_add_amounts": 8,
+    "adaptive_targets": 4,
+    "staffing_supported": 97
+  },
+  "add_amounts_generated": [
+    1,
+    5,
+    10,
+    15,
+    20,
+    25,
+    50,
+    100
+  ],
+  "add_exact_max_existing_level": 1000,
+  "operation_contract": {
+    "availability_gate": "can_construct_building + can_queue_building_levels(1)",
+    "add_policy": "best_effort_until_state_limit",
+    "set_policy": "safe_raise_or_equal_only; lowering is blocked to avoid destructive recreate",
+    "remove_policy": "whole_building_only",
+    "preset_policy": "per_state_best_effort_with_availability_gate"
+  },
+  "generated": {
+    "common/scripted_triggers/cmp_regions2_triggers.txt": "7cefa3881e89d3b8f05e084e7c0f968330846969e8b59b1e213261274b2ff59f",
+    "common/scripted_guis/cmp_regions2_sgui.txt": "ae45132d23c1ba31a27d82fb3aa1bb409bd0a43e948dd2d22d12fbed0110997e",
+    "common/scripted_effects/cmp_regions2_effects.txt": "8bf0b6fea25946c2ab17bc8f59fadaadb9d3080c216cbf0facf3fcae56aa09ba",
+    "common/scripted_triggers/cmp_staffing_adaptive_triggers.txt": "f3c99d3e729065d6c84891ddadaa99592b23eacff11f5d4b2c6c4b93a152b648",
+    "common/scripted_guis/cmp_staffing_adaptive_sgui.txt": "4d552345642807d464830bc395bd19fb6dada286d61149fcc7b9f53b5d10f7f6",
+    "common/scripted_effects/cmp_staffing_adaptive_effects.txt": "105842923b7e6b54e0d3bd9a7170f02c7b75bda49db32c2adce97c1b9ccc8941",
+    "common/scripted_guis/cmp_staffing_sgui.txt": "2ddd177c7b814727b0545173fb2d4fe640ae8ab8ed534710b58f5a2d5186c64e",
+    "common/scripted_effects/sakuya_cheat_b6_effects.txt": "26934ea9a165ca2d9b58dd65dbb59eaab4c3f74070e70ed06ef9718aaa7cddee",
+    "generated/regions2_panel.gui.txt": "9d450efe860ce81959011fd2edebc3a2178de3d403c4b498c3c4e9c97e60aafb"
+  }
+}

@@ -1,0 +1,5 @@
+# Cheat Menu Pro v0.3-alpha - Staffing Assistant
+cmp_staffing_hiring_boost = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	building_job_attractiveness_mult = 5.0
+}

@@ -1,0 +1,1496 @@
+{
+  "schema_version": 2,
+  "selection_contract": {
+    "independent_from_building_operations": true,
+    "country_marker_prefix": "cmp_staffing_sel_",
+    "ui_variable": "cmp_staffing_selected_building"
+  },
+  "profiles": {
+    "extraction": {
+      "label": "CMP_WS_STAFF_PROFILE_EXTRACTION",
+      "weights": {
+        "laborers": 650,
+        "machinists": 220,
+        "engineers": 80,
+        "clerks": 30,
+        "shopkeepers": 20
+      }
+    },
+    "agriculture": {
+      "label": "CMP_WS_STAFF_PROFILE_AGRICULTURE",
+      "weights": {
+        "laborers": 650,
+        "farmers": 250,
+        "machinists": 50,
+        "clerks": 30,
+        "shopkeepers": 20
+      }
+    },
+    "light_industry": {
+      "label": "CMP_WS_STAFF_PROFILE_LIGHT",
+      "weights": {
+        "laborers": 450,
+        "machinists": 350,
+        "engineers": 80,
+        "clerks": 80,
+        "shopkeepers": 40
+      }
+    },
+    "heavy_industry": {
+      "label": "CMP_WS_STAFF_PROFILE_HEAVY",
+      "weights": {
+        "laborers": 350,
+        "machinists": 400,
+        "engineers": 150,
+        "clerks": 70,
+        "shopkeepers": 30
+      }
+    },
+    "power": {
+      "label": "CMP_WS_STAFF_PROFILE_POWER",
+      "weights": {
+        "laborers": 300,
+        "machinists": 300,
+        "engineers": 250,
+        "clerks": 100,
+        "shopkeepers": 50
+      }
+    },
+    "infrastructure": {
+      "label": "CMP_WS_STAFF_PROFILE_INFRA",
+      "weights": {
+        "laborers": 400,
+        "machinists": 300,
+        "engineers": 150,
+        "clerks": 100,
+        "shopkeepers": 50
+      }
+    },
+    "government": {
+      "label": "CMP_WS_STAFF_PROFILE_GOVERNMENT",
+      "weights": {
+        "bureaucrats": 600,
+        "clerks": 200,
+        "laborers": 100,
+        "academics": 100
+      }
+    },
+    "education": {
+      "label": "CMP_WS_STAFF_PROFILE_EDUCATION",
+      "weights": {
+        "academics": 650,
+        "clerks": 150,
+        "bureaucrats": 100,
+        "laborers": 100
+      }
+    },
+    "military": {
+      "label": "CMP_WS_STAFF_PROFILE_MILITARY",
+      "weights": {
+        "soldiers": 750,
+        "officers": 150,
+        "laborers": 50,
+        "clerks": 50
+      }
+    },
+    "services": {
+      "label": "CMP_WS_STAFF_PROFILE_SERVICES",
+      "weights": {
+        "shopkeepers": 350,
+        "clerks": 300,
+        "laborers": 250,
+        "machinists": 100
+      }
+    },
+    "arts": {
+      "label": "CMP_WS_STAFF_PROFILE_ARTS",
+      "weights": {
+        "academics": 500,
+        "clerks": 150,
+        "laborers": 200,
+        "shopkeepers": 100,
+        "capitalists": 50
+      }
+    },
+    "trade": {
+      "label": "CMP_WS_STAFF_PROFILE_TRADE",
+      "weights": {
+        "clerks": 450,
+        "shopkeepers": 300,
+        "laborers": 150,
+        "capitalists": 100
+      }
+    },
+    "ownership": {
+      "label": "CMP_WS_STAFF_PROFILE_OWNERSHIP",
+      "weights": {
+        "capitalists": 450,
+        "aristocrats": 300,
+        "clerks": 150,
+        "bureaucrats": 100
+      }
+    },
+    "technology": {
+      "label": "CMP_WS_STAFF_PROFILE_TECHNOLOGY",
+      "weights": {
+        "engineers": 350,
+        "academics": 300,
+        "machinists": 150,
+        "clerks": 150,
+        "laborers": 50
+      }
+    }
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "CMP_WS_STAFF_CATEGORY_ALL",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_ALL_TT",
+      "profiles": []
+    },
+    {
+      "id": "primary",
+      "label": "CMP_WS_STAFF_CATEGORY_PRIMARY",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_PRIMARY_TT",
+      "profiles": [
+        "extraction",
+        "agriculture"
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "CMP_WS_STAFF_CATEGORY_INDUSTRY",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_INDUSTRY_TT",
+      "profiles": [
+        "light_industry",
+        "heavy_industry",
+        "technology"
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "CMP_WS_STAFF_CATEGORY_INFRA",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_INFRA_TT",
+      "profiles": [
+        "power",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "public",
+      "label": "CMP_WS_STAFF_CATEGORY_PUBLIC",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_PUBLIC_TT",
+      "profiles": [
+        "government",
+        "education"
+      ]
+    },
+    {
+      "id": "military",
+      "label": "CMP_WS_STAFF_CATEGORY_MILITARY",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_MILITARY_TT",
+      "profiles": [
+        "military"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "CMP_WS_STAFF_CATEGORY_SERVICES",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_SERVICES_TT",
+      "profiles": [
+        "services",
+        "arts",
+        "trade"
+      ]
+    },
+    {
+      "id": "ownership",
+      "label": "CMP_WS_STAFF_CATEGORY_OWNERSHIP",
+      "tooltip": "CMP_WS_STAFF_CATEGORY_OWNERSHIP_TT",
+      "profiles": [
+        "ownership"
+      ]
+    }
+  ],
+  "buildings": [
+    {
+      "id": "coal_mine",
+      "building_type": "building_coal_mine",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_coal_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_coal_mine"
+    },
+    {
+      "id": "iron_mine",
+      "building_type": "building_iron_mine",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_iron_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_iron_mine"
+    },
+    {
+      "id": "lead_mine",
+      "building_type": "building_lead_mine",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_lead_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_lead_mine"
+    },
+    {
+      "id": "sulfur_mine",
+      "building_type": "building_sulfur_mine",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_sulfur_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_sulfur_mine"
+    },
+    {
+      "id": "gold_mine",
+      "building_type": "building_gold_mine",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_gold_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_gold_mine"
+    },
+    {
+      "id": "gold_field",
+      "building_type": "building_gold_field",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_gold_field",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_gold_field"
+    },
+    {
+      "id": "logging_camp",
+      "building_type": "building_logging_camp",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_logging_camp",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_logging_camp"
+    },
+    {
+      "id": "rubber_plantation",
+      "building_type": "building_rubber_plantation",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_rubber_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_rubber_plantation"
+    },
+    {
+      "id": "fishing_wharf",
+      "building_type": "building_fishing_wharf",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_fishing_wharf",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_fishing_wharf"
+    },
+    {
+      "id": "whaling_station",
+      "building_type": "building_whaling_station",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_whaling_station",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_whaling_station"
+    },
+    {
+      "id": "oil_rig",
+      "building_type": "building_oil_rig",
+      "provider": "vanilla",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_oil_rig",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_oil_rig"
+    },
+    {
+      "id": "bauxite_mine",
+      "building_type": "building_bauxite_mine",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_bauxite_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_bauxite_mine"
+    },
+    {
+      "id": "copper_mine",
+      "building_type": "building_copper_mine",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_copper_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_copper_mine"
+    },
+    {
+      "id": "commonores_mine",
+      "building_type": "building_commonores_mine",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_commonores_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_commonores_mine"
+    },
+    {
+      "id": "advancedores_mine",
+      "building_type": "building_advancedores_mine",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_advancedores_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_advancedores_mine"
+    },
+    {
+      "id": "natural_gas_rig",
+      "building_type": "building_natural_gas_rig",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_natural_gas_rig",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_natural_gas_rig"
+    },
+    {
+      "id": "rare_earths_mine",
+      "building_type": "building_rare_earths_mine",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_rare_earths_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_rare_earths_mine"
+    },
+    {
+      "id": "uranium_mine",
+      "building_type": "building_uranium_mine",
+      "provider": "tech_res",
+      "profile": "extraction",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_uranium_mine",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_uranium_mine"
+    },
+    {
+      "id": "rye_farm",
+      "building_type": "building_rye_farm",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_rye_farm",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_rye_farm"
+    },
+    {
+      "id": "wheat_farm",
+      "building_type": "building_wheat_farm",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_wheat_farm",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_wheat_farm"
+    },
+    {
+      "id": "rice_farm",
+      "building_type": "building_rice_farm",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_rice_farm",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_rice_farm"
+    },
+    {
+      "id": "maize_farm",
+      "building_type": "building_maize_farm",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_maize_farm",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_maize_farm"
+    },
+    {
+      "id": "millet_farm",
+      "building_type": "building_millet_farm",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_millet_farm",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_millet_farm"
+    },
+    {
+      "id": "livestock_ranch",
+      "building_type": "building_livestock_ranch",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_livestock_ranch",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_livestock_ranch"
+    },
+    {
+      "id": "vineyard",
+      "building_type": "building_vineyard",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_vineyard",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_vineyard"
+    },
+    {
+      "id": "coffee_plantation",
+      "building_type": "building_coffee_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_coffee_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_coffee_plantation"
+    },
+    {
+      "id": "cotton_plantation",
+      "building_type": "building_cotton_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_cotton_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_cotton_plantation"
+    },
+    {
+      "id": "dye_plantation",
+      "building_type": "building_dye_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_dye_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_dye_plantation"
+    },
+    {
+      "id": "opium_plantation",
+      "building_type": "building_opium_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_opium_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_opium_plantation"
+    },
+    {
+      "id": "tea_plantation",
+      "building_type": "building_tea_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_tea_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_tea_plantation"
+    },
+    {
+      "id": "tobacco_plantation",
+      "building_type": "building_tobacco_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_tobacco_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_tobacco_plantation"
+    },
+    {
+      "id": "sugar_plantation",
+      "building_type": "building_sugar_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_sugar_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_sugar_plantation"
+    },
+    {
+      "id": "banana_plantation",
+      "building_type": "building_banana_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_banana_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_banana_plantation"
+    },
+    {
+      "id": "silk_plantation",
+      "building_type": "building_silk_plantation",
+      "provider": "vanilla",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_silk_plantation",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_silk_plantation"
+    },
+    {
+      "id": "food_industry",
+      "building_type": "building_food_industry",
+      "provider": "vanilla",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_food_industry",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_food_industry"
+    },
+    {
+      "id": "textile_mill",
+      "building_type": "building_textile_mill",
+      "provider": "vanilla",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_textile_mill",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_textile_mill"
+    },
+    {
+      "id": "furniture_manufactory",
+      "building_type": "building_furniture_manufactory",
+      "provider": "vanilla",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_furniture_manufactory",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_furniture_manufactory"
+    },
+    {
+      "id": "glassworks",
+      "building_type": "building_glassworks",
+      "provider": "vanilla",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_glassworks",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_glassworks"
+    },
+    {
+      "id": "tooling_workshop",
+      "building_type": "building_tooling_workshop",
+      "provider": "vanilla",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_tooling_workshop",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_tooling_workshop"
+    },
+    {
+      "id": "paper_mill",
+      "building_type": "building_paper_mill",
+      "provider": "vanilla",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_paper_mill",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_paper_mill"
+    },
+    {
+      "id": "chemical_plant",
+      "building_type": "building_chemical_plant",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_chemical_plant",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_chemical_plant"
+    },
+    {
+      "id": "explosives_factory",
+      "building_type": "building_explosives_factory",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_explosives_factory",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_explosives_factory"
+    },
+    {
+      "id": "synthetics_plant",
+      "building_type": "building_synthetics_plant",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_synthetics_plant",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_synthetics_plant"
+    },
+    {
+      "id": "steel_mill",
+      "building_type": "building_steel_mill",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_steel_mill",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_steel_mill"
+    },
+    {
+      "id": "motor_industry",
+      "building_type": "building_motor_industry",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_motor_industry",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_motor_industry"
+    },
+    {
+      "id": "shipyard",
+      "building_type": "building_shipyard",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_shipyard",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_shipyard"
+    },
+    {
+      "id": "automotive_industry",
+      "building_type": "building_automotive_industry",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_automotive_industry",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_automotive_industry"
+    },
+    {
+      "id": "electrics_industry",
+      "building_type": "building_electrics_industry",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_electrics_industry",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_electrics_industry"
+    },
+    {
+      "id": "arms_industry",
+      "building_type": "building_arms_industry",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_arms_industry",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_arms_industry"
+    },
+    {
+      "id": "artillery_foundry",
+      "building_type": "building_artillery_foundry",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_artillery_foundry",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_artillery_foundry"
+    },
+    {
+      "id": "munition_plant",
+      "building_type": "building_munition_plant",
+      "provider": "vanilla",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_munition_plant",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_munition_plant"
+    },
+    {
+      "id": "power_plant",
+      "building_type": "building_power_plant",
+      "provider": "vanilla",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_power_plant",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_power_plant"
+    },
+    {
+      "id": "water_plant",
+      "building_type": "building_water_plant",
+      "provider": "tech_res",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_water_plant",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_water_plant"
+    },
+    {
+      "id": "railway",
+      "building_type": "building_railway",
+      "provider": "vanilla",
+      "profile": "infrastructure",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_railway",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_railway"
+    },
+    {
+      "id": "construction_sector",
+      "building_type": "building_construction_sector",
+      "provider": "vanilla",
+      "profile": "infrastructure",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_construction_sector",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_construction_sector"
+    },
+    {
+      "id": "port",
+      "building_type": "building_port",
+      "provider": "vanilla",
+      "profile": "infrastructure",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_port",
+      "source": "building_operations_registry",
+      "legacy_selection_variable": "sakuya_b6_build_sel_port"
+    },
+    {
+      "id": "university",
+      "building_type": "building_university",
+      "provider": "vanilla",
+      "profile": "education",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_university",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "government_administration",
+      "building_type": "building_government_administration",
+      "provider": "vanilla",
+      "profile": "government",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_government_administration",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "barrack",
+      "building_type": "building_barrack",
+      "provider": "vanilla",
+      "profile": "military",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_barrack",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "conscription_center",
+      "building_type": "building_conscription_center",
+      "provider": "vanilla",
+      "profile": "military",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_conscription_center",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "naval_administration",
+      "building_type": "building_naval_administration",
+      "provider": "vanilla",
+      "profile": "military",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_naval_administration",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "naval_fortification",
+      "building_type": "building_naval_fortification",
+      "provider": "vanilla",
+      "profile": "military",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_naval_fortification",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "naval_logistics_center",
+      "building_type": "building_naval_logistics_center",
+      "provider": "vanilla",
+      "profile": "military",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_naval_logistics_center",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "art_academy",
+      "building_type": "building_art_academy",
+      "provider": "vanilla",
+      "profile": "arts",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_art_academy",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "urban_center",
+      "building_type": "building_urban_center",
+      "provider": "vanilla",
+      "profile": "services",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_urban_center",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "trade_center",
+      "building_type": "building_trade_center",
+      "provider": "vanilla",
+      "profile": "trade",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_trade_center",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "manor_house",
+      "building_type": "building_manor_house",
+      "provider": "vanilla",
+      "profile": "ownership",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_manor_house",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "financial_district",
+      "building_type": "building_financial_district",
+      "provider": "vanilla",
+      "profile": "ownership",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_financial_district",
+      "source": "legacy_selector_plus_1.13_audit"
+    },
+    {
+      "id": "office",
+      "building_type": "building_office",
+      "provider": "tech_res",
+      "profile": "services",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_office",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "software_industry",
+      "building_type": "building_software_industry",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_software_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "interactive_media_industry",
+      "building_type": "building_interactive_media_industry",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_interactive_media_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "telecommunications_industry",
+      "building_type": "building_telecommunications_industry",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_telecommunications_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "datacenter_industry",
+      "building_type": "building_datacenter_industry",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_datacenter_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "ecommerce_logistics",
+      "building_type": "building_ecommerce_logistics",
+      "provider": "tech_res",
+      "profile": "trade",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_ecommerce_logistics",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "hydroelectric_power_plant",
+      "building_type": "building_hydroelectric_power_plant",
+      "provider": "tech_res",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_hydroelectric_power_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "renewable_energy_power_plant",
+      "building_type": "building_renewable_energy_power_plant",
+      "provider": "tech_res",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_renewable_energy_power_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "geothermal_power_plant",
+      "building_type": "building_geothermal_power_plant",
+      "provider": "tech_res",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_geothermal_power_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "fusion_power_plant",
+      "building_type": "building_fusion_power_plant",
+      "provider": "tech_res",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_fusion_power_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "power_grid_station",
+      "building_type": "building_power_grid_station",
+      "provider": "tech_res",
+      "profile": "power",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_power_grid_station",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "alloys_plant",
+      "building_type": "building_alloys_plant",
+      "provider": "tech_res",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_alloys_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "electronics_industry",
+      "building_type": "building_electronics_industry",
+      "provider": "tech_res",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_electronics_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "battery_plant",
+      "building_type": "building_battery_plant",
+      "provider": "tech_res",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_battery_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "processors_foundry",
+      "building_type": "building_processors_foundry",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_processors_foundry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "computer_assembly_plant",
+      "building_type": "building_computer_assembly_plant",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_computer_assembly_plant",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "robotics_industry",
+      "building_type": "building_robotics_industry",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_robotics_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "aircraft_industry",
+      "building_type": "building_aircraft_industry",
+      "provider": "tech_res",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_aircraft_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "pharmaceuticals_industry",
+      "building_type": "building_pharmaceuticals_industry",
+      "provider": "tech_res",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_pharmaceuticals_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "consumer_electronics_industry",
+      "building_type": "building_consumer_electronics_industry",
+      "provider": "tech_res",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_consumer_electronics_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "hydroponic",
+      "building_type": "building_hydroponic",
+      "provider": "tech_res",
+      "profile": "agriculture",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_hydroponic",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "nuclear_weapons_silo",
+      "building_type": "building_nuclear_weapons_silo",
+      "provider": "tech_res",
+      "profile": "military",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_nuclear_weapons_silo",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "research_center",
+      "building_type": "building_research_center",
+      "provider": "tech_res",
+      "profile": "technology",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_research_center",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "elgar_opera",
+      "building_type": "building_elgar_opera",
+      "provider": "tech_res",
+      "profile": "arts",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_elgar_opera",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "manzoni_publishing_industry",
+      "building_type": "building_manzoni_publishing_industry",
+      "provider": "tech_res",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_manzoni_publishing_industry",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "instrument_workshops",
+      "building_type": "building_instrument_workshops",
+      "provider": "tech_res",
+      "profile": "light_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_instrument_workshops",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "mendelejew_hydrogenation_plants",
+      "building_type": "building_mendelejew_hydrogenation_plants",
+      "provider": "tech_res",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_mendelejew_hydrogenation_plants",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "mendelejew_synthetic_rubber_factory",
+      "building_type": "building_mendelejew_synthetic_rubber_factory",
+      "provider": "tech_res",
+      "profile": "heavy_industry",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_mendelejew_synthetic_rubber_factory",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "airport",
+      "building_type": "building_airport",
+      "provider": "tech_res",
+      "profile": "infrastructure",
+      "status": "SUPPORTED",
+      "selection_variable": "cmp_staffing_sel_airport",
+      "source": "tech_res_3472248460_snapshot"
+    },
+    {
+      "id": "company_headquarter",
+      "building_type": "building_company_headquarter",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "MANUAL",
+      "selection_variable": "cmp_staffing_sel_company_headquarter",
+      "source": "legacy_selector_audit",
+      "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+    },
+    {
+      "id": "company_regional_headquarter",
+      "building_type": "building_company_regional_headquarter",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "MANUAL",
+      "selection_variable": "cmp_staffing_sel_company_regional_headquarter",
+      "source": "legacy_selector_audit",
+      "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+    },
+    {
+      "id": "skyscraper",
+      "building_type": "building_skyscraper",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "MANUAL",
+      "selection_variable": "cmp_staffing_sel_skyscraper",
+      "source": "legacy_selector_audit",
+      "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+    },
+    {
+      "id": "suez_canal",
+      "building_type": "building_suez_canal",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "MANUAL",
+      "selection_variable": "cmp_staffing_sel_suez_canal",
+      "source": "legacy_selector_audit",
+      "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+    },
+    {
+      "id": "panama_canal",
+      "building_type": "building_panama_canal",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "MANUAL",
+      "selection_variable": "cmp_staffing_sel_panama_canal",
+      "source": "legacy_selector_audit",
+      "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+    },
+    {
+      "id": "angkor_wat",
+      "building_type": "building_angkor_wat",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_angkor_wat",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "big_ben",
+      "building_type": "building_big_ben",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_big_ben",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "cristo_redentor",
+      "building_type": "building_cristo_redentor",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_cristo_redentor",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "eiffel_tower",
+      "building_type": "building_eiffel_tower",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_eiffel_tower",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "estacion_de_madrid_atocha",
+      "building_type": "building_estacion_de_madrid_atocha",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_estacion_de_madrid_atocha",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "forbidden_city",
+      "building_type": "building_forbidden_city",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_forbidden_city",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "gran_teatro_de_la_habana",
+      "building_type": "building_gran_teatro_de_la_habana",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_gran_teatro_de_la_habana",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "hagia_sophia",
+      "building_type": "building_hagia_sophia",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_hagia_sophia",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "kaiserforum_1",
+      "building_type": "building_kaiserforum_1",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_kaiserforum_1",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "kaiserforum_2",
+      "building_type": "building_kaiserforum_2",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_kaiserforum_2",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "kaiserforum_3",
+      "building_type": "building_kaiserforum_3",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_kaiserforum_3",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "kaiserforum_4",
+      "building_type": "building_kaiserforum_4",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_kaiserforum_4",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "machu_picchu",
+      "building_type": "building_machu_picchu",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_machu_picchu",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "manila_cathedral_monument",
+      "building_type": "building_manila_cathedral_monument",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_manila_cathedral_monument",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "manila_cathedral_original",
+      "building_type": "building_manila_cathedral_original",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_manila_cathedral_original",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "manila_cathedral_ruins",
+      "building_type": "building_manila_cathedral_ruins",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_manila_cathedral_ruins",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "mosque_of_djenne",
+      "building_type": "building_mosque_of_djenne",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_mosque_of_djenne",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "pena_convent",
+      "building_type": "building_pena_convent",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_pena_convent",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "pena_palace",
+      "building_type": "building_pena_palace",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_pena_palace",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "power_bloc_statue",
+      "building_type": "building_power_bloc_statue",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_power_bloc_statue",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "sagrada_familia_cathedral_1",
+      "building_type": "building_sagrada_familia_cathedral_1",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_sagrada_familia_cathedral_1",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "sagrada_familia_cathedral_2",
+      "building_type": "building_sagrada_familia_cathedral_2",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_sagrada_familia_cathedral_2",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "sagrada_familia_cathedral_3",
+      "building_type": "building_sagrada_familia_cathedral_3",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_sagrada_familia_cathedral_3",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "saint_basils_cathedral",
+      "building_type": "building_saint_basils_cathedral",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_saint_basils_cathedral",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "statue_of_liberty",
+      "building_type": "building_statue_of_liberty",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_statue_of_liberty",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "taj_mahal",
+      "building_type": "building_taj_mahal",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_taj_mahal",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "vatican_city",
+      "building_type": "building_vatican_city",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_vatican_city",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "victoria_terminus",
+      "building_type": "building_victoria_terminus",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_victoria_terminus",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "white_house",
+      "building_type": "building_white_house",
+      "provider": "vanilla",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_white_house",
+      "source": "legacy_selector_audit",
+      "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+    },
+    {
+      "id": "modern_state_baseline",
+      "building_type": "building_modern_state_baseline",
+      "provider": "tech_res",
+      "profile": null,
+      "status": "UNSUPPORTED",
+      "selection_variable": "cmp_staffing_sel_modern_state_baseline",
+      "source": "tech_res_3472248460_snapshot",
+      "reason": "Tech & Res non-buildable baseline helper; no workforce injection."
+    }
+  ]
+}

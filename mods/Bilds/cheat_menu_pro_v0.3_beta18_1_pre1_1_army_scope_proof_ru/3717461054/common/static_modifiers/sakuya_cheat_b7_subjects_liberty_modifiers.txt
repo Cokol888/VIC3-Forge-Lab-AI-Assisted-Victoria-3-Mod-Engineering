@@ -1,0 +1,14 @@
+sakuya_cheat_b7_subjects_liberty_desire_player = {
+	icon = "gfx/interface/icons/notification_icons/power_bloc.dds"
+	country_liberty_desire_of_subjects_add = 1
+}
+
+sakuya_cheat_b7_subjects_liberty_desire_marked = {
+	icon = "gfx/interface/icons/notification_icons/power_bloc.dds"
+	country_liberty_desire_of_subjects_add = 1
+}
+
+sakuya_cheat_b7_subjects_liberty_desire_marked_minus20 = {
+	icon = "gfx/interface/icons/notification_icons/power_bloc.dds"
+	country_liberty_desire_of_subjects_add = -20
+}

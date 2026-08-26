@@ -1,0 +1,11 @@
+﻿# Cheat Menu Pro v0.3-beta5 - Simple Army Controls
+cmp_army_control_offense = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" unit_army_offense_mult = 1 }
+cmp_army_control_defense = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" unit_army_defense_mult = 1 }
+cmp_army_control_morale_recovery = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" unit_morale_recovery_mult = 1 }
+cmp_army_control_mobilization = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" military_formation_mobilization_speed_mult = 1 }
+cmp_army_control_experience = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" unit_experience_gain_mult = 1 }
+cmp_army_control_movement = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" military_formation_army_movement_speed_mult = 1 }
+cmp_army_control_supply = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" unit_supply_consumption_mult = -1 }
+cmp_army_control_goods_cost = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" country_military_goods_cost_mult = -1 }
+cmp_army_control_wages = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" country_military_wages_mult = -1 }
+cmp_army_control_war_exhaustion = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" country_war_exhaustion_casualties_mult = -1 }

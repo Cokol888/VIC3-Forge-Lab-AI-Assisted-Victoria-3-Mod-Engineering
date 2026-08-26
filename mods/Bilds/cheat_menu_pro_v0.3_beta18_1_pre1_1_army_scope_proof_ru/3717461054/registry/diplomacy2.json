@@ -1,0 +1,70 @@
+{
+  "version": "0.3-beta16-pre2",
+  "tabs": [
+    {"id": "relations", "label": "CMP_WS_DIP_TAB_RELATIONS", "help": "relations"},
+    {"id": "subjects", "label": "CMP_WS_DIP_TAB_SUBJECTS", "help": "subjects"},
+    {"id": "treaties", "label": "CMP_WS_DIP_TAB_TREATIES", "help": "treaties"},
+    {"id": "sovereignty", "label": "CMP_WS_DIP_TAB_SOVEREIGNTY", "help": "sovereignty"},
+    {"id": "power_bloc", "label": "CMP_WS_DIP_TAB_BLOC", "help": "power_bloc"}
+  ],
+  "relations": [
+    {"label": "CMP_WS_DIP_REL_P1", "endpoint": "sakuya_b7_fx_increase_relations_alt", "tooltip": "CMP_B7_TT_INCREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_P20", "endpoint": "sakuya_b7_fx_increase_relations", "tooltip": "CMP_B7_TT_INCREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_P50", "endpoint": "sakuya_b7_fx_increase_relations_ctrl", "tooltip": "CMP_B7_TT_INCREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_P1000", "endpoint": "sakuya_b7_fx_increase_relations_shift", "tooltip": "CMP_B7_TT_INCREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_N1", "endpoint": "sakuya_b7_fx_decrease_relations_alt", "tooltip": "CMP_B7_TT_DECREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_N20", "endpoint": "sakuya_b7_fx_decrease_relations", "tooltip": "CMP_B7_TT_DECREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_N50", "endpoint": "sakuya_b7_fx_decrease_relations_ctrl", "tooltip": "CMP_B7_TT_DECREASE_RELATIONS"},
+    {"label": "CMP_WS_DIP_REL_N1000", "endpoint": "sakuya_b7_fx_decrease_relations_shift", "tooltip": "CMP_B7_TT_DECREASE_RELATIONS"}
+  ],
+  "obligations": [
+    {"label": "CMP_WS_DIP_OBLIGATION_THEM", "endpoint": "sakuya_b7_fx_obligation_marked_owes_player", "tooltip": "CMP_B7_TT_OBLIGATION"},
+    {"label": "CMP_WS_DIP_OBLIGATION_US", "endpoint": "sakuya_b7_fx_obligation_player_owes_marked", "tooltip": "CMP_B7_TT_OBLIGATION"}
+  ],
+  "subject_types": [
+    {"id": "protectorate", "label": "CMP_WS_DIP_SUB_PROTECTORATE", "forward": "sakuya_b7_fx_protectorate", "reverse": "sakuya_b7_fx_protectorate_reverse", "tooltip": "CMP_B7_TT_PROTECTORATE"},
+    {"id": "puppet", "label": "CMP_WS_DIP_SUB_PUPPET", "forward": "sakuya_b7_fx_puppet", "reverse": "sakuya_b7_fx_puppet_reverse", "tooltip": "CMP_B7_TT_PUPPET"},
+    {"id": "dominion", "label": "CMP_WS_DIP_SUB_DOMINION", "forward": "sakuya_b7_fx_dominion", "reverse": "sakuya_b7_fx_dominion_reverse", "tooltip": "CMP_B7_TT_DOMINION"},
+    {"id": "vassal", "label": "CMP_WS_DIP_SUB_VASSAL", "forward": "sakuya_b7_fx_vassal", "reverse": "sakuya_b7_fx_vassal_reverse", "tooltip": "CMP_B7_TT_VASSAL"},
+    {"id": "tributary", "label": "CMP_WS_DIP_SUB_TRIBUTARY", "forward": "sakuya_b7_fx_tributary", "reverse": "sakuya_b7_fx_tributary_reverse", "tooltip": "CMP_B7_TT_TRIBUTARY"},
+    {"id": "colony", "label": "CMP_WS_DIP_SUB_COLONY", "forward": "sakuya_b7_fx_colony", "reverse": "sakuya_b7_fx_colony_reverse", "tooltip": "CMP_B7_TT_COLONY"},
+    {"id": "chartered_company", "label": "CMP_WS_DIP_SUB_CHARTERED", "forward": "sakuya_b7_fx_chartered_company", "reverse": "sakuya_b7_fx_chartered_company_reverse", "tooltip": "CMP_B7_TT_CHARTERED_COMPANY"},
+    {"id": "crown_land", "label": "CMP_WS_DIP_SUB_CROWN_LAND", "forward": "sakuya_b7_fx_crown_land", "reverse": "sakuya_b7_fx_crown_land_reverse", "tooltip": "CMP_B7_TT_CROWN_LAND"}
+  ],
+  "subject_actions": [
+    {"label": "CMP_WS_DIP_AUTONOMY_DOWN", "endpoint": "sakuya_b7_fx_autonomy_decrease", "tooltip": "CMP_B7_TT_AUTONOMY_INDEPENDENCE"},
+    {"label": "CMP_WS_DIP_AUTONOMY_UP", "endpoint": "sakuya_b7_fx_autonomy_increase", "tooltip": "CMP_B7_TT_AUTONOMY_INDEPENDENCE"},
+    {"label": "CMP_WS_DIP_INDEPENDENT_MARKED", "endpoint": "sakuya_b7_fx_marked_independent", "tooltip": "CMP_B7_TT_AUTONOMY_INDEPENDENCE"},
+    {"label": "CMP_WS_DIP_INDEPENDENT_PLAYER", "endpoint": "sakuya_b7_fx_player_independent", "tooltip": "CMP_B7_TT_AUTONOMY_INDEPENDENCE"}
+  ],
+  "treaties": [
+    {"id": "alliance", "label": "CMP_WS_DIP_TR_ALLIANCE", "create": "sakuya_b7_tr_alliance_create", "remove": "sakuya_b7_tr_alliance_remove", "tooltip": "CMP_B7_TT_TR_ALLIANCE"},
+    {"id": "defensive_pact", "label": "CMP_WS_DIP_TR_DEFENSIVE", "create": "sakuya_b7_tr_defensive_pact_create", "remove": "sakuya_b7_tr_defensive_pact_remove", "tooltip": "CMP_B7_TT_TR_DEFENSIVE_PACT"},
+    {"id": "guarantee", "label": "CMP_WS_DIP_TR_GUARANTEE", "create": "sakuya_b7_tr_guarantee_independence_create", "remove": "sakuya_b7_tr_guarantee_independence_remove", "tooltip": "CMP_B7_TT_TR_GUARANTEE"},
+    {"id": "support", "label": "CMP_WS_DIP_TR_SUPPORT", "create": "sakuya_b7_tr_support_independence_create", "remove": "sakuya_b7_tr_support_independence_remove", "tooltip": "CMP_B7_TT_TR_SUPPORT"},
+    {"id": "military_access", "label": "CMP_WS_DIP_TR_ACCESS", "create": "sakuya_b7_tr_military_access_create", "remove": "sakuya_b7_tr_military_access_remove", "tooltip": "CMP_WS_DIP_TR_GENERIC_TT"},
+    {"id": "embassy", "label": "CMP_WS_DIP_TR_EMBASSY", "create": "sakuya_b7_tr_offer_embassy_create", "remove": "sakuya_b7_tr_offer_embassy_remove", "tooltip": "CMP_WS_DIP_TR_GENERIC_TT"},
+    {"id": "investment", "label": "CMP_WS_DIP_TR_INVESTMENT", "create": "sakuya_b7_tr_foreign_investment_create", "remove": "sakuya_b7_tr_foreign_investment_remove", "tooltip": "CMP_WS_DIP_TR_GENERIC_TT"},
+    {"id": "transit", "label": "CMP_WS_DIP_TR_TRANSIT", "create": "sakuya_b7_tr_transit_rights_create", "remove": "sakuya_b7_tr_transit_rights_remove", "tooltip": "CMP_WS_DIP_TR_GENERIC_TT"},
+    {"id": "trade_privilege", "label": "CMP_WS_DIP_TR_TRADE", "create": "sakuya_b7_tr_trade_privilege_create", "remove": "sakuya_b7_tr_trade_privilege_remove", "tooltip": "CMP_WS_DIP_TR_GENERIC_TT"}
+  ],
+  "sovereignty": [
+    {"label": "CMP_WS_DIP_CEDE_HOME", "endpoint": "sakuya_b7_fx_cede_home_state", "guard": "home", "tooltip": "CMP_B7_TT_CEDE_HOME_STATE"},
+    {"label": "CMP_WS_DIP_CEDE_HOME_INCORP", "endpoint": "sakuya_b7_fx_cede_home_state_integrated", "guard": "home", "tooltip": "CMP_B7_TT_CEDE_HOME_STATE"},
+    {"label": "CMP_WS_DIP_TAKE_FOREIGN", "endpoint": "sakuya_b7_fx_take_foreign_state", "guard": "foreign", "tooltip": "CMP_B7_TT_TAKE_FOREIGN_STATE"},
+    {"label": "CMP_WS_DIP_TAKE_FOREIGN_INCORP", "endpoint": "sakuya_b7_fx_take_foreign_state_integrated", "guard": "foreign", "tooltip": "CMP_B7_TT_TAKE_FOREIGN_STATE"},
+    {"label": "CMP_WS_DIP_PORT_ACQUIRE", "endpoint": "sakuya_b7_fx_acquire_treaty_port", "guard": "foreign", "tooltip": "CMP_B7_TT_DIRECT_TREATY_PORT"},
+    {"label": "CMP_WS_DIP_PORT_GRANT", "endpoint": "sakuya_b7_fx_grant_treaty_port", "guard": "home", "tooltip": "CMP_B7_TT_DIRECT_TREATY_PORT"}
+  ],
+  "power_bloc_safe": [
+    {"label": "CMP_WS_DIP_BLOC_P25", "endpoint": "cmp_politics2_bloc_cohesion_p25", "tooltip": "CMP_POL2_BLOC_TT"},
+    {"label": "CMP_WS_DIP_BLOC_P50", "endpoint": "cmp_politics2_bloc_cohesion_p50", "tooltip": "CMP_POL2_BLOC_TT"},
+    {"label": "CMP_WS_DIP_BLOC_N25", "endpoint": "cmp_politics2_bloc_cohesion_n25", "tooltip": "CMP_POL2_BLOC_TT"},
+    {"label": "CMP_WS_DIP_BLOC_100", "endpoint": "cmp_politics2_bloc_cohesion_100", "tooltip": "CMP_POL2_BLOC_TT"}
+  ],
+  "power_bloc_membership": [
+    {"label": "CMP_WS_DIP_BLOC_JOIN_PLAYER", "endpoint": "cmp_diplomacy2_membership_player_join", "tooltip": "CMP_WS_DIP_BLOC_JOIN_PLAYER_TT"},
+    {"label": "CMP_WS_DIP_BLOC_JOIN_COUNTRY", "endpoint": "cmp_diplomacy2_membership_country_join", "tooltip": "CMP_WS_DIP_BLOC_JOIN_COUNTRY_TT"}
+  ],
+  "deferred_power_bloc": ["normal_invitation", "leave", "principles", "leverage"]
+}

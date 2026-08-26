@@ -1,0 +1,699 @@
+﻿namespace = sakuya_main_03_01  
+
+sakuya_main_03_01.1 = {
+	type = country_event
+
+	title = SKY_B3_EVT_MARK_COMPANY_TITLE
+	desc = SKY_B3_EVT_MARK_COMPANY_DESC
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { has_variable = sakuya_main_03_01_slot_1 } }
+				desc = SKY_B3_EVT_MARK_COMPANY_DESC_EMPTY
+			}
+			triggered_desc = {
+				trigger = {
+					any_company = {
+						has_variable = sakuya_main_03_01_marked
+					}
+				}
+				desc = SKY_B3_EVT_MARK_COMPANY_DESC_MARKED
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = SKY_B3_EVT_MARK_COMPANY_DESC_HINT
+			}
+		}
+	}
+
+	event_image = { video = "gfx/event_pictures/southamerica_factory_opening.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 0
+
+	trigger = { is_player = yes }
+
+	immediate = {
+		save_scope_as = sakuya_main_03_01_event_root
+		# Reset page slot flags
+		remove_variable = sakuya_main_03_01_slot_1
+		remove_variable = sakuya_main_03_01_slot_2
+		remove_variable = sakuya_main_03_01_slot_3
+		remove_variable = sakuya_main_03_01_slot_4
+		remove_variable = sakuya_main_03_01_slot_5
+		remove_variable = sakuya_main_03_01_slot_6
+		remove_variable = sakuya_main_03_01_slot_7
+		remove_variable = sakuya_main_03_01_slot_8
+		remove_variable = sakuya_main_03_01_has_next
+		remove_variable = sakuya_main_03_01_page2_valid
+
+		if = {
+			limit = { has_variable = sakuya_main_03_01_force_empty_notice }
+			remove_variable = sakuya_main_03_01_page_2
+			remove_variable = sakuya_main_03_01_force_empty_notice
+		}
+		else = {
+			save_scope_as = sakuya_main_03_01_source_country
+			if = {
+				limit = {
+					has_variable = sakuya_main_03_01_use_marked_country
+					exists = scope:sakuya_main_03_01_marked_country_scope
+				}
+				scope:sakuya_main_03_01_marked_country_scope = {
+					save_scope_as = sakuya_main_03_01_source_country
+				}
+			}
+
+			scope:sakuya_main_03_01_source_country = {
+				# Auto-fallback to page 1 if page 2 no longer has entries
+				if = {
+					limit = {
+						scope:sakuya_main_03_01_event_root = { has_variable = sakuya_main_03_01_page_2 }
+						any_company = {
+							count >= 9
+							NOT = { has_variable = sakuya_main_03_01_marked }
+						}
+					}
+					scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_page2_valid }
+				}
+				if = {
+					limit = {
+						scope:sakuya_main_03_01_event_root = {
+							has_variable = sakuya_main_03_01_page_2
+							NOT = { has_variable = sakuya_main_03_01_page2_valid }
+						}
+					}
+					scope:sakuya_main_03_01_event_root = { remove_variable = sakuya_main_03_01_page_2 }
+				}
+				scope:sakuya_main_03_01_event_root = { remove_variable = sakuya_main_03_01_page2_valid }
+
+				# Fill 8 slots from page 1 or page 2
+				if = {
+					limit = { scope:sakuya_main_03_01_event_root = { has_variable = sakuya_main_03_01_page_2 } }
+
+					if = {
+						limit = { any_company = { count >= 9 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 8
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_1
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_1 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 10 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 9
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_2
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_2 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 11 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 10
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_3
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_3 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 12 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 11
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_4
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_4 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 13 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 12
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_5
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_5 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 14 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 13
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_6
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_6 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 15 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 14
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_7
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_7 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 16 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 15
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_8
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_8 }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { any_company = { count >= 1 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 0
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_1
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_1 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 2 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 1
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_2
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_2 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 3 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 2
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_3
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_3 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 4 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 3
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_4
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_4 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 5 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 4
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_5
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_5 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 6 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 5
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_6
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_6 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 7 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 6
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_7
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_7 }
+						}
+					}
+					if = {
+						limit = { any_company = { count >= 8 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						ordered_company = {
+							position = 7
+							check_range_bounds = no
+							limit = { NOT = { has_variable = sakuya_main_03_01_marked } }
+							save_scope_as = sakuya_main_03_01_cmp_8
+							scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_slot_8 }
+						}
+					}
+
+					# Page 1 shows next page if 9th candidate exists
+					if = {
+						limit = { any_company = { count >= 9 NOT = { has_variable = sakuya_main_03_01_marked } } }
+						scope:sakuya_main_03_01_event_root = { set_variable = sakuya_main_03_01_has_next }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_1
+		trigger = { has_variable = sakuya_main_03_01_slot_1 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_1 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_2
+		trigger = { has_variable = sakuya_main_03_01_slot_2 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_2 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_3
+		trigger = { has_variable = sakuya_main_03_01_slot_3 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_3 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_4
+		trigger = { has_variable = sakuya_main_03_01_slot_4 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_4 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_5
+		trigger = { has_variable = sakuya_main_03_01_slot_5 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_5 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_6
+		trigger = { has_variable = sakuya_main_03_01_slot_6 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_6 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_7
+		trigger = { has_variable = sakuya_main_03_01_slot_7 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_7 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_SLOT_8
+		trigger = { has_variable = sakuya_main_03_01_slot_8 }
+		ai_chance = { base = 0 }
+		scope:sakuya_main_03_01_cmp_8 = {
+			set_variable = sakuya_main_03_01_marked
+			save_scope_as = sakuya_main_03_01_latest_marked_company
+		}
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_PREV
+		trigger = { has_variable = sakuya_main_03_01_page_2 }
+		ai_chance = { base = 0 }
+		remove_variable = sakuya_main_03_01_page_2
+		hidden_effect = { trigger_event = { id = sakuya_main_03_01.1 popup = yes } }
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_NEXT
+		trigger = {
+			NOT = { has_variable = sakuya_main_03_01_page_2 }
+			has_variable = sakuya_main_03_01_has_next
+		}
+		ai_chance = { base = 0 }
+		set_variable = sakuya_main_03_01_page_2
+		hidden_effect = { trigger_event = { id = sakuya_main_03_01.1 popup = yes } }
+	}
+	option = {
+		name = SKY_B3_EVT_MARK_COMPANY_CLOSE
+		default_option = yes
+		ai_chance = { base = 100 }
+		remove_variable = sakuya_main_03_01_page_2
+		set_variable = sakuya_main_force_show
+	}
+}
+
+sakuya_main_03_01.2 = {
+	type = country_event
+
+	title = SKY_B5_EVT_LOBBY_TITLE
+	desc = SKY_B5_EVT_LOBBY_DESC
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_variable = sakuya_b5_lobby_force_empty_notice }
+				desc = SKY_B5_EVT_LOBBY_DESC_EMPTY
+			}
+			triggered_desc = {
+				trigger = { NOT = { has_variable = sakuya_b5_lobby_has_any } }
+				desc = SKY_B5_EVT_LOBBY_DESC_EMPTY
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = SKY_B5_EVT_LOBBY_DESC_HINT
+			}
+		}
+	}
+
+	event_image = { video = "gfx/event_pictures/southamerica_factory_opening.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 0
+
+	trigger = { is_player = yes }
+
+	immediate = {
+		save_scope_as = sakuya_b5_event_root
+		remove_variable = sakuya_b5_lobby_slot_1
+		remove_variable = sakuya_b5_lobby_slot_2
+		remove_variable = sakuya_b5_lobby_slot_3
+		remove_variable = sakuya_b5_lobby_slot_4
+		remove_variable = sakuya_b5_lobby_slot_5
+		remove_variable = sakuya_b5_lobby_slot_6
+		remove_variable = sakuya_b5_lobby_slot_7
+		remove_variable = sakuya_b5_lobby_slot_8
+		remove_variable = sakuya_b5_lobby_has_any
+
+		if = {
+			limit = { has_variable = sakuya_b5_lobby_force_empty_notice }
+			remove_variable = sakuya_b5_lobby_force_empty_notice
+		}
+		else = {
+			save_scope_as = sakuya_b5_lobby_source_country
+			if = {
+				limit = {
+					has_variable = sakuya_b5_lobby_use_marked_country
+					exists = scope:sakuya_b5_lobby_marked_country_scope
+				}
+				scope:sakuya_b5_lobby_marked_country_scope = {
+					save_scope_as = sakuya_b5_lobby_source_country
+				}
+			}
+
+			scope:sakuya_b5_lobby_source_country = {
+				every_political_lobby = {
+					# slot 1
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { NOT = { has_variable = sakuya_b5_lobby_slot_1 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_1
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_1 set_variable = sakuya_b5_lobby_has_any }
+					}
+					# slot 2
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_1 NOT = { has_variable = sakuya_b5_lobby_slot_2 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_2
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_2 }
+					}
+					# slot 3
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_2 NOT = { has_variable = sakuya_b5_lobby_slot_3 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_3
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_3 }
+					}
+					# slot 4
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_3 NOT = { has_variable = sakuya_b5_lobby_slot_4 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_4
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_4 }
+					}
+					# slot 5
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_4 NOT = { has_variable = sakuya_b5_lobby_slot_5 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_5
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_5 }
+					}
+					# slot 6
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_5 NOT = { has_variable = sakuya_b5_lobby_slot_6 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_6
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_6 }
+					}
+					# slot 7
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_6 NOT = { has_variable = sakuya_b5_lobby_slot_7 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_7
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_7 }
+					}
+					# slot 8
+					if = {
+						limit = {
+							NOT = { has_variable = sakuya_b5_lobby_enum_done }
+							scope:sakuya_b5_event_root = { has_variable = sakuya_b5_lobby_slot_7 NOT = { has_variable = sakuya_b5_lobby_slot_8 } }
+						}
+						set_variable = sakuya_b5_lobby_enum_done
+						save_scope_as = sakuya_b5_lobby_8
+						scope:sakuya_b5_event_root = { set_variable = sakuya_b5_lobby_slot_8 }
+					}
+				}
+				# cleanup temp markers
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_lobby_enum_done }
+					remove_variable = sakuya_b5_lobby_enum_done
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_1
+		trigger = { has_variable = sakuya_b5_lobby_slot_1 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_1 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_2
+		trigger = { has_variable = sakuya_b5_lobby_slot_2 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_2 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_3
+		trigger = { has_variable = sakuya_b5_lobby_slot_3 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_3 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_4
+		trigger = { has_variable = sakuya_b5_lobby_slot_4 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_4 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_5
+		trigger = { has_variable = sakuya_b5_lobby_slot_5 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_5 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_6
+		trigger = { has_variable = sakuya_b5_lobby_slot_6 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_6 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_7
+		trigger = { has_variable = sakuya_b5_lobby_slot_7 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_7 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_SLOT_8
+		trigger = { has_variable = sakuya_b5_lobby_slot_8 }
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			every_political_lobby = {
+				limit = { has_variable = sakuya_b5_sel_lobby }
+				remove_variable = sakuya_b5_sel_lobby
+			}
+			every_country = {
+				every_political_lobby = {
+					limit = { has_variable = sakuya_b5_sel_lobby }
+					remove_variable = sakuya_b5_sel_lobby
+				}
+			}
+			scope:sakuya_b5_lobby_8 = { set_variable = sakuya_b5_sel_lobby }
+		}
+		set_variable = sakuya_main_force_show
+	}
+
+	option = {
+		name = SKY_B5_EVT_LOBBY_CLOSE
+		default_option = yes
+		ai_chance = { base = 100 }
+		set_variable = sakuya_main_force_show
+	}
+}
+

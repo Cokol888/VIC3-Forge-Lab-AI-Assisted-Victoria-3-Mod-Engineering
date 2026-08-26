@@ -1,0 +1,6 @@
+﻿l_english:
+ CMP_BUILD_ID:0 "Build ID: CMP-0.3-B18-1-PRE1-1-20260823"
+ CMP_BUILD_VERSION:0 "Version: 0.3-beta18.1-pre1.1"
+ CMP_BUILD_BASELINE:0 "Victoria baseline: 1.13.10"
+ CMP_BUILD_RUNTIME_STATUS:0 "Runtime status: STATIC_PASS_RUNTIME_PENDING"
+ CMP_BUILD_NAVY_RC_STATUS:0 "Navy beta18 Final: Runtime PASS / released"

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "providers": [
+    {
+      "id": "vanilla",
+      "kind": "base_game",
+      "required": true,
+      "detection_trigger": null,
+      "workshop_id": null,
+      "notes": "Base Victoria 3 content."
+    },
+    {
+      "id": "community_mod_framework",
+      "kind": "framework",
+      "required": true,
+      "detection_trigger": "community_framework_is_active",
+      "workshop_id": "3385002128",
+      "notes": "Dependency inherited through Tech & Res; used for compatibility-oriented extensions."
+    },
+    {
+      "id": "tech_res",
+      "kind": "content_mod",
+      "required": true,
+      "detection_trigger": "technres_is_active",
+      "workshop_id": "3472248460",
+      "notes": "Tech & Res provider. The mod itself exports REPLACE_OR_CREATE:technres_is_active = { always = yes }."
+    }
+  ]
+}

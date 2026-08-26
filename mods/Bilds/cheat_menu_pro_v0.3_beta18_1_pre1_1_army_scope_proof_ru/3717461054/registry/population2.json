@@ -1,0 +1,57 @@
+{
+  "amounts": [
+    {"id":"1k","size":1000,"loc":"CMP_POP2_AMOUNT_1K"},
+    {"id":"5k","size":5000,"loc":"CMP_POP2_AMOUNT_5K"},
+    {"id":"10k","size":10000,"loc":"CMP_POP2_AMOUNT_10K"},
+    {"id":"25k","size":25000,"loc":"CMP_POP2_AMOUNT_25K"},
+    {"id":"50k","size":50000,"loc":"CMP_POP2_AMOUNT_50K"},
+    {"id":"100k","size":100000,"loc":"CMP_POP2_AMOUNT_100K"}
+  ],
+  "literacy": [
+    {"id":"25","value":0.25,"loc":"CMP_POP2_PERCENT_25"},
+    {"id":"50","value":0.50,"loc":"CMP_POP2_PERCENT_50"},
+    {"id":"75","value":0.75,"loc":"CMP_POP2_PERCENT_75"},
+    {"id":"90","value":0.90,"loc":"CMP_POP2_PERCENT_90"},
+    {"id":"100","value":1.00,"loc":"CMP_POP2_PERCENT_100"}
+  ],
+  "qualifications": [
+    {"id":"25","value":0.25,"loc":"CMP_POP2_PERCENT_25"},
+    {"id":"50","value":0.50,"loc":"CMP_POP2_PERCENT_50"},
+    {"id":"75","value":0.75,"loc":"CMP_POP2_PERCENT_75"},
+    {"id":"100","value":1.00,"loc":"CMP_POP2_PERCENT_100"}
+  ],
+  "professions": [
+    {"id":"peasants","pop_type":"peasants","loc":"CMP_POP2_PROF_PEASANTS"},
+    {"id":"laborers","pop_type":"laborers","loc":"CMP_POP2_PROF_LABORERS"},
+    {"id":"machinists","pop_type":"machinists","loc":"CMP_POP2_PROF_MACHINISTS"},
+    {"id":"engineers","pop_type":"engineers","loc":"CMP_POP2_PROF_ENGINEERS"},
+    {"id":"clerks","pop_type":"clerks","loc":"CMP_POP2_PROF_CLERKS"},
+    {"id":"bureaucrats","pop_type":"bureaucrats","loc":"CMP_POP2_PROF_BUREAUCRATS"},
+    {"id":"academics","pop_type":"academics","loc":"CMP_POP2_PROF_ACADEMICS"},
+    {"id":"officers","pop_type":"officers","loc":"CMP_POP2_PROF_OFFICERS"},
+    {"id":"shopkeepers","pop_type":"shopkeepers","loc":"CMP_POP2_PROF_SHOPKEEPERS"},
+    {"id":"capitalists","pop_type":"capitalists","loc":"CMP_POP2_PROF_CAPITALISTS"}
+  ],
+  "wealth": [
+    {"id":"low","value":10,"loc":"CMP_POP2_WEALTH_LOW"},
+    {"id":"comfortable","value":20,"loc":"CMP_POP2_WEALTH_COMFORTABLE"},
+    {"id":"wealthy","value":30,"loc":"CMP_POP2_WEALTH_WEALTHY"},
+    {"id":"rich","value":50,"loc":"CMP_POP2_WEALTH_RICH"}
+  ],
+  "social_steps": [
+    {"id":"10","value":0.10,"loc":"CMP_POP2_PERCENT_PLUS10"},
+    {"id":"25","value":0.25,"loc":"CMP_POP2_PERCENT_PLUS25"},
+    {"id":"50","value":0.50,"loc":"CMP_POP2_PERCENT_PLUS50"}
+  ],
+  "migration": [
+    {"id":"25","multiplier":0.25,"loc":"CMP_POP2_PERCENT_PLUS25"},
+    {"id":"50","multiplier":0.50,"loc":"CMP_POP2_PERCENT_PLUS50"},
+    {"id":"100","multiplier":1.00,"loc":"CMP_POP2_PERCENT_PLUS100"},
+    {"id":"500","multiplier":5.00,"loc":"CMP_POP2_PERCENT_PLUS500"}
+  ],
+  "workforce": [
+    {"id":"5","add":0.05,"loc":"CMP_POP2_PP_PLUS5"},
+    {"id":"10","add":0.10,"loc":"CMP_POP2_PP_PLUS10"},
+    {"id":"20","add":0.20,"loc":"CMP_POP2_PP_PLUS20"}
+  ]
+}

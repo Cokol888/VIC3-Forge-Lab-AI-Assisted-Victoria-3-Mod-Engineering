@@ -1,0 +1,55 @@
+﻿# Cheat Menu Pro v0.3-beta5 - Simple Army Controls Scripted GUI
+
+cmp_army_controls_target_self_selected = { scope = country is_shown = { OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 } } }
+cmp_army_controls_target_marked_selected = { scope = country is_shown = { var:cmp_army_controls_target_index = 2 } }
+cmp_army_controls_has_marked_country = { scope = country is_shown = { any_country = { has_variable = sakuya_mark_country_target } } }
+cmp_army_controls_select_target_self = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_target_self_effect = yes } }
+cmp_army_controls_select_target_marked = { scope = country is_valid = { is_player = yes any_country = { has_variable = sakuya_mark_country_target } } effect = { cmp_army_controls_select_target_marked_effect = yes } }
+
+cmp_army_controls_parameter_offense_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 1 } }
+cmp_army_controls_select_parameter_offense = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_offense_effect = yes } }
+cmp_army_controls_parameter_defense_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 2 } }
+cmp_army_controls_select_parameter_defense = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_defense_effect = yes } }
+cmp_army_controls_parameter_morale_recovery_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 3 } }
+cmp_army_controls_select_parameter_morale_recovery = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_morale_recovery_effect = yes } }
+cmp_army_controls_parameter_mobilization_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 4 } }
+cmp_army_controls_select_parameter_mobilization = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_mobilization_effect = yes } }
+cmp_army_controls_parameter_experience_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 5 } }
+cmp_army_controls_select_parameter_experience = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_experience_effect = yes } }
+cmp_army_controls_parameter_movement_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 6 } }
+cmp_army_controls_select_parameter_movement = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_movement_effect = yes } }
+cmp_army_controls_parameter_supply_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 7 } }
+cmp_army_controls_select_parameter_supply = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_supply_effect = yes } }
+cmp_army_controls_parameter_goods_cost_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 8 } }
+cmp_army_controls_select_parameter_goods_cost = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_goods_cost_effect = yes } }
+cmp_army_controls_parameter_wages_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 9 } }
+cmp_army_controls_select_parameter_wages = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_wages_effect = yes } }
+cmp_army_controls_parameter_war_exhaustion_selected = { scope = country is_shown = { var:cmp_army_controls_parameter_index = 10 } }
+cmp_army_controls_select_parameter_war_exhaustion = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_select_parameter_war_exhaustion_effect = yes } }
+cmp_army_controls_value_1_selected = { scope = country is_shown = { var:cmp_army_controls_value_index = 1 } }
+cmp_army_controls_select_value_1 = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index } effect = { cmp_army_controls_select_value_1_effect = yes } }
+cmp_army_controls_value_2_selected = { scope = country is_shown = { var:cmp_army_controls_value_index = 2 } }
+cmp_army_controls_select_value_2 = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index } effect = { cmp_army_controls_select_value_2_effect = yes } }
+cmp_army_controls_value_3_selected = { scope = country is_shown = { var:cmp_army_controls_value_index = 3 } }
+cmp_army_controls_select_value_3 = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index } effect = { cmp_army_controls_select_value_3_effect = yes } }
+cmp_army_controls_value_4_selected = { scope = country is_shown = { var:cmp_army_controls_value_index = 4 } }
+cmp_army_controls_select_value_4 = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index } effect = { cmp_army_controls_select_value_4_effect = yes } }
+cmp_army_controls_value_5_selected = { scope = country is_shown = { var:cmp_army_controls_value_index = 5 } }
+cmp_army_controls_select_value_5 = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index } effect = { cmp_army_controls_select_value_5_effect = yes } }
+cmp_army_controls_positive_parameter = { scope = country is_shown = { OR = { var:cmp_army_controls_parameter_index = 1 var:cmp_army_controls_parameter_index = 2 var:cmp_army_controls_parameter_index = 3 var:cmp_army_controls_parameter_index = 4 var:cmp_army_controls_parameter_index = 5 var:cmp_army_controls_parameter_index = 6 } } }
+cmp_army_controls_reduction_parameter = { scope = country is_shown = { OR = { var:cmp_army_controls_parameter_index = 7 var:cmp_army_controls_parameter_index = 8 var:cmp_army_controls_parameter_index = 9 var:cmp_army_controls_parameter_index = 10 } } }
+cmp_army_controls_has_parameter = { scope = country is_shown = { has_variable = cmp_army_controls_parameter_index } }
+cmp_army_controls_has_value = { scope = country is_shown = { has_variable = cmp_army_controls_value_index } }
+cmp_army_controls_apply = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index has_variable = cmp_army_controls_value_index OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_apply_effect = yes } }
+cmp_army_controls_reset_parameter = { scope = country is_valid = { is_player = yes has_variable = cmp_army_controls_parameter_index OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_reset_parameter_effect = yes } }
+cmp_army_controls_reset_all = { scope = country is_valid = { is_player = yes OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_reset_all_effect = yes } }
+cmp_army_controls_clear_selection = { scope = country is_valid = { is_player = yes } effect = { cmp_army_controls_clear_selection_effect = yes } }
+cmp_army_controls_result_applied = { scope = country is_shown = { var:cmp_army_controls_result = 1 } }
+cmp_army_controls_result_reset = { scope = country is_shown = { OR = { var:cmp_army_controls_result = 2 var:cmp_army_controls_result = 3 } } }
+cmp_army_controls_result_preset = { scope = country is_shown = { var:cmp_army_controls_result = 4 } }
+cmp_army_controls_result_failed = { scope = country is_shown = { var:cmp_army_controls_result = -1 } }
+
+cmp_army_controls_preset_balanced = { scope = country is_valid = { is_player = yes OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_preset_balanced_effect = yes } }
+cmp_army_controls_preset_rapid = { scope = country is_valid = { is_player = yes OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_preset_rapid_effect = yes } }
+cmp_army_controls_preset_economy = { scope = country is_valid = { is_player = yes OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_preset_economy_effect = yes } }
+cmp_army_controls_preset_god = { scope = country is_valid = { is_player = yes OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 AND = { var:cmp_army_controls_target_index = 2 any_country = { has_variable = sakuya_mark_country_target } } } } effect = { cmp_army_controls_preset_god_effect = yes } }

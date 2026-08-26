@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "generator": "tools/generate_registry.py",
+  "counts": {
+    "providers": 3,
+    "buildings": 92,
+    "units": 26,
+    "ships": 25,
+    "resources": 8,
+    "operations": 11
+  },
+  "generated": {
+    "common/scripted_guis/cmp_fleet_builder_sgui.txt": "0651f08a5a1e2da5ee0dba5811f44cb017420520a951f0030ca61dc9423e25f7",
+    "common/scripted_effects/cmp_fleet_builder_effects.txt": "db13896db98990d056f57cbe356ce920de0cf41a9a00cc4834a341d7145c7023",
+    "common/scripted_triggers/cmp_provider_triggers.txt": "1177d3dd6a8101e9128974db737fc0f965debd9ea3c8dce729487e8b6c84cf0a",
+    "generated/fleet_ship_selector.gui.txt": "800d6682f64e66674bca9ca641feaff31a473a0fb6566fc77dfeb4ac362bf24d"
+  },
+  "codegen_scope": [
+    "fleet_builder_sgui",
+    "fleet_builder_effects",
+    "fleet_ship_selector_gui",
+    "provider_detection_adapters"
+  ],
+  "next_consumers": [
+    "beta12_regions_buildings_resources_staffing",
+    "beta17_army_final",
+    "beta18_navy_final"
+  ]
+}

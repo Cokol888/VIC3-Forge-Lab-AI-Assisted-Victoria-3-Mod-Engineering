@@ -1,0 +1,407 @@
+sakuya_superdip_humiliate_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+		NOT = { is_country_type = decentralized }
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+			NOT = { is_country_type = decentralized }
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+		NOT = { has_war_with = scope:target_country }
+		scope:target_country ?= {
+			NOT = {
+				has_diplomatic_pact = {
+					who = root
+					type = humiliation
+				}
+			}
+			NOT = {
+				has_diplomatic_pact = {
+					who = root
+					type = sakuya_superdip_humiliation_pact_01
+				}
+			}
+		}
+	}
+
+	accept_effect = {
+		save_scope_as = sakuya_superdip_actor_country
+		set_variable = { name = sakuya_superdip_target_country_var value = scope:target_country }
+		trigger_event = {
+			id = sakuya_superdip.1
+			popup = yes
+		}
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+
+	is_hostile = yes
+}
+
+sakuya_superdip_humiliation_pact_01 = {
+	groups = {
+		general
+	}
+
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	can_select_to_break = no
+	texture = "gfx/interface/sakuya/crino.dds"
+
+	selectable = {
+		always = no
+	}
+
+	pact = {
+		is_two_sided_pact = no
+		is_humiliation = yes
+		forced_duration = 60
+	}
+}
+
+sakuya_superdip_switch_country_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+			NOT = { is_country_type = decentralized }
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+	}
+
+	accept_effect = {
+		play_as = scope:target_country
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+}
+
+sakuya_superdip_force_join_power_bloc_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+		is_in_power_bloc = yes
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+			is_subject = no
+			NOT = { is_country_type = decentralized }
+			is_revolutionary = no
+			NOT = { is_in_same_power_bloc = root }
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+	}
+
+	accept_effect = {
+		save_scope_as = actor
+		scope:target_country = {
+			save_scope_as = target
+		}
+		power_bloc = {
+			power_bloc_leader = {
+				save_scope_as = sakuya_superdip_player_power_bloc_leader
+			}
+		}
+		scope:target_country = {
+			join_power_bloc = scope:sakuya_superdip_player_power_bloc_leader
+		}
+		post_notification = sakuya_superdip_force_join_power_bloc_toast
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+}
+
+sakuya_superdip_annex_country_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+	}
+
+	accept_effect = {
+		save_scope_as = actor
+		scope:target_country = {
+			save_scope_as = target
+		}
+		annex = scope:target_country
+		post_notification = sakuya_superdip_annex_country_toast
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+
+	is_hostile = yes
+}
+
+sakuya_superdip_subjugate_country_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+			NOT = { is_country_type = decentralized }
+			is_subject = no
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+		scope:target_country = {
+			is_diplomatic_play_committed_participant = no
+		}
+	}
+
+	accept_effect = {
+		save_scope_as = actor
+		scope:target_country = {
+			save_scope_as = target
+		}
+		if = {
+			limit = { is_country_type = unrecognized }
+			create_diplomatic_pact = {
+				country = scope:target_country
+				type = tributary
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target_country = {
+					is_country_type = colonial
+				}
+			}
+			create_diplomatic_pact = {
+				country = scope:target_country
+				type = dominion
+			}
+		}
+		else = {
+			create_diplomatic_pact = {
+				country = scope:target_country
+				type = protectorate
+			}
+		}
+		post_notification = sakuya_superdip_subjugate_country_toast
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+
+	is_hostile = yes
+}
+
+sakuya_superdip_incite_independence_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+			is_subject = yes
+			NOT = { is_country_type = decentralized }
+			is_revolutionary = no
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+	}
+
+	accept_effect = {
+		save_scope_as = actor
+		scope:target_country = {
+			save_scope_as = target
+		}
+		custom_tooltip = {
+			text = sakuya_superdip_incite_independence_effect_tt
+		}
+		hidden_effect = {
+			scope:target_country = {
+				make_independent = yes
+			}
+			post_notification = sakuya_superdip_incite_independence_toast
+		}
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+}
+
+sakuya_superdip_beguile_country_01 = {
+	groups = {
+		general
+	}
+
+	texture = "gfx/interface/sakuya/crino.dds"
+	requires_approval = no
+	should_notify_third_parties = no
+	show_in_lens = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = yes
+
+	selectable = {
+		is_player = yes
+		has_variable = SKY_RIGHT_CLICK_ON
+	}
+
+	potential = {
+		has_variable = SKY_RIGHT_CLICK_ON
+		scope:target_country ?= {
+			is_player = no
+			NOT = { is_country_type = decentralized }
+		}
+	}
+
+	possible = {
+		root != scope:target_country
+	}
+
+	accept_effect = {
+		change_relations = {
+			country = scope:target_country
+			value = 200
+		}
+		create_diplomatic_catalyst = {
+			type = catalyst_event_positive
+			target = scope:target_country
+		}
+		scope:target_country = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_positive
+				target = root
+			}
+		}
+	}
+
+	ai = {
+		will_propose = {
+			always = no
+		}
+	}
+}

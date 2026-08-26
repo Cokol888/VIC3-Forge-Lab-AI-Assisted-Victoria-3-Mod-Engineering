@@ -1,0 +1,40 @@
+sakuya_superdip_humiliation_toast = {
+	type = country
+	group = "sakuya_superdip_humiliation_group"
+	texture = "gfx/interface/sakuya/crino.dds"
+	notification_type = toast
+	color = bad
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+}
+
+sakuya_superdip_annex_country_toast = {
+	type = country
+	texture = "gfx/interface/sakuya/crino.dds"
+	notification_type = toast
+	color = good
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+}
+
+sakuya_superdip_force_join_power_bloc_toast = {
+	type = country
+	texture = "gfx/interface/sakuya/crino.dds"
+	notification_type = toast
+	color = good
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+}
+
+sakuya_superdip_subjugate_country_toast = {
+	type = country
+	texture = "gfx/interface/sakuya/crino.dds"
+	notification_type = toast
+	color = good
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+}
+
+sakuya_superdip_incite_independence_toast = {
+	type = country
+	texture = "gfx/interface/sakuya/crino.dds"
+	notification_type = toast
+	color = good
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+}

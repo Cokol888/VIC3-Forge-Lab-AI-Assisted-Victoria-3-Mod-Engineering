@@ -1,0 +1,159 @@
+﻿# Sakuya Cheat Menu Pro - Marking System Diplomatic Actions
+# 标记国家 + 取消标记国家 + 标记外国地区 + 取消该国全部外国地区标记
+
+# ============================================================
+# 标记国家（变量）— 目标国家未被标记时显示
+# ============================================================
+sakuya_mark_country = {
+	groups = { general }
+	requires_approval = no
+	should_notify_third_parties = no
+	show_effect_in_tooltip = yes
+	texture = "gfx/interface/sakuya/sakuya_help.dds"
+
+	potential = {
+		is_ai = no
+		scope:target_country = {
+			NOT = { has_variable = sakuya_mark_country_target }
+		}
+	}
+
+	possible = {
+	}
+
+	accept_effect = {
+		custom_tooltip = { text = sakuya_mark_country_effect_tt }
+		# 清除旧标记
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			remove_variable = sakuya_mark_country_target
+		}
+		ordered_decentralized_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			order_by = gdp
+			position = 0
+			check_range_bounds = no
+			remove_variable = sakuya_mark_country_target
+		}
+		# 标记新国家
+		scope:target_country = {
+			set_variable = sakuya_mark_country_target
+		}
+	}
+
+	ai = {
+		propose_score = { value = 0 }
+		will_propose = { always = no }
+	}
+}
+
+# ============================================================
+# 取消标记国家（变量）— 目标国家已被标记时显示
+# ============================================================
+sakuya_unmark_country = {
+	groups = { general }
+	requires_approval = no
+	should_notify_third_parties = no
+	show_effect_in_tooltip = yes
+	texture = "gfx/interface/sakuya/sakuya_help.dds"
+
+	potential = {
+		is_ai = no
+		scope:target_country = {
+			has_variable = sakuya_mark_country_target
+		}
+	}
+
+	possible = {
+	}
+
+	accept_effect = {
+		custom_tooltip = { text = sakuya_unmark_country_effect_tt }
+		scope:target_country = {
+			remove_variable = sakuya_mark_country_target
+		}
+	}
+
+	ai = {
+		propose_score = { value = 0 }
+		will_propose = { always = no }
+	}
+}
+
+# ============================================================
+# 标记外国地区（变量）— 已标记地区不出现在选择列表中
+# ============================================================
+sakuya_mark_foreign_state = {
+	groups = { general }
+	requires_approval = no
+	should_notify_third_parties = no
+	show_effect_in_tooltip = yes
+	texture = "gfx/interface/sakuya/kawashiro.dds"
+
+	state_selection = second_required
+	second_state_list = second_country
+
+	potential = {
+		is_ai = no
+	}
+
+	possible = {
+	}
+
+	second_state_trigger = {
+		NOT = { has_variable = sakuya_mark_foreign_state_target }
+	}
+
+	accept_effect = {
+		custom_tooltip = { text = sakuya_mark_foreign_state_effect_tt }
+		if = {
+			limit = { exists = scope:second_state }
+			scope:second_state = {
+				set_variable = sakuya_mark_foreign_state_target
+			}
+		}
+	}
+
+	ai = {
+		propose_score = { value = 0 }
+		will_propose = { always = no }
+	}
+}
+
+# ============================================================
+# 取消该国全部外国地区标记（变量）— 目标国家存在已标记地区时显示
+# ============================================================
+sakuya_unmark_foreign_states_in_country = {
+	groups = { general }
+	requires_approval = no
+	should_notify_third_parties = no
+	show_effect_in_tooltip = yes
+	texture = "gfx/interface/sakuya/kawashiro2.dds"
+
+	potential = {
+		is_ai = no
+		scope:target_country = {
+			any_scope_state = {
+				has_variable = sakuya_mark_foreign_state_target
+			}
+		}
+	}
+
+	possible = {
+	}
+
+	accept_effect = {
+		custom_tooltip = { text = sakuya_unmark_foreign_states_in_country_effect_tt }
+		scope:target_country = {
+			every_scope_state = {
+				limit = { has_variable = sakuya_mark_foreign_state_target }
+				remove_variable = sakuya_mark_foreign_state_target
+			}
+		}
+	}
+
+	ai = {
+		propose_score = { value = 0 }
+		will_propose = { always = no }
+	}
+}

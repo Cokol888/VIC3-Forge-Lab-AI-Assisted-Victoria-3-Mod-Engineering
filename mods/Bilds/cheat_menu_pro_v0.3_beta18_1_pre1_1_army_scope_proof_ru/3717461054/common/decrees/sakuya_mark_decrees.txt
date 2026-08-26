@@ -1,0 +1,17 @@
+﻿# Sakuya Cheat Menu Pro - Marking System Decrees
+# 标记自有地区
+
+decree_sakuya_mark_state = {
+	texture = "gfx/interface/sakuya/reimu.dds"
+	cost = 0
+
+	modifier = {
+	}
+ 
+	country_trigger = {
+		is_player = yes
+	}
+
+	state_trigger = {
+	}
+}

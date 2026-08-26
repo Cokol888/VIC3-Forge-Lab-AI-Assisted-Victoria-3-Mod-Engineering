@@ -1,0 +1,1187 @@
+{
+  "version": "0.3-beta18.1-pre1.1",
+  "base_mod": "3717461054",
+  "features": [
+    "Beta18 Final releases the runtime-accepted Navy Rework after the full RC1 regression",
+    "Fleet Composer 2.0, exact Fleet, exact Ship, flagship, transfers, native retrofit bridge and naval logistics are frozen as Runtime PASS",
+    "Beta18 Final adds zero new gameplay mechanics relative to RC1 and validates the frozen Navy semantic hashes before release",
+    "Amphibious Assistant remains post-beta18 as part of Military Operations rather than a Navy Final blocker",
+    "Beta18-RC1 freezes Navy gameplay features and runs the complete regression matrix before beta18 Final",
+    "RC1 regression covers Fleet Composer 2.0, exact Fleet/add-ships, exact Ship, flagship, single/batch/cross-Fleet transfer, native Retrofit bridge and Supply Ship logistics",
+    "RC1 Interface diagnostics no longer depend on the legacy persistent fleet-target marker",
+    "Dedicated tools/validate_beta18_rc1.py is part of the mandatory full release gate",
+    "Pre5/pre5.1 core functions are user-accepted; RC1 still requires edge-state, tick, save-load and four-profile runtime acceptance",
+    "Beta18-pre5.1 adds a native Retrofit bridge: Ship Designer + selected native fleet panel, without inventing direct ShipTemplate writes",
+    "National Supply Ship reserve cheat uses the documented country effect add_supply_ships with +1/+10/+50/+100 actions",
+    "Selected-fleet logistics diagnostics use the documented 1.13.9 num_assigned_supply_ships MilitaryFormation value target",
+    "Supply Ship assignment to a specific formation remains read-only/deferred because no safe direct assignment write is assumed",
+    "Amphibious Assistant is deferred until after beta18 Final and the later Military Operations rework",
+    "Beta18-pre4 Exact Ship Control and flagship set/unset accepted at runtime and frozen as exact-Ship baseline",
+    "Beta18-pre5 adds single exact-Ship ownership transfer via set_ship_owner to a marked non-player receiver country with a port",
+    "Beta18-pre5 adds a persistent cross-fleet basket of up to 20 exact Ships and batch transfer via set_ship_owner_multiple",
+    "Batch ownership transfer clears the source-country ownership transfer fleet with clear_ownership_transfer_fleet after all writes",
+    "Transfer rejects destroyed, in-battle and flagship Ships; flagship must be removed explicitly before transfer",
+    "Retrofit automation, amphibious auto-attach, destructive Ship writes and supply writes remain deferred behind later gates",
+    "Beta18-pre3 Fleet Composer 2.0 accepted at runtime and frozen as Navy creation baseline",
+    "Beta18-pre4 adds exact Ship targeting through ordered_scope_ship over non-destroyed ships with a persistent Ship-scope marker",
+    "Exact Ship Control exposes 100 positions in five pages and resolves 25 Ship Types plus flagship/damage/port/battle/health/crew diagnostics",
+    "Beta18-pre2.4 Fleet Scope Proof/native panel bridge accepted as runtime target-core baseline",
+    "Beta18-pre3 Fleet Composer 2.0 exposes five independent composition rows across all 25 combat hulls",
+    "Each composer row selects one hull plus amount 0/1/3/5/10; duplicate hull rows are allowed and expected to accumulate",
+    "Composer creation uses one anchor create_military_formation with save_temporary_scope_as, then adds non-anchor rows to that exact new fleet",
+    "Fleet Composer presets fill rows only and never execute creation automatically",
+    "Instant ship creation remains default-template; user Ship Templates remain on the native Ship Designer/construction workflow",
+    "Beta18-pre2.4 Fleet Scope Proof accepted at runtime: per-row MilitaryFormation scope and native fleet panel bridge work in-game",
+    "Beta18-pre3 Fleet Composer 2.0 introduces five arbitrary hull rows over the full 25-hull combat catalog",
+    "Each composer row independently selects one hull and amount 0/1/3/5/10; duplicate hull rows intentionally accumulate",
+    "Composer 2.0 creates one exact fleet using a schema-backed create_military_formation temporary saved scope, then populates remaining rows with create_ship",
+    "Role presets now fill the five-row composer instead of the old three-role composer",
+    "Per-row MilitaryFormation scope proof is split into a bare always=yes root probe and a separate owner=player probe",
+    "Existing-fleet direct add remains a gated candidate; no custom persistent fleet marker is reintroduced into the production Workspace",
+    "Beta18-pre2.3 production Fleet Selector uses Victoria native FormationPanel.SelectFormation and GetSelectedFormation as the source of truth",
+    "Existing-fleet add-ships runs with the selected MilitaryFormation as ScriptedGui ROOT and does not rescan cmp_military_target_fleet markers",
+    "Legacy fleet target marker/resolver implementation remains source fallback only and has zero production Workspace selector references",
+    "Empty owned fleet formations are accepted as first-ship targets; fleets with any existing ship in battle are conservatively blocked",
+    "CMP does not force fleet UI selection persistence across save/load, preventing a production ghost-target contract",
+    "Beta18-pre2.3 replaces the primary existing-fleet target marker path with Victoria native FormationPanel.SelectFormation + GetSelectedFormation",
+    "Visible existing-fleet operations execute with GetSelectedFormation.MakeScope as the direct MilitaryFormation root; no scan/resolver is used on the production path",
+    "Selected Fleet allows empty fleets as valid add-ship targets and blocks the direct add operation when an existing ship is in battle",
+    "cmp_military_target_fleet marker/resolver remains source-level fallback only and is not the Workspace source of truth",
+    "Runtime gate requires Fleet A/Fleet B exact mutation, army-selection blocking, empty-fleet add, +1 day and save/load safety before beta18-pre3",
+    "Beta18-pre2.2 repairs exact fleet selection by executing ScriptedGui directly with military_formation as ROOT instead of country ROOT plus AddScope(formation)",
+    "Fleet target clear is owner-local and no longer scans every country before writing the exact marker",
+    "Fleet picker runtime diagnostics expose direct-root probe, callback receipt and exact-marker persistence before further Navy development",
+    "Selected Fleet exact-target add-ships path now exposes all 25 combat hulls instead of only five Tech & Res hulls",
+    "Instant scripted ship creation is explicitly default-template only; user Ship Templates remain on the native Ship Designer/construction workflow",
+    "Legacy Fleet Plans top-level launcher is hidden while source fallback remains for parity/recovery",
+    "Beta18-pre2 replaces the five-hull-only discovery catalog with 20 vanilla + 5 Tech & Res combat hulls and a READ_ONLY Supply Ship classification",
+    "Workspace Fleet now exposes Ships & Templates, Mixed Fleet compatibility, and Selected Fleet as separate modes",
+    "Full catalog is grouped as Capital, Cruisers, Torpedo Craft, Tech & Res and All; vanilla obsolete filtering delegates to ShipType.IsObsolete at runtime",
+    "Each of 25 combat hulls has x1/x3/x5/x10 bounded new-fleet creation: 100 explicit ScriptedGui/effect pairs, each creating one new fleet formation",
+    "Native Ship Designer bridge uses the same PopupManager.ToggleShipDesignerPopup entry point found in vanilla panel_military.gui and never performs direct ShipTemplate writes",
+    "Naval data model is explicitly Ship Type -> Ship Template -> Ship -> Fleet; catalog scripting creation uses the normal/default template until exact template-selection discovery",
+    "Legacy Fleet Designer is relabeled Fleet Composition Planner (legacy) to avoid collision with Victoria 3 native Ship Designer",
+    "Transfers, exact ship control, flagship writes, supply assignment and retrofit automation remain deferred to later beta18 gates",
+    "Beta17 Final accepted as released after user runtime smoke found no critical game-breaking defects",
+    "Beta18-pre1 starts the Navy Rework on Victoria 3 1.13 standalone ship objects instead of extending the old one-ship-at-a-time creation UX",
+    "New Fleet and Selected Fleet are separate Workspace modes: new formations never silently target an existing fleet",
+    "Navy composition builder exposes five verified Tech & Res ship types with independent counts 0/1/3/5/10",
+    "Any non-zero multi-ship composition is emitted as one create_military_formation fleet with several ship blocks",
+    "New-fleet HQ context is the highest-GDP marked owned state with a port; no marked port means no creation",
+    "Escort, Battle, Carrier, Wolfpack and Amphibious Support presets fill composition only; creation remains an explicit second action",
+    "Legacy exact-fleet add-ships path remains available under Selected Fleet as a compatibility surface until beta18-pre3",
+    "Tech & Res ship groups, unlock technologies, flagship eligibility and modification slots are pinned in registry/navy18.json with provider snapshot hashes",
+    "Ship ownership transfer, supply-ship writes, flagship writes and automatic amphibious attach are explicitly deferred to later beta18 discovery gates",
+    "Native SearchBar remains deferred because SearchBar/SearchResult and shared/search_bar.gui enter the documented surface in 1.13.9 while the CMP baseline remains 1.13.*",
+    "Roadmap v2 records Army Rework 2.0 after beta18 and a later high-priority Economy/Markets/Regions discovery/rework track",
+    "Beta17-pre3.1 Regions/Staffing safety pass accepted in runtime by user on 2026-08-20",
+    "Army Final RC1 adds a declarative registry/army_final.json contract and mandatory tools/validate_army_final.py release gate",
+    "Army Builder audited as 26 unit types x 5 amounts = 130 exact create-military-formation endpoints with technology and marked-state gates",
+    "Quick preset audit fixed a duplicated military_drill branch: mobile preset now uses one deterministic Dragoons tie-break consistent with mixed/designer templates",
+    "Quick artillery preset SGUI now includes blitzkrieg, matching the existing Modern Heavy Tank effect path instead of relying on prerequisite side effects",
+    "Mixed templates audited as 4 x 392 = 1,568 mutually enumerated role branches with exact 50-battalion compositions",
+    "Army Template Designer audited across 48 configurations and 17,472 explicit technology branches; four 70/30 configurations intentionally omit mobile units",
+    "Designer integer rounding is now documented and validated, including half-even infantry rounding when infantry+artillery equals 100 percent",
+    "Amphibious Builder audited as 2 verified Tech & Res marine tiers x 4 amounts = 8 create branches with marked-port targeting and no automatic fleet attach",
+    "Army Controls audited as 10 parameters x 5 values = 50 apply endpoints plus four presets; 20 dead *_level cleanup references removed",
+    "Tech & Res land-unit roles and unlock technologies are cross-checked against the pinned 3472248460 provider snapshot contract",
+    "Army create workflows are validated to never silently select an existing military formation; exact existing-army targeting remains intentionally out of scope",
+    "Staffing Coverage 2.1 separates the 97-building supported staffing catalog from the 56-building ADD/SET/REMOVE operations registry",
+    "Staffing selection uses independent cmp_staffing_sel markers and no longer mutates the building-operations selector",
+    "One hundred thirty-two staffing candidates are explicitly classified: 97 SUPPORTED, 5 MANUAL, 30 UNSUPPORTED",
+    "Fourteen deterministic staffing reserve profiles cover primary, industry, infrastructure, government, education, military, services, arts, trade, ownership and technology roles",
+    "Universal coverage statuses SUPPORTED, READ_ONLY, MANUAL, UNSAFE and UNSUPPORTED are validated from registry/coverage.json",
+    "Semantic coverage validation checks providers, profiles, status reasons, old-registry preservation and all 102 legacy B6 building selectors",
+    "Single Build ID is generated from registry/build.json into Workspace, localization, manifest and QA; current RC1 identity is CMP-0.3-B17-FINAL-RC1-20260820",
+    "Interface diagnostics expose Build ID, Victoria baseline, runtime status and exact fleet-target readiness without claiming runtime acceptance",
+    "Military reporting now separates 267 registered/reused endpoints, 253 audited Workspace ScriptedGui references and 123 executable Workspace actions; historical 239 is deprecated",
+    "Native SearchBar integration is deferred until the supported minimum Victoria baseline is proven to be 1.13.9 or newer",
+    "Fleet picker rows use one selection callback instead of selection plus immediate UI close",
+    "Dynamic fleet labels use MilitaryFormation.GetNameNoFormatting and transparent text so the parent button owns pointer input",
+    "Picker remains open after selection so the green exact-target marker is observable before explicit close",
+    "Persistent Military Target UX lists all owned fleets inside Workspace through Country.GetMilitaryFormationsFleet",
+    "The obsolete one-shot event picker and its sixteen-fleet paging limit are removed",
+    "Selected fleet name and selection highlight remain visible inside Workspace",
+    "Fleet selection is non-destructive and execution remains a separate explicit action",
+    "Fleet Builder, presets, Fleet Designer and Amphibious Task Force resolve only the persistent exact fleet marker",
+    "Silent first-eligible fallback from the legacy marked-navy list is removed from Workspace operations",
+    "Fleet target status distinguishes missing, ready and all-ships-in-battle states across all four profiles",
+    "Army Builder and templates explicitly target a marked owned state while Army Controls target a country",
+    "Beta16 Diplomacy and Sovereignty runtime acceptance passed on 2026-08-19",
+    "Fleet localization, Power Bloc forced membership, confirmation reset, tick behavior and save-load persistence accepted in game",
+    "Beta16 Final changes release documentation and metadata only while preserving the tested beta16-pre2.1 runtime implementation",
+    "Fleet Builder RU and EN localization headers normalized to exactly one UTF-8 BOM",
+    "All forty-two Fleet and Task Force keys load under the correct language header",
+    "Release validation now rejects missing or duplicate BOMs and incorrect RU or EN headers",
+    "Audited forced Power Bloc membership added to all four Workspace profiles",
+    "One-action confirmation protects both direct membership operations",
+    "Membership success is reported only after an is_in_power_bloc post-check",
+    "Normal invitations, leaving, principles, and leverage remain explicitly deferred",
+    "Diplomacy and Sovereignty preview migrated into all four Workspace profiles",
+    "Five diplomacy tabs: Relations, Subjects, Treaties, Sovereignty, and Power Bloc",
+    "Sixty unique audited diplomacy actions exposed with profile parity",
+    "Explicit negative feedback for targets, subjects, treaties, and state transfers",
+    "Twenty-four persistent diplomacy help layouts keep long text outside the primary viewport",
+    "Power Bloc principles and leverage remain explicitly deferred",
+    "Completed Workspace migration consolidated behind one visible legacy-menu launcher",
+    "Shared seven-section Help directory generated for all four interface profiles",
+    "UI-only Home reset clears navigation, help, tabs and filters while preserving profile and gameplay context",
+    "Workspace shortcut contract standardized on the existing close_window binding",
+    "English military terminology standardized on Army and Fleet",
+    "Legacy fallback panels retained in source without visible launchers",
+    "Workspace convergence changes no common gameplay file",
+    "Army and Navy tools migrated into the Workspace across all four interface profiles",
+    "Five military top-level tabs unify Army Builder, templates, controls, Fleet Builder and Fleet Templates",
+    "Forty-four content-only military scroll layouts keep navigation and results fixed",
+    "Thirty-two persistent military help layouts replace long always-visible descriptions",
+    "Two hundred sixty-seven unique existing military ScriptedGui endpoints are exposed with profile parity",
+    "Twenty-six land units are filtered by Infantry and Marines, Artillery, and Cavalry and Armor roles",
+    "Elided military object labels retain complete localized unit or ship help",
+    "Army and fleet technology gates, targets, battle eligibility and results remain explicit",
+    "Amphibious workflows retain a persistent manual army-to-fleet attachment warning",
+    "Legacy Army and Fleet panels remain as emergency fallbacks",
+    "Military Workspace migration changes no common gameplay file",
+    "Politics & Characters 2.0 migrated into the Workspace across all four interface profiles",
+    "Five content-only scrolling Politics tabs keep target state, navigation and result fixed",
+    "Eighty-six unique Politics action and selection endpoints have four-profile parity",
+    "Twenty-four persistent Politics help scroll layouts replace long always-visible descriptions",
+    "Government, Character, Interest Group, Law and Power Bloc tabs use context-sensitive target status",
+    "Destructive role removal and law-enactment actions retain persistent warnings",
+    "Interest Group political-strength controls retain explicit relative-clout semantics",
+    "Politics operation feedback integrated into the fixed Workspace footer",
+    "Separate legacy Politics launcher removed while the generated fallback panel remains available in source",
+    "Seven-category building filter shared by Regions Operations and Staffing across all four profiles",
+    "All fifty-six registered buildings are assigned exactly once to six functional categories",
+    "Category changes preserve the selected building and never mutate gameplay state",
+    "Category menu uses compact labels with full RU/EN descriptions and object counts in tooltips",
+    "Population & Society 2.0 migrated into the Workspace across all four interface profiles",
+    "Four content-only scrolling Population tabs keep target state, navigation and result fixed",
+    "Fifty-nine unique Population action and selection endpoints have four-profile parity",
+    "Twenty persistent Population help scroll layouts replace long always-visible descriptions",
+    "Mass identity actions retain explicit confirmation and a persistent destructive warning",
+    "Population operation feedback integrated into the fixed Workspace footer",
+    "Regions & Buildings 2.0 migrated into the Workspace across all four interface profiles",
+    "Two-column scrollable building/resource pickers keep configuration and target actions fixed",
+    "Fifty-six Staffing buildings and nineteen resource-capable buildings expose full localized names in tooltips",
+    "Building, Resource and Preset operations reuse the existing Regions2 gameplay endpoints",
+    "Staffing Assistant integrated with reserve sizes and occupancy gates Off/50/75/90/100",
+    "Persistent destructive warning remains visible for exact building SET",
+    "Five persistent scrollable Regions help topics generated for every interface profile",
+    "Regions and Staffing results integrated into the fixed Workspace footer",
+    "Interface implementation note moved from the visible page into persistent scrollable help",
+    "Interface page now uses a compact runtime-safe summary across all four profiles",
+    "Legacy fixed-width target tray replaced by one stable Workspace launcher",
+    "Separate legacy Economy launcher removed from the old workspace",
+    "Economy shell uses compact visible labels with composite hover tooltips",
+    "Four persistent scrollable Economy help topics generated for every interface profile",
+    "Active target status and latest operation result remain visible outside tooltip-only help",
+    "Technical migration note removed from the visible shell navigation",
+    "Economy 2.0 migrated into the Global UI Shell across all four interface profiles",
+    "Money, Modifiers, and Ownership use dedicated content-only scroll layouts",
+    "Forty-six unique Economy action and selection endpoints have four-profile parity",
+    "Economy target status and Target Center navigation integrated into the shell page",
+    "Economy feedback integrated into the fixed shell footer",
+    "Legacy Economy popup retained only as an emergency fallback without a visible entry",
+    "Restored complete 5,387-line Block 4 ScriptedGui source after beta15.2 package truncation",
+    "Preserved Victoria 3 1.13 ownership-transfer fleet finalization in both transfer workflows",
+    "Verified full base-plus-overlay cross-reference integrity with zero validation errors",
+    "Global Workspace Shell foundation with header, navigation, content viewport, and fixed footer",
+    "Target Center migrated into the Workspace Shell with 44-56px controls and 12pt minimum text",
+    "Four deterministic interface reflow profiles: 90, 100, 115, and 130 percent density",
+    "Interface profile selector inside the Workspace Shell",
+    "Primary Workspace labels never use elide=right",
+    "Legacy Target popup retained as an emergency fallback but removed from visible entry points",
+    "Workspace registry/codegen and release determinism gate",
+    "Workspace RU/EN localization parity and accessibility gate",
+    "UI Accessibility Rework driven by 2560x1080 runtime feedback",
+    "Economy 2.0 redesigned into three large tabs: Money, Modifiers, Ownership",
+    "Economy 2.0 enlarged to 1040x700 with larger target/action controls and two-row value selector",
+    "Politics 2.0 enlarged to 912x642 with larger readable controls",
+    "Fleet ship selector upgraded to two columns with 268x48 ship controls",
+    "Second Army/Fleet typography pass: larger primary controls and readable labels",
+    "Population 2.0 typography pass for 2560x1080 readability",
+    "Expanded RU visible-string QA across Economy/Politics/Population/Army/Fleet",
+    "Tech & Res resource toolkit",
+    "Staffing Assistant",
+    "Target Bar",
+    "Diplomacy/Subject/Naval/State diagnostics",
+    "Technology-aware Army Builder",
+    "Simple Army Controls (target/parameter/value)",
+    "Army Builder quick best-unlocked presets",
+    "Technology-aware mixed army templates (3 unit groups in one formation)",
+    "Bounded Army Template Designer: size 25/50/75/100, infantry 40/50/60/70%, artillery 10/20/30%, mobile remainder",
+    "Amphibious Builder for verified Tech & Res Marine tiers using marked port states",
+    "Fixed T&R auto-role mapping: Modern Heavy Tank -> artillery; Modern Light Tanks -> mobile/cavalry",
+    "Fleet Template Designer: size 10/20/40 with escort/carrier/submarine shares and capital remainder",
+    "Unified Target Controller with active target context and persistent country groups A/B/C",
+    "Declarative registries for providers, buildings, resources, land units, ships, and operations",
+    "Production code generation for Fleet Builder scripted GUI/effects and ship selector GUI",
+    "Regions & Buildings 2.0: explicit Building ADD / exact SET / REMOVE",
+    "Resource ADD / exact SET / CLEAR with Tech & Res geology-tier synchronization",
+    "Four additive regional building presets",
+    "Adaptive Staffing gated by real building occupancy at 50/75/90/100%",
+    "Registry/codegen generation for Regions2 and Adaptive Staffing",
+    "Economy 2.0 country-target controller using Unified Target Core",
+    "Direct treasury and investment-pool additions relative to gold-reserve cap",
+    "Explicit debt clear / bankruptcy / bankruptcy rescue operations",
+    "Eleven explicit economic modifiers with selected value controls",
+    "Six ownership/investment policy overrides with explicit ON/OFF",
+    "Production code generation for Economy 2.0 GUI/SGUI/effects/modifiers/script-values",
+    "UI Accessibility Foundation: 2560x1080 primary and 3440x1440 secondary static layout gates",
+    "Accessible Fleet ship selector: two columns with 268x44 controls and visible RU cleanup",
+    "Population & Society 2.0 accessibility-first UI with Legacy POP fallback",
+    "Population add/remove, exact literacy/qualification/wealth operations, profession cohort creation",
+    "Population loyalists/radicals, migration, working-adult ratio, confirmed identity changes and presets",
+    "Population2 deterministic registry/codegen and UI/localization accessibility validator",
+    "Politics & Characters 2.0 unified controller over legacy B3/B5/B9",
+    "Target-Core government controls for legitimacy/authority/bureaucracy/influence and institution levels",
+    "Character immortality, health/popularity bonuses, commander ranks, roles and quick traits",
+    "Interest Group approval and political-strength controls with explicit clout semantics",
+    "Current-law enactment controller and safe Power Bloc cohesion controls",
+    "Vanilla Rework audit seed for systematic legacy CMP semantics/description review"
+  ],
+  "army_builder": {
+    "unit_types": 26,
+    "amounts": [
+      1,
+      5,
+      10,
+      25,
+      50
+    ],
+    "target": "highest-GDP marked owned state",
+    "service_type": "regular",
+    "tech_gate": "has_technology_researched",
+    "tech_res_units": 10,
+    "quick_presets": [
+      "infantry_corps_25",
+      "artillery_group_10",
+      "mobile_corps_10",
+      "marine_force_10"
+    ],
+    "audit": {
+      "unit_types": 26,
+      "amounts": 5,
+      "spawn_endpoints": 130,
+      "formation_type": "army",
+      "service_type": "regular"
+    },
+    "quick_preset_mobile_tiebreak": "dragoons over cuirassiers at military_drill for consistency with generated templates"
+  },
+  "army_controls": {
+    "parameters": [
+      "offense",
+      "defense",
+      "morale_recovery",
+      "mobilization",
+      "experience",
+      "movement",
+      "supply",
+      "goods_cost",
+      "wages",
+      "war_exhaustion"
+    ],
+    "positive_values_percent": [
+      10,
+      25,
+      50,
+      100,
+      500
+    ],
+    "reduction_values_percent": [
+      10,
+      25,
+      50,
+      75,
+      90
+    ],
+    "targets": [
+      "player",
+      "marked_country"
+    ],
+    "profiles": [
+      "balanced",
+      "rapid",
+      "economy",
+      "god"
+    ],
+    "ui_label_for_god": "Extreme",
+    "audit": {
+      "parameters": 10,
+      "values_each": 5,
+      "apply_endpoints": 50,
+      "dead_level_variables": 0,
+      "single_marked_country_contract": true
+    }
+  },
+  "mixed_army_templates": {
+    "balanced": {
+      "battalions": [
+        25,
+        15,
+        10
+      ],
+      "technology_policy": "highest supported unlocked unit per role"
+    },
+    "infantry_heavy": {
+      "battalions": [
+        35,
+        10,
+        5
+      ],
+      "technology_policy": "highest supported unlocked unit per role"
+    },
+    "breakthrough": {
+      "battalions": [
+        20,
+        15,
+        15
+      ],
+      "technology_policy": "highest supported unlocked unit per role"
+    },
+    "armored_fist": {
+      "battalions": [
+        15,
+        10,
+        25
+      ],
+      "technology_policy": "highest supported unlocked unit per role"
+    },
+    "audit": {
+      "templates": 4,
+      "branches_per_template": 392,
+      "explicit_unit_branches": 1568,
+      "total_battalions_each": 50
+    }
+  },
+  "army_template_designer": {
+    "sizes": [
+      25,
+      50,
+      75,
+      100
+    ],
+    "infantry_percent": [
+      40,
+      50,
+      60,
+      70
+    ],
+    "artillery_percent": [
+      10,
+      20,
+      30
+    ],
+    "mobile_percent": "remainder",
+    "technology_policy": "highest supported unlocked unit per role",
+    "generated_configurations": 48,
+    "explicit_unit_branches": 17472,
+    "rounding": "positive mobile share: floor infantry/artillery then remainder to mobile; 70/30 zero-mobile: half-even infantry round then artillery remainder",
+    "audit": {
+      "configurations": 48,
+      "explicit_unit_branches": 17472,
+      "zero_mobile_configurations": 4
+    }
+  },
+  "amphibious_builder": {
+    "amounts": [
+      5,
+      10,
+      25,
+      50
+    ],
+    "verified_units": [
+      "combat_unit_type_modern_tier_marines",
+      "combat_unit_type_advanced_tier_marines"
+    ],
+    "requires_marked_port_state": true,
+    "automatic_fleet_attachment": false,
+    "audit": {
+      "verified_marine_tiers": 2,
+      "amounts": 4,
+      "create_branches": 8,
+      "port_gate": true,
+      "automatic_fleet_attachment": false
+    }
+  },
+  "name": "Cheat Menu Pro v0.3 beta18.1-pre1.1 - Army Scope Proof RU/EN",
+  "military_target_ux": {
+    "fleet_scope": "one owned military formation marked cmp_military_target_fleet",
+    "picker_model": "Country.GetMilitaryFormationsFleet",
+    "picker_capacity": "all owned fleets; scrollable",
+    "presentation": "persistent Workspace overlay; explicit close after observable green selection marker",
+    "selection_side_effects": "none",
+    "blocked_state": "all ships in selected fleet are in battle",
+    "legacy_list_policy": "compatibility mirror only; never used as Workspace fallback",
+    "army_builder_target": "marked owned state; creates a new formation",
+    "army_controls_target": "player or marked country",
+    "selection_input": "single parent-button callback; transparent unformatted formation label"
+  },
+  "beta8": {
+    "fleet_builder": true,
+    "verified_ship_types": [
+      "ship_type_modern_destroyer",
+      "ship_type_modern_cruiser",
+      "ship_type_modern_battleship",
+      "ship_type_nuclear_carrier",
+      "ship_type_nuclear_submarine"
+    ],
+    "amounts": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "presets": [
+      "escort",
+      "battle",
+      "carrier",
+      "submarine"
+    ],
+    "task_force_workflow": true,
+    "automatic_army_fleet_attachment": false,
+    "reason": "No supported scripted army-to-fleet attach effect confirmed in Victoria 3 1.13 documentation."
+  },
+  "beta9": {
+    "fleet_template_designer": true,
+    "sizes": [
+      10,
+      20,
+      40
+    ],
+    "escort_percent": [
+      20,
+      40,
+      60
+    ],
+    "carrier_percent": [
+      0,
+      10,
+      20
+    ],
+    "submarine_percent": [
+      0,
+      20,
+      40
+    ],
+    "capital_percent": "remainder, split between modern cruiser and modern battleship",
+    "valid_configurations": 75,
+    "profiles": [
+      "battle_fleet",
+      "carrier_strike",
+      "convoy_escort",
+      "wolfpack",
+      "amphibious_fleet"
+    ],
+    "technology_policy": "verified Tech & Res hulls only; each role is re-gated before creation"
+  },
+  "beta10": {
+    "unified_target_core": true,
+    "active_modes": [
+      "player",
+      "marked_country",
+      "group_a",
+      "group_b",
+      "group_c",
+      "own_marked_states",
+      "incorporated_states",
+      "foreign_marked_states",
+      "marked_character",
+      "marked_fleet",
+      "marked_power_bloc"
+    ],
+    "persistent_country_groups": [
+      "A",
+      "B",
+      "C"
+    ],
+    "transient_clear": "country/foreign-state/character/power-bloc/army-list/fleet-list; preserves own-state decree marks and A/B/C",
+    "migration_policy": "new/reworked systems consume core first; legacy pages migrate incrementally"
+  },
+  "beta11": {
+    "registry_codegen_foundation": true,
+    "registry_counts": {
+      "providers": 3,
+      "buildings": 56,
+      "land_units": 26,
+      "ships": 5,
+      "resources": 8,
+      "operations": 7
+    },
+    "production_codegen": [
+      "common/scripted_guis/cmp_fleet_builder_sgui.txt",
+      "common/scripted_effects/cmp_fleet_builder_effects.txt",
+      "common/scripted_triggers/cmp_provider_triggers.txt",
+      "gui/main/sakuya_main.gui#fleet_ship_selector"
+    ],
+    "provider_detection": {
+      "community_mod_framework": "community_framework_is_active",
+      "tech_res": "technres_is_active"
+    },
+    "generator": "tools/generate_registry.py",
+    "validator": "tools/validate_release.py",
+    "policy": "generated files are deterministic; edit registry JSON, then regenerate; beta12 will consume resources/buildings/staffing registries"
+  },
+  "beta12": {
+    "regions_buildings_2": true,
+    "building_operations": [
+      "add_delta",
+      "set_exact_recreate",
+      "remove"
+    ],
+    "amounts": [
+      1,
+      5,
+      10,
+      25,
+      50,
+      100
+    ],
+    "exact_add_current_level_ceiling": 300,
+    "resource_operations": [
+      "add_potential",
+      "set_exact_potential",
+      "clear_potential"
+    ],
+    "tech_res_geology_policy": "SET assigns a trait only when selected value exactly matches registry tier; ADD leaves traits unchanged; CLEAR removes registered traits",
+    "regional_presets": [
+      "industrial_core",
+      "heavy_industry",
+      "military_industry",
+      "infrastructure_hub"
+    ],
+    "adaptive_staffing": {
+      "occupancy_targets_percent": [
+        50,
+        75,
+        90,
+        100
+      ],
+      "profession_policy": "registry staffing profile; no false claim of exact per-profession vacancy vector"
+    },
+    "generator": "tools/generate_regions2.py",
+    "runtime_validation_required": [
+      "building SET PM/ownership/reserves",
+      "resource potential exact values",
+      "occupancy gating",
+      "save/load persistence"
+    ]
+  },
+  "beta13": {
+    "economy2": true,
+    "country_target_modes": [
+      "player",
+      "marked_country",
+      "group_a",
+      "group_b",
+      "group_c"
+    ],
+    "modifier_parameters": 11,
+    "values_percent": [
+      -90,
+      -75,
+      -50,
+      -25,
+      0,
+      25,
+      50,
+      100,
+      500
+    ],
+    "money_steps_percent_of_reserve_cap": [
+      10,
+      25,
+      50,
+      100
+    ],
+    "ownership_policy_overrides": 6,
+    "legacy_b2_preserved": true,
+    "known_legacy_mismatch": "SKY_B2 Tax Income control modifies country_government_dividends_efficiency_add"
+  },
+  "beta14": {
+    "population2": true,
+    "ui_profiles": {
+      "primary": "2560x1080",
+      "secondary_ultrawide": "3440x1440",
+      "runtime_render_required": true
+    },
+    "tabs": [
+      "population",
+      "professions",
+      "welfare",
+      "society"
+    ],
+    "state_target_modes": [
+      "marked_home_states",
+      "all_incorporated_states",
+      "marked_foreign_states"
+    ],
+    "amounts": [
+      1000,
+      5000,
+      10000,
+      25000,
+      50000,
+      100000
+    ],
+    "professions": 10,
+    "literacy_values_percent": [
+      25,
+      50,
+      75,
+      90,
+      100
+    ],
+    "qualification_values_percent": [
+      25,
+      50,
+      75,
+      100
+    ],
+    "wealth_values": [
+      10,
+      20,
+      30,
+      50
+    ],
+    "migration_values_percent": [
+      25,
+      50,
+      100,
+      500
+    ],
+    "working_adult_ratio_pp": [
+      5,
+      10,
+      20
+    ],
+    "presets": [
+      "industrial_reserve",
+      "educated_region",
+      "stabilize"
+    ],
+    "legacy_pop_preserved": true,
+    "fleet_ship_button_size": "268x44",
+    "accessibility_validator": "tools/validate_ui_accessibility.py",
+    "generator": "tools/generate_population2.py"
+  },
+  "beta15": {
+    "controller": "Politics & Characters 2.0",
+    "tabs": [
+      "government",
+      "characters",
+      "interest_groups",
+      "laws",
+      "power_bloc"
+    ],
+    "country_targets": [
+      "player",
+      "marked_country",
+      "group_a",
+      "group_b",
+      "group_c"
+    ],
+    "government_parameters": [
+      "legitimacy",
+      "authority",
+      "bureaucracy",
+      "influence"
+    ],
+    "institutions": 7,
+    "interest_groups": 8,
+    "character_quick_traits": 6,
+    "age_policy": "read-only; no safe direct SET-age effect confirmed",
+    "power_bloc_scope": "cohesion only",
+    "vanilla_rework_seed": true,
+    "ui_primary": "2560x1080",
+    "ui_secondary": "3440x1440"
+  },
+  "ui_accessibility_beta15_1": {
+    "primary_profile": "2560x1080",
+    "secondary_profile": "3440x1440",
+    "economy_panel": [
+      1040,
+      700
+    ],
+    "politics_panel": [
+      912,
+      642
+    ],
+    "fleet_ship_button": [
+      268,
+      48
+    ],
+    "army_min_fontsize": 15,
+    "fleet_min_fontsize": 14,
+    "population_min_fontsize": 13,
+    "economy_min_fontsize": 12,
+    "politics_min_fontsize": 12,
+    "visible_localization_gate": true,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_2": {
+    "stage": "shell-foundation",
+    "migrated_pages": [
+      "target_center",
+      "interface_profiles"
+    ],
+    "pending_page_migrations": [
+      "economy",
+      "regions_buildings",
+      "population",
+      "politics",
+      "army_navy"
+    ],
+    "shell_geometry": [
+      1120,
+      660
+    ],
+    "content_scroll": true,
+    "fixed_footer": true,
+    "minimum_user_fontsize": 12,
+    "minimum_primary_button_height": 44,
+    "primary_label_elision": false,
+    "profiles": {
+      "compact": 90,
+      "standard": 100,
+      "large": 115,
+      "xlarge": 130
+    },
+    "scale_implementation": "deterministic reflowed geometry; no unverified runtime root-scale binding",
+    "generator": "tools/generate_workspace_shell.py",
+    "registry": "registry/ui_shell.json",
+    "runtime_pixel_render_required": true,
+    "base_snapshot_required_for_full_overlay_validation": true
+  },
+  "ui_shell_beta15_3": {
+    "stage": "economy-migration",
+    "migrated_pages": [
+      "target_center",
+      "economy",
+      "interface_profiles"
+    ],
+    "pending_page_migrations": [
+      "regions_buildings",
+      "population",
+      "politics",
+      "army_navy"
+    ],
+    "economy_tabs": [
+      "money",
+      "modifiers",
+      "ownership"
+    ],
+    "economy_unique_endpoints": 46,
+    "economy_profile_scroll_layouts": 12,
+    "legacy_popup_visible_entry": false,
+    "legacy_popup_retained": true,
+    "effect_contract_changed": false,
+    "full_overlay_validation": "PASS",
+    "missing_gui_scripted_gui_references": 0,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_3_1": {
+    "stage": "runtime-ui-density-hotfix",
+    "single_legacy_workspace_launcher": true,
+    "legacy_target_tray_removed": true,
+    "legacy_economy_launcher_removed": true,
+    "compact_economy_tab_labels": true,
+    "composite_tooltip_topics": 4,
+    "persistent_help_topics_per_profile": 4,
+    "persistent_help_scroll_layouts": 16,
+    "essential_target_state_visible": true,
+    "essential_result_state_visible": true,
+    "effect_contract_changed": false,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_3_1_1": {
+    "stage": "interface-text-runtime-hotfix",
+    "visible_interface_summary": true,
+    "visible_implementation_note": false,
+    "persistent_interface_help_cards": 4,
+    "interface_help_scroll_layouts": 4,
+    "effect_contract_changed": false,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_4": {
+    "stage": "regions-buildings-migration",
+    "migrated_pages": [
+      "target_center",
+      "economy",
+      "regions_buildings",
+      "interface_profiles"
+    ],
+    "pending_page_migrations": [
+      "population",
+      "politics",
+      "army_navy"
+    ],
+    "workspace_profiles": 4,
+    "building_picker_entries_per_profile": 56,
+    "resource_picker_entries_per_profile": 19,
+    "regional_presets": 4,
+    "staffing_amounts": 6,
+    "staffing_occupancy_modes": 5,
+    "persistent_regions_help_topics_per_profile": 5,
+    "persistent_regions_help_scroll_layouts": 20,
+    "only_object_picker_labels_may_elide": true,
+    "elided_picker_labels_have_full_name_tooltips": true,
+    "destructive_set_warning_visible": true,
+    "fixed_result_footer": true,
+    "legacy_regions_panel_retained": true,
+    "effect_contract_changed": false,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_5": {
+    "stage": "population-society-migration",
+    "migrated_pages": [
+      "target_center",
+      "economy",
+      "regions_buildings",
+      "population_society",
+      "interface_profiles"
+    ],
+    "pending_page_migrations": [
+      "politics",
+      "army_navy"
+    ],
+    "workspace_profiles": 4,
+    "population_tabs": [
+      "population",
+      "professions",
+      "welfare",
+      "society"
+    ],
+    "population_unique_endpoints": 59,
+    "population_profile_scroll_layouts": 16,
+    "persistent_population_help_topics_per_profile": 5,
+    "persistent_population_help_scroll_layouts": 20,
+    "essential_target_state_visible": true,
+    "fixed_result_footer": true,
+    "identity_confirmation_retained": true,
+    "legacy_population_panel_retained": true,
+    "effect_contract_changed": false,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_5_1": {
+    "stage": "regions-building-category-hotfix",
+    "category_selector": "shared-session-variable",
+    "categories": {
+      "all": 56,
+      "extraction": 18,
+      "agriculture": 16,
+      "light_industry": 6,
+      "heavy_industry": 11,
+      "power": 2,
+      "infrastructure": 3
+    },
+    "filtered_surfaces": [
+      "regions_building_operations",
+      "staffing_assistant"
+    ],
+    "resource_picker_filtered": false,
+    "selected_building_preserved_on_category_change": true,
+    "workspace_profiles": 4,
+    "generated_category_scroll_layouts": 48,
+    "generated_category_menus": 8,
+    "effect_contract_changed": false,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_7": {
+    "stage": "army-navy-migration",
+    "migrated_pages": [
+      "target_center",
+      "economy",
+      "regions_buildings",
+      "population_society",
+      "politics_characters",
+      "army_navy",
+      "interface_profiles"
+    ],
+    "pending_page_migrations": [],
+    "workspace_profiles": 4,
+    "top_level_tabs": [
+      "army_builder",
+      "army_templates",
+      "army_controls",
+      "fleet_builder",
+      "fleet_templates"
+    ],
+    "army_unit_filters": {
+      "infantry_and_marines": 10,
+      "artillery": 8,
+      "cavalry_and_armor": 8
+    },
+    "military_unique_scripted_gui_endpoints": 267,
+    "military_active_scroll_layouts": 44,
+    "persistent_military_help_topics_per_profile": 8,
+    "persistent_military_help_scroll_layouts": 32,
+    "elided_unit_and_ship_labels_have_full_help": true,
+    "technology_gates_retained": true,
+    "manual_army_to_fleet_attachment_warning_visible": true,
+    "fixed_result_footer": true,
+    "legacy_military_panels_retained": true,
+    "effect_contract_changed": false,
+    "common_directory_changed": false,
+    "full_overlay_validation": "PASS",
+    "missing_gui_scripted_gui_references": 0,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta15_8": {
+    "stage": "workspace-convergence",
+    "visible_legacy_launchers": [
+      "cmp_workspace_launcher"
+    ],
+    "workspace_profiles": 4,
+    "header_home_controls": 4,
+    "global_help_buttons": 4,
+    "global_help_cards": 4,
+    "global_help_routes": 28,
+    "global_help_sections": [
+      "target_center",
+      "economy",
+      "regions_buildings",
+      "population_society",
+      "politics_characters",
+      "army_fleet",
+      "interface_profiles"
+    ],
+    "home_reset_scope": [
+      "navigation",
+      "help_layers",
+      "workspace_tabs",
+      "list_filters"
+    ],
+    "home_reset_preserves": [
+      "interface_profile",
+      "gameplay_targets",
+      "scripted_gui_selections",
+      "operation_results"
+    ],
+    "workspace_shortcuts": [
+      "close_window"
+    ],
+    "custom_shortcuts_added": false,
+    "legacy_fallback_panels_retained": true,
+    "effect_contract_changed": false,
+    "common_directory_changed": false,
+    "runtime_pixel_render_required": true
+  },
+  "ui_shell_beta16_pre2": {
+    "stage": "audited-power-bloc-membership-preview",
+    "workspace_profiles": 4,
+    "top_level_tabs": [
+      "relations",
+      "subjects",
+      "treaties",
+      "sovereignty",
+      "power_bloc"
+    ],
+    "audited_unique_actions": 60,
+    "safe_power_bloc_actions": 4,
+    "expert_power_bloc_actions": 2,
+    "active_scroll_layouts": 20,
+    "persistent_help_topics_per_profile": 6,
+    "persistent_help_scroll_layouts": 24,
+    "global_help_routes": 32,
+    "explicit_negative_feedback": true,
+    "destructive_state_transfer_warning_visible": true,
+    "deferred_power_bloc_operations": [
+      "normal_invitation",
+      "leave",
+      "principles",
+      "leverage"
+    ],
+    "membership_confirmation_scope": "one_action",
+    "membership_precondition": "country_is_not_in_any_power_bloc",
+    "membership_postcondition": "country_is_in_a_power_bloc_after_direct_join",
+    "effect_contract_changed": true,
+    "common_directory_changed": true,
+    "full_overlay_validation": "PASS",
+    "runtime_pixel_render_required": true
+  },
+  "build_identity": {
+    "build_id": "CMP-0.3-B18-1-PRE1-1-20260823",
+    "baseline_victoria": "1.13.10",
+    "workshop_snapshot": "3717461054",
+    "parent_version": "0.3-beta18.1-pre1",
+    "runtime_status": "STATIC_PASS_RUNTIME_PENDING",
+    "fleet_gate": "BETA18_FINAL_RUNTIME_PASS; NAVY_REWORK_FROZEN"
+  },
+  "beta17_pre3": {
+    "stage": "Coverage & Diagnostics Foundation",
+    "build_id": "CMP-0.3-B17-PRE3-20260820",
+    "parent": "0.3-beta17-pre2.1",
+    "runtime_status": "UNVERIFIED",
+    "inherited_fleet_gate": "beta17-pre2.1 Fleet Selector Click Hotfix runtime pending",
+    "staffing_coverage": {
+      "operations_registry_buildings": 56,
+      "coverage_total": 132,
+      "supported": 97,
+      "manual": 5,
+      "unsupported": 30,
+      "profiles": 14,
+      "old_supported_preserved": 56,
+      "legacy_b6_selectors_classified": 102,
+      "independent_selector": true,
+      "adaptive_targets": [
+        50,
+        75,
+        90,
+        100
+      ]
+    },
+    "coverage_statuses": [
+      "SUPPORTED",
+      "READ_ONLY",
+      "MANUAL",
+      "UNSAFE",
+      "UNSUPPORTED"
+    ],
+    "build_identity_source": "registry/build.json",
+    "runtime_diagnostics": [
+      "build_id",
+      "baseline_victoria",
+      "runtime_status",
+      "exact_fleet_target_state"
+    ],
+    "military_metrics": {
+      "registered_reused_endpoints": 267,
+      "audited_workspace_scripted_gui_refs": 253,
+      "executable_workspace_action_endpoints": 123,
+      "historical_239_metric": "DEPRECATED"
+    },
+    "search_filter_discovery": {
+      "status": "DEFERRED",
+      "reason": "Native SearchBar/SearchResult surface is documented from Victoria 3 1.13.9, while CMP minimum baseline remains 1.13.*"
+    },
+    "docs": [
+      "docs/STAFFING_COVERAGE_2_1_RU.md",
+      "docs/COVERAGE_DIAGNOSTICS_FOUNDATION_RU.md",
+      "docs/SEARCH_FILTER_DISCOVERY_BETA17_PRE3_RU.md",
+      "docs/ROADMAP_2026-08-20_RU.md",
+      "docs/QA_SUMMARY_BETA17_PRE3_RU.md"
+    ]
+  },
+  "beta17_pre3_1": {
+    "stage": "Regions Operations Coverage & Safety Hotfix",
+    "parent": "0.3-beta17-pre3",
+    "runtime_status": "UNVERIFIED",
+    "operations_registry_buildings": 92,
+    "categories": [
+      "all",
+      "primary",
+      "industry",
+      "infrastructure",
+      "public",
+      "military",
+      "services",
+      "ownership"
+    ],
+    "availability_gate": [
+      "can_construct_building",
+      "can_queue_building_levels"
+    ],
+    "safe_set": "raise/equal only; lowering blocked; no destructive recreate",
+    "remove_semantics": "whole building only",
+    "preset_semantics": "per target state, best effort, guarded per level",
+    "preset_codegen_fix": "ADD 15/20 helpers generated and cross-validated",
+    "selection_contract": "independent cmp_regions2 selection, disjoint from staffing; legacy bridge clears the other selector",
+    "fleet_logic": "unchanged from beta17-pre2.1/pre3",
+    "preset_component_isolation": "per-state blocked guard reset before every preset building; aggregate result flags preserved",
+    "nested_cmp_effect_refs_checked": 881,
+    "nested_cmp_effect_refs_missing": 0,
+    "release_gate_note": "runtime UNVERIFIED; full Regions + inherited Fleet gate required"
+  },
+  "beta17_final_rc1": {
+    "status": "STATIC_CANDIDATE_RUNTIME_REQUIRED",
+    "parent": "0.3-beta17-pre3.1",
+    "parent_runtime_status": "PASS",
+    "build_id": "CMP-0.3-B17-FINAL-RC1-20260820",
+    "army_scripted_gui_definitions": 209,
+    "army_scripted_effect_definitions": 278,
+    "builder_spawn_endpoints": 130,
+    "mixed_template_branches": 1568,
+    "designer_branches": 17472,
+    "amphibious_create_branches": 8,
+    "controls_apply_endpoints": 50,
+    "runtime_gate": [
+      "immediate",
+      "+1 day",
+      "save-load",
+      "negative technology/target states",
+      "Workspace profiles 90/100/115/130"
+    ],
+    "tech_res_provider_snapshot": {
+      "workshop_id": "3472248460",
+      "combat_unit_source_files": 3,
+      "sha256_pinned": true
+    }
+  },
+  "beta18_pre1": {
+    "status": "STATIC_DEVELOPMENT",
+    "roadmap": "docs/ROADMAP_2026-08-20_RU.md",
+    "new_fleet_mode": "multi_ship_one_formation",
+    "selected_fleet_mode": "beta17_exact_fleet_compatibility",
+    "supported_provider_ships": 5,
+    "composition_amounts": [
+      0,
+      1,
+      3,
+      5,
+      10
+    ],
+    "composition_space_nonzero": 3124,
+    "presets": 5,
+    "transfer": "DEFERRED_BETA18_PRE3",
+    "amphibious": "MANUAL_DISCOVERY_BETA18_PRE4",
+    "supply_ships": "READ_ONLY_DISCOVERY_BETA18_PRE4",
+    "flagship": "DEFERRED_BETA18_PRE4",
+    "vanilla_ship_catalog": "DISCOVERY_REQUIRED",
+    "search": "DEFERRED_BASELINE_GATE"
+  },
+  "beta18_pre2_2": {
+    "status": "STATIC_CANDIDATE_RUNTIME_SELECTOR_GATE",
+    "parent": "0.3-beta18-pre2.1",
+    "parent_runtime_status": "FAIL_FLEET_SELECTION",
+    "build_id": "CMP-0.3-B18-PRE2-2-20260821",
+    "selection_root": "military_formation",
+    "removed_bridge": "country_root_plus_AddScope_formation",
+    "clear_scope": "owner_country_only",
+    "diagnostics": [
+      "formation_root_probe",
+      "callback_received",
+      "exact_marker_written"
+    ],
+    "runtime_gate": [
+      "amber root probe visible",
+      "click callback received",
+      "green exact marker visible",
+      "selected fleet name persists after picker close",
+      "clear target",
+      "switch between two fleets",
+      "existing-fleet add-ships uses selected exact fleet"
+    ]
+  },
+  "beta18_rc1": {
+    "status": "RUNTIME_PASS",
+    "feature_freeze": true,
+    "new_gameplay_mechanics": 0,
+    "runtime_matrix": "registry/navy18.json::rc1.matrix",
+    "checklist": "docs/BETA18_RC1_RUNTIME_CHECKLIST_RU.md",
+    "static_validator": "tools/validate_beta18_rc1.py",
+    "final_rule": "beta18 Final only after RC1 runtime PASS",
+    "runtime_evidence": "USER_CONFIRMED_FULL_REGRESSION_PASS"
+  },
+  "beta18_final": {
+    "status": "RELEASED_RUNTIME_PASS",
+    "build_id": "CMP-0.3-B18-FINAL-20260822",
+    "parent": "0.3-beta18-RC1",
+    "release_date": "2026-08-22",
+    "feature_freeze": true,
+    "new_gameplay_mechanics": 0,
+    "freeze_manifest": "registry/beta18_final_freeze.json",
+    "runtime_matrix": "registry/navy18.json::rc1.matrix",
+    "post_release_roadmap": "docs/ROADMAP_2026-08-22_RU.md"
+  }
+}

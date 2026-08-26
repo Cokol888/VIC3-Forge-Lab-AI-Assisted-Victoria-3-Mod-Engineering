@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "id": "water",
+      "building_type": "building_water_plant",
+      "provider": "tech_res",
+      "building_group": "bg_water_farms",
+      "tiers": [
+        {
+          "value": 4,
+          "trait": "state_trait_groundwater_scarce"
+        },
+        {
+          "value": 10,
+          "trait": "state_trait_groundwater_normal"
+        },
+        {
+          "value": 20,
+          "trait": "state_trait_groundwater_humid"
+        },
+        {
+          "value": 40,
+          "trait": "state_trait_groundwater_very_humid"
+        },
+        {
+          "value": 30,
+          "trait": "state_trait_hydroelectric_water_deposits"
+        }
+      ]
+    },
+    {
+      "id": "bauxite",
+      "building_type": "building_bauxite_mine",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 10,
+          "trait": "state_trait_nano_bauxite_mine"
+        },
+        {
+          "value": 25,
+          "trait": "state_trait_small_bauxite_mine"
+        },
+        {
+          "value": 50,
+          "trait": "state_trait_medium_bauxite_mine"
+        },
+        {
+          "value": 120,
+          "trait": "state_trait_big_bauxite_mine"
+        },
+        {
+          "value": 200,
+          "trait": "state_trait_huge_bauxite_mine"
+        }
+      ]
+    },
+    {
+      "id": "copper",
+      "building_type": "building_copper_mine",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 10,
+          "trait": "state_trait_nano_copper_mine"
+        },
+        {
+          "value": 25,
+          "trait": "state_trait_small_copper_mine"
+        },
+        {
+          "value": 50,
+          "trait": "state_trait_medium_copper_mine"
+        },
+        {
+          "value": 120,
+          "trait": "state_trait_big_copper_mine"
+        },
+        {
+          "value": 200,
+          "trait": "state_trait_huge_copper_mine"
+        }
+      ]
+    },
+    {
+      "id": "common_ores",
+      "building_type": "building_commonores_mine",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 10,
+          "trait": "state_trait_nano_commonores_mine"
+        },
+        {
+          "value": 25,
+          "trait": "state_trait_small_commonores_mine"
+        },
+        {
+          "value": 50,
+          "trait": "state_trait_medium_commonores_mine"
+        },
+        {
+          "value": 120,
+          "trait": "state_trait_big_commonores_mine"
+        },
+        {
+          "value": 200,
+          "trait": "state_trait_huge_commonores_mine"
+        }
+      ]
+    },
+    {
+      "id": "advanced_ores",
+      "building_type": "building_advancedores_mine",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 20,
+          "trait": "state_trait_nano_advancedores_mine"
+        },
+        {
+          "value": 40,
+          "trait": "state_trait_small_advancedores_mine"
+        },
+        {
+          "value": 80,
+          "trait": "state_trait_medium_advancedores_mine"
+        },
+        {
+          "value": 200,
+          "trait": "state_trait_big_advancedores_mine"
+        }
+      ]
+    },
+    {
+      "id": "natural_gas",
+      "building_type": "building_natural_gas_rig",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 25,
+          "trait": "state_trait_small_natural_gas_rig"
+        },
+        {
+          "value": 50,
+          "trait": "state_trait_medium_natural_gas_rig"
+        },
+        {
+          "value": 120,
+          "trait": "state_trait_big_natural_gas_rig"
+        },
+        {
+          "value": 200,
+          "trait": "state_trait_huge_natural_gas_rig"
+        }
+      ]
+    },
+    {
+      "id": "rare_earths",
+      "building_type": "building_rare_earths_mine",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 15,
+          "trait": "state_trait_small_rare_earths_mine"
+        },
+        {
+          "value": 55,
+          "trait": "state_trait_medium_rare_earths_mine"
+        },
+        {
+          "value": 180,
+          "trait": "state_trait_big_rare_earths_mine"
+        }
+      ]
+    },
+    {
+      "id": "uranium",
+      "building_type": "building_uranium_mine",
+      "provider": "tech_res",
+      "building_group": "bg_mining",
+      "tiers": [
+        {
+          "value": 15,
+          "trait": "state_trait_small_uranium_mine"
+        },
+        {
+          "value": 45,
+          "trait": "state_trait_medium_uranium_mine"
+        },
+        {
+          "value": 120,
+          "trait": "state_trait_big_uranium_mine"
+        }
+      ]
+    }
+  ]
+}

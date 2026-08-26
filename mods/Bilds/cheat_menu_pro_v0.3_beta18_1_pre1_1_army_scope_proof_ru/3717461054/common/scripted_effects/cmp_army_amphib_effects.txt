@@ -1,0 +1,60 @@
+﻿# Cheat Menu Pro v0.3-beta7 - Amphibious Builder (verified T&R marine tiers)
+cmp_army_amphib_clear_result_effect = { remove_variable = cmp_army_amphib_result }
+cmp_army_amphib_enter_mode_effect = { remove_variable = cmp_army_builder_unit_index remove_variable = cmp_army_builder_amount_index remove_variable = cmp_army_builder_result remove_variable = cmp_army_builder_preset_result remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result }
+cmp_army_amphib_clear_selection_effect = { remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result }
+cmp_army_amphib_select_amount_5_effect = { cmp_army_amphib_enter_mode_effect = yes set_variable = { name = cmp_army_amphib_amount_index value = 1 } cmp_army_amphib_clear_result_effect = yes }
+cmp_army_amphib_select_amount_10_effect = { cmp_army_amphib_enter_mode_effect = yes set_variable = { name = cmp_army_amphib_amount_index value = 2 } cmp_army_amphib_clear_result_effect = yes }
+cmp_army_amphib_select_amount_25_effect = { cmp_army_amphib_enter_mode_effect = yes set_variable = { name = cmp_army_amphib_amount_index value = 3 } cmp_army_amphib_clear_result_effect = yes }
+cmp_army_amphib_select_amount_50_effect = { cmp_army_amphib_enter_mode_effect = yes set_variable = { name = cmp_army_amphib_amount_index value = 4 } cmp_army_amphib_clear_result_effect = yes }
+cmp_army_amphib_resolve_port_state_effect = {
+    clear_saved_scope = cmp_army_amphib_state
+    clear_saved_scope = cmp_army_amphib_hq_region
+    clear_saved_scope = cmp_army_amphib_state_region
+    ordered_scope_state = { limit = { has_decree = decree_sakuya_mark_state has_port_state = yes } order_by = gdp position = 0 check_range_bounds = no save_scope_as = cmp_army_amphib_state }
+    if = { limit = { exists = scope:cmp_army_amphib_state } scope:cmp_army_amphib_state = { region = { save_scope_as = cmp_army_amphib_hq_region } state_region = { save_scope_as = cmp_army_amphib_state_region } } }
+}
+cmp_army_amphib_apply_effect = {
+    remove_variable = cmp_army_amphib_result
+    cmp_army_amphib_resolve_port_state_effect = yes
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 1 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = high_performance_apparel }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_advanced_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 5 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 1 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = amphibious_warfare NOT = { has_technology_researched = high_performance_apparel } }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_modern_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 5 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 2 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = high_performance_apparel }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_advanced_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 10 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 2 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = amphibious_warfare NOT = { has_technology_researched = high_performance_apparel } }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_modern_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 10 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 3 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = high_performance_apparel }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_advanced_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 25 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 3 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = amphibious_warfare NOT = { has_technology_researched = high_performance_apparel } }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_modern_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 25 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 4 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = high_performance_apparel }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_advanced_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 50 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = {
+        limit = { var:cmp_army_amphib_amount_index = 4 exists = scope:cmp_army_amphib_hq_region exists = scope:cmp_army_amphib_state_region has_technology_researched = amphibious_warfare NOT = { has_technology_researched = high_performance_apparel } }
+        create_military_formation = { type = army hq_region = scope:cmp_army_amphib_hq_region combat_unit = { type = unit_type:combat_unit_type_modern_tier_marines service_type = regular state_region = scope:cmp_army_amphib_state_region count = 50 } }
+        set_variable = { name = cmp_army_amphib_result value = 1 }
+    }
+    if = { limit = { NOT = { var:cmp_army_amphib_result = 1 } } set_variable = { name = cmp_army_amphib_result value = 2 } }
+}

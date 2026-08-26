@@ -1,0 +1,94 @@
+﻿# Sakuya Cheat Menu Pro - Marking System Scripted GUIs
+# 清除标记按钮
+
+sakuya_mark_clear_country = {
+	scope = country
+
+	is_shown = {
+		is_player = yes
+	}
+
+	is_valid = {
+		OR = {
+			any_country = {
+				has_variable = sakuya_mark_country_target
+			}
+			any_decentralized_country = {
+				has_variable = sakuya_mark_country_target
+			}
+		}
+	}
+
+	effect = {
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			remove_variable = sakuya_mark_country_target
+		}
+		ordered_decentralized_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			order_by = gdp
+			position = 0
+			check_range_bounds = no
+			remove_variable = sakuya_mark_country_target
+		}
+	}
+}
+
+sakuya_mark_clear_foreign_states = {
+	scope = country
+
+	is_shown = {
+		is_player = yes
+	}
+
+	is_valid = {
+		any_state = {
+			has_variable = sakuya_mark_foreign_state_target
+		}
+	}
+
+	effect = {
+		every_state = {
+			limit = { has_variable = sakuya_mark_foreign_state_target }
+			remove_variable = sakuya_mark_foreign_state_target
+		}
+	}
+}
+
+sakuya_mark_clear_character = {
+	scope = country
+
+	is_shown = {
+		is_player = yes
+	}
+
+	is_valid = {
+		OR = {
+			any_country = {
+				any_scope_character = {
+					has_variable = sakuya_mark_character_target
+				}
+			}
+			any_character_in_exile_pool = {
+				has_variable = sakuya_mark_character_target
+			}
+		}
+	}
+
+	effect = {
+		every_country = {
+			every_scope_character = {
+				limit = { has_variable = sakuya_mark_character_target }
+				remove_variable = sakuya_mark_character_target
+			}
+		}
+		every_character_in_exile_pool = {
+			limit = { has_variable = sakuya_mark_character_target }
+			remove_variable = sakuya_mark_character_target
+		}
+		every_country = {
+			limit = { is_player = yes }
+			remove_variable = sakuya_b3_marked_character_cached
+		}
+	}
+}

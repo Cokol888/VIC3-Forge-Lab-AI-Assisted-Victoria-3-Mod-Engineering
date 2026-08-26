@@ -1,0 +1,1595 @@
+﻿# Cheat Menu Pro v0.3 beta15 - Politics & Characters 2.0 effects
+
+cmp_politics2_feedback_clear_effect = { remove_variable = cmp_politics2_feedback }
+
+cmp_politics2_local_gov_apply_effect = {
+    if = { limit = { root.var:cmp_politics2_gov_param = 1 root.var:cmp_politics2_gov_value = 10 } remove_modifier = cmp_politics2_legitimacy add_modifier = { name = cmp_politics2_legitimacy multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 1 root.var:cmp_politics2_gov_value = 25 } remove_modifier = cmp_politics2_legitimacy add_modifier = { name = cmp_politics2_legitimacy multiplier = 25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 1 root.var:cmp_politics2_gov_value = 50 } remove_modifier = cmp_politics2_legitimacy add_modifier = { name = cmp_politics2_legitimacy multiplier = 50 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 1 root.var:cmp_politics2_gov_value = 100 } remove_modifier = cmp_politics2_legitimacy add_modifier = { name = cmp_politics2_legitimacy multiplier = 100 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 2 root.var:cmp_politics2_gov_value = 10 } remove_modifier = cmp_politics2_authority add_modifier = { name = cmp_politics2_authority multiplier = 0.1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 2 root.var:cmp_politics2_gov_value = 25 } remove_modifier = cmp_politics2_authority add_modifier = { name = cmp_politics2_authority multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 2 root.var:cmp_politics2_gov_value = 50 } remove_modifier = cmp_politics2_authority add_modifier = { name = cmp_politics2_authority multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 2 root.var:cmp_politics2_gov_value = 100 } remove_modifier = cmp_politics2_authority add_modifier = { name = cmp_politics2_authority multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 3 root.var:cmp_politics2_gov_value = 10 } remove_modifier = cmp_politics2_bureaucracy add_modifier = { name = cmp_politics2_bureaucracy multiplier = 0.1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 3 root.var:cmp_politics2_gov_value = 25 } remove_modifier = cmp_politics2_bureaucracy add_modifier = { name = cmp_politics2_bureaucracy multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 3 root.var:cmp_politics2_gov_value = 50 } remove_modifier = cmp_politics2_bureaucracy add_modifier = { name = cmp_politics2_bureaucracy multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 3 root.var:cmp_politics2_gov_value = 100 } remove_modifier = cmp_politics2_bureaucracy add_modifier = { name = cmp_politics2_bureaucracy multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 4 root.var:cmp_politics2_gov_value = 10 } remove_modifier = cmp_politics2_influence add_modifier = { name = cmp_politics2_influence multiplier = 0.1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 4 root.var:cmp_politics2_gov_value = 25 } remove_modifier = cmp_politics2_influence add_modifier = { name = cmp_politics2_influence multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 4 root.var:cmp_politics2_gov_value = 50 } remove_modifier = cmp_politics2_influence add_modifier = { name = cmp_politics2_influence multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root.var:cmp_politics2_gov_param = 4 root.var:cmp_politics2_gov_value = 100 } remove_modifier = cmp_politics2_influence add_modifier = { name = cmp_politics2_influence multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_gov_apply_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_gov_apply_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_gov_apply_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_gov_apply_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_gov_apply_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_gov_apply_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_gov_reset_effect = {
+    remove_modifier = cmp_politics2_legitimacy
+    remove_modifier = cmp_politics2_authority
+    remove_modifier = cmp_politics2_bureaucracy
+    remove_modifier = cmp_politics2_influence
+    root = { set_variable = cmp_politics2_op_found }
+}
+
+cmp_politics2_gov_reset_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_gov_reset_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_gov_reset_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_gov_reset_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_gov_reset_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_gov_reset_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_institution_apply_effect = {
+    if = {
+        limit = { root.var:cmp_politics2_inst = 1 has_institution = institution_colonial_affairs }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_colonial_affairs level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_colonial_affairs level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_colonial_affairs level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_colonial_affairs level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_colonial_affairs level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+    if = {
+        limit = { root.var:cmp_politics2_inst = 2 has_institution = institution_schools }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_schools level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_schools level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_schools level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_schools level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_schools level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+    if = {
+        limit = { root.var:cmp_politics2_inst = 3 has_institution = institution_social_security }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_social_security level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_social_security level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_social_security level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_social_security level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_social_security level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+    if = {
+        limit = { root.var:cmp_politics2_inst = 4 has_institution = institution_workplace_safety }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_workplace_safety level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_workplace_safety level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_workplace_safety level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_workplace_safety level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_workplace_safety level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+    if = {
+        limit = { root.var:cmp_politics2_inst = 5 has_institution = institution_police }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_police level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_police level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_police level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_police level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_police level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+    if = {
+        limit = { root.var:cmp_politics2_inst = 6 has_institution = institution_health_system }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_health_system level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_health_system level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_health_system level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_health_system level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_health_system level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+    if = {
+        limit = { root.var:cmp_politics2_inst = 7 has_institution = institution_home_affairs }
+            if = { limit = { root.var:cmp_politics2_inst_level = 1 } set_institution_investment_level = { institution = institution_home_affairs level = 1 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 2 } set_institution_investment_level = { institution = institution_home_affairs level = 2 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 3 } set_institution_investment_level = { institution = institution_home_affairs level = 3 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 4 } set_institution_investment_level = { institution = institution_home_affairs level = 4 } root = { set_variable = cmp_politics2_op_found } }
+            if = { limit = { root.var:cmp_politics2_inst_level = 5 } set_institution_investment_level = { institution = institution_home_affairs level = 5 } root = { set_variable = cmp_politics2_op_found } }
+    }
+}
+
+cmp_politics2_institution_apply_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_institution_apply_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_institution_apply_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_institution_apply_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_institution_apply_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_institution_apply_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_immortal_on_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        set_character_immortal = yes
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_immortal_on_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_immortal_on_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_immortal_on_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_immortal_off_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        set_character_immortal = no
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_immortal_off_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_immortal_off_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_immortal_off_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_health_0p05_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_health
+        add_modifier = { name = cmp_politics2_character_health multiplier = 0.05 }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_health_0p05_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_health_0p05_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_health_0p05_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_health_0p2_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_health
+        add_modifier = { name = cmp_politics2_character_health multiplier = 0.2 }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_health_0p2_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_health_0p2_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_health_0p2_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_health_1p0_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_health
+        add_modifier = { name = cmp_politics2_character_health multiplier = 1 }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_health_1p0_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_health_1p0_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_health_1p0_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_health_reset_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_health
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_health_reset_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_health_reset_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_health_reset_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_popularity_5_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_popularity
+        add_modifier = { name = cmp_politics2_character_popularity multiplier = 5 }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_popularity_5_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_popularity_5_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_popularity_5_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_popularity_25_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_popularity
+        add_modifier = { name = cmp_politics2_character_popularity multiplier = 25 }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_popularity_25_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_popularity_25_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_popularity_25_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_popularity_100_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_popularity
+        add_modifier = { name = cmp_politics2_character_popularity multiplier = 100 }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_popularity_100_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_popularity_100_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_popularity_100_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_popularity_reset_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_modifier = cmp_politics2_character_popularity
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_popularity_reset_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_popularity_reset_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_popularity_reset_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_rank_1_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target OR = { has_role_of_type = general has_role_of_type = admiral } }
+        set_commander_rank = 1
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_rank_1_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_rank_1_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_rank_1_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_rank_2_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target OR = { has_role_of_type = general has_role_of_type = admiral } }
+        set_commander_rank = 2
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_rank_2_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_rank_2_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_rank_2_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_rank_3_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target OR = { has_role_of_type = general has_role_of_type = admiral } }
+        set_commander_rank = 3
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_rank_3_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_rank_3_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_rank_3_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_rank_4_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target OR = { has_role_of_type = general has_role_of_type = admiral } }
+        set_commander_rank = 4
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_rank_4_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_rank_4_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_rank_4_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_rank_5_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target OR = { has_role_of_type = general has_role_of_type = admiral } }
+        set_commander_rank = 5
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_rank_5_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_rank_5_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_rank_5_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_role_general_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        add_character_role = character_role_general
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_role_general_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_role_general_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_role_general_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_role_general_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_character_role = character_role_general
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_role_general_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_role_general_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_role_general_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_role_admiral_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        add_character_role = character_role_admiral
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_role_admiral_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_role_admiral_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_role_admiral_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_role_admiral_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        remove_character_role = character_role_admiral
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_role_admiral_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_role_admiral_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_role_admiral_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_ambitious_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { NOT = { has_trait = ambitious } } add_trait = ambitious }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_ambitious_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_ambitious_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_ambitious_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_ambitious_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { has_trait = ambitious } remove_trait = ambitious }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_ambitious_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_ambitious_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_ambitious_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_charismatic_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { NOT = { has_trait = charismatic } } add_trait = charismatic }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_charismatic_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_charismatic_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_charismatic_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_charismatic_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { has_trait = charismatic } remove_trait = charismatic }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_charismatic_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_charismatic_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_charismatic_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_brave_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { NOT = { has_trait = brave } } add_trait = brave }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_brave_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_brave_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_brave_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_brave_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { has_trait = brave } remove_trait = brave }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_brave_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_brave_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_brave_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_innovative_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { NOT = { has_trait = innovative } } add_trait = innovative }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_innovative_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_innovative_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_innovative_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_innovative_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { has_trait = innovative } remove_trait = innovative }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_innovative_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_innovative_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_innovative_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_meticulous_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { NOT = { has_trait = meticulous } } add_trait = meticulous }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_meticulous_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_meticulous_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_meticulous_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_meticulous_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { has_trait = meticulous } remove_trait = meticulous }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_meticulous_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_meticulous_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_meticulous_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_persistent_add_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { NOT = { has_trait = persistent } } add_trait = persistent }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_persistent_add_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_persistent_add_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_persistent_add_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_char_trait_persistent_remove_local_effect = {
+    if = {
+        limit = { has_variable = sakuya_mark_character_target }
+        if = { limit = { has_trait = persistent } remove_trait = persistent }
+        root = { set_variable = cmp_politics2_op_found }
+    }
+}
+
+cmp_politics2_char_trait_persistent_remove_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 9 }
+        every_country = { every_scope_character = { cmp_politics2_char_trait_persistent_remove_local_effect = yes } }
+        every_character_in_exile_pool = { cmp_politics2_char_trait_persistent_remove_local_effect = yes }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -2 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_approval_5_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_approval add_modifier = { name = cmp_politics2_ig_armed_forces_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_approval add_modifier = { name = cmp_politics2_ig_devout_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_approval add_modifier = { name = cmp_politics2_ig_industrialists_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_approval add_modifier = { name = cmp_politics2_ig_intelligentsia_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_approval add_modifier = { name = cmp_politics2_ig_landowners_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_approval add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_approval add_modifier = { name = cmp_politics2_ig_rural_folk_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_approval add_modifier = { name = cmp_politics2_ig_trade_unions_approval multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_approval_5_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_approval_5_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_approval_5_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_approval_5_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_approval_5_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_approval_5_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_approval_10_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_approval add_modifier = { name = cmp_politics2_ig_armed_forces_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_approval add_modifier = { name = cmp_politics2_ig_devout_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_approval add_modifier = { name = cmp_politics2_ig_industrialists_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_approval add_modifier = { name = cmp_politics2_ig_intelligentsia_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_approval add_modifier = { name = cmp_politics2_ig_landowners_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_approval add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_approval add_modifier = { name = cmp_politics2_ig_rural_folk_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_approval add_modifier = { name = cmp_politics2_ig_trade_unions_approval multiplier = 10 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_approval_10_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_approval_10_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_approval_10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_approval_10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_approval_10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_approval_10_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_approval_20_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_approval add_modifier = { name = cmp_politics2_ig_armed_forces_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_approval add_modifier = { name = cmp_politics2_ig_devout_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_approval add_modifier = { name = cmp_politics2_ig_industrialists_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_approval add_modifier = { name = cmp_politics2_ig_intelligentsia_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_approval add_modifier = { name = cmp_politics2_ig_landowners_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_approval add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_approval add_modifier = { name = cmp_politics2_ig_rural_folk_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_approval add_modifier = { name = cmp_politics2_ig_trade_unions_approval multiplier = 20 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_approval_20_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_approval_20_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_approval_20_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_approval_20_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_approval_20_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_approval_20_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_approval_n5_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_approval add_modifier = { name = cmp_politics2_ig_armed_forces_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_approval add_modifier = { name = cmp_politics2_ig_devout_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_approval add_modifier = { name = cmp_politics2_ig_industrialists_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_approval add_modifier = { name = cmp_politics2_ig_intelligentsia_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_approval add_modifier = { name = cmp_politics2_ig_landowners_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_approval add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_approval add_modifier = { name = cmp_politics2_ig_rural_folk_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_approval add_modifier = { name = cmp_politics2_ig_trade_unions_approval multiplier = -5 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_approval_n5_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_approval_n5_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_approval_n5_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_approval_n5_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_approval_n5_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_approval_n5_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_approval_n10_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_approval add_modifier = { name = cmp_politics2_ig_armed_forces_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_approval add_modifier = { name = cmp_politics2_ig_devout_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_approval add_modifier = { name = cmp_politics2_ig_industrialists_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_approval add_modifier = { name = cmp_politics2_ig_intelligentsia_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_approval add_modifier = { name = cmp_politics2_ig_landowners_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_approval add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_approval add_modifier = { name = cmp_politics2_ig_rural_folk_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_approval add_modifier = { name = cmp_politics2_ig_trade_unions_approval multiplier = -10 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_approval_n10_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_approval_n10_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_approval_n10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_approval_n10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_approval_n10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_approval_n10_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_approval_0_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_approval root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_approval root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_approval_0_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_approval_0_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_approval_0_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_approval_0_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_approval_0_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_approval_0_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_strength_25_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_pol_str add_modifier = { name = cmp_politics2_ig_armed_forces_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_pol_str add_modifier = { name = cmp_politics2_ig_devout_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_pol_str add_modifier = { name = cmp_politics2_ig_industrialists_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_pol_str add_modifier = { name = cmp_politics2_ig_intelligentsia_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_pol_str add_modifier = { name = cmp_politics2_ig_landowners_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_pol_str add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_pol_str add_modifier = { name = cmp_politics2_ig_rural_folk_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_pol_str add_modifier = { name = cmp_politics2_ig_trade_unions_pol_str multiplier = 0.25 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_strength_25_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_strength_25_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_strength_25_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_strength_25_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_strength_25_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_strength_25_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_strength_50_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_pol_str add_modifier = { name = cmp_politics2_ig_armed_forces_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_pol_str add_modifier = { name = cmp_politics2_ig_devout_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_pol_str add_modifier = { name = cmp_politics2_ig_industrialists_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_pol_str add_modifier = { name = cmp_politics2_ig_intelligentsia_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_pol_str add_modifier = { name = cmp_politics2_ig_landowners_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_pol_str add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_pol_str add_modifier = { name = cmp_politics2_ig_rural_folk_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_pol_str add_modifier = { name = cmp_politics2_ig_trade_unions_pol_str multiplier = 0.5 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_strength_50_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_strength_50_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_strength_50_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_strength_50_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_strength_50_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_strength_50_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_strength_100_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_pol_str add_modifier = { name = cmp_politics2_ig_armed_forces_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_pol_str add_modifier = { name = cmp_politics2_ig_devout_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_pol_str add_modifier = { name = cmp_politics2_ig_industrialists_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_pol_str add_modifier = { name = cmp_politics2_ig_intelligentsia_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_pol_str add_modifier = { name = cmp_politics2_ig_landowners_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_pol_str add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_pol_str add_modifier = { name = cmp_politics2_ig_rural_folk_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_pol_str add_modifier = { name = cmp_politics2_ig_trade_unions_pol_str multiplier = 1 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_strength_100_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_strength_100_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_strength_100_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_strength_100_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_strength_100_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_strength_100_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_strength_500_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_pol_str add_modifier = { name = cmp_politics2_ig_armed_forces_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_pol_str add_modifier = { name = cmp_politics2_ig_devout_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_pol_str add_modifier = { name = cmp_politics2_ig_industrialists_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_pol_str add_modifier = { name = cmp_politics2_ig_intelligentsia_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_pol_str add_modifier = { name = cmp_politics2_ig_landowners_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_pol_str add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_pol_str add_modifier = { name = cmp_politics2_ig_rural_folk_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_pol_str add_modifier = { name = cmp_politics2_ig_trade_unions_pol_str multiplier = 5 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_strength_500_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_strength_500_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_strength_500_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_strength_500_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_strength_500_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_strength_500_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_strength_n50_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_pol_str add_modifier = { name = cmp_politics2_ig_armed_forces_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_pol_str add_modifier = { name = cmp_politics2_ig_devout_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_pol_str add_modifier = { name = cmp_politics2_ig_industrialists_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_pol_str add_modifier = { name = cmp_politics2_ig_intelligentsia_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_pol_str add_modifier = { name = cmp_politics2_ig_landowners_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_pol_str add_modifier = { name = cmp_politics2_ig_petty_bourgeoisie_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_pol_str add_modifier = { name = cmp_politics2_ig_rural_folk_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_pol_str add_modifier = { name = cmp_politics2_ig_trade_unions_pol_str multiplier = -0.5 } root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_strength_n50_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_strength_n50_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_strength_n50_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_strength_n50_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_strength_n50_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_strength_n50_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_ig_strength_0_effect = {
+    if = { limit = { root = { has_variable = cmp_politics2_ig_armed_forces } } remove_modifier = cmp_politics2_ig_armed_forces_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_devout } } remove_modifier = cmp_politics2_ig_devout_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_industrialists } } remove_modifier = cmp_politics2_ig_industrialists_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_intelligentsia } } remove_modifier = cmp_politics2_ig_intelligentsia_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_landowners } } remove_modifier = cmp_politics2_ig_landowners_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_petty_bourgeoisie } } remove_modifier = cmp_politics2_ig_petty_bourgeoisie_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_rural_folk } } remove_modifier = cmp_politics2_ig_rural_folk_pol_str root = { set_variable = cmp_politics2_op_found } }
+    if = { limit = { root = { has_variable = cmp_politics2_ig_trade_unions } } remove_modifier = cmp_politics2_ig_trade_unions_pol_str root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_ig_strength_0_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_ig_strength_0_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_ig_strength_0_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_ig_strength_0_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_ig_strength_0_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_ig_strength_0_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_progress_10_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } add_law_progress = 0.10 root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_law_progress_10_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_progress_10_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_progress_10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_progress_10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_progress_10_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_progress_10_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_progress_25_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } add_law_progress = 0.25 root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_law_progress_25_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_progress_25_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_progress_25_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_progress_25_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_progress_25_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_progress_25_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_advance_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } add_enactment_phase = 1 root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_law_advance_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_advance_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_advance_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_advance_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_advance_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_advance_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_setback_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } add_enactment_setback = 1 root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_law_setback_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_setback_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_setback_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_setback_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_setback_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_setback_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_complete_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } currently_enacting_law = { save_scope_as = cmp_politics2_current_law } if = { limit = { exists = scope:cmp_politics2_current_law } activate_law = scope:cmp_politics2_current_law.type root = { set_variable = cmp_politics2_op_found } } }
+}
+
+cmp_politics2_law_complete_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_complete_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_complete_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_complete_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_complete_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_complete_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_cancel_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } cancel_enactment = yes root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_law_cancel_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_cancel_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_cancel_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_cancel_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_cancel_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_cancel_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_local_law_clear_modifiers_effect = {
+    if = { limit = { enacting_any_law = yes exists = currently_enacting_law } clear_enactment_modifier = yes root = { set_variable = cmp_politics2_op_found } }
+}
+
+cmp_politics2_law_clear_modifiers_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } }
+        cmp_politics2_local_law_clear_modifiers_effect = yes
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } cmp_politics2_local_law_clear_modifiers_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 3 }
+        every_country = { limit = { has_variable = cmp_target_group_a_member } cmp_politics2_local_law_clear_modifiers_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 4 }
+        every_country = { limit = { has_variable = cmp_target_group_b_member } cmp_politics2_local_law_clear_modifiers_effect = yes }
+    }
+    else_if = {
+        limit = { var:cmp_target_core_mode = 5 }
+        every_country = { limit = { has_variable = cmp_target_group_c_member } cmp_politics2_local_law_clear_modifiers_effect = yes }
+    }
+    if = {
+        limit = { has_variable = cmp_politics2_op_found }
+        set_variable = { name = cmp_politics2_feedback value = 1 }
+    }
+    else = { set_variable = { name = cmp_politics2_feedback value = -3 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_bloc_cohesion_p25_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 11 }
+        every_country = {
+            limit = { has_variable = sakuya_mark_power_bloc_target is_in_power_bloc = yes }
+            power_bloc = { add_cohesion_number = 25 }
+            root = { set_variable = cmp_politics2_op_found }
+        }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -4 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_bloc_cohesion_p50_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 11 }
+        every_country = {
+            limit = { has_variable = sakuya_mark_power_bloc_target is_in_power_bloc = yes }
+            power_bloc = { add_cohesion_number = 50 }
+            root = { set_variable = cmp_politics2_op_found }
+        }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -4 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_bloc_cohesion_n25_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 11 }
+        every_country = {
+            limit = { has_variable = sakuya_mark_power_bloc_target is_in_power_bloc = yes }
+            power_bloc = { add_cohesion_number = -25 }
+            root = { set_variable = cmp_politics2_op_found }
+        }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -4 } }
+    remove_variable = cmp_politics2_op_found
+}
+
+cmp_politics2_bloc_cohesion_100_effect = {
+    remove_variable = cmp_politics2_op_found
+    if = {
+        limit = { var:cmp_target_core_mode = 11 }
+        every_country = {
+            limit = { has_variable = sakuya_mark_power_bloc_target is_in_power_bloc = yes }
+            power_bloc = { add_cohesion_number = -999999 add_cohesion_number = 100 }
+            root = { set_variable = cmp_politics2_op_found }
+        }
+    }
+    if = { limit = { has_variable = cmp_politics2_op_found } set_variable = { name = cmp_politics2_feedback value = 1 } }
+    else = { set_variable = { name = cmp_politics2_feedback value = -4 } }
+    remove_variable = cmp_politics2_op_found
+}

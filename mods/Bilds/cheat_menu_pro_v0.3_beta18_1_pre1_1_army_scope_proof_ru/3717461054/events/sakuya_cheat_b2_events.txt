@@ -1,0 +1,257 @@
+﻿namespace = sakuya_b2_event 
+
+# LMB: try to nationalize all nationalizable assets in player-owned states.
+sakuya_b2_event.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        save_scope_as = sakuya_b2_event_root
+        if = {
+            limit = {
+                any_scope_state = { always = yes }
+            }
+            every_country = {
+                limit = {
+                    NOT = { this = scope:sakuya_b2_event_root }
+                }
+                scope:sakuya_b2_event_root = {
+                    sakuya_b2_force_nationalize_target_effect = { TARGET = prev }
+                }
+            }
+        }
+    }
+}
+
+# Shift+LMB: only runs when player has at least one marked own state.
+sakuya_b2_event.2 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        save_scope_as = sakuya_b2_event_root
+        if = {
+            limit = {
+                any_scope_state = {
+                    has_decree = decree_sakuya_mark_state
+                }
+            }
+            every_country = {
+                limit = {
+                    NOT = { this = scope:sakuya_b2_event_root }
+                }
+                scope:sakuya_b2_event_root = {
+                    sakuya_b2_force_nationalize_target_effect = { TARGET = prev }
+                }
+            }
+        }
+    }
+}
+
+# Alt+LMB: nationalize marked country assets in player country.
+sakuya_b2_event.3 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        save_scope_as = sakuya_b2_event_root
+        every_country = {
+            limit = {
+                has_variable = sakuya_mark_country_target
+                NOT = { this = scope:sakuya_b2_event_root }
+            }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            sakuya_b2_force_nationalize_target_effect = {
+                TARGET = scope:sakuya_b2_marked_country_scope
+            }
+        }
+    }
+}
+
+# Ctrl+LMB: nationalize by owners of marked foreign states.
+sakuya_b2_event.4 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        save_scope_as = sakuya_b2_event_root
+        # Cleanup stale owner markers from previous runs.
+        every_country = {
+            limit = { has_variable = sakuya_b2_ctrl_marked_owner_target }
+            remove_variable = sakuya_b2_ctrl_marked_owner_target
+        }
+
+        # Collect unique owner countries from marked foreign states.
+        every_state = {
+            limit = {
+                has_variable = sakuya_mark_foreign_state_target
+                exists = owner
+            }
+            owner = {
+                if = {
+                    limit = { NOT = { this = scope:sakuya_b2_event_root } }
+                    set_variable = sakuya_b2_ctrl_marked_owner_target
+                }
+            }
+        }
+
+        every_country = {
+            limit = { has_variable = sakuya_b2_ctrl_marked_owner_target }
+            scope:sakuya_b2_event_root = {
+                sakuya_b2_force_nationalize_target_effect = { TARGET = prev }
+            }
+            remove_variable = sakuya_b2_ctrl_marked_owner_target
+        }
+    }
+}
+
+# LMB: declare bankruptcy for player country (simulate core result).
+sakuya_b2_event.5 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        clear_debt = yes
+        remove_modifier = declared_bankruptcy
+        add_modifier = {
+            name = declared_bankruptcy
+            months = 120
+        }
+    }
+}
+
+# Shift+LMB: declare bankruptcy for marked country.
+sakuya_b2_event.6 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_bankruptcy_target
+        }
+
+        if = {
+            limit = { exists = scope:sakuya_b2_bankruptcy_target }
+            scope:sakuya_b2_bankruptcy_target = {
+                clear_debt = yes
+                remove_modifier = declared_bankruptcy
+                add_modifier = {
+                    name = declared_bankruptcy
+                    months = 120
+                }
+            }
+        }
+    }
+}
+
+# Alt+LMB: rescue marked bankrupt country (remove modifier + give 100% gold reserve cap).
+sakuya_b2_event.7 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_bankruptcy_target
+        }
+
+        if = {
+            limit = {
+                exists = scope:sakuya_b2_bankruptcy_target
+                scope:sakuya_b2_bankruptcy_target = { has_modifier = declared_bankruptcy }
+            }
+            scope:sakuya_b2_bankruptcy_target = {
+                remove_modifier = declared_bankruptcy
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 1
+                }
+            }
+        }
+    }
+}
+
+# RMB: remove bankruptcy modifier from player country.
+sakuya_b2_event.8 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        remove_modifier = declared_bankruptcy
+    }
+}
+
+# LMB: clear player debt only.
+sakuya_b2_event.9 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        clear_debt = yes
+    }
+}
+
+# Shift+LMB: clear marked country debt only.
+sakuya_b2_event.10 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        is_player = yes
+    }
+
+    immediate = {
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_bankruptcy_target
+        }
+
+        if = {
+            limit = { exists = scope:sakuya_b2_bankruptcy_target }
+            scope:sakuya_b2_bankruptcy_target = {
+                clear_debt = yes
+            }
+        }
+    }
+}

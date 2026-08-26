@@ -1,0 +1,19 @@
+﻿# Military Target UX beta18-pre2.4. Legacy marker fallback only; Workspace probes per-row MilitaryFormation and native panel bridge.
+# Country-local clear for the exact marker and compatible legacy list.
+# The selector itself now executes with military_formation as ROOT.
+cmp_military_target_clear_fleet_effect = {
+    every_military_formation = {
+        limit = { has_variable = cmp_military_target_fleet }
+        remove_variable = cmp_military_target_fleet
+    }
+    if = {
+        limit = { has_variable_list = sakuya_main_04_01_marked_navy_list }
+        clear_variable_list = sakuya_main_04_01_marked_navy_list
+    }
+    remove_variable = cmp_military_target_feedback
+    remove_variable = cmp_military_target_diag_direct_click
+    if = {
+        limit = { var:cmp_target_core_mode = 10 }
+        set_variable = { name = cmp_target_core_mode value = 1 }
+    }
+}

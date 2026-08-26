@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "amounts": [
+    {
+      "value": 1,
+      "index": 1
+    },
+    {
+      "value": 3,
+      "index": 2
+    },
+    {
+      "value": 5,
+      "index": 3
+    },
+    {
+      "value": 10,
+      "index": 4
+    }
+  ],
+  "presets": [
+    {
+      "id": "escort",
+      "requires": [
+        "modern_naval_doctrine",
+        "modern_battleships"
+      ],
+      "ships": {
+        "modern_destroyer": 6,
+        "modern_cruiser": 2
+      },
+      "loc_key": "CMP_FLEET_PRESET_ESCORT"
+    },
+    {
+      "id": "battle",
+      "requires": [
+        "modern_naval_doctrine",
+        "modern_battleships"
+      ],
+      "ships": {
+        "modern_destroyer": 4,
+        "modern_cruiser": 3,
+        "modern_battleship": 2
+      },
+      "loc_key": "CMP_FLEET_PRESET_BATTLE"
+    },
+    {
+      "id": "carrier",
+      "requires": [
+        "modern_naval_doctrine",
+        "modern_battleships",
+        "integrated_naval_air_tactics"
+      ],
+      "ships": {
+        "modern_destroyer": 4,
+        "modern_cruiser": 2,
+        "nuclear_carrier": 1
+      },
+      "loc_key": "CMP_FLEET_PRESET_CARRIER"
+    },
+    {
+      "id": "submarine",
+      "requires": [
+        "nuclear_submarine"
+      ],
+      "ships": {
+        "nuclear_submarine": 5
+      },
+      "loc_key": "CMP_FLEET_PRESET_SUB"
+    }
+  ],
+  "amphibious_support": [
+    {
+      "requires": [
+        "modern_naval_doctrine"
+      ],
+      "ships": {
+        "modern_destroyer": 4
+      }
+    },
+    {
+      "requires": [
+        "modern_battleships"
+      ],
+      "ships": {
+        "modern_cruiser": 2,
+        "modern_battleship": 1
+      }
+    },
+    {
+      "requires": [
+        "integrated_naval_air_tactics"
+      ],
+      "ships": {
+        "nuclear_carrier": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+﻿# Sakuya Cheat Menu Pro - BTN3 Tab6 Law Modification Effects
+
+sakuya_b3_lawmod_player_apply_modifier_effect = {
+	if = {
+		limit = { root = { has_modifier = $MOD$ } }
+		root = { remove_modifier = $MOD$ }
+	}
+	root = {
+		if = {
+			limit = { has_variable = $VAR$ }
+			add_modifier = {
+				name = $MOD$
+				multiplier = var:$VAR$
+			}
+		}
+	}
+}
+
+sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+	if = {
+		limit = {
+			root = {
+				NOT = { has_variable = $VAR$ }
+			}
+		}
+		root = {
+			set_variable = { name = $VAR$ value = 0 }
+		}
+	}
+	root = {
+		change_variable = { name = $VAR$ add = $DELTA$ }
+	}
+	if = {
+		limit = { root.var:$VAR$ = 0 }
+		root = {
+			remove_variable = $VAR$
+		}
+	}
+	sakuya_b3_lawmod_player_apply_modifier_effect = {
+		MOD = $MOD$
+		VAR = $VAR$
+	}
+}
+
+sakuya_b3_lawmod_player_clear_modifier_effect = {
+	root = {
+		remove_variable = $VAR$
+		remove_modifier = $MOD$
+	}
+}
+
+sakuya_b3_lawmod_player_set_bool_modifier_effect = {
+	root = {
+		if = {
+			limit = { has_modifier = $MOD$ }
+			remove_modifier = $MOD$
+		}
+		add_modifier = { name = $MOD$ }
+	}
+}
+
+sakuya_b3_lawmod_marked_set_bool_modifier_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			root = {
+				has_variable = sakuya_b3_marked_country_found
+				exists = scope:sakuya_b3_marked_country_scope
+			}
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			if = {
+				limit = { has_modifier = $MOD$ }
+				remove_modifier = $MOD$
+			}
+			add_modifier = { name = $MOD$ }
+		}
+	}
+	root = { remove_variable = sakuya_b3_marked_country_found }
+}
+
+sakuya_b3_lawmod_player_clear_bool_modifier_effect = {
+	root = {
+		remove_modifier = $MOD$
+	}
+}
+
+sakuya_b3_lawmod_marked_clear_forbid_law_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			root = {
+				has_variable = sakuya_b3_marked_country_found
+				exists = scope:sakuya_b3_marked_country_scope
+			}
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b3_cannot_start_law_enactment
+			remove_modifier = sakuya_cheat_b3_cannot_cancel_law_enactment
+		}
+	}
+	root = { remove_variable = sakuya_b3_marked_country_found }
+}
+
+sakuya_b3_lawmod_clear_forbid_law_effect = {
+	root = {
+		remove_modifier = sakuya_cheat_b3_cannot_start_law_enactment
+		remove_modifier = sakuya_cheat_b3_cannot_cancel_law_enactment
+	}
+	sakuya_b3_lawmod_marked_clear_forbid_law_effect = yes
+}
+
+sakuya_b3_lawmod_complete_current_law_effect = {
+	if = {
+		limit = {
+			root = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			currently_enacting_law = {
+				save_scope_as = sakuya_b3_lawmod_current_law_scope
+			}
+			if = {
+				limit = { exists = scope:sakuya_b3_lawmod_current_law_scope }
+				activate_law = scope:sakuya_b3_lawmod_current_law_scope.type
+			}
+		}
+	}
+}
+
+sakuya_b3_lawmod_cancel_current_law_effect = {
+	if = {
+		limit = {
+			root = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			cancel_enactment = yes
+		}
+	}
+}
+
+sakuya_b3_lawmod_advance_current_law_effect = {
+	if = {
+		limit = {
+			root = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			add_enactment_phase = 1
+		}
+	}
+}
+
+sakuya_b3_lawmod_setback_current_law_effect = {
+	if = {
+		limit = {
+			root = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			add_enactment_setback = 1
+		}
+	}
+}
+
+sakuya_b3_lawmod_add_current_enactment_modifier_effect = {
+	if = {
+		limit = {
+			root = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			add_enactment_modifier = {
+				name = $MOD$
+			}
+		}
+	}
+}
+
+sakuya_b3_lawmod_clear_current_enactment_modifiers_effect = {
+	if = {
+		limit = {
+			root = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			clear_enactment_modifier = yes
+		}
+	}
+}
+
+sakuya_b3_lawmod_clear_all_current_amendments_effect = {
+	if = {
+		limit = {
+			root = {
+				has_dlc_feature = ip4_content
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			currently_enacting_law = {
+				every_scope_amendment = {
+					remove_amendment = yes
+				}
+			}
+		}
+	}
+}
+
+sakuya_b3_lawmod_remove_random_current_amendment_effect = {
+	if = {
+		limit = {
+			root = {
+				has_dlc_feature = ip4_content
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+		}
+		root = {
+			currently_enacting_law = {
+				random_scope_amendment = {
+					remove_amendment = yes
+				}
+			}
+		}
+	}
+}
+
+sakuya_b3_lawmod_add_ruler_sponsored_current_amendment_effect = {
+	if = {
+		limit = {
+			root = {
+				has_dlc_feature = ip4_content
+				enacting_any_law = yes
+				exists = currently_enacting_law
+				exists = ruler
+			}
+		}
+		root = {
+			ruler = {
+				interest_group = {
+					save_scope_as = sakuya_b3_lawmod_ruler_ig
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:sakuya_b3_lawmod_ruler_ig
+					NOT = {
+						currently_enacting_law = {
+							has_amendment = amendment_type:$TYPE$
+						}
+					}
+				}
+				currently_enacting_law = {
+					add_amendment = {
+						type = $TYPE$
+						sponsor = scope:sakuya_b3_lawmod_ruler_ig
+						cooldown = 120
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,298 @@
+namespace = sakuya_main_04_03
+
+sakuya_main_04_03.1 = {
+    type = country_event
+
+    title = SKY_B4_EVT_MARK_PM_TITLE
+    desc = SKY_B4_EVT_MARK_PM_DESC
+    flavor = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { has_variable = sakuya_main_04_03_force_empty_notice }
+                desc = SKY_B4_EVT_MARK_PM_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = { NOT = { has_variable = sakuya_main_04_03_slot_1 } }
+                desc = SKY_B4_EVT_MARK_PM_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = {
+                    OR = {
+                        any_political_movement = { has_variable = sakuya_main_04_03_marked_political_movement }
+                        any_country = {
+                            any_political_movement = { has_variable = sakuya_main_04_03_marked_political_movement }
+                        }
+                    }
+                }
+                desc = SKY_B4_EVT_MARK_PM_DESC_MARKED
+            }
+            triggered_desc = {
+                trigger = { always = yes }
+                desc = SKY_B4_EVT_MARK_PM_DESC_HINT
+            }
+        }
+    }
+
+    event_image = { video = "gfx/event_pictures/southamerica_factory_opening.bk2" }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    duration = 0
+
+    trigger = { is_player = yes }
+
+    immediate = {
+        save_scope_as = sakuya_main_04_03_event_root
+        remove_variable = sakuya_main_04_03_slot_1
+        remove_variable = sakuya_main_04_03_slot_2
+        remove_variable = sakuya_main_04_03_slot_3
+        remove_variable = sakuya_main_04_03_slot_4
+        remove_variable = sakuya_main_04_03_slot_5
+        remove_variable = sakuya_main_04_03_slot_6
+        remove_variable = sakuya_main_04_03_slot_7
+        remove_variable = sakuya_main_04_03_slot_8
+        remove_variable = sakuya_main_04_03_has_next
+        remove_variable = sakuya_main_04_03_page2_valid
+
+        if = {
+            limit = { has_variable = sakuya_main_04_03_force_empty_notice }
+            remove_variable = sakuya_main_04_03_page_2
+            remove_variable = sakuya_main_04_03_force_empty_notice
+        }
+        else = {
+            save_scope_as = sakuya_main_04_03_source_country
+            if = {
+                limit = {
+                    has_variable = sakuya_main_04_03_use_marked_country
+                    exists = scope:sakuya_main_04_03_marked_country_scope
+                }
+                scope:sakuya_main_04_03_marked_country_scope = {
+                    save_scope_as = sakuya_main_04_03_source_country
+                }
+            }
+
+            scope:sakuya_main_04_03_source_country = {
+                if = {
+                    limit = {
+                        scope:sakuya_main_04_03_event_root = { has_variable = sakuya_main_04_03_page_2 }
+                        any_political_movement = { count >= 9 }
+                    }
+                    scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_page2_valid }
+                }
+                if = {
+                    limit = {
+                        scope:sakuya_main_04_03_event_root = { has_variable = sakuya_main_04_03_page_2 }
+                        scope:sakuya_main_04_03_event_root = { NOT = { has_variable = sakuya_main_04_03_page2_valid } }
+                    }
+                    scope:sakuya_main_04_03_event_root = { remove_variable = sakuya_main_04_03_page_2 }
+                }
+                scope:sakuya_main_04_03_event_root = { remove_variable = sakuya_main_04_03_page2_valid }
+
+                if = {
+                    limit = { scope:sakuya_main_04_03_event_root = { has_variable = sakuya_main_04_03_page_2 } }
+
+                    if = {
+                        limit = { any_political_movement = { count >= 9 } }
+                        ordered_political_movement = { position = 8 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_1 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_1 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 10 } }
+                        ordered_political_movement = { position = 9 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_2 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_2 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 11 } }
+                        ordered_political_movement = { position = 10 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_3 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_3 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 12 } }
+                        ordered_political_movement = { position = 11 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_4 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_4 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 13 } }
+                        ordered_political_movement = { position = 12 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_5 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_5 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 14 } }
+                        ordered_political_movement = { position = 13 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_6 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_6 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 15 } }
+                        ordered_political_movement = { position = 14 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_7 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_7 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 16 } }
+                        ordered_political_movement = { position = 15 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_8 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_8 } }
+                    }
+                }
+                else = {
+                    if = {
+                        limit = { any_political_movement = { count >= 1 } }
+                        ordered_political_movement = { position = 0 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_1 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_1 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 2 } }
+                        ordered_political_movement = { position = 1 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_2 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_2 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 3 } }
+                        ordered_political_movement = { position = 2 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_3 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_3 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 4 } }
+                        ordered_political_movement = { position = 3 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_4 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_4 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 5 } }
+                        ordered_political_movement = { position = 4 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_5 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_5 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 6 } }
+                        ordered_political_movement = { position = 5 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_6 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_6 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 7 } }
+                        ordered_political_movement = { position = 6 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_7 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_7 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 8 } }
+                        ordered_political_movement = { position = 7 check_range_bounds = no order_by = political_movement_radicalism save_scope_as = sakuya_main_04_03_pm_8 scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_slot_8 } }
+                    }
+                    if = {
+                        limit = { any_political_movement = { count >= 9 } }
+                        scope:sakuya_main_04_03_event_root = { set_variable = sakuya_main_04_03_has_next }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_1
+        trigger = { has_variable = sakuya_main_04_03_slot_1 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_1 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_2
+        trigger = { has_variable = sakuya_main_04_03_slot_2 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_2 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_3
+        trigger = { has_variable = sakuya_main_04_03_slot_3 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_3 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_4
+        trigger = { has_variable = sakuya_main_04_03_slot_4 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_4 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_5
+        trigger = { has_variable = sakuya_main_04_03_slot_5 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_5 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_6
+        trigger = { has_variable = sakuya_main_04_03_slot_6 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_6 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_7
+        trigger = { has_variable = sakuya_main_04_03_slot_7 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_7 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_SLOT_8
+        trigger = { has_variable = sakuya_main_04_03_slot_8 }
+        ai_chance = { base = 0 }
+        hidden_effect = {
+            every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement }
+            every_country = { every_political_movement = { limit = { has_variable = sakuya_main_04_03_marked_political_movement } remove_variable = sakuya_main_04_03_marked_political_movement } }
+            scope:sakuya_main_04_03_pm_8 = { set_variable = sakuya_main_04_03_marked_political_movement save_scope_as = sakuya_main_04_03_latest_marked_political_movement }
+        }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_PREV
+        trigger = { has_variable = sakuya_main_04_03_page_2 }
+        ai_chance = { base = 0 }
+        remove_variable = sakuya_main_04_03_page_2
+        hidden_effect = { trigger_event = { id = sakuya_main_04_03.1 popup = yes } }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_NEXT
+        trigger = {
+            NOT = { has_variable = sakuya_main_04_03_page_2 }
+            has_variable = sakuya_main_04_03_has_next
+        }
+        ai_chance = { base = 0 }
+        set_variable = sakuya_main_04_03_page_2
+        hidden_effect = { trigger_event = { id = sakuya_main_04_03.1 popup = yes } }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_PM_CLOSE
+        default_option = yes
+        ai_chance = { base = 100 }
+        remove_variable = sakuya_main_04_03_page_2
+        set_variable = sakuya_main_force_show
+    }
+}

@@ -1,0 +1,824 @@
+# Sakuya Cheat Menu Pro - Block 8 Fun Features effects
+
+sakuya_b8_fx_apply_lawset_liberal_player = {
+	sakuya_b3_activate_law_player_effect = { LAW = law_parliamentary_republic }
+	sakuya_b3_activate_law_player_effect = { LAW = law_universal_suffrage }
+	sakuya_b3_activate_law_player_effect = { LAW = law_multicultural }
+	sakuya_b3_activate_law_player_effect = { LAW = law_total_separation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_elected_bureaucrats }
+	sakuya_b3_activate_law_player_effect = { LAW = law_professional_army }
+	sakuya_b3_activate_law_player_effect = { LAW = law_guaranteed_liberties }
+	sakuya_b3_activate_law_player_effect = { LAW = law_laissez_faire }
+	sakuya_b3_activate_law_player_effect = { LAW = law_free_trade }
+	sakuya_b3_activate_law_player_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_commercialized_agriculture }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_player_effect = { LAW = law_dedicated_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_player_effect = { LAW = law_protected_speech }
+	sakuya_b3_activate_law_player_effect = { LAW = law_worker_protections }
+	sakuya_b3_activate_law_player_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_player_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_player_effect = { LAW = law_old_age_pension }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_migration_controls }
+	sakuya_b3_activate_law_player_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_player_effect = { LAW = law_right_to_associate }
+}
+
+sakuya_b8_fx_apply_lawset_liberal_marked = {
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_parliamentary_republic }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_universal_suffrage }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_multicultural }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_total_separation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_elected_bureaucrats }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_professional_army }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_guaranteed_liberties }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_laissez_faire }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_free_trade }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_commercialized_agriculture }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_dedicated_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_protected_speech }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_worker_protections }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_old_age_pension }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_migration_controls }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_right_to_associate }
+}
+
+sakuya_b8_fx_apply_lawset_fascist_player = {
+	sakuya_b3_activate_law_player_effect = { LAW = law_corporate_state }
+	sakuya_b3_activate_law_player_effect = { LAW = law_single_party_state }
+	sakuya_b3_activate_law_player_effect = { LAW = law_ethnostate }
+	sakuya_b3_activate_law_player_effect = { LAW = law_state_religion }
+	sakuya_b3_activate_law_player_effect = { LAW = law_appointed_bureaucrats }
+	sakuya_b3_activate_law_player_effect = { LAW = law_mass_conscription }
+	sakuya_b3_activate_law_player_effect = { LAW = law_secret_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_interventionism }
+	sakuya_b3_activate_law_player_effect = { LAW = law_protectionism }
+	sakuya_b3_activate_law_player_effect = { LAW = law_proportional_taxation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_commercialized_agriculture }
+	sakuya_b3_activate_law_player_effect = { LAW = law_colonial_exploitation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_militarized_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_player_effect = { LAW = law_outlawed_dissent }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_workers_rights }
+	sakuya_b3_activate_law_player_effect = { LAW = law_restricted_child_labor }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_womens_rights }
+	sakuya_b3_activate_law_player_effect = { LAW = law_poor_laws }
+	sakuya_b3_activate_law_player_effect = { LAW = law_closed_borders }
+	sakuya_b3_activate_law_player_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_player_effect = { LAW = law_corporatized_unions }
+}
+
+sakuya_b8_fx_apply_lawset_fascist_marked = {
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_corporate_state }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_single_party_state }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_ethnostate }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_state_religion }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_appointed_bureaucrats }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_mass_conscription }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_secret_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_interventionism }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_protectionism }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_proportional_taxation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_commercialized_agriculture }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_colonial_exploitation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_militarized_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_outlawed_dissent }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_workers_rights }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_restricted_child_labor }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_womens_rights }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_poor_laws }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_closed_borders }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_corporatized_unions }
+}
+
+sakuya_b8_fx_apply_lawset_gdp_player = {
+	sakuya_b3_activate_law_player_effect = { LAW = law_corporate_state }
+	sakuya_b3_activate_law_player_effect = { LAW = law_technocracy }
+	sakuya_b3_activate_law_player_effect = { LAW = law_multicultural }
+	sakuya_b3_activate_law_player_effect = { LAW = law_total_separation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_appointed_bureaucrats }
+	sakuya_b3_activate_law_player_effect = { LAW = law_professional_army }
+	sakuya_b3_activate_law_player_effect = { LAW = law_secret_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_laissez_faire }
+	sakuya_b3_activate_law_player_effect = { LAW = law_free_trade }
+	sakuya_b3_activate_law_player_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_commercialized_agriculture }
+	sakuya_b3_activate_law_player_effect = { LAW = law_colonial_exploitation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_dedicated_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_player_effect = { LAW = law_right_of_assembly }
+	sakuya_b3_activate_law_player_effect = { LAW = law_regulatory_bodies }
+	sakuya_b3_activate_law_player_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_player_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_player_effect = { LAW = law_poor_laws }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_migration_controls }
+	sakuya_b3_activate_law_player_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_player_effect = { LAW = law_right_to_associate }
+}
+
+sakuya_b8_fx_apply_lawset_gdp_marked = {
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_corporate_state }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_technocracy }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_multicultural }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_total_separation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_appointed_bureaucrats }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_professional_army }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_secret_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_laissez_faire }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_free_trade }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_commercialized_agriculture }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_colonial_exploitation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_dedicated_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_right_of_assembly }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_regulatory_bodies }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_poor_laws }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_migration_controls }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_right_to_associate }
+}
+
+sakuya_b8_fx_apply_lawset_sol_player = {
+	sakuya_b3_activate_law_player_effect = { LAW = law_council_republic }
+	sakuya_b3_activate_law_player_effect = { LAW = law_universal_suffrage }
+	sakuya_b3_activate_law_player_effect = { LAW = law_multicultural }
+	sakuya_b3_activate_law_player_effect = { LAW = law_total_separation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_elected_bureaucrats }
+	sakuya_b3_activate_law_player_effect = { LAW = law_professional_army }
+	sakuya_b3_activate_law_player_effect = { LAW = law_guaranteed_liberties }
+	sakuya_b3_activate_law_player_effect = { LAW = law_cooperative_ownership }
+	sakuya_b3_activate_law_player_effect = { LAW = law_free_trade }
+	sakuya_b3_activate_law_player_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_collectivized_agriculture }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_player_effect = { LAW = law_dedicated_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_player_effect = { LAW = law_protected_speech }
+	sakuya_b3_activate_law_player_effect = { LAW = law_worker_protections }
+	sakuya_b3_activate_law_player_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_player_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_player_effect = { LAW = law_old_age_pension }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_migration_controls }
+	sakuya_b3_activate_law_player_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_player_effect = { LAW = law_factory_councils }
+}
+
+sakuya_b8_fx_apply_lawset_sol_marked = {
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_council_republic }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_universal_suffrage }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_multicultural }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_total_separation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_elected_bureaucrats }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_professional_army }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_guaranteed_liberties }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_cooperative_ownership }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_free_trade }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_collectivized_agriculture }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_dedicated_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_protected_speech }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_worker_protections }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_old_age_pension }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_migration_controls }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_factory_councils }
+}
+
+sakuya_b8_fx_apply_lawset_communist_player = {
+	sakuya_b3_activate_law_player_effect = { LAW = law_council_republic }
+	sakuya_b3_activate_law_player_effect = { LAW = law_single_party_state }
+	sakuya_b3_activate_law_player_effect = { LAW = law_cultural_exclusion }
+	sakuya_b3_activate_law_player_effect = { LAW = law_state_atheism }
+	sakuya_b3_activate_law_player_effect = { LAW = law_appointed_bureaucrats }
+	sakuya_b3_activate_law_player_effect = { LAW = law_mass_conscription }
+	sakuya_b3_activate_law_player_effect = { LAW = law_secret_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_command_economy }
+	sakuya_b3_activate_law_player_effect = { LAW = law_isolationism }
+	sakuya_b3_activate_law_player_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_collectivized_agriculture }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_player_effect = { LAW = law_militarized_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_player_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_player_effect = { LAW = law_outlawed_dissent }
+	sakuya_b3_activate_law_player_effect = { LAW = law_worker_protections }
+	sakuya_b3_activate_law_player_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_player_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_player_effect = { LAW = law_old_age_pension }
+	sakuya_b3_activate_law_player_effect = { LAW = law_closed_borders }
+	sakuya_b3_activate_law_player_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_player_effect = { LAW = law_corporatized_unions }
+}
+
+sakuya_b8_fx_apply_lawset_communist_marked = {
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_council_republic }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_single_party_state }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_cultural_exclusion }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_state_atheism }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_appointed_bureaucrats }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_mass_conscription }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_secret_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_command_economy }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_isolationism }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_graduated_taxation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_collectivized_agriculture }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_militarized_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_schools }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_public_health_insurance }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_outlawed_dissent }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_worker_protections }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_compulsory_primary_school }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_womens_suffrage }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_old_age_pension }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_closed_borders }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_slavery_banned }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_corporatized_unions }
+}
+
+sakuya_b8_fx_apply_lawset_shit_player = {
+	sakuya_b3_activate_law_player_effect = { LAW = law_chiefdom }
+	sakuya_b3_activate_law_player_effect = { LAW = law_autocracy }
+	sakuya_b3_activate_law_player_effect = { LAW = law_ethnostate }
+	sakuya_b3_activate_law_player_effect = { LAW = law_hindu_caste_enforced }
+	sakuya_b3_activate_law_player_effect = { LAW = law_state_religion }
+	sakuya_b3_activate_law_player_effect = { LAW = law_hereditary_bureaucrats }
+	sakuya_b3_activate_law_player_effect = { LAW = law_peasant_levies }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_home_affairs }
+	sakuya_b3_activate_law_player_effect = { LAW = law_traditionalism }
+	sakuya_b3_activate_law_player_effect = { LAW = law_isolationism }
+	sakuya_b3_activate_law_player_effect = { LAW = law_consumption_based_taxation }
+	sakuya_b3_activate_law_player_effect = { LAW = law_serfdom }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_police }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_schools }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_health_system }
+	sakuya_b3_activate_law_player_effect = { LAW = law_outlawed_dissent }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_workers_rights }
+	sakuya_b3_activate_law_player_effect = { LAW = law_child_labor_allowed }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_womens_rights }
+	sakuya_b3_activate_law_player_effect = { LAW = law_no_social_security }
+	sakuya_b3_activate_law_player_effect = { LAW = law_closed_borders }
+	sakuya_b3_activate_law_player_effect = { LAW = law_slave_trade }
+	sakuya_b3_activate_law_player_effect = { LAW = law_combination_acts }
+}
+
+sakuya_b8_fx_apply_lawset_shit_marked = {
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_chiefdom }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_autocracy }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_ethnostate }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_hindu_caste_enforced }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_state_religion }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_hereditary_bureaucrats }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_peasant_levies }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_home_affairs }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_traditionalism }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_isolationism }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_consumption_based_taxation }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_serfdom }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_colonial_affairs }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_police }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_schools }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_health_system }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_outlawed_dissent }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_workers_rights }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_child_labor_allowed }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_womens_rights }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_no_social_security }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_closed_borders }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_slave_trade }
+	sakuya_b3_activate_law_marked_country_effect = { LAW = law_combination_acts }
+}
+
+sakuya_b8_remove_how_dare_u_effect = {
+	remove_modifier = sakuya_cheat_b8_how_dare_u
+	remove_modifier = sakuya_cheat_b8_how_dare_u_negative
+}
+
+sakuya_b8_remove_doomfall_effect = {
+	remove_modifier = sakuya_cheat_b8_doomfall
+}
+
+sakuya_b8_remove_social_collapse_effect = {
+	remove_modifier = sakuya_cheat_b8_social_collapse
+}
+
+sakuya_b8_fx_how_dare_u_player = {
+	sakuya_b8_remove_how_dare_u_effect = yes
+	add_modifier = { name = sakuya_cheat_b8_how_dare_u days = -1 }
+}
+
+sakuya_b8_fx_how_dare_u_player_negative = {
+	sakuya_b8_remove_how_dare_u_effect = yes
+	add_modifier = { name = sakuya_cheat_b8_how_dare_u_negative days = -1 }
+}
+
+sakuya_b8_fx_how_dare_u_marked = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			sakuya_b8_remove_how_dare_u_effect = yes
+			add_modifier = { name = sakuya_cheat_b8_how_dare_u days = -1 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_fx_how_dare_u_marked_negative = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			sakuya_b8_remove_how_dare_u_effect = yes
+			add_modifier = { name = sakuya_cheat_b8_how_dare_u_negative days = -1 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_fx_doomfall_player = {
+	sakuya_b8_remove_doomfall_effect = yes
+	add_modifier = { name = sakuya_cheat_b8_doomfall days = -1 }
+	add_treasury = {
+		value = gold_reserves_limit
+		multiply = -10
+	}
+}
+
+sakuya_b8_fx_doomfall_marked = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			sakuya_b8_remove_doomfall_effect = yes
+			add_modifier = { name = sakuya_cheat_b8_doomfall days = -1 }
+			add_treasury = {
+				value = gold_reserves_limit
+				multiply = -10
+			}
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_fx_social_collapse_player = {
+	sakuya_b8_remove_social_collapse_effect = yes
+	add_modifier = { name = sakuya_cheat_b8_social_collapse days = -1 }
+}
+
+sakuya_b8_fx_social_collapse_marked = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			sakuya_b8_remove_social_collapse_effect = yes
+			add_modifier = { name = sakuya_cheat_b8_social_collapse days = -1 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_fx_clear_how_dare_u = {
+	remove_modifier = sakuya_cheat_b8_how_dare_u
+	remove_modifier = sakuya_cheat_b8_how_dare_u_negative
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b8_how_dare_u
+			remove_modifier = sakuya_cheat_b8_how_dare_u_negative
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_fx_clear_doomfall = {
+	remove_modifier = sakuya_cheat_b8_doomfall
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b8_doomfall
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_fx_clear_social_collapse = {
+	remove_modifier = sakuya_cheat_b8_social_collapse
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b8_social_collapse
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_tab1_change_country_modifier_delta_effect = {
+	if = { limit = { NOT = { has_variable = $VAR$ } } set_variable = { name = $VAR$ value = 0 } }
+	change_variable = { name = $VAR$ add = $DELTA$ }
+	if = { limit = { var:$VAR$ = 0 } remove_variable = $VAR$ }
+	remove_modifier = $MOD$
+	if = { limit = { has_variable = $VAR$ } add_modifier = { name = $MOD$ multiplier = var:$VAR$ } set_variable = $ACTIVE$ }
+	if = { limit = { NOT = { has_variable = $VAR$ } NOT = { has_variable = $SMALL_VAR$ } } remove_variable = $ACTIVE$ }
+}
+
+sakuya_b8_tab1_apply_marked_country_fixed_modifier_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = $VAR$
+			remove_modifier = $DYNAMIC_MOD$
+			remove_modifier = $ADD_MOD$
+			remove_modifier = $SUB_MOD$
+			add_modifier = { name = $ADD_MOD$ }
+			set_variable = $ACTIVE$
+		}
+		set_variable = $ACTIVE$
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_tab1_clear_country_modifier_pair_effect = {
+	remove_variable = $VAR$
+	remove_variable = $SMALL_VAR$
+	remove_variable = $ACTIVE$
+	remove_modifier = $MOD$
+	remove_modifier = $SMALL_MOD$
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = $VAR$
+			remove_variable = $SMALL_VAR$
+			remove_variable = $ACTIVE$
+			remove_modifier = $MOD$
+			remove_modifier = $SMALL_MOD$
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+# === BTN8 technology unlocks start ===
+sakuya_b8_add_marked_country_technology_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			add_technology_researched = $TECH$
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+# === BTN8 technology unlocks end ===
+
+sakuya_b8_culture_resolve_selected_effect = {
+	clear_saved_scope = sakuya_b8_culture_selected_scope
+	if = {
+		limit = { has_variable = sakuya_list_confirmed_culture }
+		var:sakuya_list_confirmed_culture = {
+			save_scope_as = sakuya_b8_culture_selected_scope
+		}
+	}
+}
+
+sakuya_b8_culture_add_selected_to_dest_effect = {
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			exists = scope:sakuya_b8_culture_dest_scope
+			scope:sakuya_b8_culture_dest_scope = {
+				NOT = { country_has_primary_culture = scope:sakuya_b8_culture_selected_scope }
+			}
+		}
+		scope:sakuya_b8_culture_dest_scope = {
+			add_primary_culture = scope:sakuya_b8_culture_selected_scope
+		}
+	}
+}
+
+sakuya_b8_culture_remove_source_from_dest_effect = {
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_source_scope
+			exists = scope:sakuya_b8_culture_dest_scope
+			scope:sakuya_b8_culture_dest_scope = {
+				country_has_primary_culture = scope:sakuya_b8_culture_source_scope
+				any_primary_culture = {
+					NOT = { this = scope:sakuya_b8_culture_source_scope }
+				}
+			}
+		}
+		scope:sakuya_b8_culture_dest_scope = {
+			remove_primary_culture = scope:sakuya_b8_culture_source_scope
+		}
+	}
+}
+
+sakuya_b8_culture_remove_selected_from_dest_effect = {
+	if = {
+		limit = { exists = scope:sakuya_b8_culture_selected_scope }
+		scope:sakuya_b8_culture_selected_scope = {
+			save_scope_as = sakuya_b8_culture_source_scope
+		}
+		sakuya_b8_culture_remove_source_from_dest_effect = yes
+	}
+}
+
+sakuya_b8_culture_set_only_selected_in_dest_effect = {
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			exists = scope:sakuya_b8_culture_dest_scope
+		}
+		sakuya_b8_culture_add_selected_to_dest_effect = yes
+		scope:sakuya_b8_culture_dest_scope = {
+			every_primary_culture = {
+				limit = {
+					NOT = { this = scope:sakuya_b8_culture_selected_scope }
+				}
+				save_scope_as = sakuya_b8_culture_source_scope
+				root = { sakuya_b8_culture_remove_source_from_dest_effect = yes }
+			}
+		}
+	}
+}
+
+sakuya_b8_culture_add_selected_to_player_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	save_scope_as = sakuya_b8_culture_dest_scope
+	sakuya_b8_culture_add_selected_to_dest_effect = yes
+}
+
+sakuya_b8_culture_remove_selected_from_player_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	save_scope_as = sakuya_b8_culture_dest_scope
+	sakuya_b8_culture_remove_selected_from_dest_effect = yes
+}
+
+sakuya_b8_culture_set_only_selected_in_player_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	save_scope_as = sakuya_b8_culture_dest_scope
+	sakuya_b8_culture_set_only_selected_in_dest_effect = yes
+}
+
+sakuya_b8_culture_add_selected_to_marked_country_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = { save_scope_as = sakuya_b8_culture_dest_scope }
+		sakuya_b8_culture_add_selected_to_dest_effect = yes
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_culture_remove_selected_from_marked_country_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = { save_scope_as = sakuya_b8_culture_dest_scope }
+		sakuya_b8_culture_remove_selected_from_dest_effect = yes
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_culture_set_only_selected_in_marked_country_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = { save_scope_as = sakuya_b8_culture_dest_scope }
+		sakuya_b8_culture_set_only_selected_in_dest_effect = yes
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_culture_add_selected_homeland_player_marked_states_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			any_scope_state = { has_decree = decree_sakuya_mark_state }
+		}
+		every_scope_state = {
+			limit = { has_decree = decree_sakuya_mark_state }
+			state_region = {
+				if = {
+					limit = { NOT = { is_homeland = scope:sakuya_b8_culture_selected_scope } }
+					add_homeland = scope:sakuya_b8_culture_selected_scope
+				}
+			}
+		}
+	}
+}
+
+sakuya_b8_culture_remove_selected_homeland_player_marked_states_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			any_scope_state = { has_decree = decree_sakuya_mark_state }
+		}
+		every_scope_state = {
+			limit = { has_decree = decree_sakuya_mark_state }
+			state_region = {
+				if = {
+					limit = { is_homeland = scope:sakuya_b8_culture_selected_scope }
+					remove_homeland = scope:sakuya_b8_culture_selected_scope
+				}
+			}
+		}
+	}
+}
+
+sakuya_b8_culture_add_selected_community_player_marked_states_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			any_scope_state = { has_decree = decree_sakuya_mark_state }
+		}
+		every_scope_state = {
+			limit = { has_decree = decree_sakuya_mark_state }
+			if = {
+				limit = { NOT = { has_cultural_community = scope:sakuya_b8_culture_selected_scope } }
+				add_cultural_community = scope:sakuya_b8_culture_selected_scope
+			}
+		}
+	}
+}
+
+sakuya_b8_culture_add_selected_homeland_marked_country_states_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+			scope:sakuya_b3_marked_country_scope = {
+				any_scope_state = { has_decree = decree_sakuya_mark_state }
+			}
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			every_scope_state = {
+				limit = { has_decree = decree_sakuya_mark_state }
+				state_region = {
+					if = {
+						limit = { NOT = { is_homeland = scope:sakuya_b8_culture_selected_scope } }
+						add_homeland = scope:sakuya_b8_culture_selected_scope
+					}
+				}
+			}
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_culture_remove_selected_homeland_marked_country_states_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+			scope:sakuya_b3_marked_country_scope = {
+				any_scope_state = { has_decree = decree_sakuya_mark_state }
+			}
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			every_scope_state = {
+				limit = { has_decree = decree_sakuya_mark_state }
+				state_region = {
+					if = {
+						limit = { is_homeland = scope:sakuya_b8_culture_selected_scope }
+						remove_homeland = scope:sakuya_b8_culture_selected_scope
+					}
+				}
+			}
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_culture_add_selected_community_marked_country_states_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			has_variable = sakuya_b3_marked_country_found
+			exists = scope:sakuya_b3_marked_country_scope
+			scope:sakuya_b3_marked_country_scope = {
+				any_scope_state = { has_decree = decree_sakuya_mark_state }
+			}
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			every_scope_state = {
+				limit = { has_decree = decree_sakuya_mark_state }
+				if = {
+					limit = { NOT = { has_cultural_community = scope:sakuya_b8_culture_selected_scope } }
+					add_cultural_community = scope:sakuya_b8_culture_selected_scope
+				}
+			}
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b8_culture_selected_fervor_add_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b8_culture_selected_scope }
+		scope:sakuya_b8_culture_selected_scope = {
+			add_fervor = 10
+		}
+	}
+}
+
+sakuya_b8_culture_selected_fervor_remove_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b8_culture_selected_scope }
+		scope:sakuya_b8_culture_selected_scope = {
+			add_fervor = -10
+		}
+	}
+}
+
+sakuya_b8_culture_selected_awakening_start_effect = {
+	sakuya_b8_culture_resolve_selected_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b8_culture_selected_scope
+			scope:sakuya_b8_culture_selected_scope = {
+				culture_has_national_awakening = no
+			}
+		}
+		start_national_awakening = {
+			culture = scope:sakuya_b8_culture_selected_scope
+			months = 120
+		}
+	}
+}

@@ -1,0 +1,35 @@
+sakuya_b9_remove_all_modifiers = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = { sakuya_b9_remove_all_sakuya_modifiers_effect = yes }
+}
+
+sakuya_b9_clear_all_mark_variables = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = { sakuya_b9_clear_all_mark_variables_effect = yes }
+}
+
+sakuya_start_button_seen_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_global_variable = sakuya_start_button_seen_global
+	}
+}
+
+sakuya_start_button_seen_set = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		set_global_variable = sakuya_start_button_seen_global
+	}
+}
+
+sakuya_start_button_seen_clear = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		remove_global_variable = sakuya_start_button_seen_global
+	}
+}

@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "stage": "beta17-final-rc1",
+  "baseline": "Victoria 3 1.13.*",
+  "builder": {
+    "amounts": [
+      1,
+      5,
+      10,
+      25,
+      50
+    ],
+    "target_policy": "highest_gdp_marked_owned_state",
+    "formation_type": "army",
+    "service_type": "regular",
+    "state_marker": "decree_sakuya_mark_state",
+    "result_contract": {
+      "created": 1,
+      "failed": -1
+    }
+  },
+  "template_priority": {
+    "infantry": [
+      "advanced_mechanized_infantry",
+      "modern_mechanized_infantry",
+      "mechanized_infantry",
+      "squad_infantry",
+      "trench_infantry",
+      "skirmish_infantry",
+      "line_infantry",
+      "irregular_infantry"
+    ],
+    "artillery": [
+      "rocket_artillery",
+      "modern_heavy_tank",
+      "self_propelled_artillery",
+      "siege_artillery",
+      "shrapnel_artillery",
+      "mobile_artillery",
+      "cannon_artillery"
+    ],
+    "mobile": [
+      "giant_death_robot",
+      "main_battle_tanks",
+      "modern_light_tanks",
+      "light_tanks",
+      "lancers",
+      "dragoons",
+      "hussars"
+    ],
+    "marines": [
+      "advanced_tier_marines",
+      "modern_tier_marines"
+    ],
+    "same_unlock_tiebreaks": {
+      "military_drill": "dragoons_over_cuirassiers_for_generated_templates",
+      "mobile_armor_artillery": "self_propelled_artillery_over_heavy_tank_for_generated_templates"
+    }
+  },
+  "quick_presets": {
+    "infantry_corps": {
+      "amount": 25,
+      "priority_role": "infantry"
+    },
+    "artillery_group": {
+      "amount": 10,
+      "priority_role": "artillery"
+    },
+    "mobile_corps": {
+      "amount": 10,
+      "priority_role": "mobile"
+    },
+    "marine_force": {
+      "amount": 10,
+      "priority_role": "marines"
+    }
+  },
+  "mixed_templates": {
+    "balanced": {
+      "index": 1,
+      "counts": {
+        "infantry": 25,
+        "artillery": 15,
+        "mobile": 10
+      }
+    },
+    "infantry_heavy": {
+      "index": 2,
+      "counts": {
+        "infantry": 35,
+        "artillery": 10,
+        "mobile": 5
+      }
+    },
+    "breakthrough": {
+      "index": 3,
+      "counts": {
+        "infantry": 20,
+        "artillery": 15,
+        "mobile": 15
+      }
+    },
+    "armored_fist": {
+      "index": 4,
+      "counts": {
+        "infantry": 15,
+        "artillery": 10,
+        "mobile": 25
+      },
+      "extra_gate": "mobile_armor"
+    }
+  },
+  "designer": {
+    "sizes": [
+      25,
+      50,
+      75,
+      100
+    ],
+    "infantry_percent": [
+      40,
+      50,
+      60,
+      70
+    ],
+    "artillery_percent": [
+      10,
+      20,
+      30
+    ],
+    "mobile_policy": "remainder",
+    "rounding": "when mobile share is positive: floor infantry and artillery then give remainder to mobile; when infantry+artillery=100: round infantry with half-even semantics and give remainder to artillery, omit mobile",
+    "expected_configurations": 48,
+    "expected_explicit_branches": 17472
+  },
+  "amphibious_builder": {
+    "amounts": [
+      5,
+      10,
+      25,
+      50
+    ],
+    "priority_role": "marines",
+    "requires_marked_port_state": true,
+    "port_trigger": "has_port_state",
+    "automatic_fleet_attachment": false,
+    "manual_attach_required": true
+  },
+  "controls": {
+    "target_policy": "player_or_single_marked_country",
+    "marked_country_contract": "sakuya_mark_country clears previous country marks before setting a new one",
+    "positive_values": [
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      5.0
+    ],
+    "reduction_values": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "parameters": [
+      {
+        "id": "offense",
+        "index": 1,
+        "modifier": "cmp_army_control_offense",
+        "modifier_key": "unit_army_offense_mult",
+        "polarity": "positive"
+      },
+      {
+        "id": "defense",
+        "index": 2,
+        "modifier": "cmp_army_control_defense",
+        "modifier_key": "unit_army_defense_mult",
+        "polarity": "positive"
+      },
+      {
+        "id": "morale_recovery",
+        "index": 3,
+        "modifier": "cmp_army_control_morale_recovery",
+        "modifier_key": "unit_morale_recovery_mult",
+        "polarity": "positive"
+      },
+      {
+        "id": "mobilization",
+        "index": 4,
+        "modifier": "cmp_army_control_mobilization",
+        "modifier_key": "military_formation_mobilization_speed_mult",
+        "polarity": "positive"
+      },
+      {
+        "id": "experience",
+        "index": 5,
+        "modifier": "cmp_army_control_experience",
+        "modifier_key": "unit_experience_gain_mult",
+        "polarity": "positive"
+      },
+      {
+        "id": "movement",
+        "index": 6,
+        "modifier": "cmp_army_control_movement",
+        "modifier_key": "military_formation_army_movement_speed_mult",
+        "polarity": "positive"
+      },
+      {
+        "id": "supply",
+        "index": 7,
+        "modifier": "cmp_army_control_supply",
+        "modifier_key": "unit_supply_consumption_mult",
+        "polarity": "reduction"
+      },
+      {
+        "id": "goods_cost",
+        "index": 8,
+        "modifier": "cmp_army_control_goods_cost",
+        "modifier_key": "country_military_goods_cost_mult",
+        "polarity": "reduction"
+      },
+      {
+        "id": "wages",
+        "index": 9,
+        "modifier": "cmp_army_control_wages",
+        "modifier_key": "country_military_wages_mult",
+        "polarity": "reduction"
+      },
+      {
+        "id": "war_exhaustion",
+        "index": 10,
+        "modifier": "cmp_army_control_war_exhaustion",
+        "modifier_key": "country_war_exhaustion_casualties_mult",
+        "polarity": "reduction"
+      }
+    ],
+    "presets": {
+      "balanced": {
+        "positive": 0.25,
+        "reduction": 0.25
+      },
+      "rapid": {
+        "offense": 0.5,
+        "defense": 0.5,
+        "morale_recovery": 1.0,
+        "mobilization": 1.0,
+        "experience": 0.25,
+        "movement": 1.0,
+        "reduction": 0.5
+      },
+      "economy": {
+        "offense": 0.1,
+        "defense": 0.1,
+        "morale_recovery": 0.1,
+        "mobilization": 0.1,
+        "experience": 0.25,
+        "movement": 0.1,
+        "reduction": 0.5
+      },
+      "god": {
+        "ui_label": "Extreme",
+        "positive": 5.0,
+        "reduction": 0.9
+      }
+    },
+    "result_contract": {
+      "applied": 1,
+      "reset_parameter": 2,
+      "reset_all": 3,
+      "preset": 4,
+      "failed": -1
+    }
+  },
+  "tech_res_provider_contract": [
+    {
+      "id": "modern_mechanized_infantry",
+      "group": "combat_unit_group_infantry",
+      "unlock_technology": "mechanized_infantry"
+    },
+    {
+      "id": "advanced_mechanized_infantry",
+      "group": "combat_unit_group_infantry",
+      "unlock_technology": "high_performance_apparel"
+    },
+    {
+      "id": "modern_tier_marines",
+      "group": "combat_unit_group_marines",
+      "unlock_technology": "amphibious_warfare"
+    },
+    {
+      "id": "advanced_tier_marines",
+      "group": "combat_unit_group_marines",
+      "unlock_technology": "high_performance_apparel"
+    },
+    {
+      "id": "self_propelled_artillery",
+      "group": "combat_unit_group_artillery",
+      "unlock_technology": "mobile_armor"
+    },
+    {
+      "id": "rocket_artillery",
+      "group": "combat_unit_group_artillery",
+      "unlock_technology": "rocket_artillery"
+    },
+    {
+      "id": "modern_heavy_tank",
+      "group": "combat_unit_group_artillery",
+      "unlock_technology": "blitzkrieg"
+    },
+    {
+      "id": "modern_light_tanks",
+      "group": "combat_unit_group_cavalry",
+      "unlock_technology": "blitzkrieg"
+    },
+    {
+      "id": "main_battle_tanks",
+      "group": "combat_unit_group_cavalry",
+      "unlock_technology": "main_battle_tank"
+    },
+    {
+      "id": "giant_death_robot",
+      "group": "combat_unit_group_cavalry",
+      "unlock_technology": "mecha_engineering"
+    }
+  ],
+  "known_limitations": [
+    "Army Builder and templates create new formations; they do not target an existing exact army formation.",
+    "Army Controls target a country-wide military modifier surface, not one formation.",
+    "Only the two verified Tech & Res marine tiers are used by Amphibious Builder.",
+    "Automatic attachment of a newly created marine army to a fleet remains a documented manual game-UI step.",
+    "Vanilla unit gates are preserved from the accepted project registry; Tech & Res gates are cross-checked against the pinned provider snapshot."
+  ],
+  "runtime_gate": [
+    "builder_single_unit_immediate_plus1day_saveload",
+    "quick_presets_all_roles",
+    "mixed_templates_all_four",
+    "designer_sizes_and_zero_mobile_case",
+    "amphibious_port_positive_and_inland_negative",
+    "controls_self_and_marked_country_apply_reset_presets",
+    "technology_locked_negative_states",
+    "profiles_90_100_115_130"
+  ],
+  "tech_res_provider_snapshot": {
+    "workshop_id": "3472248460",
+    "source_collection": "529340(1).zip",
+    "files": {
+      "common/combat_unit_types/ztr_infantry_combat_unit_types.txt": "0da5ffd7f2b1a7cbad7ccf11d1166b69a696519ebf3c09a52aa7027dc30d6a38",
+      "common/combat_unit_types/ztr_artillery_combat_unit_types.txt": "d01ef0dc62907d3c8578b52c75ec3d05451551d47509b8e48618c7689f9e933f",
+      "common/combat_unit_types/ztr_tank_combat_unit_types.txt": "f6e55e0fc7a5cb070eb7faa0ec2bb7f22d3a8b84edb380902be430673bf6af2c"
+    }
+  }
+}

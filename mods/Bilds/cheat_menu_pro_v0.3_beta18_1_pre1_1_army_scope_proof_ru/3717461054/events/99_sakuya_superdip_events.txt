@@ -1,0 +1,151 @@
+namespace = sakuya_superdip
+
+sakuya_superdip.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = "sakuya_superdip.1.t"
+	desc = "sakuya_superdip.1.d"
+	flavor = "sakuya_superdip.1.f"
+	event_image = { texture = "gfx/interface/sakuya/about/sakuya_event_superdip_1.jpg" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	trigger = {
+		has_variable = sakuya_superdip_target_country_var
+	}
+
+	immediate = {
+		save_scope_as = sakuya_superdip_actor_country
+		var:sakuya_superdip_target_country_var = {
+			save_scope_as = sakuya_superdip_target_country
+		}
+	}
+
+	option = {
+		name = "sakuya_superdip.1.a"
+		default_option = yes
+
+		scope:sakuya_superdip_actor_country = {
+			create_diplomatic_pact = {
+				country = scope:sakuya_superdip_target_country
+				type = sakuya_superdip_humiliation_pact_01
+			}
+			scope:sakuya_superdip_target_country = {
+				add_modifier = {
+					name = country_humiliated
+					months = 60
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = sakuya_superdip.2
+					months = 60
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "sakuya_superdip.1.b"
+
+		scope:sakuya_superdip_actor_country = {
+			save_scope_as = actor
+		}
+		scope:sakuya_superdip_target_country = {
+			save_scope_as = target
+		}
+		scope:sakuya_superdip_actor_country = {
+			create_diplomatic_pact = {
+				country = scope:sakuya_superdip_target_country
+				type = sakuya_superdip_humiliation_pact_01
+			}
+			scope:sakuya_superdip_target_country = {
+				add_modifier = {
+					name = country_humiliated
+					months = 60
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = sakuya_superdip.2
+					months = 60
+				}
+			}
+		}
+		scope:sakuya_superdip_target_country = {
+			random_list = {
+				1 = { add_modifier = { name = sakuya_superdip_insult_01 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_02 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_03 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_04 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_05 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_06 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_07 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_08 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_09 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_10 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_11 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_12 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_13 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_14 months = 60 is_decaying = yes } }
+				1 = { add_modifier = { name = sakuya_superdip_insult_15 months = 60 is_decaying = yes } }
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = scope:sakuya_superdip_actor_country
+			}
+		}
+		scope:sakuya_superdip_actor_country = {
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = scope:sakuya_superdip_target_country
+			}
+			change_relations = {
+				country = scope:sakuya_superdip_target_country
+				value = -50
+			}
+			post_notification = sakuya_superdip_humiliation_toast
+		}
+	}
+
+	option = {
+		name = "sakuya_superdip.1.c"
+		custom_tooltip = {
+			text = sakuya_superdip.1.c_desc
+		}
+	}
+}
+
+sakuya_superdip.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		exists = scope:sakuya_superdip_actor_country
+		exists = scope:sakuya_superdip_target_country
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:sakuya_superdip_target_country = {
+					has_diplomatic_pact = {
+						who = scope:sakuya_superdip_actor_country
+						type = sakuya_superdip_humiliation_pact_01
+					}
+				}
+			}
+			scope:sakuya_superdip_target_country = {
+				remove_diplomatic_pact = {
+					country = scope:sakuya_superdip_actor_country
+					type = sakuya_superdip_humiliation_pact_01
+				}
+			}
+		}
+	}
+}

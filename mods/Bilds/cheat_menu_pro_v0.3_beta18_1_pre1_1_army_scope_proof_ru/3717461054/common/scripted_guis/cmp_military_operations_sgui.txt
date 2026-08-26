@@ -1,0 +1,17 @@
+﻿# beta18.1-pre1.1 — Military Operations read-only Army scope proof.
+# No gameplay writes: these endpoints only observe a military_formation root.
+
+cmp_ops_army_root_probe = {
+    scope = military_formation
+    is_shown = {
+        always = yes
+    }
+}
+
+cmp_ops_army_owner_probe = {
+    scope = military_formation
+    is_shown = {
+        is_army = yes
+        owner = { is_player = yes }
+    }
+}

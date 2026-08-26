@@ -1,0 +1,49 @@
+sakuya_b2_gold_reserves_limit_n50 = {
+    value = gold_reserves_limit
+    multiply = -999.99
+}
+
+sakuya_b2_gold_reserves_limit_n20 = {
+    value = gold_reserves_limit
+    multiply = -3
+}
+
+sakuya_b2_gold_reserves_limit_n10 = {
+    value = gold_reserves_limit
+    multiply = -0.5
+}
+
+sakuya_b2_gold_reserves_limit_n5 = {
+    value = gold_reserves_limit
+    multiply = -0.1
+}
+
+sakuya_b2_gold_reserves_limit_p10 = {
+    value = gold_reserves_limit
+    multiply = 0.1
+}
+
+sakuya_b2_gold_reserves_limit_p25 = {
+    value = gold_reserves_limit
+    multiply = 0.25
+}
+
+sakuya_b2_gold_reserves_limit_p50 = {
+    value = gold_reserves_limit
+    multiply = 0.5
+}
+
+sakuya_b2_gold_reserves_limit_p100 = {
+    value = gold_reserves_limit
+    multiply = 1
+}
+
+sakuya_b2_gold_reserves_limit_p300 = {
+    value = gold_reserves_limit
+    multiply = 50
+}
+
+sakuya_b2_gold_reserves_limit_p1000 = {
+    value = gold_reserves_limit
+    multiply = 999.99
+}

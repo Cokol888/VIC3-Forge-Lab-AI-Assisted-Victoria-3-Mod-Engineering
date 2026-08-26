@@ -1,0 +1,695 @@
+{
+  "status": "PASS",
+  "checks": {
+    "build_identity_codegen_check": "PASS: build identity is synchronized",
+    "staffing2_codegen_check": "PASS: Staffing Coverage 2.1 artifacts are deterministic",
+    "registry_coverage": {
+      "status": "PASS",
+      "checks": {
+        "build_id": "CMP-0.3-B18-1-PRE1-1-20260823",
+        "staffing_total": 132,
+        "staffing_supported": 97,
+        "staffing_manual": 5,
+        "staffing_unsupported": 30,
+        "legacy_selectors_covered": 102,
+        "profiles": 14,
+        "building_operations_supported": 92,
+        "building_operations_covered": 132,
+        "status_contract": [
+          "MANUAL",
+          "READ_ONLY",
+          "SUPPORTED",
+          "UNSAFE",
+          "UNSUPPORTED"
+        ]
+      },
+      "errors": []
+    },
+    "regions_operations": {
+      "status": "PASS",
+      "checks": {
+        "operations_buildings": 92,
+        "providers": {
+          "tech_res": 37,
+          "vanilla": 55
+        },
+        "categories": {
+          "all": 92,
+          "primary": 35,
+          "industry": 35,
+          "infrastructure": 11,
+          "public": 2,
+          "military": 5,
+          "services": 4,
+          "ownership": 0
+        },
+        "preset_deltas": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "generated_add_amounts": [
+          1,
+          5,
+          10,
+          15,
+          20,
+          25,
+          50,
+          100
+        ],
+        "resource_buildings": 19,
+        "safe_set": "no remove_building in SET helpers",
+        "availability_gate": "can_construct_building + can_queue_building_levels",
+        "selection_contract": "independent operations/staffing + legacy bridge",
+        "preset_component_isolation": {
+          "industrial_core": {
+            "components": 6,
+            "guard_resets": 6
+          },
+          "heavy_industry": {
+            "components": 6,
+            "guard_resets": 6
+          },
+          "military_industry": {
+            "components": 6,
+            "guard_resets": 6
+          },
+          "infrastructure_hub": {
+            "components": 4,
+            "guard_resets": 4
+          }
+        }
+      },
+      "errors": []
+    },
+    "army_final": {
+      "status": "PASS",
+      "checks": {
+        "registry": {
+          "units": 26,
+          "roles": {
+            "artillery": 8,
+            "infantry": 8,
+            "marines": 2,
+            "mobile": 8
+          },
+          "providers": [
+            "community_mod_framework",
+            "tech_res",
+            "vanilla"
+          ]
+        },
+        "tech_res_provider_contract": {
+          "entries": 10,
+          "status": "PASS"
+        },
+        "tech_res_provider_snapshot": {
+          "workshop_id": "3472248460",
+          "source_collection": "529340(1).zip",
+          "files": 3
+        },
+        "builder": {
+          "unit_types": 26,
+          "amounts": [
+            1,
+            5,
+            10,
+            25,
+            50
+          ],
+          "spawn_endpoints": 130,
+          "expected_spawn_endpoints": 130
+        },
+        "quick_presets": {
+          "infantry_corps": {
+            "priority_entries": 8,
+            "amount": 25,
+            "techs": [
+              "general_staff",
+              "high_performance_apparel",
+              "line_infantry",
+              "mechanized_infantry",
+              "mobile_armor",
+              "nco_training",
+              "trench_works"
+            ]
+          },
+          "artillery_group": {
+            "priority_entries": 7,
+            "amount": 10,
+            "techs": [
+              "artillery",
+              "blitzkrieg",
+              "breech_loading_artillery",
+              "defense_in_depth",
+              "mobile_armor",
+              "napoleonic_warfare",
+              "rocket_artillery"
+            ]
+          },
+          "mobile_corps": {
+            "priority_entries": 7,
+            "amount": 10,
+            "techs": [
+              "blitzkrieg",
+              "main_battle_tank",
+              "mecha_engineering",
+              "military_drill",
+              "mobile_armor",
+              "napoleonic_warfare",
+              "standing_army"
+            ]
+          },
+          "marine_force": {
+            "priority_entries": 2,
+            "amount": 10,
+            "techs": [
+              "amphibious_warfare",
+              "high_performance_apparel"
+            ]
+          }
+        },
+        "mixed_templates": {
+          "branches": 1568,
+          "per_preset": {
+            "1": 392,
+            "2": 392,
+            "3": 392,
+            "4": 392
+          }
+        },
+        "designer": {
+          "configurations": 48,
+          "branches": 17472,
+          "zero_mobile_configurations": 4
+        },
+        "amphibious": {
+          "create_branches": 8,
+          "amounts": [
+            5,
+            10,
+            25,
+            50
+          ],
+          "automatic_fleet_attachment": false
+        },
+        "controls": {
+          "parameters": 10,
+          "apply_endpoints": 50,
+          "presets": [
+            "balanced",
+            "rapid",
+            "economy",
+            "god"
+          ],
+          "stale_level_variables": 0,
+          "marked_target_single_mark_contract": true
+        },
+        "isolation": {
+          "create_workflows_target_existing_army": false,
+          "builder_mixed_designer_amphib_selection_isolated": true
+        },
+        "metrics": {
+          "army_scripted_gui_definitions": 209,
+          "army_scripted_effect_definitions": 278,
+          "builder_spawn_endpoints": 130,
+          "mixed_branches": 1568,
+          "designer_branches": 17472,
+          "amphibious_create_branches": 8,
+          "controls_apply_endpoints": 50
+        }
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "navy18": {
+      "status": "PASS",
+      "checks": {
+        "composer2_anchor_branches": 500,
+        "composer2_static_create_ship_payloads": 2375,
+        "ship_control_slots": 100,
+        "ship_control_ordering": "power_projection",
+        "ship_control_marker": "ship scope variable",
+        "ship_control_diagnostics": [
+          "type",
+          "flagship",
+          "damaged",
+          "port",
+          "battle",
+          "hp-band",
+          "crew-band"
+        ],
+        "flagship_write": "runtime PASS exact-ship only",
+        "transfer_status": "core runtime pass / RC1 regression",
+        "transfer_single": "set_ship_owner",
+        "transfer_batch": "set_ship_owner_multiple",
+        "transfer_batch_max": 20,
+        "transfer_cleanup": "source country",
+        "transfer_blocked_states": [
+          "dead",
+          "battle",
+          "flagship"
+        ],
+        "retrofit": "native bridge only",
+        "supply_reserve_write": "add_supply_ships country scope",
+        "supply_add_amounts": [
+          1,
+          10,
+          50,
+          100
+        ],
+        "assigned_supply_diagnostic": "num_assigned_supply_ships",
+        "supply_direct_assignment": "deferred",
+        "combat_hulls": 25,
+        "catalog_creation": 100,
+        "composer2_rows": 5,
+        "composer2_row_hull_choices": 125,
+        "composer2_counts": [
+          0,
+          1,
+          3,
+          5,
+          10
+        ],
+        "composer2_strategy": "anchor create_military_formation + exact temporary fleet + create_ship rows",
+        "duplicate_hulls": "allowed/additive",
+        "fleet_target_core": "pre2.4 runtime PASS",
+        "exact_ship_control": "pre4 runtime PASS",
+        "native_designer_bridge": true,
+        "instant_template": "default",
+        "legacy_plans_top_tab": false,
+        "workspace_profiles": 4,
+        "localization_keys": 352
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "navy_final_freeze": {
+      "status": "PASS",
+      "checks": {
+        "build_id": "CMP-0.3-B18-1-PRE1-1-20260823",
+        "runtime_status": "STATIC_PASS_RUNTIME_PENDING",
+        "final_status": "RELEASED_RUNTIME_PASS",
+        "rc1_runtime_pass": true,
+        "regression_cases": 16,
+        "semantic_freeze_files": 15,
+        "semantic_mismatches": [],
+        "workspace_navy_scoped_freeze": {
+          "checked": true,
+          "block_count": 28,
+          "semantic_sha256": "8d402e4837c8b98f253da65a17096e25367c99d352ed6f1be9852fb1e6a533b1"
+        },
+        "raw_frozen_data_files": 3,
+        "raw_mismatches": [],
+        "combat_hulls": 25,
+        "composer_rows": 5,
+        "exact_ship_slots": 100,
+        "transfer_batch_max": 20,
+        "supply_add_amounts": [
+          1,
+          10,
+          50,
+          100
+        ],
+        "workspace_modes": 6,
+        "workspace_profiles": 4,
+        "new_gameplay_mechanics": 0
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "military_operations_pre1": {
+      "status": "PASS",
+      "checks": {
+        "build_id": "CMP-0.3-B18-1-PRE1-1-20260823",
+        "baseline_victoria": "1.13.10",
+        "capabilities": 15,
+        "new_gameplay_writes": 0,
+        "navy_gameplay_changes": 0,
+        "new_persistent_markers": 0,
+        "legacy_amphib_files_frozen": 2,
+        "army_observer": "STATIC_IMPLEMENTED_RUNTIME_PENDING",
+        "army_scope_probe": "STATIC_IMPLEMENTED_RUNTIME_PENDING",
+        "army_list_accessor": "DISCOVERY_UNRESOLVED",
+        "marine_count": "DISCOVERY_UNRESOLVED",
+        "native_invasion_bridge": "DISCOVERY_REQUIRED"
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "registry_codegen_check": "REGISTRY_CHECK_PASS {\"buildings\": 92, \"operations\": 11, \"providers\": 3, \"resources\": 8, \"ships\": 25, \"units\": 26}",
+    "regions2_codegen_check": "REGIONS2_CHECK_PASS {\"adaptive_targets\": 4, \"amounts\": 6, \"buildings\": 92, \"generated_add_amounts\": 8, \"presets\": 4, \"resource_capable\": 19, \"staffing_supported\": 97}",
+    "economy2_codegen_check": "PASS economy2 codegen deterministic",
+    "population2_codegen_check": "PASS population2 codegen deterministic",
+    "politics2_codegen_check": "PASS politics2 codegen deterministic",
+    "navy18_codegen_check": "PASS: beta18 Final Fleet Composer 2.0 codegen is deterministic",
+    "navy18_catalog_codegen_check": "PASS: beta18-pre2 full naval catalog codegen is deterministic",
+    "navy18_ship_control_codegen_check": "PASS: beta18 Final exact ship control codegen is deterministic",
+    "navy18_transfer_codegen_check": "PASS: beta18 Final exact ship transfer codegen is deterministic",
+    "navy18_logistics_codegen_check": "PASS: beta18 Final retrofit/logistics codegen is deterministic",
+    "workspace_codegen_check": "PASS: workspace shell artifacts are deterministic",
+    "brace_files_checked": 131,
+    "brace_failures": [],
+    "military_target_contract": [],
+    "unique_gui_sgui_refs": 11362,
+    "missing_gui_sgui_refs": [],
+    "nested_cmp_effect_refs": 1276,
+    "missing_nested_cmp_effects": [],
+    "fleet_sgui_effect_refs": 37,
+    "missing_fleet_effects": [],
+    "cmp_sgui_effect_refs": 940,
+    "missing_cmp_sgui_effects": [],
+    "duplicate_cmp_definitions": {},
+    "fleet_gui_marker_begin": 1,
+    "fleet_gui_marker_end": 1,
+    "missing_ship_gui_entries": [],
+    "registry_ship_localization_missing": [],
+    "duplicate_cmp_localization_keys": {},
+    "regions2_localization_keys": 40,
+    "regions2_localization_missing": [],
+    "economy2_localization_keys": 78,
+    "economy2_localization_missing": [],
+    "economy2_sgui_effect_refs": 46,
+    "economy2_missing_effects": [],
+    "population2_localization_keys": 121,
+    "population2_localization_missing": [],
+    "politics2": {
+      "status": "PASS",
+      "gui_sgui_refs": 118,
+      "effect_refs": 58,
+      "loc_keys": 138,
+      "min_font": 12,
+      "errors": []
+    },
+    "ui_accessibility": {
+      "status": "PASS",
+      "profiles": [
+        {
+          "resolution": "2560x1080",
+          "role": "primary",
+          "kind": "static-layout-gate"
+        },
+        {
+          "resolution": "3440x1440",
+          "role": "secondary-ultrawide",
+          "kind": "static-layout-gate"
+        },
+        {
+          "density": "90/100/115/130",
+          "role": "workspace-reflow",
+          "kind": "generated-profile-gate"
+        }
+      ],
+      "note": "Static layout/readability gate only; real rendered QA still requires Victoria 3 at the listed resolutions/UI scales.",
+      "font_stats": {
+        "army": {
+          "min_fontsize": 15,
+          "min_fontsize_min": 11,
+          "font_entries": 149
+        },
+        "fleet": {
+          "min_fontsize": 14,
+          "min_fontsize_min": 11,
+          "font_entries": 124
+        },
+        "population2": {
+          "min_fontsize": 13,
+          "min_fontsize_min": 11,
+          "font_entries": 106
+        },
+        "economy2": {
+          "min_fontsize": 12,
+          "min_fontsize_min": 11,
+          "font_entries": 81
+        },
+        "politics2": {
+          "min_fontsize": 12,
+          "min_fontsize_min": 11,
+          "font_entries": 124
+        },
+        "workspace": {
+          "min_fontsize": 12,
+          "min_fontsize_min": 12,
+          "font_entries": 9404
+        }
+      },
+      "fleet_ship_selector": {
+        "large_button_states_268x48": 50,
+        "ship_keys": [
+          "CMP_NAVY18_HULL_AIRCRAFT_CARRIER",
+          "CMP_NAVY18_HULL_ARMORED_CRUISER",
+          "CMP_NAVY18_HULL_COASTAL_DEFENSE_SHIP",
+          "CMP_NAVY18_HULL_DESTROYER",
+          "CMP_NAVY18_HULL_DREADNOUGHT",
+          "CMP_NAVY18_HULL_EARLY_IRONCLAD",
+          "CMP_NAVY18_HULL_FRIGATE",
+          "CMP_NAVY18_HULL_IRON_FRIGATE",
+          "CMP_NAVY18_HULL_LIGHT_CRUISER",
+          "CMP_NAVY18_HULL_MODERN_BATTLESHIP",
+          "CMP_NAVY18_HULL_MODERN_CRUISER",
+          "CMP_NAVY18_HULL_MODERN_DESTROYER",
+          "CMP_NAVY18_HULL_MODERN_IRONCLAD",
+          "CMP_NAVY18_HULL_MONITOR",
+          "CMP_NAVY18_HULL_NUCLEAR_CARRIER",
+          "CMP_NAVY18_HULL_NUCLEAR_SUBMARINE",
+          "CMP_NAVY18_HULL_PRE_DREADNOUGHT",
+          "CMP_NAVY18_HULL_PROTECTED_CRUISER",
+          "CMP_NAVY18_HULL_SEAPLANE_TENDER",
+          "CMP_NAVY18_HULL_SHIP_OF_THE_LINE",
+          "CMP_NAVY18_HULL_SUBMARINE",
+          "CMP_NAVY18_HULL_SUPER_DREADNOUGHT",
+          "CMP_NAVY18_HULL_TORPEDO_BOAT",
+          "CMP_NAVY18_HULL_TORPEDO_BOAT_DESTROYER",
+          "CMP_NAVY18_HULL_TROOP_SHIP"
+        ]
+      },
+      "population_large_controls_detected": 63,
+      "workspace_visible_localization_keys": 409,
+      "workspace_localization_missing": [],
+      "workspace_economy_scrolls": {
+        "direct": 4,
+        "modifiers": 4,
+        "policies": 4
+      },
+      "workspace_economy_endpoints": 46,
+      "workspace_economy_endpoint_parity_failures": {},
+      "workspace_regions_building_endpoints": 111,
+      "workspace_regions_selector_endpoint_parity_failures": {},
+      "workspace_regions_target_endpoint_parity_failures": {},
+      "workspace_picker_elisions_with_full_name_tooltips": {
+        "total": 2940,
+        "buildings": 1588,
+        "military_units": 104,
+        "navy_hulls": 1604
+      },
+      "workspace_building_operation_category_counts": {
+        "primary": 35,
+        "industry": 35,
+        "infrastructure": 11,
+        "public": 2,
+        "military": 5,
+        "services": 4,
+        "ownership": 0
+      },
+      "workspace_staffing_category_counts": {
+        "primary": 35,
+        "industry": 35,
+        "infrastructure": 11,
+        "public": 2,
+        "military": 6,
+        "services": 6,
+        "ownership": 2
+      },
+      "workspace_staffing_supported_buildings": 97,
+      "workspace_building_category_menus": 8,
+      "workspace_building_category_filtered_scrolls": 56,
+      "workspace_building_category_layout_failures": [],
+      "workspace_building_category_selector_failures": {
+        "operations": {},
+        "staffing": {}
+      },
+      "workspace_population_scrolls": {
+        "population": 4,
+        "professions": 4,
+        "welfare": 4,
+        "society": 4
+      },
+      "workspace_population_endpoints": 59,
+      "workspace_population_endpoint_parity_failures": {},
+      "workspace_politics_scrolls": {
+        "government": 4,
+        "characters": 4,
+        "interest_groups": 4,
+        "laws": 4,
+        "bloc": 4
+      },
+      "workspace_politics_endpoints": 86,
+      "workspace_politics_endpoint_parity_failures": {},
+      "workspace_politics_target_parity_failures": {},
+      "workspace_diplomacy_scrolls": {
+        "relations": 4,
+        "subjects": 4,
+        "treaties": 4,
+        "sovereignty": 4,
+        "power_bloc": 4
+      },
+      "workspace_diplomacy_endpoints": 60,
+      "workspace_diplomacy_endpoint_parity_failures": {},
+      "workspace_diplomacy_deferred_endpoint_leaks": [],
+      "workspace_military_scrolls": {
+        "army_picker": 12,
+        "army_templates": 16,
+        "army_controls": 4,
+        "fleet_builder_new": 4,
+        "fleet_builder_existing": 4,
+        "fleet_shipctrl": 4,
+        "fleet_transfer": 4,
+        "fleet_logistics": 4,
+        "fleet_templates": 8,
+        "fleet_picker": 4
+      },
+      "workspace_military_endpoints_checked": 1034,
+      "workspace_military_endpoint_parity_failures": {},
+      "workspace_convergence": {
+        "single_launcher": 1,
+        "home_controls": 4,
+        "global_help_buttons": 4,
+        "global_help_cards": 4,
+        "global_help_routes": 32,
+        "shortcuts": [
+          "close_window",
+          "close_window",
+          "close_window",
+          "close_window"
+        ],
+        "home_preserves_profile_and_gameplay_state": true
+      },
+      "localization": {
+        "cmp_fleet_builder": {
+          "english_keys": 72,
+          "russian_keys": 72,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_fleet_designer": {
+          "english_keys": 36,
+          "russian_keys": 36,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_army_builder": {
+          "english_keys": 80,
+          "russian_keys": 80,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_army_designer": {
+          "english_keys": 40,
+          "russian_keys": 40,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_army_mixed": {
+          "english_keys": 16,
+          "russian_keys": 16,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_army_ux": {
+          "english_keys": 65,
+          "russian_keys": 65,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_population2": {
+          "english_keys": 122,
+          "russian_keys": 122,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_economy2": {
+          "english_keys": 97,
+          "russian_keys": 97,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_politics2": {
+          "english_keys": 141,
+          "russian_keys": 141,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_workspace": {
+          "english_keys": 417,
+          "russian_keys": 417,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        },
+        "cmp_navy18": {
+          "english_keys": 46,
+          "russian_keys": 46,
+          "missing_ru": [],
+          "missing_en": [],
+          "same_englishish": []
+        }
+      },
+      "localization_files_checked": 50,
+      "localization_header_errors": [],
+      "forbidden_ru_hits": [],
+      "errors": [],
+      "warnings": []
+    },
+    "build_identity": {
+      "version": "0.3-beta18.1-pre1.1",
+      "build_id": "CMP-0.3-B18-1-PRE1-1-20260823",
+      "baseline_victoria": "1.13.10",
+      "runtime_status": "STATIC_PASS_RUNTIME_PENDING",
+      "fleet_gate": "BETA18_FINAL_RUNTIME_PASS; NAVY_REWORK_FROZEN"
+    },
+    "military_metrics": {
+      "registered_reused_endpoints": 267,
+      "audited_workspace_scripted_gui_refs": 1056,
+      "executable_workspace_action_endpoints": 506,
+      "historical_239_metric": "deprecated; replaced by explicit definitions above",
+      "profile_basis": "single generated Workspace profile; parity checked separately"
+    },
+    "registries": {
+      "army_final.json": "config",
+      "beta18_final_freeze.json": "config",
+      "beta18_postfinal_navy_freeze.json": "config",
+      "build.json": "config",
+      "buildings.json": 92,
+      "coverage.json": "config",
+      "diplomacy2.json": "config",
+      "economy2.json": 11,
+      "fleet_builder.json": 4,
+      "land_units.json": 26,
+      "military_operations.json": "config",
+      "naval_catalog.json": "config",
+      "navy18.json": "config",
+      "operations.json": 11,
+      "politics2.json": "config",
+      "population2.json": 6,
+      "providers.json": 3,
+      "regions_buildings.json": "config",
+      "resources.json": 8,
+      "ships.json": 25,
+      "staffing.json": 132,
+      "ui_shell.json": "config"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,123 @@
+﻿# Cheat Menu Pro v0.3-beta10 - Unified Target & Action Core
+
+cmp_target_core_feedback_clear_effect = { remove_variable = cmp_target_core_feedback }
+
+cmp_target_core_select_player_effect = {
+    set_variable = { name = cmp_target_core_mode value = 1 }
+    set_variable = { name = cmp_target_core_feedback value = 1 }
+}
+cmp_target_core_select_marked_country_effect = {
+    set_variable = { name = cmp_target_core_mode value = 2 }
+    set_variable = { name = cmp_target_core_feedback value = 1 }
+}
+cmp_target_core_select_group_a_effect = { set_variable = { name = cmp_target_core_mode value = 3 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_group_b_effect = { set_variable = { name = cmp_target_core_mode value = 4 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_group_c_effect = { set_variable = { name = cmp_target_core_mode value = 5 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_home_states_effect = { set_variable = { name = cmp_target_core_mode value = 6 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_incorporated_states_effect = { set_variable = { name = cmp_target_core_mode value = 7 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_foreign_states_effect = { set_variable = { name = cmp_target_core_mode value = 8 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_character_effect = { set_variable = { name = cmp_target_core_mode value = 9 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_fleet_effect = { set_variable = { name = cmp_target_core_mode value = 10 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+cmp_target_core_select_power_bloc_effect = { set_variable = { name = cmp_target_core_mode value = 11 } set_variable = { name = cmp_target_core_feedback value = 1 } }
+
+cmp_target_core_toggle_group_a_effect = {
+    remove_variable = cmp_target_core_group_op_found
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        if = {
+            limit = { has_variable = cmp_target_group_a_member }
+            remove_variable = cmp_target_group_a_member
+            root = { set_variable = { name = cmp_target_core_feedback value = 3 } }
+        }
+        else = {
+            set_variable = cmp_target_group_a_member
+            root = { set_variable = { name = cmp_target_core_feedback value = 2 } }
+        }
+        root = { set_variable = cmp_target_core_group_op_found }
+    }
+    if = { limit = { NOT = { has_variable = cmp_target_core_group_op_found } } set_variable = { name = cmp_target_core_feedback value = -1 } }
+    remove_variable = cmp_target_core_group_op_found
+}
+
+cmp_target_core_toggle_group_b_effect = {
+    remove_variable = cmp_target_core_group_op_found
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        if = {
+            limit = { has_variable = cmp_target_group_b_member }
+            remove_variable = cmp_target_group_b_member
+            root = { set_variable = { name = cmp_target_core_feedback value = 3 } }
+        }
+        else = {
+            set_variable = cmp_target_group_b_member
+            root = { set_variable = { name = cmp_target_core_feedback value = 2 } }
+        }
+        root = { set_variable = cmp_target_core_group_op_found }
+    }
+    if = { limit = { NOT = { has_variable = cmp_target_core_group_op_found } } set_variable = { name = cmp_target_core_feedback value = -1 } }
+    remove_variable = cmp_target_core_group_op_found
+}
+
+cmp_target_core_toggle_group_c_effect = {
+    remove_variable = cmp_target_core_group_op_found
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        if = {
+            limit = { has_variable = cmp_target_group_c_member }
+            remove_variable = cmp_target_group_c_member
+            root = { set_variable = { name = cmp_target_core_feedback value = 3 } }
+        }
+        else = {
+            set_variable = cmp_target_group_c_member
+            root = { set_variable = { name = cmp_target_core_feedback value = 2 } }
+        }
+        root = { set_variable = cmp_target_core_group_op_found }
+    }
+    if = { limit = { NOT = { has_variable = cmp_target_core_group_op_found } } set_variable = { name = cmp_target_core_feedback value = -1 } }
+    remove_variable = cmp_target_core_group_op_found
+}
+
+cmp_target_core_clear_group_a_effect = {
+    every_country = { limit = { has_variable = cmp_target_group_a_member } remove_variable = cmp_target_group_a_member }
+    if = { limit = { var:cmp_target_core_mode = 3 } set_variable = { name = cmp_target_core_mode value = 1 } }
+    set_variable = { name = cmp_target_core_feedback value = 4 }
+}
+cmp_target_core_clear_group_b_effect = {
+    every_country = { limit = { has_variable = cmp_target_group_b_member } remove_variable = cmp_target_group_b_member }
+    if = { limit = { var:cmp_target_core_mode = 4 } set_variable = { name = cmp_target_core_mode value = 1 } }
+    set_variable = { name = cmp_target_core_feedback value = 4 }
+}
+cmp_target_core_clear_group_c_effect = {
+    every_country = { limit = { has_variable = cmp_target_group_c_member } remove_variable = cmp_target_group_c_member }
+    if = { limit = { var:cmp_target_core_mode = 5 } set_variable = { name = cmp_target_core_mode value = 1 } }
+    set_variable = { name = cmp_target_core_feedback value = 4 }
+}
+
+# Clears transient CMP marks. Own-state decree marks and A/B/C persistent groups are deliberately retained.
+cmp_target_core_clear_transient_marks_effect = {
+    every_country = { limit = { has_variable = sakuya_mark_country_target } remove_variable = sakuya_mark_country_target }
+    ordered_decentralized_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        order_by = gdp
+        position = 0
+        check_range_bounds = no
+        remove_variable = sakuya_mark_country_target
+    }
+    every_state = { limit = { has_variable = sakuya_mark_foreign_state_target } remove_variable = sakuya_mark_foreign_state_target }
+    every_country = {
+        every_scope_character = { limit = { has_variable = sakuya_mark_character_target } remove_variable = sakuya_mark_character_target }
+        if = { limit = { has_variable = sakuya_mark_power_bloc_target } remove_variable = sakuya_mark_power_bloc_target }
+        if = { limit = { has_variable_list = sakuya_main_04_01_marked_army_list } clear_variable_list = sakuya_main_04_01_marked_army_list }
+        if = { limit = { has_variable_list = sakuya_main_04_01_marked_navy_list } clear_variable_list = sakuya_main_04_01_marked_navy_list }
+        every_military_formation = {
+            if = { limit = { has_variable = sakuya_main_04_01_marked_navy } remove_variable = sakuya_main_04_01_marked_navy }
+            if = { limit = { has_variable = cmp_military_target_fleet } remove_variable = cmp_military_target_fleet }
+        }
+    }
+    every_character_in_exile_pool = { limit = { has_variable = sakuya_mark_character_target } remove_variable = sakuya_mark_character_target }
+    if = {
+        limit = { OR = { var:cmp_target_core_mode = 2 var:cmp_target_core_mode = 8 var:cmp_target_core_mode = 9 var:cmp_target_core_mode = 10 var:cmp_target_core_mode = 11 } }
+        set_variable = { name = cmp_target_core_mode value = 1 }
+    }
+    set_variable = { name = cmp_target_core_feedback value = 5 }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "operations": [
+    {
+      "id": "resource_add",
+      "domain": "regions_buildings",
+      "object": "resource_potential",
+      "mode": "ADD",
+      "target_core_ready": false,
+      "generator_owner": "beta12"
+    },
+    {
+      "id": "resource_set",
+      "domain": "regions_buildings",
+      "object": "resource_potential",
+      "mode": "SET",
+      "target_core_ready": false,
+      "generator_owner": "beta12"
+    },
+    {
+      "id": "resource_clear",
+      "domain": "regions_buildings",
+      "object": "resource_potential",
+      "mode": "CLEAR",
+      "target_core_ready": false,
+      "generator_owner": "beta12"
+    },
+    {
+      "id": "staffing_reserve",
+      "domain": "regions_buildings",
+      "object": "workforce",
+      "mode": "ADD",
+      "target_core_ready": false,
+      "generator_owner": "beta12"
+    },
+    {
+      "id": "create_army",
+      "domain": "military",
+      "object": "military_formation",
+      "mode": "CREATE",
+      "target_core_ready": false,
+      "generator_owner": "beta17"
+    },
+    {
+      "id": "add_ships",
+      "domain": "military",
+      "object": "ship",
+      "mode": "CREATE",
+      "target_core_ready": false,
+      "generator_owner": "beta18",
+      "codegen": "fleet_builder"
+    },
+    {
+      "id": "target_group_toggle",
+      "domain": "target_core",
+      "object": "country_group",
+      "mode": "TOGGLE",
+      "target_core_ready": true,
+      "generator_owner": "beta10"
+    },
+    {
+      "id": "economy_modifier_set",
+      "domain": "economy",
+      "object": "country_modifier",
+      "mode": "SET",
+      "target_core_ready": true,
+      "generator_owner": "beta13",
+      "codegen": "economy2"
+    },
+    {
+      "id": "economy_money_add",
+      "domain": "economy",
+      "object": "treasury_or_investment_pool",
+      "mode": "ADD",
+      "target_core_ready": true,
+      "generator_owner": "beta13",
+      "codegen": "economy2"
+    },
+    {
+      "id": "economy_clear_debt",
+      "domain": "economy",
+      "object": "debt",
+      "mode": "CLEAR",
+      "target_core_ready": true,
+      "generator_owner": "beta13",
+      "codegen": "economy2"
+    },
+    {
+      "id": "economy_policy_override",
+      "domain": "economy",
+      "object": "ownership_policy",
+      "mode": "SET_BOOL",
+      "target_core_ready": true,
+      "generator_owner": "beta13",
+      "codegen": "economy2"
+    }
+  ]
+}

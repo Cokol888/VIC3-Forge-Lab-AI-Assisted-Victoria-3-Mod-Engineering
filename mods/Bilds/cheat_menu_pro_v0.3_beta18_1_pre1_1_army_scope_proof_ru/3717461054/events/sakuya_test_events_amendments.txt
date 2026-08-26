@@ -1,0 +1,141 @@
+namespace = sakuya_test_events_amendments
+
+sakuya_test_events_amendments.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = sakuya_test_events_amendments.1.t
+	desc = sakuya_test_events_amendments.1.d
+	flavor = sakuya_test_events_amendments.1.f
+
+	duration = 0
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	trigger = {
+		is_player = yes
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.a
+		active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_geheime_staatskonferenz_metternich
+				sponsor = PREV.ig:ig_landowners
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.b
+		active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_geheime_staatskonferenz_kolowrat
+				sponsor = PREV.ig:ig_intelligentsia
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.c
+		active_law:lawgroup_economic_system ?= {
+			add_amendment = {
+				type = amendment_economic_regeneration_1
+				sponsor = PREV.ig:ig_industrialists
+				cooldown = 240
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.o
+		active_law:lawgroup_economic_system ?= {
+			add_amendment = {
+				type = amendment_economic_regeneration_2
+				sponsor = PREV.ig:ig_industrialists
+				cooldown = 240
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.e
+		if = {
+			limit = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+			currently_enacting_law = {
+				add_amendment = {
+					type = amendment_redemption_payments
+					sponsor = PREV.ig:ig_landowners
+					cooldown = 120
+					timeout = 600
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.n
+		if = {
+			limit = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+			currently_enacting_law = {
+				add_amendment = {
+					type = amendment_individual_redemption_payments
+					sponsor = PREV.ig:ig_landowners
+					cooldown = 120
+					timeout = 600
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.g
+		if = {
+			limit = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+			currently_enacting_law = {
+				add_amendment = {
+					type = amendment_generic_sponsor_polstr_increase
+					sponsor = PREV.ig:ig_intelligentsia
+					cooldown = 120
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.h
+		if = {
+			limit = {
+				enacting_any_law = yes
+				exists = currently_enacting_law
+			}
+			currently_enacting_law = {
+				add_amendment = {
+					type = amendment_prussian_education
+					sponsor = PREV.ig:ig_armed_forces
+					cooldown = 120
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_events_amendments.1.z
+		default_option = yes
+	}
+}

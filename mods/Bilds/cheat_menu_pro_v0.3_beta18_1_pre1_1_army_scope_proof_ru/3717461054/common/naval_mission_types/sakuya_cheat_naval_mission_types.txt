@@ -1,0 +1,43 @@
+naval_mission_type_piracy = {
+    icon = "gfx/interface/icons/commander_order_icons/piracy_privateering.dds"
+    clicksound = "event:/SFX/UI/NavalBattle/Missions/naval_mission_piracy"
+
+    piracy = yes
+    piracy_targets = { non_allies }
+    ai_will_cancel_for_transportation = yes
+
+    command_modifier = {
+        character_piracy_goods_capacity_mult = 1.5
+        ship_vulnerability_mult = 0.25
+        ship_visibility_mult = -0.5
+    }
+
+    potential = {
+        has_dlc_feature = ep2_content
+        owner ?= {
+            OR = {
+                is_country_type = unrecognized
+                has_variable = sakuya_b4_navy_recognized_piracy_active
+            }
+            NOT = {
+                any_scope_treaty = {
+                    any_scope_article = {
+                        source_country = root.owner
+                        has_type = abandon_piracy
+                    }
+                }
+            }
+        }
+        trigger_if = {
+            limit = {
+                exists = owner.top_overlord
+            }
+            owner.top_overlord ?= {
+                OR = {
+                    is_country_type = unrecognized
+                    has_variable = sakuya_b4_navy_recognized_piracy_active
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+﻿sakuya_b7_special_cooperation_clause = {
+	kind = directed
+	cost = 0
+
+	relations_progress_per_day = 0
+	relations_improvement_max = 0
+
+	icon = "gfx/interface/sakuya/hand.dds"
+
+	flags = { }
+
+	usage_limit = once_per_side
+	maintenance_paid_by = source_country
+
+	visible = {
+		has_dlc_feature = mp1_treaties
+		is_player = yes
+		has_variable = sakuya_b7_special_clause_unlocked
+	}
+
+	possible = {
+		is_player = yes
+	}
+
+	can_ratify = { }
+
+	on_entry_into_force = { }
+	on_withdrawal = { }
+	on_break = {
+		scope:withdrawing_country = {
+			change_relations = { country = scope:non_withdrawing_country value = -10 }
+		}
+	}
+
+	ai = {
+		treaty_categories = {
+			other
+		}
+
+		article_ai_usage = {
+			request
+			offer
+		}
+
+		evaluation_chance = {
+			value = 0
+		}
+
+		inherent_accept_score = {
+			value = 0
+
+			if = {
+				limit = { scope:target_country ?= this }
+				add = { value = 99999 }
+			}
+		}
+
+		contextual_accept_score = {
+			value = 0
+		}
+	}
+}

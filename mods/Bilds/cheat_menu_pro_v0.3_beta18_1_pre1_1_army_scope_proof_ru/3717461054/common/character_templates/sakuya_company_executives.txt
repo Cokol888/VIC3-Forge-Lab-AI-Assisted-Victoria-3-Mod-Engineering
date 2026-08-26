@@ -1,0 +1,199 @@
+sakuya_izayoi_company_executive = {
+	first_name = Sakuya
+	last_name = Izayoi
+	historical = yes
+	female = yes
+	age = 18
+	dna = dna_sakuya_izayoi
+	culture = cu:sakuya_nonexistent
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	traits = {
+		charismatic
+		meticulous
+		innovative
+		persistent
+		expert_entrepreneur
+		imposing
+	}
+
+	on_created = {
+		set_character_immortal = yes
+	}
+
+	executive_usage = {
+		country_trigger = {
+			has_variable = sakuya_super_company
+		}
+		company_trigger = {
+			is_company_type = company_type:company_sakuya_gensokyo_industrial_group
+		}
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1936.1.1
+		chance = 100
+	}
+}
+
+sakuya_izayoi_general = {
+	first_name = Sakuya
+	last_name = Izayoi
+	historical = yes
+	female = yes
+	age = 18
+	dna = dna_sakuya_izayoi
+	culture = cu:sakuya_nonexistent
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	is_general = yes
+	traits = {
+		charismatic
+		meticulous
+		innovative
+		persistent
+		expert_entrepreneur
+		imposing
+	}
+
+	on_created = {
+		set_character_immortal = yes
+	}
+}
+
+sakuya_izayoi_admiral = {
+	first_name = Sakuya
+	last_name = Izayoi
+	historical = yes
+	female = yes
+	age = 18
+	dna = dna_sakuya_izayoi
+	culture = cu:sakuya_nonexistent
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	is_admiral = yes
+	traits = {
+		charismatic
+		meticulous
+		innovative
+		persistent
+		expert_entrepreneur
+		imposing
+	}
+
+	on_created = {
+		set_character_immortal = yes
+	}
+}
+
+sakuya_izayoi_agitator = {
+	first_name = Sakuya
+	last_name = Izayoi
+	historical = yes
+	female = yes
+	age = 18
+	dna = dna_sakuya_izayoi
+	culture = cu:sakuya_nonexistent
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	is_agitator = yes
+	traits = {
+		charismatic
+		meticulous
+		innovative
+		persistent
+		expert_entrepreneur
+		imposing
+	}
+
+	on_created = {
+		set_character_immortal = yes
+	}
+}
+
+sakuya_izayoi_ig_leader = {
+	first_name = Sakuya
+	last_name = Izayoi
+	historical = yes
+	female = yes
+	age = 18
+	dna = dna_sakuya_izayoi
+	culture = cu:sakuya_nonexistent
+	religion = rel:shinto
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	ig_leader = yes
+	traits = {
+		charismatic
+		meticulous
+		innovative
+		persistent
+		expert_entrepreneur
+		imposing
+	}
+
+	on_created = {
+		set_character_immortal = yes
+	}
+}
+
+sakuya_karl_marx_ruler = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	birth_date = 1818.5.5
+	dna = dna_karl_marx
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+	traits = {
+		direct
+		persistent
+		literary
+	}
+}
+
+sakuya_karl_marx_general = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	birth_date = 1818.5.5
+	dna = dna_karl_marx
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+	is_general = yes
+	traits = {
+		direct
+		persistent
+		literary
+	}
+}
+
+sakuya_karl_marx_admiral = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	birth_date = 1818.5.5
+	dna = dna_karl_marx
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+	is_admiral = yes
+	traits = {
+		direct
+		persistent
+		literary
+	}
+}

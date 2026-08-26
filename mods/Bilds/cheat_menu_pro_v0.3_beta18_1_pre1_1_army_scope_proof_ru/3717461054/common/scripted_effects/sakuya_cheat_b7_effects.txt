@@ -1,0 +1,1150 @@
+﻿sakuya_b7_resolve_marked_country_effect = {
+	clear_saved_scope = sakuya_b7_marked_country_scope
+	every_country = {
+		limit = { has_variable = sakuya_mark_country_target }
+		save_scope_as = sakuya_b7_marked_country_scope
+	}
+	ordered_decentralized_country = {
+		limit = { has_variable = sakuya_mark_country_target }
+		order_by = gdp
+		position = 0
+		check_range_bounds = no
+		save_scope_as = sakuya_b7_marked_country_scope
+	}
+}
+
+
+# CMP v0.3 beta2: persistent, non-popup action feedback for Diplomacy/Subjects/Treaties.
+sakuya_b7_feedback_clear_effect = {
+    remove_variable = cmp_b7_feedback_success
+    remove_variable = cmp_b7_feedback_no_target
+    remove_variable = cmp_b7_feedback_subject_conflict
+    remove_variable = cmp_b7_feedback_subject_invalid
+    remove_variable = cmp_b7_feedback_treaty_invalid
+    remove_variable = cmp_b7_feedback_no_matching_treaty
+    remove_variable = cmp_b7_feedback_not_subject
+    remove_variable = cmp_b7_feedback_state_transfer_failed
+    remove_variable = cmp_b7_feedback_treaty_port_attempted
+}
+
+sakuya_b7_set_marked_country_strategy_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = { set_strategy = $STRATEGY$ }
+	}
+}
+
+sakuya_b7_resolve_marked_foreign_state_effect = {
+	clear_saved_scope = sakuya_b7_marked_foreign_state_scope
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		every_state = {
+			limit = {
+				has_variable = sakuya_mark_foreign_state_target
+				owner = scope:sakuya_b7_marked_country_scope
+			}
+			save_scope_as = sakuya_b7_marked_foreign_state_scope
+		}
+	}
+}
+
+sakuya_b7_resolve_marked_home_state_effect = {
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		save_scope_as = sakuya_b7_marked_home_state_scope
+	}
+}
+
+sakuya_b7_resolve_marked_player_company_effect = {
+	every_country = {
+		every_company = {
+			limit = {
+				has_variable = sakuya_main_03_01_marked
+				owner = root
+			}
+			save_scope_as = sakuya_b7_marked_company_scope
+		}
+	}
+}
+
+sakuya_b7_remove_marked_country_pact_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		remove_diplomatic_pact = {
+			country = scope:sakuya_b7_marked_country_scope
+			type = $TYPE$
+		}
+	}
+}
+
+sakuya_b7_create_marked_country_pact_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		create_diplomatic_pact = {
+			country = scope:sakuya_b7_marked_country_scope
+			type = $TYPE$
+		}
+	}
+}
+
+sakuya_b7_make_marked_country_owe_player_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope }
+        scope:sakuya_b7_marked_country_scope = { set_owes_obligation_to = { country = root setting = yes } }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+
+sakuya_b7_make_player_owe_marked_country_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope }
+        set_owes_obligation_to = { country = scope:sakuya_b7_marked_country_scope setting = yes }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+
+sakuya_b7_set_marked_country_subject_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = {
+        limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } }
+        set_variable = cmp_b7_feedback_no_target
+    }
+    else_if = {
+        limit = { scope:sakuya_b7_marked_country_scope = { is_subject_of = root } }
+        scope:sakuya_b7_marked_country_scope = { change_subject_type = $SUBJECT$ }
+        if = {
+            limit = { scope:sakuya_b7_marked_country_scope = { is_subject_of = root is_subject_type = $SUBJECT$ } }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_subject_invalid }
+    }
+    else_if = {
+        limit = { scope:sakuya_b7_marked_country_scope = { is_subject = no } }
+        create_diplomatic_pact = { country = scope:sakuya_b7_marked_country_scope type = $PACT$ }
+        if = {
+            limit = { scope:sakuya_b7_marked_country_scope = { is_subject_of = root is_subject_type = $SUBJECT$ } }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_subject_invalid }
+    }
+    else = { set_variable = cmp_b7_feedback_subject_conflict }
+}
+
+
+sakuya_b7_set_player_subject_of_marked_country_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = {
+        limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } }
+        set_variable = cmp_b7_feedback_no_target
+    }
+    else_if = {
+        limit = { is_subject_of = scope:sakuya_b7_marked_country_scope }
+        change_subject_type = $SUBJECT$
+        if = {
+            limit = { is_subject_of = scope:sakuya_b7_marked_country_scope is_subject_type = $SUBJECT$ }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_subject_invalid }
+    }
+    else_if = {
+        limit = { is_subject = no }
+        scope:sakuya_b7_marked_country_scope = {
+            create_diplomatic_pact = { country = root type = $PACT$ }
+        }
+        if = {
+            limit = { is_subject_of = scope:sakuya_b7_marked_country_scope is_subject_type = $SUBJECT$ }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_subject_invalid }
+    }
+    else = { set_variable = cmp_b7_feedback_subject_conflict }
+}
+
+
+sakuya_b7_remove_marked_country_treaty_article_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    remove_variable = cmp_b7_feedback_found_treaty
+    if = {
+        limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } }
+        set_variable = cmp_b7_feedback_no_target
+    }
+    else = {
+        every_scope_treaty = {
+            limit = {
+                binds = scope:sakuya_b7_marked_country_scope
+                any_scope_article = { has_type = $ARTICLE$ }
+            }
+            root = { set_variable = cmp_b7_feedback_found_treaty }
+            withdraw = { country = root }
+        }
+        if = {
+            limit = { has_variable = cmp_b7_feedback_found_treaty }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_no_matching_treaty }
+    }
+    remove_variable = cmp_b7_feedback_found_treaty
+}
+
+
+sakuya_b7_create_mutual_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = { limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_no_target }
+    else_if = {
+        limit = { can_create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = $ARTICLE$ } } } }
+        create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = $ARTICLE$ } } }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_treaty_invalid }
+}
+
+
+sakuya_b7_create_directed_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = { limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_no_target }
+    else_if = {
+        limit = { can_create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = $ARTICLE$ source_country = root target_country = scope:sakuya_b7_marked_country_scope } } } }
+        create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = $ARTICLE$ source_country = root target_country = scope:sakuya_b7_marked_country_scope } } }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_treaty_invalid }
+}
+
+
+sakuya_b7_create_reverse_directed_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = { limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_no_target }
+    else_if = {
+        limit = { can_create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = $ARTICLE$ source_country = scope:sakuya_b7_marked_country_scope target_country = root } } } }
+        create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = $ARTICLE$ source_country = scope:sakuya_b7_marked_country_scope target_country = root } } }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_treaty_invalid }
+}
+
+
+sakuya_b7_create_treaty_port_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    sakuya_b7_resolve_marked_foreign_state_effect = yes
+    if = { limit = { OR = { NOT = { exists = scope:sakuya_b7_marked_country_scope } NOT = { exists = scope:sakuya_b7_marked_foreign_state_scope } } } set_variable = cmp_b7_feedback_no_target }
+    else_if = {
+        limit = { can_create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = treaty_port source_country = scope:sakuya_b7_marked_country_scope target_country = root inputs = { { state = scope:sakuya_b7_marked_foreign_state_scope } } } } } }
+        create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = treaty_port source_country = scope:sakuya_b7_marked_country_scope target_country = root inputs = { { state = scope:sakuya_b7_marked_foreign_state_scope } } } } }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_treaty_invalid }
+}
+
+
+sakuya_b7_create_reverse_treaty_port_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    sakuya_b7_resolve_marked_home_state_effect = yes
+    if = { limit = { OR = { NOT = { exists = scope:sakuya_b7_marked_country_scope } NOT = { exists = scope:sakuya_b7_marked_home_state_scope } } } set_variable = cmp_b7_feedback_no_target }
+    else_if = {
+        limit = { can_create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = treaty_port source_country = root target_country = scope:sakuya_b7_marked_country_scope inputs = { { state = scope:sakuya_b7_marked_home_state_scope } } } } } }
+        create_treaty = { first_country = root second_country = scope:sakuya_b7_marked_country_scope is_draft = no binding_period = { years = 99 } articles_to_create = { { article = treaty_port source_country = root target_country = scope:sakuya_b7_marked_country_scope inputs = { { state = scope:sakuya_b7_marked_home_state_scope } } } } }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_treaty_invalid }
+}
+
+
+sakuya_b7_create_company_monopoly_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    sakuya_b7_resolve_marked_player_company_effect = yes
+    if = {
+        limit = {
+            OR = {
+                NOT = { exists = scope:sakuya_b7_marked_country_scope }
+                NOT = { exists = scope:sakuya_b7_marked_company_scope }
+            }
+        }
+        set_variable = cmp_b7_feedback_no_target
+    }
+    else_if = {
+        limit = {
+            can_create_treaty = {
+                first_country = root
+                second_country = scope:sakuya_b7_marked_country_scope
+                is_draft = no
+                binding_period = { years = 99 }
+                articles_to_create = {
+                    {
+                        article = acquire_monopoly_for_company
+                        source_country = root
+                        target_country = scope:sakuya_b7_marked_country_scope
+                        inputs = {
+                            { company = scope:sakuya_b7_marked_company_scope }
+                            { building_type = $BUILDING$ }
+                        }
+                    }
+                }
+            }
+        }
+        create_treaty = {
+            first_country = root
+            second_country = scope:sakuya_b7_marked_country_scope
+            is_draft = no
+            binding_period = { years = 99 }
+            articles_to_create = {
+                {
+                    article = acquire_monopoly_for_company
+                    source_country = root
+                    target_country = scope:sakuya_b7_marked_country_scope
+                    inputs = {
+                        { company = scope:sakuya_b7_marked_company_scope }
+                        { building_type = $BUILDING$ }
+                    }
+                }
+            }
+        }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_treaty_invalid }
+}
+
+sakuya_b7_remove_company_monopoly_treaty_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    remove_variable = cmp_b7_feedback_found_treaty
+    if = {
+        limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } }
+        set_variable = cmp_b7_feedback_no_target
+    }
+    else = {
+        every_scope_treaty = {
+            limit = {
+                binds = scope:sakuya_b7_marked_country_scope
+                any_scope_article = {
+                    has_type = acquire_monopoly_for_company
+                    source_country = root
+                }
+            }
+            root = { set_variable = cmp_b7_feedback_found_treaty }
+            withdraw = { country = root }
+        }
+        if = {
+            limit = { has_variable = cmp_b7_feedback_found_treaty }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_no_matching_treaty }
+    }
+    remove_variable = cmp_b7_feedback_found_treaty
+}
+
+sakuya_b7_expel_diplomats_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		change_relations = { country = scope:sakuya_b7_marked_country_scope value = -30 }
+		set_diplomats_expelled = scope:sakuya_b7_marked_country_scope
+		if = {
+			limit = {
+				scope:sakuya_b7_marked_country_scope = {
+					has_diplomatic_pact = {
+						who = root
+						type = increase_relations
+					}
+				}
+			}
+			scope:sakuya_b7_marked_country_scope = {
+				remove_diplomatic_pact = {
+					country = root
+					type = increase_relations
+				}
+			}
+		}
+	}
+}
+
+sakuya_b7_change_relations_with_marked_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope }
+        change_relations = { country = scope:sakuya_b7_marked_country_scope value = $VALUE$ }
+        set_variable = cmp_b7_feedback_success
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+
+sakuya_b7_set_target_secret_goal_towards_player_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			set_secret_goal = {
+				country = root
+				secret_goal = $GOAL$
+			}
+		}
+	}
+}
+
+sakuya_b7_set_player_secret_goal_towards_target_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		set_secret_goal = {
+			country = scope:sakuya_b7_marked_country_scope
+			secret_goal = $GOAL$
+		}
+	}
+}
+
+sakuya_b7_set_mutual_secret_goal_with_target_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		set_mutual_secret_goal = {
+			country = scope:sakuya_b7_marked_country_scope
+			secret_goal = $GOAL$
+		}
+	}
+}
+
+sakuya_b7_decrease_autonomy_of_marked_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = { limit = { exists = scope:sakuya_b7_marked_country_scope scope:sakuya_b7_marked_country_scope = { is_subject_of = root } } scope:sakuya_b7_marked_country_scope = { decrease_autonomy = yes } set_variable = cmp_b7_feedback_success }
+    else_if = { limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_no_target }
+    else = { set_variable = cmp_b7_feedback_not_subject }
+}
+
+
+sakuya_b7_increase_autonomy_of_marked_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = { limit = { exists = scope:sakuya_b7_marked_country_scope scope:sakuya_b7_marked_country_scope = { is_subject_of = root } } scope:sakuya_b7_marked_country_scope = { increase_autonomy = yes } set_variable = cmp_b7_feedback_success }
+    else_if = { limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_no_target }
+    else = { set_variable = cmp_b7_feedback_not_subject }
+}
+
+
+sakuya_b7_make_player_independent_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    if = { limit = { is_subject = yes } make_independent = yes set_variable = cmp_b7_feedback_success }
+    else = { set_variable = cmp_b7_feedback_not_subject }
+}
+
+
+sakuya_b7_make_marked_independent_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    if = { limit = { exists = scope:sakuya_b7_marked_country_scope scope:sakuya_b7_marked_country_scope = { is_subject = yes } } scope:sakuya_b7_marked_country_scope = { make_independent = yes } set_variable = cmp_b7_feedback_success }
+    else_if = { limit = { NOT = { exists = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_no_target }
+    else = { set_variable = cmp_b7_feedback_not_subject }
+}
+
+
+sakuya_b7_add_marked_country_liberty_desire_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = { add_liberty_desire = $VALUE$ }
+	}
+}
+
+sakuya_b7_add_player_liberty_desire_if_subject_of_marked_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b7_marked_country_scope
+			is_subject_of = scope:sakuya_b7_marked_country_scope
+		}
+		add_liberty_desire = $VALUE$
+	}
+}
+
+sakuya_b7_add_player_liberty_desire_if_vassal_of_marked_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b7_marked_country_scope
+			is_subject_of = scope:sakuya_b7_marked_country_scope
+			is_subject_type = subject_type_vassal
+		}
+		add_liberty_desire = $VALUE$
+	}
+}
+
+sakuya_b7_add_player_subjects_liberty_desire_effect = {
+	every_direct_subject = {
+		add_liberty_desire = $VALUE$
+	}
+}
+
+sakuya_b7_add_marked_subjects_liberty_desire_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			every_direct_subject = {
+				add_liberty_desire = $VALUE$
+			}
+		}
+	}
+}
+
+sakuya_b7_apply_player_liberty_modifier_effect = {
+	remove_modifier = sakuya_cheat_b7_subject_liberty_mod_player
+	remove_modifier = sakuya_cheat_b7_player_liberty_desire
+	if = {
+		limit = { has_variable = sakuya_b7_subject_liberty_mod_player_value }
+		add_modifier = {
+			name = sakuya_cheat_b7_subject_liberty_mod_player
+			days = -1
+			multiplier = root.var:sakuya_b7_subject_liberty_mod_player_value
+		}
+	}
+	sakuya_b7_refresh_subject_liberty_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_liberty_modifier_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked
+			remove_modifier = sakuya_cheat_b7_marked_liberty_desire
+			if = {
+				limit = { has_variable = sakuya_b7_subject_liberty_mod_marked_value }
+				add_modifier = {
+					name = sakuya_cheat_b7_subject_liberty_mod_marked
+					days = -1
+					multiplier = var:sakuya_b7_subject_liberty_mod_marked_value
+				}
+			}
+		}
+	}
+	sakuya_b7_refresh_subject_liberty_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_liberty_plus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_subject_liberty_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked
+			remove_modifier = sakuya_cheat_b7_marked_liberty_desire
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_plus20
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_subject_liberty_mod_marked_plus20 days = -1 }
+		}
+		set_variable = sakuya_b7_subject_liberty_mod_active
+	}
+}
+
+sakuya_b7_apply_marked_liberty_minus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_subject_liberty_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked
+			remove_modifier = sakuya_cheat_b7_marked_liberty_desire
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_plus20
+			remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_subject_liberty_mod_marked_minus20 days = -1 }
+		}
+		set_variable = sakuya_b7_subject_liberty_mod_active
+	}
+}
+
+sakuya_b7_refresh_subject_liberty_mod_active_effect = {
+	remove_variable = sakuya_b7_subject_liberty_mod_active
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			OR = {
+				has_variable = sakuya_b7_subject_liberty_mod_player_value
+				AND = {
+					exists = scope:sakuya_b7_marked_country_scope
+					scope:sakuya_b7_marked_country_scope = {
+						OR = {
+							has_variable = sakuya_b7_subject_liberty_mod_marked_value
+							has_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_plus20
+							has_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_minus20
+						}
+					}
+				}
+			}
+		}
+		set_variable = sakuya_b7_subject_liberty_mod_active
+	}
+}
+
+sakuya_b7_apply_player_prestige_modifier_effect = {
+	remove_modifier = sakuya_cheat_b7_prestige_player
+	if = {
+		limit = { has_variable = sakuya_b7_prestige_mod_player_value }
+		add_modifier = {
+			name = sakuya_cheat_b7_prestige_player
+			days = -1
+			multiplier = root.var:sakuya_b7_prestige_mod_player_value
+		}
+	}
+	sakuya_b7_refresh_prestige_mod_active_effect = yes
+}
+
+sakuya_b7_apply_player_prestige_add_effect = {
+	remove_modifier = sakuya_cheat_b7_prestige_add_player
+	if = {
+		limit = { has_variable = sakuya_b7_prestige_add_player_value }
+		add_modifier = {
+			name = sakuya_cheat_b7_prestige_add_player
+			days = -1
+			multiplier = root.var:sakuya_b7_prestige_add_player_value
+		}
+	}
+	sakuya_b7_refresh_prestige_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_prestige_modifier_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b7_prestige_marked
+			if = {
+				limit = { has_variable = sakuya_b7_prestige_mod_marked_value }
+				add_modifier = {
+					name = sakuya_cheat_b7_prestige_marked
+					days = -1
+					multiplier = var:sakuya_b7_prestige_mod_marked_value
+				}
+			}
+		}
+	}
+	sakuya_b7_refresh_prestige_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_prestige_plus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_prestige_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_prestige_marked
+			remove_modifier = sakuya_cheat_b7_prestige_marked_plus20
+			remove_modifier = sakuya_cheat_b7_prestige_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_prestige_marked_plus20 days = -1 }
+		}
+		set_variable = sakuya_b7_prestige_mod_active
+	}
+}
+
+sakuya_b7_apply_marked_prestige_minus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_prestige_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_prestige_marked
+			remove_modifier = sakuya_cheat_b7_prestige_marked_plus20
+			remove_modifier = sakuya_cheat_b7_prestige_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_prestige_marked_minus20 days = -1 }
+		}
+		set_variable = sakuya_b7_prestige_mod_active
+	}
+}
+
+sakuya_b7_refresh_prestige_mod_active_effect = {
+	remove_variable = sakuya_b7_prestige_mod_active
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			OR = {
+				has_variable = sakuya_b7_prestige_mod_player_value
+				has_variable = sakuya_b7_prestige_add_player_value
+				AND = {
+					exists = scope:sakuya_b7_marked_country_scope
+					scope:sakuya_b7_marked_country_scope = {
+						OR = {
+							has_variable = sakuya_b7_prestige_mod_marked_value
+							has_modifier = sakuya_cheat_b7_prestige_marked_plus20
+							has_modifier = sakuya_cheat_b7_prestige_marked_minus20
+						}
+					}
+				}
+			}
+		}
+		set_variable = sakuya_b7_prestige_mod_active
+	}
+}
+
+sakuya_b7_apply_player_prestige_modifier_delta_effect = {
+	if = {
+		limit = { NOT = { has_variable = sakuya_b7_prestige_mod_player_value } }
+		set_variable = { name = sakuya_b7_prestige_mod_player_value value = 0 }
+	}
+	change_variable = { name = sakuya_b7_prestige_mod_player_value add = $DELTA$ }
+	if = {
+		limit = { var:sakuya_b7_prestige_mod_player_value = 0 }
+		remove_variable = sakuya_b7_prestige_mod_player_value
+	}
+	sakuya_b7_apply_player_prestige_modifier_effect = yes
+}
+
+sakuya_b7_apply_player_prestige_add_delta_effect = {
+	if = {
+		limit = { NOT = { has_variable = sakuya_b7_prestige_add_player_value } }
+		set_variable = { name = sakuya_b7_prestige_add_player_value value = 0 }
+	}
+	change_variable = { name = sakuya_b7_prestige_add_player_value add = $DELTA$ }
+	if = {
+		limit = { var:sakuya_b7_prestige_add_player_value = 0 }
+		remove_variable = sakuya_b7_prestige_add_player_value
+	}
+	sakuya_b7_apply_player_prestige_add_effect = yes
+}
+
+sakuya_b7_apply_marked_prestige_modifier_delta_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			if = {
+				limit = { NOT = { has_variable = sakuya_b7_prestige_mod_marked_value } }
+				set_variable = { name = sakuya_b7_prestige_mod_marked_value value = 0 }
+			}
+			change_variable = { name = sakuya_b7_prestige_mod_marked_value add = $DELTA$ }
+			if = {
+				limit = { var:sakuya_b7_prestige_mod_marked_value = 0 }
+				remove_variable = sakuya_b7_prestige_mod_marked_value
+			}
+		}
+	}
+	sakuya_b7_apply_marked_prestige_modifier_effect = yes
+}
+
+sakuya_b7_clear_all_prestige_modifier_effect = {
+	remove_variable = sakuya_b7_prestige_mod_active
+	every_country = {
+		remove_variable = sakuya_b7_prestige_mod_player_value
+		remove_variable = sakuya_b7_prestige_add_player_value
+		remove_variable = sakuya_b7_prestige_mod_marked_value
+		remove_modifier = sakuya_cheat_b7_prestige_player
+		remove_modifier = sakuya_cheat_b7_prestige_add_player
+		remove_modifier = sakuya_cheat_b7_prestige_marked
+		remove_modifier = sakuya_cheat_b7_prestige_marked_plus20
+		remove_modifier = sakuya_cheat_b7_prestige_marked_minus20
+	}
+}
+
+sakuya_b7_apply_player_power_projection_modifier_effect = {
+	remove_modifier = sakuya_cheat_b7_power_projection_player
+	if = {
+		limit = { has_variable = sakuya_b7_power_projection_mod_player_value }
+		add_modifier = {
+			name = sakuya_cheat_b7_power_projection_player
+			days = -1
+			multiplier = root.var:sakuya_b7_power_projection_mod_player_value
+		}
+	}
+	sakuya_b7_refresh_power_projection_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_power_projection_modifier_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b7_power_projection_marked
+			if = {
+				limit = { has_variable = sakuya_b7_power_projection_mod_marked_value }
+				add_modifier = {
+					name = sakuya_cheat_b7_power_projection_marked
+					days = -1
+					multiplier = var:sakuya_b7_power_projection_mod_marked_value
+				}
+			}
+		}
+	}
+	sakuya_b7_refresh_power_projection_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_power_projection_plus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_power_projection_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_power_projection_marked
+			remove_modifier = sakuya_cheat_b7_power_projection_marked_plus20
+			remove_modifier = sakuya_cheat_b7_power_projection_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_power_projection_marked_plus20 days = -1 }
+		}
+		set_variable = sakuya_b7_power_projection_mod_active
+	}
+}
+
+sakuya_b7_apply_marked_power_projection_minus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_power_projection_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_power_projection_marked
+			remove_modifier = sakuya_cheat_b7_power_projection_marked_plus20
+			remove_modifier = sakuya_cheat_b7_power_projection_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_power_projection_marked_minus20 days = -1 }
+		}
+		set_variable = sakuya_b7_power_projection_mod_active
+	}
+}
+
+sakuya_b7_refresh_power_projection_mod_active_effect = {
+	remove_variable = sakuya_b7_power_projection_mod_active
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			OR = {
+				has_variable = sakuya_b7_power_projection_mod_player_value
+				AND = {
+					exists = scope:sakuya_b7_marked_country_scope
+					scope:sakuya_b7_marked_country_scope = {
+						OR = {
+							has_variable = sakuya_b7_power_projection_mod_marked_value
+							has_modifier = sakuya_cheat_b7_power_projection_marked_plus20
+							has_modifier = sakuya_cheat_b7_power_projection_marked_minus20
+						}
+					}
+				}
+			}
+		}
+		set_variable = sakuya_b7_power_projection_mod_active
+	}
+}
+
+sakuya_b7_apply_player_power_projection_modifier_delta_effect = {
+	if = {
+		limit = { NOT = { has_variable = sakuya_b7_power_projection_mod_player_value } }
+		set_variable = { name = sakuya_b7_power_projection_mod_player_value value = 0 }
+	}
+	change_variable = { name = sakuya_b7_power_projection_mod_player_value add = $DELTA$ }
+	if = {
+		limit = { var:sakuya_b7_power_projection_mod_player_value = 0 }
+		remove_variable = sakuya_b7_power_projection_mod_player_value
+	}
+	sakuya_b7_apply_player_power_projection_modifier_effect = yes
+}
+
+sakuya_b7_apply_marked_power_projection_modifier_delta_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			if = {
+				limit = { NOT = { has_variable = sakuya_b7_power_projection_mod_marked_value } }
+				set_variable = { name = sakuya_b7_power_projection_mod_marked_value value = 0 }
+			}
+			change_variable = { name = sakuya_b7_power_projection_mod_marked_value add = $DELTA$ }
+			if = {
+				limit = { var:sakuya_b7_power_projection_mod_marked_value = 0 }
+				remove_variable = sakuya_b7_power_projection_mod_marked_value
+			}
+		}
+	}
+	sakuya_b7_apply_marked_power_projection_modifier_effect = yes
+}
+
+sakuya_b7_clear_all_power_projection_modifier_effect = {
+	remove_variable = sakuya_b7_power_projection_mod_active
+	every_country = {
+		remove_variable = sakuya_b7_power_projection_mod_player_value
+		remove_variable = sakuya_b7_power_projection_mod_marked_value
+		remove_modifier = sakuya_cheat_b7_power_projection_player
+		remove_modifier = sakuya_cheat_b7_power_projection_marked
+		remove_modifier = sakuya_cheat_b7_power_projection_marked_plus20
+		remove_modifier = sakuya_cheat_b7_power_projection_marked_minus20
+	}
+}
+
+sakuya_b7_apply_player_liberty_modifier_delta_effect = {
+	if = {
+		limit = { NOT = { has_variable = sakuya_b7_subject_liberty_mod_player_value } }
+		set_variable = { name = sakuya_b7_subject_liberty_mod_player_value value = 0 }
+	}
+	change_variable = { name = sakuya_b7_subject_liberty_mod_player_value add = $DELTA$ }
+	if = {
+		limit = { var:sakuya_b7_subject_liberty_mod_player_value = 0 }
+		remove_variable = sakuya_b7_subject_liberty_mod_player_value
+	}
+	sakuya_b7_apply_player_liberty_modifier_effect = yes
+}
+
+sakuya_b7_apply_marked_liberty_modifier_delta_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			if = {
+				limit = { NOT = { has_variable = sakuya_b7_subject_liberty_mod_marked_value } }
+				set_variable = { name = sakuya_b7_subject_liberty_mod_marked_value value = 0 }
+			}
+			change_variable = { name = sakuya_b7_subject_liberty_mod_marked_value add = $DELTA$ }
+			if = {
+				limit = { var:sakuya_b7_subject_liberty_mod_marked_value = 0 }
+				remove_variable = sakuya_b7_subject_liberty_mod_marked_value
+			}
+			sakuya_b7_apply_marked_liberty_modifier_effect = yes
+		}
+	}
+}
+
+sakuya_b7_clear_player_liberty_modifier_effect = {
+	remove_variable = sakuya_b7_subject_liberty_mod_player_value
+	remove_modifier = sakuya_cheat_b7_subject_liberty_mod_player
+	remove_modifier = sakuya_cheat_b7_player_liberty_desire
+	sakuya_b7_refresh_subject_liberty_mod_active_effect = yes
+}
+
+sakuya_b7_clear_all_liberty_modifier_effect = {
+	remove_variable = sakuya_b7_subject_liberty_mod_active
+	every_country = {
+		remove_variable = sakuya_b7_subject_liberty_mod_player_value
+		remove_variable = sakuya_b7_subject_liberty_mod_marked_value
+		remove_modifier = sakuya_cheat_b7_subject_liberty_mod_player
+		remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked
+		remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_plus20
+		remove_modifier = sakuya_cheat_b7_subject_liberty_mod_marked_minus20
+		remove_modifier = sakuya_cheat_b7_player_liberty_desire
+		remove_modifier = sakuya_cheat_b7_marked_liberty_desire
+	}
+}
+
+sakuya_b7_apply_player_subjects_liberty_modifier_effect = {
+	remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_player
+	if = {
+		limit = { has_variable = sakuya_b7_subjects_liberty_mod_player_value }
+		add_modifier = {
+			name = sakuya_cheat_b7_subjects_liberty_desire_player
+			days = -1
+			multiplier = root.var:sakuya_b7_subjects_liberty_mod_player_value
+		}
+	}
+	sakuya_b7_refresh_subjects_liberty_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_subjects_liberty_modifier_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_marked
+			if = {
+				limit = { has_variable = sakuya_b7_subjects_liberty_mod_marked_value }
+				add_modifier = {
+					name = sakuya_cheat_b7_subjects_liberty_desire_marked
+					days = -1
+					multiplier = var:sakuya_b7_subjects_liberty_mod_marked_value
+				}
+			}
+		}
+	}
+	sakuya_b7_refresh_subjects_liberty_mod_active_effect = yes
+}
+
+sakuya_b7_apply_marked_subjects_liberty_minus20_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			remove_variable = sakuya_b7_subjects_liberty_mod_marked_value
+			remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_marked
+			remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_marked_minus20
+			add_modifier = { name = sakuya_cheat_b7_subjects_liberty_desire_marked_minus20 days = -1 }
+		}
+		set_variable = sakuya_b7_subjects_liberty_mod_active
+	}
+}
+
+sakuya_b7_refresh_subjects_liberty_mod_active_effect = {
+	remove_variable = sakuya_b7_subjects_liberty_mod_active
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			OR = {
+				has_variable = sakuya_b7_subjects_liberty_mod_player_value
+				AND = {
+					exists = scope:sakuya_b7_marked_country_scope
+					scope:sakuya_b7_marked_country_scope = {
+						OR = {
+							has_variable = sakuya_b7_subjects_liberty_mod_marked_value
+							has_modifier = sakuya_cheat_b7_subjects_liberty_desire_marked_minus20
+						}
+					}
+				}
+			}
+		}
+		set_variable = sakuya_b7_subjects_liberty_mod_active
+	}
+}
+
+sakuya_b7_apply_player_subjects_liberty_modifier_delta_effect = {
+	if = {
+		limit = { NOT = { has_variable = sakuya_b7_subjects_liberty_mod_player_value } }
+		set_variable = { name = sakuya_b7_subjects_liberty_mod_player_value value = 0 }
+	}
+	change_variable = { name = sakuya_b7_subjects_liberty_mod_player_value add = $DELTA$ }
+	if = {
+		limit = { var:sakuya_b7_subjects_liberty_mod_player_value = 0 }
+		remove_variable = sakuya_b7_subjects_liberty_mod_player_value
+	}
+	sakuya_b7_apply_player_subjects_liberty_modifier_effect = yes
+}
+
+sakuya_b7_apply_marked_subjects_liberty_modifier_delta_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		scope:sakuya_b7_marked_country_scope = {
+			if = {
+				limit = { NOT = { has_variable = sakuya_b7_subjects_liberty_mod_marked_value } }
+				set_variable = { name = sakuya_b7_subjects_liberty_mod_marked_value value = 0 }
+			}
+			change_variable = { name = sakuya_b7_subjects_liberty_mod_marked_value add = $DELTA$ }
+			if = {
+				limit = { var:sakuya_b7_subjects_liberty_mod_marked_value = 0 }
+				remove_variable = sakuya_b7_subjects_liberty_mod_marked_value
+			}
+		}
+	}
+	sakuya_b7_apply_marked_subjects_liberty_modifier_effect = yes
+}
+
+sakuya_b7_clear_subjects_liberty_modifier_effect = {
+	remove_variable = sakuya_b7_subjects_liberty_mod_active
+	every_country = {
+		remove_variable = sakuya_b7_subjects_liberty_mod_player_value
+		remove_variable = sakuya_b7_subjects_liberty_mod_marked_value
+		remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_player
+		remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_marked
+		remove_modifier = sakuya_cheat_b7_subjects_liberty_desire_marked_minus20
+	}
+}
+
+sakuya_b7_acquire_treaty_port_effect = {
+	sakuya_b7_feedback_clear_effect = yes
+	sakuya_b7_resolve_marked_foreign_state_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_foreign_state_scope }
+		scope:sakuya_b7_marked_foreign_state_scope = { cede_treaty_port = root remove_variable = sakuya_mark_foreign_state_target }
+        set_variable = cmp_b7_feedback_treaty_port_attempted
+	}
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+
+sakuya_b7_grant_treaty_port_effect = {
+	sakuya_b7_feedback_clear_effect = yes
+	sakuya_b7_resolve_marked_country_effect = yes
+	sakuya_b7_resolve_marked_home_state_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope exists = scope:sakuya_b7_marked_home_state_scope }
+		scope:sakuya_b7_marked_home_state_scope = { cede_treaty_port = scope:sakuya_b7_marked_country_scope }
+        set_variable = cmp_b7_feedback_treaty_port_attempted
+	}
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+
+sakuya_b7_cede_home_state_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    sakuya_b7_resolve_marked_home_state_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope exists = scope:sakuya_b7_marked_home_state_scope }
+        scope:sakuya_b7_marked_home_state_scope = { set_state_owner = scope:sakuya_b7_marked_country_scope }
+        if = { limit = { scope:sakuya_b7_marked_home_state_scope = { owner = scope:sakuya_b7_marked_country_scope } } set_variable = cmp_b7_feedback_success }
+        else = { set_variable = cmp_b7_feedback_state_transfer_failed }
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+sakuya_b7_cede_home_state_integrated_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    sakuya_b7_resolve_marked_home_state_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope exists = scope:sakuya_b7_marked_home_state_scope }
+        scope:sakuya_b7_marked_home_state_scope = { set_state_owner = scope:sakuya_b7_marked_country_scope }
+        if = {
+            limit = { scope:sakuya_b7_marked_home_state_scope = { owner = scope:sakuya_b7_marked_country_scope } }
+            scope:sakuya_b7_marked_home_state_scope = { set_state_type = incorporated }
+            set_variable = cmp_b7_feedback_success
+        }
+        else = { set_variable = cmp_b7_feedback_state_transfer_failed }
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+}
+sakuya_b7_take_foreign_state_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    remove_variable = cmp_b7_transfer_found
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope }
+        every_state = {
+            limit = { has_variable = sakuya_mark_foreign_state_target owner = scope:sakuya_b7_marked_country_scope }
+            set_state_owner = root
+            remove_variable = sakuya_mark_foreign_state_target
+            root = { set_variable = cmp_b7_transfer_found }
+        }
+        if = { limit = { has_variable = cmp_b7_transfer_found } set_variable = cmp_b7_feedback_success }
+        else = { set_variable = cmp_b7_feedback_state_transfer_failed }
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+    remove_variable = cmp_b7_transfer_found
+}
+sakuya_b7_take_foreign_state_integrated_effect = {
+    sakuya_b7_feedback_clear_effect = yes
+    sakuya_b7_resolve_marked_country_effect = yes
+    remove_variable = cmp_b7_transfer_found
+    if = {
+        limit = { exists = scope:sakuya_b7_marked_country_scope }
+        every_state = {
+            limit = { has_variable = sakuya_mark_foreign_state_target owner = scope:sakuya_b7_marked_country_scope }
+            set_state_owner = root
+            set_state_type = incorporated
+            remove_variable = sakuya_mark_foreign_state_target
+            root = { set_variable = cmp_b7_transfer_found }
+        }
+        if = { limit = { has_variable = cmp_b7_transfer_found } set_variable = cmp_b7_feedback_success }
+        else = { set_variable = cmp_b7_feedback_state_transfer_failed }
+    }
+    else = { set_variable = cmp_b7_feedback_no_target }
+    remove_variable = cmp_b7_transfer_found
+}
+sakuya_b7_annex_country_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		annex = scope:sakuya_b7_marked_country_scope
+	}
+}
+
+sakuya_b7_switch_country_effect = {
+	sakuya_b7_resolve_marked_country_effect = yes
+	if = {
+		limit = { exists = scope:sakuya_b7_marked_country_scope }
+		play_as = scope:sakuya_b7_marked_country_scope
+	}
+}

@@ -1,0 +1,81 @@
+# Cheat Menu Pro v0.3 beta16-pre2 - audited Power Bloc membership effects
+
+cmp_diplomacy2_feedback_clear_effect = {
+    remove_variable = cmp_diplomacy2_feedback
+}
+
+cmp_diplomacy2_resolve_bloc_leader_effect = {
+    every_country = {
+        limit = {
+            has_variable = sakuya_mark_power_bloc_target
+            is_in_power_bloc = yes
+        }
+        save_scope_as = cmp_diplomacy2_bloc_leader_scope
+    }
+}
+
+cmp_diplomacy2_resolve_country_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        save_scope_as = cmp_diplomacy2_country_scope
+    }
+}
+
+# Expert action: this intentionally bypasses the normal invitation, leverage,
+# acceptance and cooldown flow. The precondition requires the actor to be
+# outside every bloc, so is_in_power_bloc is an unambiguous postcondition.
+cmp_diplomacy2_membership_player_join_effect = {
+    cmp_diplomacy2_feedback_clear_effect = yes
+    cmp_politics2_feedback_clear_effect = yes
+    cmp_diplomacy2_resolve_bloc_leader_effect = yes
+    if = {
+        limit = { NOT = { exists = scope:cmp_diplomacy2_bloc_leader_scope } }
+        set_variable = { name = cmp_diplomacy2_feedback value = -1 }
+    }
+    else_if = {
+        limit = { is_in_power_bloc = yes }
+        set_variable = { name = cmp_diplomacy2_feedback value = -3 }
+    }
+    else = {
+        join_power_bloc = scope:cmp_diplomacy2_bloc_leader_scope
+        if = {
+            limit = { is_in_power_bloc = yes }
+            set_variable = { name = cmp_diplomacy2_feedback value = 1 }
+        }
+        else = { set_variable = { name = cmp_diplomacy2_feedback value = -4 } }
+    }
+}
+
+# The marked-country variant uses the same unambiguous before/after contract.
+cmp_diplomacy2_membership_country_join_effect = {
+    cmp_diplomacy2_feedback_clear_effect = yes
+    cmp_politics2_feedback_clear_effect = yes
+    cmp_diplomacy2_resolve_bloc_leader_effect = yes
+    cmp_diplomacy2_resolve_country_effect = yes
+    if = {
+        limit = { NOT = { exists = scope:cmp_diplomacy2_bloc_leader_scope } }
+        set_variable = { name = cmp_diplomacy2_feedback value = -1 }
+    }
+    else_if = {
+        limit = { NOT = { exists = scope:cmp_diplomacy2_country_scope } }
+        set_variable = { name = cmp_diplomacy2_feedback value = -2 }
+    }
+    else_if = {
+        limit = {
+            scope:cmp_diplomacy2_country_scope = { is_in_power_bloc = yes }
+        }
+        set_variable = { name = cmp_diplomacy2_feedback value = -3 }
+    }
+    else = {
+        scope:cmp_diplomacy2_country_scope = {
+            join_power_bloc = scope:cmp_diplomacy2_bloc_leader_scope
+            if = {
+                limit = { is_in_power_bloc = yes }
+                root = { set_variable = { name = cmp_diplomacy2_feedback value = 1 } }
+            }
+            else = {
+                root = { set_variable = { name = cmp_diplomacy2_feedback value = -4 } }
+            }
+        }
+    }
+}

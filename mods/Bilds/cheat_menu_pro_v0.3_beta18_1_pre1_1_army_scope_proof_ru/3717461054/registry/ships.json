@@ -1,0 +1,256 @@
+{
+  "schema_version": 2,
+  "phase": "beta18-pre2.4",
+  "ships": [
+    {
+      "id": "ship_of_the_line",
+      "ship_type": "ship_type_ship_of_the_line",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "drydocks",
+      "loc_key": "CMP_NAVY18_HULL_SHIP_OF_THE_LINE",
+      "name_en": "Ship of the Line",
+      "name_ru": "Линейный корабль"
+    },
+    {
+      "id": "monitor",
+      "ship_type": "ship_type_monitor",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "ironclad_tech",
+      "loc_key": "CMP_NAVY18_HULL_MONITOR",
+      "name_en": "Monitor",
+      "name_ru": "Монитор"
+    },
+    {
+      "id": "early_ironclad",
+      "ship_type": "ship_type_early_ironclad",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "ironclad_tech",
+      "loc_key": "CMP_NAVY18_HULL_EARLY_IRONCLAD",
+      "name_en": "Early Ironclad",
+      "name_ru": "Ранний броненосец"
+    },
+    {
+      "id": "coastal_defense_ship",
+      "ship_type": "ship_type_coastal_defense_ship",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "monitor_tech",
+      "loc_key": "CMP_NAVY18_HULL_COASTAL_DEFENSE_SHIP",
+      "name_en": "Coastal Defense Ship",
+      "name_ru": "Корабль береговой обороны"
+    },
+    {
+      "id": "modern_ironclad",
+      "ship_type": "ship_type_modern_ironclad",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "monitor_tech",
+      "loc_key": "CMP_NAVY18_HULL_MODERN_IRONCLAD",
+      "name_en": "Modern Ironclad",
+      "name_ru": "Современный броненосец"
+    },
+    {
+      "id": "pre_dreadnought",
+      "ship_type": "ship_type_pre_dreadnought",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "pre_dreadnought_tech",
+      "loc_key": "CMP_NAVY18_HULL_PRE_DREADNOUGHT",
+      "name_en": "Pre-Dreadnought",
+      "name_ru": "Додредноут"
+    },
+    {
+      "id": "dreadnought",
+      "ship_type": "ship_type_dreadnought",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "dreadnought_tech",
+      "loc_key": "CMP_NAVY18_HULL_DREADNOUGHT",
+      "name_en": "Dreadnought",
+      "name_ru": "Дредноут"
+    },
+    {
+      "id": "super_dreadnought",
+      "ship_type": "ship_type_super_dreadnought",
+      "role": "capital",
+      "provider": "vanilla",
+      "unlock_technology": "battleship_tech",
+      "loc_key": "CMP_NAVY18_HULL_SUPER_DREADNOUGHT",
+      "name_en": "Super Dreadnought",
+      "name_ru": "Супердредноут"
+    },
+    {
+      "id": "frigate",
+      "ship_type": "ship_type_frigate",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": null,
+      "loc_key": "CMP_NAVY18_HULL_FRIGATE",
+      "name_en": "Frigate",
+      "name_ru": "Фрегат"
+    },
+    {
+      "id": "iron_frigate",
+      "ship_type": "ship_type_iron_frigate",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "ironclad_tech",
+      "loc_key": "CMP_NAVY18_HULL_IRON_FRIGATE",
+      "name_en": "Iron Frigate",
+      "name_ru": "Железный фрегат"
+    },
+    {
+      "id": "troop_ship",
+      "ship_type": "ship_type_troop_ship",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "ironclad_tech",
+      "loc_key": "CMP_NAVY18_HULL_TROOP_SHIP",
+      "name_en": "Troop Ship",
+      "name_ru": "Войсковой транспорт"
+    },
+    {
+      "id": "protected_cruiser",
+      "ship_type": "ship_type_protected_cruiser",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "sea_lane_strategies",
+      "loc_key": "CMP_NAVY18_HULL_PROTECTED_CRUISER",
+      "name_en": "Protected Cruiser",
+      "name_ru": "Бронепалубный крейсер"
+    },
+    {
+      "id": "armored_cruiser",
+      "ship_type": "ship_type_armored_cruiser",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "pre_dreadnought_tech",
+      "loc_key": "CMP_NAVY18_HULL_ARMORED_CRUISER",
+      "name_en": "Armored Cruiser",
+      "name_ru": "Бронированный крейсер"
+    },
+    {
+      "id": "light_cruiser",
+      "ship_type": "ship_type_light_cruiser",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "dreadnought_tech",
+      "loc_key": "CMP_NAVY18_HULL_LIGHT_CRUISER",
+      "name_en": "Light Cruiser",
+      "name_ru": "Лёгкий крейсер"
+    },
+    {
+      "id": "seaplane_tender",
+      "ship_type": "ship_type_seaplane_tender",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "dreadnought_tech",
+      "loc_key": "CMP_NAVY18_HULL_SEAPLANE_TENDER",
+      "name_en": "Seaplane Tender",
+      "name_ru": "Гидроавианосец"
+    },
+    {
+      "id": "aircraft_carrier",
+      "ship_type": "ship_type_aircraft_carrier",
+      "role": "cruiser",
+      "provider": "vanilla",
+      "unlock_technology": "carrier_tech",
+      "loc_key": "CMP_NAVY18_HULL_AIRCRAFT_CARRIER",
+      "name_en": "Aircraft Carrier",
+      "name_ru": "Авианосец"
+    },
+    {
+      "id": "torpedo_boat",
+      "ship_type": "ship_type_torpedo_boat",
+      "role": "torpedo",
+      "provider": "vanilla",
+      "unlock_technology": "self_propelled_torpedoes",
+      "loc_key": "CMP_NAVY18_HULL_TORPEDO_BOAT",
+      "name_en": "Torpedo Boat",
+      "name_ru": "Торпедная лодка"
+    },
+    {
+      "id": "torpedo_boat_destroyer",
+      "ship_type": "ship_type_torpedo_boat_destroyer",
+      "role": "torpedo",
+      "provider": "vanilla",
+      "unlock_technology": "sea_lane_strategies",
+      "loc_key": "CMP_NAVY18_HULL_TORPEDO_BOAT_DESTROYER",
+      "name_en": "Torpedo Boat Destroyer",
+      "name_ru": "Истребитель миноносцев"
+    },
+    {
+      "id": "submarine",
+      "ship_type": "ship_type_submarine",
+      "role": "torpedo",
+      "provider": "vanilla",
+      "unlock_technology": "submarine",
+      "loc_key": "CMP_NAVY18_HULL_SUBMARINE",
+      "name_en": "Submarine",
+      "name_ru": "Подводная лодка"
+    },
+    {
+      "id": "destroyer",
+      "ship_type": "ship_type_destroyer",
+      "role": "torpedo",
+      "provider": "vanilla",
+      "unlock_technology": "destroyer",
+      "loc_key": "CMP_NAVY18_HULL_DESTROYER",
+      "name_en": "Destroyer",
+      "name_ru": "Эсминец"
+    },
+    {
+      "id": "modern_destroyer",
+      "ship_type": "ship_type_modern_destroyer",
+      "role": "torpedo",
+      "provider": "tech_res",
+      "unlock_technology": "modern_naval_doctrine",
+      "loc_key": "CMP_NAVY18_HULL_MODERN_DESTROYER",
+      "name_en": "Modern Destroyer",
+      "name_ru": "Современный эсминец"
+    },
+    {
+      "id": "modern_cruiser",
+      "ship_type": "ship_type_modern_cruiser",
+      "role": "cruiser",
+      "provider": "tech_res",
+      "unlock_technology": "modern_battleships",
+      "loc_key": "CMP_NAVY18_HULL_MODERN_CRUISER",
+      "name_en": "Modern Cruiser",
+      "name_ru": "Современный крейсер"
+    },
+    {
+      "id": "modern_battleship",
+      "ship_type": "ship_type_modern_battleship",
+      "role": "capital",
+      "provider": "tech_res",
+      "unlock_technology": "modern_battleships",
+      "loc_key": "CMP_NAVY18_HULL_MODERN_BATTLESHIP",
+      "name_en": "Modern Battleship",
+      "name_ru": "Современный линкор"
+    },
+    {
+      "id": "nuclear_carrier",
+      "ship_type": "ship_type_nuclear_carrier",
+      "role": "cruiser",
+      "provider": "tech_res",
+      "unlock_technology": "integrated_naval_air_tactics",
+      "loc_key": "CMP_NAVY18_HULL_NUCLEAR_CARRIER",
+      "name_en": "Modern Carrier",
+      "name_ru": "Современный авианосец"
+    },
+    {
+      "id": "nuclear_submarine",
+      "ship_type": "ship_type_nuclear_submarine",
+      "role": "torpedo",
+      "provider": "tech_res",
+      "unlock_technology": "nuclear_submarine",
+      "loc_key": "CMP_NAVY18_HULL_NUCLEAR_SUBMARINE",
+      "name_en": "Modern Submarine",
+      "name_ru": "Современная подлодка"
+    }
+  ]
+}

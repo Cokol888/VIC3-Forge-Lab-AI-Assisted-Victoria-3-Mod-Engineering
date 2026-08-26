@@ -1,0 +1,829 @@
+# BTN3 Tab7 Institutions
+
+sakuya_b3_inst_mod_speed_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_modifier = sakuya_cheat_b3_institution_size_change_speed
+	}
+}
+
+sakuya_b3_inst_mod_speed_add = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_size_change_speed
+			VAR = sakuya_b3_inst_mod_speed_var
+			DELTA = 0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_speed_add_shift = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_size_change_speed
+			VAR = sakuya_b3_inst_mod_speed_var
+			DELTA = 200
+		}
+	}
+}
+
+sakuya_b3_inst_mod_speed_add_alt = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_size_change_speed
+			VAR = sakuya_b3_inst_mod_speed_var
+			DELTA = 0.05
+		}
+	}
+}
+
+sakuya_b3_inst_mod_speed_sub = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_size_change_speed
+			VAR = sakuya_b3_inst_mod_speed_var
+			DELTA = -0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_speed_clear = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_clear_modifier_effect = {
+			MOD = sakuya_cheat_b3_institution_size_change_speed
+			VAR = sakuya_b3_inst_mod_speed_var
+		}
+	}
+}
+
+sakuya_b3_inst_mod_colony_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_modifier = sakuya_cheat_b3_institution_colony_growth
+	}
+}
+
+sakuya_b3_inst_mod_colony_add = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_colony_growth
+			VAR = sakuya_b3_inst_mod_colony_var
+			DELTA = 0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_colony_add_shift = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_colony_growth
+			VAR = sakuya_b3_inst_mod_colony_var
+			DELTA = 200
+		}
+	}
+}
+
+sakuya_b3_inst_mod_colony_add_alt = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_colony_growth
+			VAR = sakuya_b3_inst_mod_colony_var
+			DELTA = 0.05
+		}
+	}
+}
+
+sakuya_b3_inst_mod_colony_sub = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_colony_growth
+			VAR = sakuya_b3_inst_mod_colony_var
+			DELTA = -0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_colony_clear = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_clear_modifier_effect = {
+			MOD = sakuya_cheat_b3_institution_colony_growth
+			VAR = sakuya_b3_inst_mod_colony_var
+		}
+	}
+}
+
+sakuya_b3_inst_mod_welfare_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_modifier = sakuya_cheat_b3_institution_welfare_payments
+	}
+}
+
+sakuya_b3_inst_mod_welfare_add = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_welfare_payments
+			VAR = sakuya_b3_inst_mod_welfare_var
+			DELTA = 0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_welfare_add_shift = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_welfare_payments
+			VAR = sakuya_b3_inst_mod_welfare_var
+			DELTA = 200
+		}
+	}
+}
+
+sakuya_b3_inst_mod_welfare_add_alt = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_welfare_payments
+			VAR = sakuya_b3_inst_mod_welfare_var
+			DELTA = 0.05
+		}
+	}
+}
+
+sakuya_b3_inst_mod_welfare_sub = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_welfare_payments
+			VAR = sakuya_b3_inst_mod_welfare_var
+			DELTA = -0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_welfare_clear = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_clear_modifier_effect = {
+			MOD = sakuya_cheat_b3_institution_welfare_payments
+			VAR = sakuya_b3_inst_mod_welfare_var
+		}
+	}
+}
+
+sakuya_b3_inst_mod_food_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_modifier = sakuya_cheat_b3_institution_food_security
+	}
+}
+
+sakuya_b3_inst_mod_food_add = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_food_security
+			VAR = sakuya_b3_inst_mod_food_var
+			DELTA = 0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_food_add_shift = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_food_security
+			VAR = sakuya_b3_inst_mod_food_var
+			DELTA = 200
+		}
+	}
+}
+
+sakuya_b3_inst_mod_food_add_alt = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_food_security
+			VAR = sakuya_b3_inst_mod_food_var
+			DELTA = 0.05
+		}
+	}
+}
+
+sakuya_b3_inst_mod_food_sub = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_food_security
+			VAR = sakuya_b3_inst_mod_food_var
+			DELTA = -0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_food_clear = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_clear_modifier_effect = {
+			MOD = sakuya_cheat_b3_institution_food_security
+			VAR = sakuya_b3_inst_mod_food_var
+		}
+	}
+}
+
+sakuya_b3_inst_mod_working_conditions_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_modifier = sakuya_cheat_b3_institution_working_conditions
+	}
+}
+
+sakuya_b3_inst_mod_working_conditions_add = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_working_conditions
+			VAR = sakuya_b3_inst_mod_working_conditions_var
+			DELTA = 0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_working_conditions_add_shift = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_working_conditions
+			VAR = sakuya_b3_inst_mod_working_conditions_var
+			DELTA = 200
+		}
+	}
+}
+
+sakuya_b3_inst_mod_working_conditions_add_alt = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_working_conditions
+			VAR = sakuya_b3_inst_mod_working_conditions_var
+			DELTA = 0.05
+		}
+	}
+}
+
+sakuya_b3_inst_mod_working_conditions_sub = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_working_conditions
+			VAR = sakuya_b3_inst_mod_working_conditions_var
+			DELTA = -0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_working_conditions_clear = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_clear_modifier_effect = {
+			MOD = sakuya_cheat_b3_institution_working_conditions
+			VAR = sakuya_b3_inst_mod_working_conditions_var
+		}
+	}
+}
+
+sakuya_b3_inst_mod_revolution_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_modifier = sakuya_cheat_b3_institution_revolution_secession
+	}
+}
+
+sakuya_b3_inst_mod_revolution_add = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_revolution_secession
+			VAR = sakuya_b3_inst_mod_revolution_var
+			DELTA = 0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_revolution_add_shift = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_revolution_secession
+			VAR = sakuya_b3_inst_mod_revolution_var
+			DELTA = 200
+		}
+	}
+}
+
+sakuya_b3_inst_mod_revolution_add_alt = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_revolution_secession
+			VAR = sakuya_b3_inst_mod_revolution_var
+			DELTA = 0.05
+		}
+	}
+}
+
+sakuya_b3_inst_mod_revolution_sub = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_change_modifier_delta_effect = {
+			MOD = sakuya_cheat_b3_institution_revolution_secession
+			VAR = sakuya_b3_inst_mod_revolution_var
+			DELTA = -0.2
+		}
+	}
+}
+
+sakuya_b3_inst_mod_revolution_clear = {
+	scope = country
+	effect = {
+		sakuya_b3_lawmod_player_clear_modifier_effect = {
+			MOD = sakuya_cheat_b3_institution_revolution_secession
+			VAR = sakuya_b3_inst_mod_revolution_var
+		}
+	}
+}
+
+sakuya_b3_inst_row_colonial_affairs_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_colonial_affairs
+	}
+}
+
+sakuya_b3_inst_colonial_affairs_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_colonial_affairs
+		OR = {
+			institution_investment_level = { institution = institution_colonial_affairs value = 2 }
+			institution_investment_level = { institution = institution_colonial_affairs value = 3 }
+			institution_investment_level = { institution = institution_colonial_affairs value = 4 }
+			institution_investment_level = { institution = institution_colonial_affairs value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_colonial_affairs_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_colonial_affairs
+		OR = {
+			institution_investment_level = { institution = institution_colonial_affairs value = 3 }
+			institution_investment_level = { institution = institution_colonial_affairs value = 4 }
+			institution_investment_level = { institution = institution_colonial_affairs value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_colonial_affairs_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_colonial_affairs
+		OR = {
+			institution_investment_level = { institution = institution_colonial_affairs value = 4 }
+			institution_investment_level = { institution = institution_colonial_affairs value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_colonial_affairs_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_colonial_affairs
+		institution_investment_level = { institution = institution_colonial_affairs value = 5 }
+	}
+}
+
+sakuya_b3_inst_colonial_affairs_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_colonial_affairs level = 1 } } }
+sakuya_b3_inst_colonial_affairs_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_colonial_affairs level = 2 } } }
+sakuya_b3_inst_colonial_affairs_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_colonial_affairs level = 3 } } }
+sakuya_b3_inst_colonial_affairs_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_colonial_affairs level = 4 } } }
+sakuya_b3_inst_colonial_affairs_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_colonial_affairs level = 5 } } }
+
+sakuya_b3_inst_row_schools_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_schools
+	}
+}
+
+sakuya_b3_inst_schools_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_schools
+		OR = {
+			institution_investment_level = { institution = institution_schools value = 2 }
+			institution_investment_level = { institution = institution_schools value = 3 }
+			institution_investment_level = { institution = institution_schools value = 4 }
+			institution_investment_level = { institution = institution_schools value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_schools_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_schools
+		OR = {
+			institution_investment_level = { institution = institution_schools value = 3 }
+			institution_investment_level = { institution = institution_schools value = 4 }
+			institution_investment_level = { institution = institution_schools value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_schools_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_schools
+		OR = {
+			institution_investment_level = { institution = institution_schools value = 4 }
+			institution_investment_level = { institution = institution_schools value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_schools_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_schools
+		institution_investment_level = { institution = institution_schools value = 5 }
+	}
+}
+
+sakuya_b3_inst_schools_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_schools level = 1 } } }
+sakuya_b3_inst_schools_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_schools level = 2 } } }
+sakuya_b3_inst_schools_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_schools level = 3 } } }
+sakuya_b3_inst_schools_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_schools level = 4 } } }
+sakuya_b3_inst_schools_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_schools level = 5 } } }
+
+sakuya_b3_inst_row_social_security_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_social_security
+	}
+}
+
+sakuya_b3_inst_social_security_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_social_security
+		OR = {
+			institution_investment_level = { institution = institution_social_security value = 2 }
+			institution_investment_level = { institution = institution_social_security value = 3 }
+			institution_investment_level = { institution = institution_social_security value = 4 }
+			institution_investment_level = { institution = institution_social_security value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_social_security_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_social_security
+		OR = {
+			institution_investment_level = { institution = institution_social_security value = 3 }
+			institution_investment_level = { institution = institution_social_security value = 4 }
+			institution_investment_level = { institution = institution_social_security value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_social_security_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_social_security
+		OR = {
+			institution_investment_level = { institution = institution_social_security value = 4 }
+			institution_investment_level = { institution = institution_social_security value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_social_security_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_social_security
+		institution_investment_level = { institution = institution_social_security value = 5 }
+	}
+}
+
+sakuya_b3_inst_social_security_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_social_security level = 1 } } }
+sakuya_b3_inst_social_security_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_social_security level = 2 } } }
+sakuya_b3_inst_social_security_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_social_security level = 3 } } }
+sakuya_b3_inst_social_security_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_social_security level = 4 } } }
+sakuya_b3_inst_social_security_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_social_security level = 5 } } }
+
+sakuya_b3_inst_row_workplace_safety_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_workplace_safety
+	}
+}
+
+sakuya_b3_inst_workplace_safety_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_workplace_safety
+		OR = {
+			institution_investment_level = { institution = institution_workplace_safety value = 2 }
+			institution_investment_level = { institution = institution_workplace_safety value = 3 }
+			institution_investment_level = { institution = institution_workplace_safety value = 4 }
+			institution_investment_level = { institution = institution_workplace_safety value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_workplace_safety_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_workplace_safety
+		OR = {
+			institution_investment_level = { institution = institution_workplace_safety value = 3 }
+			institution_investment_level = { institution = institution_workplace_safety value = 4 }
+			institution_investment_level = { institution = institution_workplace_safety value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_workplace_safety_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_workplace_safety
+		OR = {
+			institution_investment_level = { institution = institution_workplace_safety value = 4 }
+			institution_investment_level = { institution = institution_workplace_safety value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_workplace_safety_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_workplace_safety
+		institution_investment_level = { institution = institution_workplace_safety value = 5 }
+	}
+}
+
+sakuya_b3_inst_workplace_safety_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_workplace_safety level = 1 } } }
+sakuya_b3_inst_workplace_safety_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_workplace_safety level = 2 } } }
+sakuya_b3_inst_workplace_safety_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_workplace_safety level = 3 } } }
+sakuya_b3_inst_workplace_safety_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_workplace_safety level = 4 } } }
+sakuya_b3_inst_workplace_safety_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_workplace_safety level = 5 } } }
+
+sakuya_b3_inst_row_police_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_police
+	}
+}
+
+sakuya_b3_inst_police_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_police
+		OR = {
+			institution_investment_level = { institution = institution_police value = 2 }
+			institution_investment_level = { institution = institution_police value = 3 }
+			institution_investment_level = { institution = institution_police value = 4 }
+			institution_investment_level = { institution = institution_police value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_police_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_police
+		OR = {
+			institution_investment_level = { institution = institution_police value = 3 }
+			institution_investment_level = { institution = institution_police value = 4 }
+			institution_investment_level = { institution = institution_police value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_police_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_police
+		OR = {
+			institution_investment_level = { institution = institution_police value = 4 }
+			institution_investment_level = { institution = institution_police value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_police_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_police
+		institution_investment_level = { institution = institution_police value = 5 }
+	}
+}
+
+sakuya_b3_inst_police_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_police level = 1 } } }
+sakuya_b3_inst_police_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_police level = 2 } } }
+sakuya_b3_inst_police_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_police level = 3 } } }
+sakuya_b3_inst_police_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_police level = 4 } } }
+sakuya_b3_inst_police_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_police level = 5 } } }
+
+sakuya_b3_inst_row_health_system_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_health_system
+	}
+}
+
+sakuya_b3_inst_health_system_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_health_system
+		OR = {
+			institution_investment_level = { institution = institution_health_system value = 2 }
+			institution_investment_level = { institution = institution_health_system value = 3 }
+			institution_investment_level = { institution = institution_health_system value = 4 }
+			institution_investment_level = { institution = institution_health_system value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_health_system_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_health_system
+		OR = {
+			institution_investment_level = { institution = institution_health_system value = 3 }
+			institution_investment_level = { institution = institution_health_system value = 4 }
+			institution_investment_level = { institution = institution_health_system value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_health_system_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_health_system
+		OR = {
+			institution_investment_level = { institution = institution_health_system value = 4 }
+			institution_investment_level = { institution = institution_health_system value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_health_system_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_health_system
+		institution_investment_level = { institution = institution_health_system value = 5 }
+	}
+}
+
+sakuya_b3_inst_health_system_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_health_system level = 1 } } }
+sakuya_b3_inst_health_system_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_health_system level = 2 } } }
+sakuya_b3_inst_health_system_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_health_system level = 3 } } }
+sakuya_b3_inst_health_system_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_health_system level = 4 } } }
+sakuya_b3_inst_health_system_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_health_system level = 5 } } }
+
+sakuya_b3_inst_row_home_affairs_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_home_affairs
+	}
+}
+
+sakuya_b3_inst_home_affairs_lvl2_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_home_affairs
+		OR = {
+			institution_investment_level = { institution = institution_home_affairs value = 2 }
+			institution_investment_level = { institution = institution_home_affairs value = 3 }
+			institution_investment_level = { institution = institution_home_affairs value = 4 }
+			institution_investment_level = { institution = institution_home_affairs value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_home_affairs_lvl3_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_home_affairs
+		OR = {
+			institution_investment_level = { institution = institution_home_affairs value = 3 }
+			institution_investment_level = { institution = institution_home_affairs value = 4 }
+			institution_investment_level = { institution = institution_home_affairs value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_home_affairs_lvl4_plus_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_home_affairs
+		OR = {
+			institution_investment_level = { institution = institution_home_affairs value = 4 }
+			institution_investment_level = { institution = institution_home_affairs value = 5 }
+		}
+	}
+}
+
+sakuya_b3_inst_home_affairs_lvl5_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_institution = institution_home_affairs
+		institution_investment_level = { institution = institution_home_affairs value = 5 }
+	}
+}
+
+sakuya_b3_inst_home_affairs_set_1 = { scope = country effect = { set_institution_investment_level = { institution = institution_home_affairs level = 1 } } }
+sakuya_b3_inst_home_affairs_set_2 = { scope = country effect = { set_institution_investment_level = { institution = institution_home_affairs level = 2 } } }
+sakuya_b3_inst_home_affairs_set_3 = { scope = country effect = { set_institution_investment_level = { institution = institution_home_affairs level = 3 } } }
+sakuya_b3_inst_home_affairs_set_4 = { scope = country effect = { set_institution_investment_level = { institution = institution_home_affairs level = 4 } } }
+sakuya_b3_inst_home_affairs_set_5 = { scope = country effect = { set_institution_investment_level = { institution = institution_home_affairs level = 5 } } }
+
+sakuya_b3_inst_colonial_affairs_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_colonial_affairs_max_investment VAR = sakuya_b3_inst_colonial_affairs_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_colonial_affairs_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_colonial_affairs_max_investment VAR = sakuya_b3_inst_colonial_affairs_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_colonial_affairs_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_colonial_affairs_max_investment VAR = sakuya_b3_inst_colonial_affairs_max_investment_var } } }
+sakuya_b3_inst_police_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_police_max_investment VAR = sakuya_b3_inst_police_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_police_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_police_max_investment VAR = sakuya_b3_inst_police_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_police_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_police_max_investment VAR = sakuya_b3_inst_police_max_investment_var } } }
+sakuya_b3_inst_schools_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_schools_max_investment VAR = sakuya_b3_inst_schools_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_schools_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_schools_max_investment VAR = sakuya_b3_inst_schools_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_schools_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_schools_max_investment VAR = sakuya_b3_inst_schools_max_investment_var } } }
+sakuya_b3_inst_health_system_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_health_system_max_investment VAR = sakuya_b3_inst_health_system_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_health_system_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_health_system_max_investment VAR = sakuya_b3_inst_health_system_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_health_system_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_health_system_max_investment VAR = sakuya_b3_inst_health_system_max_investment_var } } }
+sakuya_b3_inst_home_affairs_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_home_affairs_max_investment VAR = sakuya_b3_inst_home_affairs_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_home_affairs_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_home_affairs_max_investment VAR = sakuya_b3_inst_home_affairs_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_home_affairs_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_home_affairs_max_investment VAR = sakuya_b3_inst_home_affairs_max_investment_var } } }
+sakuya_b3_inst_social_security_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_social_security_max_investment VAR = sakuya_b3_inst_social_security_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_social_security_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_social_security_max_investment VAR = sakuya_b3_inst_social_security_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_social_security_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_social_security_max_investment VAR = sakuya_b3_inst_social_security_max_investment_var } } }
+sakuya_b3_inst_workplace_safety_max_level_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_workplace_safety_max_investment VAR = sakuya_b3_inst_workplace_safety_max_investment_var DELTA = 1 } } }
+sakuya_b3_inst_workplace_safety_max_level_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_inst_workplace_safety_max_investment VAR = sakuya_b3_inst_workplace_safety_max_investment_var DELTA = -1 } } }
+sakuya_b3_inst_workplace_safety_max_level_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_inst_workplace_safety_max_investment VAR = sakuya_b3_inst_workplace_safety_max_investment_var } } }

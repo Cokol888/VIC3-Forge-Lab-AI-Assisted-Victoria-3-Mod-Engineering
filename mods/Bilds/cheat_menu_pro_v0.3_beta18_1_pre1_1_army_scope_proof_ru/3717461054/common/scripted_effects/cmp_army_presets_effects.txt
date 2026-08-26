@@ -1,0 +1,55 @@
+﻿# Cheat Menu Pro v0.3-beta5 - Army Builder quick presets
+cmp_army_builder_quick_clear_result_effect = { remove_variable = cmp_army_builder_result remove_variable = cmp_army_builder_preset_result remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result }
+cmp_army_builder_preset_infantry_corps_effect = {
+    remove_variable = cmp_army_builder_preset_result
+    if = { limit = { has_technology_researched = high_performance_apparel } set_variable = { name = cmp_army_builder_unit_index value = 8 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = mechanized_infantry } set_variable = { name = cmp_army_builder_unit_index value = 7 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = mobile_armor } set_variable = { name = cmp_army_builder_unit_index value = 6 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = nco_training } set_variable = { name = cmp_army_builder_unit_index value = 5 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = trench_works } set_variable = { name = cmp_army_builder_unit_index value = 4 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = general_staff } set_variable = { name = cmp_army_builder_unit_index value = 3 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = line_infantry } set_variable = { name = cmp_army_builder_unit_index value = 2 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { always = yes } set_variable = { name = cmp_army_builder_unit_index value = 1 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    set_variable = { name = cmp_army_builder_amount_index value = 4 }
+    cmp_army_builder_quick_clear_result_effect = yes
+    set_variable = { name = cmp_army_builder_preset_result value = 1 }
+}
+
+cmp_army_builder_preset_artillery_group_effect = {
+    remove_variable = cmp_army_builder_preset_result
+    if = { limit = { has_technology_researched = rocket_artillery } set_variable = { name = cmp_army_builder_unit_index value = 17 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = blitzkrieg } set_variable = { name = cmp_army_builder_unit_index value = 23 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = mobile_armor } set_variable = { name = cmp_army_builder_unit_index value = 16 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = defense_in_depth } set_variable = { name = cmp_army_builder_unit_index value = 14 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = breech_loading_artillery } set_variable = { name = cmp_army_builder_unit_index value = 13 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = napoleonic_warfare } set_variable = { name = cmp_army_builder_unit_index value = 12 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = artillery } set_variable = { name = cmp_army_builder_unit_index value = 11 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    set_variable = { name = cmp_army_builder_amount_index value = 3 }
+    cmp_army_builder_quick_clear_result_effect = yes
+    set_variable = { name = cmp_army_builder_preset_result value = 1 }
+}
+
+cmp_army_builder_preset_mobile_corps_effect = {
+    remove_variable = cmp_army_builder_preset_result
+    if = { limit = { has_technology_researched = mecha_engineering } set_variable = { name = cmp_army_builder_unit_index value = 26 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = main_battle_tank } set_variable = { name = cmp_army_builder_unit_index value = 25 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = blitzkrieg } set_variable = { name = cmp_army_builder_unit_index value = 24 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = mobile_armor } set_variable = { name = cmp_army_builder_unit_index value = 22 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = napoleonic_warfare } set_variable = { name = cmp_army_builder_unit_index value = 21 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    # Army Final deterministic same-tech tie-break: generated templates use Dragoons for military_drill.
+    else_if = { limit = { has_technology_researched = military_drill } set_variable = { name = cmp_army_builder_unit_index value = 19 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = standing_army } set_variable = { name = cmp_army_builder_unit_index value = 18 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    set_variable = { name = cmp_army_builder_amount_index value = 3 }
+    cmp_army_builder_quick_clear_result_effect = yes
+    set_variable = { name = cmp_army_builder_preset_result value = 1 }
+}
+
+cmp_army_builder_preset_marine_force_effect = {
+    remove_variable = cmp_army_builder_preset_result
+    if = { limit = { has_technology_researched = high_performance_apparel } set_variable = { name = cmp_army_builder_unit_index value = 10 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    else_if = { limit = { has_technology_researched = amphibious_warfare } set_variable = { name = cmp_army_builder_unit_index value = 9 } set_variable = { name = cmp_army_builder_preset_result value = 1 } }
+    set_variable = { name = cmp_army_builder_amount_index value = 3 }
+    cmp_army_builder_quick_clear_result_effect = yes
+    set_variable = { name = cmp_army_builder_preset_result value = 1 }
+}
+

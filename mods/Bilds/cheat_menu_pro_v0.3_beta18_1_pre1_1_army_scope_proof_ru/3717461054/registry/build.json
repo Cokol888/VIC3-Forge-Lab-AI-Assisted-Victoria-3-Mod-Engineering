@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.3-beta18.1-pre1.1",
+  "build_id": "CMP-0.3-B18-1-PRE1-1-20260823",
+  "name": "Cheat Menu Pro v0.3 beta18.1-pre1.1 - Army Scope Proof RU/EN",
+  "baseline_victoria": "1.13.10",
+  "workshop_snapshot": "3717461054",
+  "parent_version": "0.3-beta18.1-pre1",
+  "runtime_status": "STATIC_PASS_RUNTIME_PENDING",
+  "fleet_gate": "BETA18_FINAL_RUNTIME_PASS; NAVY_REWORK_FROZEN",
+  "parent_runtime_status": "PASS"
+}

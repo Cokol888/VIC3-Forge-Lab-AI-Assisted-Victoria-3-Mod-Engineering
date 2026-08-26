@@ -1,0 +1,1549 @@
+{
+  "schema_version": 1,
+  "allowed_statuses": [
+    "SUPPORTED",
+    "READ_ONLY",
+    "MANUAL",
+    "UNSAFE",
+    "UNSUPPORTED"
+  ],
+  "domains": {
+    "building_operations": [
+      {
+        "id": "coal_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "iron_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "lead_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "sulfur_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "gold_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "gold_field",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "logging_camp",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "rubber_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "fishing_wharf",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "whaling_station",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "oil_rig",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "bauxite_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "copper_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "commonores_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "advancedores_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "natural_gas_rig",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "rare_earths_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "uranium_mine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "rye_farm",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "wheat_farm",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "rice_farm",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "maize_farm",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "millet_farm",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "livestock_ranch",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "vineyard",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "coffee_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "cotton_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "dye_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "opium_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "tea_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "tobacco_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "sugar_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "banana_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "silk_plantation",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "food_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "textile_mill",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "furniture_manufactory",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "glassworks",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "tooling_workshop",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "paper_mill",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "chemical_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "explosives_factory",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "synthetics_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "steel_mill",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "motor_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "shipyard",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "automotive_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "electrics_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "arms_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "artillery_foundry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "munition_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "power_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "water_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "railway",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "construction_sector",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "port",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "university",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "government_administration",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "barrack",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "conscription_center",
+        "status": "MANUAL",
+        "reason": "Game-managed conscription workplace; direct construction route is intentionally not exposed."
+      },
+      {
+        "id": "naval_administration",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "naval_fortification",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "naval_logistics_center",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "art_academy",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "urban_center",
+        "status": "MANUAL",
+        "reason": "Automatically generated from urbanization; direct ADD/SET would conflict with game-managed levels."
+      },
+      {
+        "id": "trade_center",
+        "status": "MANUAL",
+        "reason": "Automatically generated by trade mechanics; direct ADD/SET would conflict with game-managed levels."
+      },
+      {
+        "id": "manor_house",
+        "status": "MANUAL",
+        "reason": "Ownership infrastructure generated by ownership mechanics; building operations remain manual."
+      },
+      {
+        "id": "financial_district",
+        "status": "MANUAL",
+        "reason": "Ownership infrastructure generated by ownership mechanics; building operations remain manual."
+      },
+      {
+        "id": "office",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "software_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "interactive_media_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "telecommunications_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "datacenter_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "ecommerce_logistics",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "hydroelectric_power_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "renewable_energy_power_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "geothermal_power_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "fusion_power_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "power_grid_station",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "alloys_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "electronics_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "battery_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "processors_foundry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "computer_assembly_plant",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "robotics_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "aircraft_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "pharmaceuticals_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "consumer_electronics_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "hydroponic",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "nuclear_weapons_silo",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "research_center",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "elgar_opera",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "manzoni_publishing_industry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "instrument_workshops",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "mendelejew_hydrogenation_plants",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "mendelejew_synthetic_rubber_factory",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "airport",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "company_headquarter",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "company_regional_headquarter",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "skyscraper",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "suez_canal",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "panama_canal",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "angkor_wat",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "big_ben",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "cristo_redentor",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "eiffel_tower",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "estacion_de_madrid_atocha",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "forbidden_city",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "gran_teatro_de_la_habana",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "hagia_sophia",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_1",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_2",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_3",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_4",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "machu_picchu",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "manila_cathedral_monument",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "manila_cathedral_original",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "manila_cathedral_ruins",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "mosque_of_djenne",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "pena_convent",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "pena_palace",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "power_bloc_statue",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "sagrada_familia_cathedral_1",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "sagrada_familia_cathedral_2",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "sagrada_familia_cathedral_3",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "saint_basils_cathedral",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "statue_of_liberty",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "taj_mahal",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "vatican_city",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "victoria_terminus",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "white_house",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "modern_state_baseline",
+        "status": "UNSUPPORTED",
+        "reason": "Tech & Res non-buildable baseline helper; no workforce injection."
+      }
+    ],
+    "staffing": [
+      {
+        "id": "coal_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "iron_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "lead_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "sulfur_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "gold_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "gold_field",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "logging_camp",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "rubber_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "fishing_wharf",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "whaling_station",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "oil_rig",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "bauxite_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "copper_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "commonores_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "advancedores_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "natural_gas_rig",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "rare_earths_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "uranium_mine",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "rye_farm",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "wheat_farm",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "rice_farm",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "maize_farm",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "millet_farm",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "livestock_ranch",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "vineyard",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "coffee_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "cotton_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "dye_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "opium_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "tea_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "tobacco_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "sugar_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "banana_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "silk_plantation",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "food_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "textile_mill",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "furniture_manufactory",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "glassworks",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "tooling_workshop",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "paper_mill",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "chemical_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "explosives_factory",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "synthetics_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "steel_mill",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "motor_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "shipyard",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "automotive_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "electrics_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "arms_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "artillery_foundry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "munition_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "power_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "water_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "railway",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "construction_sector",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "port",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "university",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "government_administration",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "barrack",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "conscription_center",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "naval_administration",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "naval_fortification",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "naval_logistics_center",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "art_academy",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "urban_center",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "trade_center",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "manor_house",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "financial_district",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "office",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "software_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "interactive_media_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "telecommunications_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "datacenter_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "ecommerce_logistics",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "hydroelectric_power_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "renewable_energy_power_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "geothermal_power_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "fusion_power_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "power_grid_station",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "alloys_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "electronics_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "battery_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "processors_foundry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "computer_assembly_plant",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "robotics_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "aircraft_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "pharmaceuticals_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "consumer_electronics_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "hydroponic",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "nuclear_weapons_silo",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "research_center",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "elgar_opera",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "manzoni_publishing_industry",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "instrument_workshops",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "mendelejew_hydrogenation_plants",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "mendelejew_synthetic_rubber_factory",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "airport",
+        "status": "SUPPORTED",
+        "reason": null
+      },
+      {
+        "id": "company_headquarter",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "company_regional_headquarter",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "skyscraper",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "suez_canal",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "panama_canal",
+        "status": "MANUAL",
+        "reason": "Requires dedicated workforce/persistence audit before automatic reserve injection."
+      },
+      {
+        "id": "angkor_wat",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "big_ben",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "cristo_redentor",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "eiffel_tower",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "estacion_de_madrid_atocha",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "forbidden_city",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "gran_teatro_de_la_habana",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "hagia_sophia",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_1",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_2",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_3",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "kaiserforum_4",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "machu_picchu",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "manila_cathedral_monument",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "manila_cathedral_original",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "manila_cathedral_ruins",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "mosque_of_djenne",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "pena_convent",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "pena_palace",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "power_bloc_statue",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "sagrada_familia_cathedral_1",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "sagrada_familia_cathedral_2",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "sagrada_familia_cathedral_3",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "saint_basils_cathedral",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "statue_of_liberty",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "taj_mahal",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "vatican_city",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "victoria_terminus",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "white_house",
+        "status": "UNSUPPORTED",
+        "reason": "Monument/special object is not part of automatic Staffing Coverage 2.1."
+      },
+      {
+        "id": "modern_state_baseline",
+        "status": "UNSUPPORTED",
+        "reason": "Tech & Res non-buildable baseline helper; no workforce injection."
+      }
+    ],
+    "resources": [
+      {
+        "id": "water",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "bauxite",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "copper",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "common_ores",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "advanced_ores",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "natural_gas",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "rare_earths",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "uranium",
+        "status": "SUPPORTED"
+      }
+    ],
+    "land_units": [
+      {
+        "id": "irregular_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "line_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "skirmish_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "trench_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "squad_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "mechanized_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_mechanized_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "advanced_mechanized_infantry",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_tier_marines",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "advanced_tier_marines",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "cannon_artillery",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "mobile_artillery",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "shrapnel_artillery",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "siege_artillery",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "heavy_tank",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "self_propelled_artillery",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "rocket_artillery",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "hussars",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "dragoons",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "cuirassiers",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "lancers",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "light_tanks",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_heavy_tank",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_light_tanks",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "main_battle_tanks",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "giant_death_robot",
+        "status": "SUPPORTED"
+      }
+    ],
+    "ships": [
+      {
+        "id": "ship_of_the_line",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "monitor",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "early_ironclad",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "coastal_defense_ship",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_ironclad",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "pre_dreadnought",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "dreadnought",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "super_dreadnought",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "frigate",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "iron_frigate",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "troop_ship",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "protected_cruiser",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "armored_cruiser",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "light_cruiser",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "seaplane_tender",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "aircraft_carrier",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "torpedo_boat",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "torpedo_boat_destroyer",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "submarine",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "destroyer",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_destroyer",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_cruiser",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "modern_battleship",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "nuclear_carrier",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "nuclear_submarine",
+        "status": "SUPPORTED"
+      }
+    ],
+    "operations": [
+      {
+        "id": "resource_add",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "resource_set",
+        "status": "UNSAFE"
+      },
+      {
+        "id": "resource_clear",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "staffing_reserve",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "create_army",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "add_ships",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "target_group_toggle",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "economy_modifier_set",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "economy_money_add",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "economy_clear_debt",
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "economy_policy_override",
+        "status": "SUPPORTED"
+      }
+    ]
+  },
+  "domain_contracts": {
+    "diplomacy_operations": {
+      "status": "SUPPORTED",
+      "source": "registry/diplomacy2.json",
+      "note": "Per-action audit remains authoritative."
+    },
+    "character_operations": {
+      "status": "SUPPORTED",
+      "source": "registry/politics2.json",
+      "note": "Unsafe/read-only actions remain explicitly gated by Politics 2.0."
+    },
+    "power_bloc_operations": {
+      "status": "MANUAL",
+      "source": "registry/diplomacy2.json",
+      "note": "Only audited forced-join/cohesion routes are exposed; other membership/principle/leverage paths remain deferred."
+    }
+  }
+}

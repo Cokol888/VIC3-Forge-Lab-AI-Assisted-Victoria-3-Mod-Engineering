@@ -1,0 +1,66 @@
+﻿# Cheat Menu Pro v0.3-beta10 - Unified Target & Action Core Scripted GUI
+
+cmp_target_core_mode_player_selected = { scope = country is_shown = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } } }
+cmp_target_core_mode_country_selected = { scope = country is_shown = { var:cmp_target_core_mode = 2 } }
+cmp_target_core_mode_group_a_selected = { scope = country is_shown = { var:cmp_target_core_mode = 3 } }
+cmp_target_core_mode_group_b_selected = { scope = country is_shown = { var:cmp_target_core_mode = 4 } }
+cmp_target_core_mode_group_c_selected = { scope = country is_shown = { var:cmp_target_core_mode = 5 } }
+cmp_target_core_mode_home_states_selected = { scope = country is_shown = { var:cmp_target_core_mode = 6 } }
+cmp_target_core_mode_incorporated_selected = { scope = country is_shown = { var:cmp_target_core_mode = 7 } }
+cmp_target_core_mode_foreign_states_selected = { scope = country is_shown = { var:cmp_target_core_mode = 8 } }
+cmp_target_core_mode_character_selected = { scope = country is_shown = { var:cmp_target_core_mode = 9 } }
+cmp_target_core_mode_fleet_selected = { scope = country is_shown = { var:cmp_target_core_mode = 10 } }
+cmp_target_core_mode_power_bloc_selected = { scope = country is_shown = { var:cmp_target_core_mode = 11 } }
+
+cmp_target_core_select_player = { scope = country is_valid = { is_player = yes } effect = { cmp_target_core_select_player_effect = yes } }
+cmp_target_core_select_country = { scope = country is_valid = { is_player = yes any_country = { has_variable = sakuya_mark_country_target } } effect = { cmp_target_core_select_marked_country_effect = yes } }
+cmp_target_core_select_group_a = { scope = country is_valid = { is_player = yes any_country = { has_variable = cmp_target_group_a_member } } effect = { cmp_target_core_select_group_a_effect = yes } }
+cmp_target_core_select_group_b = { scope = country is_valid = { is_player = yes any_country = { has_variable = cmp_target_group_b_member } } effect = { cmp_target_core_select_group_b_effect = yes } }
+cmp_target_core_select_group_c = { scope = country is_valid = { is_player = yes any_country = { has_variable = cmp_target_group_c_member } } effect = { cmp_target_core_select_group_c_effect = yes } }
+cmp_target_core_select_home_states = { scope = country is_valid = { is_player = yes any_scope_state = { has_decree = decree_sakuya_mark_state } } effect = { cmp_target_core_select_home_states_effect = yes } }
+cmp_target_core_select_incorporated = { scope = country is_valid = { is_player = yes any_scope_state = { is_incorporated = yes } } effect = { cmp_target_core_select_incorporated_states_effect = yes } }
+cmp_target_core_select_foreign_states = { scope = country is_valid = { is_player = yes any_state = { has_variable = sakuya_mark_foreign_state_target } } effect = { cmp_target_core_select_foreign_states_effect = yes } }
+cmp_target_core_select_character = { scope = country is_valid = { is_player = yes OR = { any_country = { any_scope_character = { has_variable = sakuya_mark_character_target } } any_character_in_exile_pool = { has_variable = sakuya_mark_character_target } } } effect = { cmp_target_core_select_character_effect = yes } }
+cmp_target_core_select_fleet = { scope = country is_valid = { is_player = yes any_country = { has_variable_list = sakuya_main_04_01_marked_navy_list } } effect = { cmp_target_core_select_fleet_effect = yes } }
+cmp_target_core_select_power_bloc = { scope = country is_valid = { is_player = yes any_country = { has_variable = sakuya_mark_power_bloc_target } } effect = { cmp_target_core_select_power_bloc_effect = yes } }
+
+cmp_target_core_has_group_a = { scope = country is_shown = { any_country = { has_variable = cmp_target_group_a_member } } }
+cmp_target_core_has_group_b = { scope = country is_shown = { any_country = { has_variable = cmp_target_group_b_member } } }
+cmp_target_core_has_group_c = { scope = country is_shown = { any_country = { has_variable = cmp_target_group_c_member } } }
+cmp_target_core_marked_in_group_a = { scope = country is_shown = { any_country = { has_variable = sakuya_mark_country_target has_variable = cmp_target_group_a_member } } }
+cmp_target_core_marked_in_group_b = { scope = country is_shown = { any_country = { has_variable = sakuya_mark_country_target has_variable = cmp_target_group_b_member } } }
+cmp_target_core_marked_in_group_c = { scope = country is_shown = { any_country = { has_variable = sakuya_mark_country_target has_variable = cmp_target_group_c_member } } }
+
+cmp_target_core_toggle_group_a = { scope = country is_valid = { is_player = yes any_country = { has_variable = sakuya_mark_country_target } } effect = { cmp_target_core_toggle_group_a_effect = yes } }
+cmp_target_core_toggle_group_b = { scope = country is_valid = { is_player = yes any_country = { has_variable = sakuya_mark_country_target } } effect = { cmp_target_core_toggle_group_b_effect = yes } }
+cmp_target_core_toggle_group_c = { scope = country is_valid = { is_player = yes any_country = { has_variable = sakuya_mark_country_target } } effect = { cmp_target_core_toggle_group_c_effect = yes } }
+cmp_target_core_clear_group_a = { scope = country is_valid = { any_country = { has_variable = cmp_target_group_a_member } } effect = { cmp_target_core_clear_group_a_effect = yes } }
+cmp_target_core_clear_group_b = { scope = country is_valid = { any_country = { has_variable = cmp_target_group_b_member } } effect = { cmp_target_core_clear_group_b_effect = yes } }
+cmp_target_core_clear_group_c = { scope = country is_valid = { any_country = { has_variable = cmp_target_group_c_member } } effect = { cmp_target_core_clear_group_c_effect = yes } }
+cmp_target_core_clear_transient = { scope = country is_valid = { is_player = yes } effect = { cmp_target_core_clear_transient_marks_effect = yes } }
+
+cmp_target_core_active_valid = {
+    scope = country
+    is_shown = {
+        OR = {
+            AND = { OR = { NOT = { has_variable = cmp_target_core_mode } var:cmp_target_core_mode = 1 } is_player = yes }
+            AND = { var:cmp_target_core_mode = 2 any_country = { has_variable = sakuya_mark_country_target } }
+            AND = { var:cmp_target_core_mode = 3 any_country = { has_variable = cmp_target_group_a_member } }
+            AND = { var:cmp_target_core_mode = 4 any_country = { has_variable = cmp_target_group_b_member } }
+            AND = { var:cmp_target_core_mode = 5 any_country = { has_variable = cmp_target_group_c_member } }
+            AND = { var:cmp_target_core_mode = 6 any_scope_state = { has_decree = decree_sakuya_mark_state } }
+            AND = { var:cmp_target_core_mode = 7 any_scope_state = { is_incorporated = yes } }
+            AND = { var:cmp_target_core_mode = 8 any_state = { has_variable = sakuya_mark_foreign_state_target } }
+            AND = { var:cmp_target_core_mode = 9 OR = { any_country = { any_scope_character = { has_variable = sakuya_mark_character_target } } any_character_in_exile_pool = { has_variable = sakuya_mark_character_target } } }
+            AND = { var:cmp_target_core_mode = 10 any_country = { has_variable_list = sakuya_main_04_01_marked_navy_list } }
+            AND = { var:cmp_target_core_mode = 11 any_country = { has_variable = sakuya_mark_power_bloc_target } }
+        }
+    }
+}
+
+cmp_target_core_feedback_selected = { scope = country is_shown = { var:cmp_target_core_feedback = 1 } }
+cmp_target_core_feedback_group_added = { scope = country is_shown = { var:cmp_target_core_feedback = 2 } }
+cmp_target_core_feedback_group_removed = { scope = country is_shown = { var:cmp_target_core_feedback = 3 } }
+cmp_target_core_feedback_group_cleared = { scope = country is_shown = { var:cmp_target_core_feedback = 4 } }
+cmp_target_core_feedback_transient_cleared = { scope = country is_shown = { var:cmp_target_core_feedback = 5 } }
+cmp_target_core_feedback_no_marked_country = { scope = country is_shown = { var:cmp_target_core_feedback = -1 } }

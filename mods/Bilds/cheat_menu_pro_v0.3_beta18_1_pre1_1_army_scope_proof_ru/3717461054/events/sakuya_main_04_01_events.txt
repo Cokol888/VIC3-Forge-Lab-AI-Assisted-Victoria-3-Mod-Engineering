@@ -1,0 +1,627 @@
+﻿namespace = sakuya_main_04_01
+
+sakuya_main_04_01.1 = {
+    type = country_event
+
+    title = SKY_B4_EVT_MARK_ARMY_TITLE
+    desc = SKY_B4_EVT_MARK_ARMY_DESC
+    flavor = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { has_variable = sakuya_main_04_01_force_empty_notice }
+                desc = SKY_B4_EVT_MARK_ARMY_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = {
+                    any_country = {
+                        has_variable_list = sakuya_main_04_01_marked_army_list
+                    }
+                }
+                desc = SKY_B4_EVT_MARK_ARMY_DESC_MARKED
+            }
+            triggered_desc = {
+                trigger = { NOT = { has_variable = sakuya_main_04_01_has_any } }
+                desc = SKY_B4_EVT_MARK_ARMY_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = { always = yes }
+                desc = SKY_B4_EVT_MARK_ARMY_DESC_HINT
+            }
+        }
+    }
+
+    event_image = { video = "gfx/event_pictures/southamerica_factory_opening.bk2" }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    duration = 0
+
+    trigger = { is_player = yes }
+
+    immediate = {
+        save_scope_as = sakuya_main_04_01_event_root
+        remove_variable = sakuya_main_04_01_slot_1
+        remove_variable = sakuya_main_04_01_slot_2
+        remove_variable = sakuya_main_04_01_slot_3
+        remove_variable = sakuya_main_04_01_slot_4
+        remove_variable = sakuya_main_04_01_slot_5
+        remove_variable = sakuya_main_04_01_slot_6
+        remove_variable = sakuya_main_04_01_slot_7
+        remove_variable = sakuya_main_04_01_slot_8
+        remove_variable = sakuya_main_04_01_has_next
+        remove_variable = sakuya_main_04_01_has_any
+
+        if = {
+            limit = { has_variable = sakuya_main_04_01_force_empty_notice }
+            remove_variable = sakuya_main_04_01_page_2
+            remove_variable = sakuya_main_04_01_force_empty_notice
+        }
+        else = {
+            save_scope_as = sakuya_main_04_01_source_country
+            if = {
+                limit = {
+                    has_variable = sakuya_main_04_01_use_marked_country
+                    exists = scope:sakuya_main_04_01_marked_country_scope
+                }
+                scope:sakuya_main_04_01_marked_country_scope = {
+                    save_scope_as = sakuya_main_04_01_source_country
+                }
+            }
+
+            scope:sakuya_main_04_01_source_country = {
+                if = {
+                    limit = {
+                        scope:sakuya_main_04_01_event_root = { has_variable = sakuya_main_04_01_page_2 }
+                        NOT = {
+                            any_military_formation = {
+                                count >= 9
+                                is_army = yes
+                            }
+                        }
+                    }
+                    scope:sakuya_main_04_01_event_root = { remove_variable = sakuya_main_04_01_page_2 }
+                }
+
+                if = {
+                    limit = { scope:sakuya_main_04_01_event_root = { has_variable = sakuya_main_04_01_page_2 } }
+
+                    if = {
+                        limit = { any_military_formation = { count >= 9 is_army = yes } }
+                        ordered_military_formation = { position = 8 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_1 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_1 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 10 is_army = yes } }
+                        ordered_military_formation = { position = 9 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_2 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_2 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 11 is_army = yes } }
+                        ordered_military_formation = { position = 10 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_3 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_3 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 12 is_army = yes } }
+                        ordered_military_formation = { position = 11 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_4 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_4 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 13 is_army = yes } }
+                        ordered_military_formation = { position = 12 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_5 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_5 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 14 is_army = yes } }
+                        ordered_military_formation = { position = 13 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_6 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_6 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 15 is_army = yes } }
+                        ordered_military_formation = { position = 14 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_7 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_7 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 16 is_army = yes } }
+                        ordered_military_formation = { position = 15 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_8 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_8 set_variable = sakuya_main_04_01_has_any } }
+                    }
+
+                    if = {
+                        limit = { any_military_formation = { count >= 17 is_army = yes } }
+                        scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_has_next }
+                    }
+                }
+                else = {
+                    if = {
+                        limit = { any_military_formation = { count >= 1 is_army = yes } }
+                        ordered_military_formation = { position = 0 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_1 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_1 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 2 is_army = yes } }
+                        ordered_military_formation = { position = 1 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_2 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_2 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 3 is_army = yes } }
+                        ordered_military_formation = { position = 2 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_3 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_3 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 4 is_army = yes } }
+                        ordered_military_formation = { position = 3 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_4 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_4 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 5 is_army = yes } }
+                        ordered_military_formation = { position = 4 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_5 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_5 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 6 is_army = yes } }
+                        ordered_military_formation = { position = 5 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_6 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_6 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 7 is_army = yes } }
+                        ordered_military_formation = { position = 6 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_7 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_7 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 8 is_army = yes } }
+                        ordered_military_formation = { position = 7 check_range_bounds = no limit = { is_army = yes } save_scope_as = sakuya_main_04_01_mf_8 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_8 set_variable = sakuya_main_04_01_has_any } }
+                    }
+
+                    if = {
+                        limit = { any_military_formation = { count >= 9 is_army = yes } }
+                        scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_has_next }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SELECT_ALL
+        trigger = { has_variable = sakuya_main_04_01_has_any }
+        ai_chance = { base = 0 }
+
+        scope:sakuya_main_04_01_source_country = {
+            clear_variable_list = sakuya_main_04_01_marked_army_list
+            every_military_formation = {
+                limit = { is_army = yes }
+                save_scope_as = sakuya_main_04_01_tmp_mf
+                scope:sakuya_main_04_01_source_country = {
+                    add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_tmp_mf }
+                }
+            }
+        }
+
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_1
+        trigger = { has_variable = sakuya_main_04_01_slot_1 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_1 }
+        }
+        scope:sakuya_main_04_01_mf_1 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_2
+        trigger = { has_variable = sakuya_main_04_01_slot_2 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_2 }
+        }
+        scope:sakuya_main_04_01_mf_2 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_3
+        trigger = { has_variable = sakuya_main_04_01_slot_3 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_3 }
+        }
+        scope:sakuya_main_04_01_mf_3 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_4
+        trigger = { has_variable = sakuya_main_04_01_slot_4 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_4 }
+        }
+        scope:sakuya_main_04_01_mf_4 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_5
+        trigger = { has_variable = sakuya_main_04_01_slot_5 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_5 }
+        }
+        scope:sakuya_main_04_01_mf_5 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_6
+        trigger = { has_variable = sakuya_main_04_01_slot_6 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_6 }
+        }
+        scope:sakuya_main_04_01_mf_6 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_7
+        trigger = { has_variable = sakuya_main_04_01_slot_7 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_7 }
+        }
+        scope:sakuya_main_04_01_mf_7 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_SLOT_8
+        trigger = { has_variable = sakuya_main_04_01_slot_8 }
+        ai_chance = { base = 0 }
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_army_list target = scope:sakuya_main_04_01_mf_8 }
+        }
+        scope:sakuya_main_04_01_mf_8 = { save_scope_as = sakuya_main_04_01_latest_marked_army }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_PREV
+        trigger = { has_variable = sakuya_main_04_01_page_2 }
+        ai_chance = { base = 0 }
+        remove_variable = sakuya_main_04_01_page_2
+        hidden_effect = { trigger_event = { id = sakuya_main_04_01.1 popup = yes } }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_NEXT
+        trigger = {
+            NOT = { has_variable = sakuya_main_04_01_page_2 }
+            has_variable = sakuya_main_04_01_has_next
+        }
+        ai_chance = { base = 0 }
+        set_variable = sakuya_main_04_01_page_2
+        hidden_effect = { trigger_event = { id = sakuya_main_04_01.1 popup = yes } }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_ARMY_CLOSE
+        default_option = yes
+        ai_chance = { base = 100 }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+}
+
+sakuya_main_04_01.2 = {
+    type = country_event
+
+    title = SKY_B4_EVT_MARK_NAVY_TITLE
+    desc = SKY_B4_EVT_MARK_NAVY_DESC
+    flavor = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { has_variable = sakuya_main_04_01_force_empty_notice }
+                desc = SKY_B4_EVT_MARK_NAVY_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = {
+                    any_country = {
+                        has_variable_list = sakuya_main_04_01_marked_navy_list
+                    }
+                }
+                desc = SKY_B4_EVT_MARK_NAVY_DESC_MARKED
+            }
+            triggered_desc = {
+                trigger = { NOT = { has_variable = sakuya_main_04_01_has_any } }
+                desc = SKY_B4_EVT_MARK_NAVY_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = { always = yes }
+                desc = SKY_B4_EVT_MARK_NAVY_DESC_HINT
+            }
+        }
+    }
+
+    event_image = { video = "gfx/event_pictures/southamerica_factory_opening.bk2" }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    duration = 0
+
+    trigger = { is_player = yes }
+
+    immediate = {
+        save_scope_as = sakuya_main_04_01_event_root
+        remove_variable = sakuya_main_04_01_slot_1
+        remove_variable = sakuya_main_04_01_slot_2
+        remove_variable = sakuya_main_04_01_slot_3
+        remove_variable = sakuya_main_04_01_slot_4
+        remove_variable = sakuya_main_04_01_slot_5
+        remove_variable = sakuya_main_04_01_slot_6
+        remove_variable = sakuya_main_04_01_slot_7
+        remove_variable = sakuya_main_04_01_slot_8
+        remove_variable = sakuya_main_04_01_has_next
+        remove_variable = sakuya_main_04_01_has_any
+
+        if = {
+            limit = { has_variable = sakuya_main_04_01_force_empty_notice }
+            remove_variable = sakuya_main_04_01_page_2
+            remove_variable = sakuya_main_04_01_force_empty_notice
+        }
+        else = {
+            save_scope_as = sakuya_main_04_01_source_country
+            if = {
+                limit = {
+                    has_variable = sakuya_main_04_01_use_marked_country
+                    exists = scope:sakuya_main_04_01_marked_country_scope
+                }
+                scope:sakuya_main_04_01_marked_country_scope = {
+                    save_scope_as = sakuya_main_04_01_source_country
+                }
+            }
+
+            scope:sakuya_main_04_01_source_country = {
+                if = {
+                    limit = {
+                        scope:sakuya_main_04_01_event_root = { has_variable = sakuya_main_04_01_page_2 }
+                        NOT = {
+                            any_military_formation = {
+                                count >= 9
+                                is_fleet = yes
+                            }
+                        }
+                    }
+                    scope:sakuya_main_04_01_event_root = { remove_variable = sakuya_main_04_01_page_2 }
+                }
+
+                if = {
+                    limit = { scope:sakuya_main_04_01_event_root = { has_variable = sakuya_main_04_01_page_2 } }
+
+                    if = {
+                        limit = { any_military_formation = { count >= 9 is_fleet = yes } }
+                        ordered_military_formation = { position = 8 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_1 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_1 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 10 is_fleet = yes } }
+                        ordered_military_formation = { position = 9 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_2 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_2 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 11 is_fleet = yes } }
+                        ordered_military_formation = { position = 10 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_3 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_3 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 12 is_fleet = yes } }
+                        ordered_military_formation = { position = 11 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_4 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_4 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 13 is_fleet = yes } }
+                        ordered_military_formation = { position = 12 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_5 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_5 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 14 is_fleet = yes } }
+                        ordered_military_formation = { position = 13 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_6 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_6 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 15 is_fleet = yes } }
+                        ordered_military_formation = { position = 14 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_7 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_7 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 16 is_fleet = yes } }
+                        ordered_military_formation = { position = 15 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_8 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_8 set_variable = sakuya_main_04_01_has_any } }
+                    }
+
+                    if = {
+                        limit = { any_military_formation = { count >= 17 is_fleet = yes } }
+                        scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_has_next }
+                    }
+                }
+                else = {
+                    if = {
+                        limit = { any_military_formation = { count >= 1 is_fleet = yes } }
+                        ordered_military_formation = { position = 0 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_1 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_1 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 2 is_fleet = yes } }
+                        ordered_military_formation = { position = 1 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_2 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_2 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 3 is_fleet = yes } }
+                        ordered_military_formation = { position = 2 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_3 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_3 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 4 is_fleet = yes } }
+                        ordered_military_formation = { position = 3 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_4 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_4 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 5 is_fleet = yes } }
+                        ordered_military_formation = { position = 4 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_5 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_5 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 6 is_fleet = yes } }
+                        ordered_military_formation = { position = 5 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_6 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_6 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 7 is_fleet = yes } }
+                        ordered_military_formation = { position = 6 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_7 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_7 set_variable = sakuya_main_04_01_has_any } }
+                    }
+                    if = {
+                        limit = { any_military_formation = { count >= 8 is_fleet = yes } }
+                        ordered_military_formation = { position = 7 check_range_bounds = no limit = { is_fleet = yes } save_scope_as = sakuya_main_04_01_mf_8 scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_slot_8 set_variable = sakuya_main_04_01_has_any } }
+                    }
+
+                    if = {
+                        limit = { any_military_formation = { count >= 9 is_fleet = yes } }
+                        scope:sakuya_main_04_01_event_root = { set_variable = sakuya_main_04_01_has_next }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SELECT_ALL
+        trigger = { has_variable = sakuya_main_04_01_has_any }
+        ai_chance = { base = 0 }
+
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            every_military_formation = {
+                limit = { is_fleet = yes }
+                save_scope_as = sakuya_main_04_01_tmp_mf
+                scope:sakuya_main_04_01_source_country = {
+                    add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_tmp_mf }
+                }
+            }
+        }
+
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_1
+        trigger = { has_variable = sakuya_main_04_01_slot_1 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_1 }
+        }
+        scope:sakuya_main_04_01_mf_1 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_2
+        trigger = { has_variable = sakuya_main_04_01_slot_2 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_2 }
+        }
+        scope:sakuya_main_04_01_mf_2 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_3
+        trigger = { has_variable = sakuya_main_04_01_slot_3 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_3 }
+        }
+        scope:sakuya_main_04_01_mf_3 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_4
+        trigger = { has_variable = sakuya_main_04_01_slot_4 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_4 }
+        }
+        scope:sakuya_main_04_01_mf_4 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_5
+        trigger = { has_variable = sakuya_main_04_01_slot_5 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_5 }
+        }
+        scope:sakuya_main_04_01_mf_5 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_6
+        trigger = { has_variable = sakuya_main_04_01_slot_6 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_6 }
+        }
+        scope:sakuya_main_04_01_mf_6 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_7
+        trigger = { has_variable = sakuya_main_04_01_slot_7 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_7 }
+        }
+        scope:sakuya_main_04_01_mf_7 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_SLOT_8
+        trigger = { has_variable = sakuya_main_04_01_slot_8 }
+        ai_chance = { base = 0 }
+        sakuya_b4_clear_marked_navy_lists_effect = yes
+        scope:sakuya_main_04_01_source_country = {
+            add_to_variable_list = { name = sakuya_main_04_01_marked_navy_list target = scope:sakuya_main_04_01_mf_8 }
+        }
+        scope:sakuya_main_04_01_mf_8 = { save_scope_as = sakuya_main_04_01_latest_marked_navy }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_PREV
+        trigger = { has_variable = sakuya_main_04_01_page_2 }
+        ai_chance = { base = 0 }
+        remove_variable = sakuya_main_04_01_page_2
+        hidden_effect = { trigger_event = { id = sakuya_main_04_01.2 popup = yes } }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_NEXT
+        trigger = {
+            NOT = { has_variable = sakuya_main_04_01_page_2 }
+            has_variable = sakuya_main_04_01_has_next
+        }
+        ai_chance = { base = 0 }
+        set_variable = sakuya_main_04_01_page_2
+        hidden_effect = { trigger_event = { id = sakuya_main_04_01.2 popup = yes } }
+    }
+
+    option = {
+        name = SKY_B4_EVT_MARK_NAVY_CLOSE
+        default_option = yes
+        ai_chance = { base = 100 }
+        remove_variable = sakuya_main_04_01_page_2
+        set_variable = sakuya_main_force_show
+    }
+}

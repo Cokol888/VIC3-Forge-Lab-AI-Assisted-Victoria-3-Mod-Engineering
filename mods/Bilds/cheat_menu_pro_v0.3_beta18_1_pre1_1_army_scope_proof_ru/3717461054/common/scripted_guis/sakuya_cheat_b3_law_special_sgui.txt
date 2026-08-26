@@ -1,0 +1,82 @@
+# Sakuya Cheat Menu Pro - Block 3 Law special scripted guis
+
+sakuya_b3_law_caste_hegemony_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_dlc_feature = ip2_content
+		OR = {
+			has_social_hierarchy = british_indian_caste_system
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				has_social_hierarchy = british_indian_caste_system
+			}
+		}
+	}
+}
+
+sakuya_b3_law_edo_social_system_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			has_social_hierarchy = edo_system
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				has_social_hierarchy = edo_system
+			}
+		}
+	}
+}
+
+sakuya_b3_law_japan_tag_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			c:JAP ?= this
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				c:JAP ?= this
+			}
+		}
+	}
+}
+
+sakuya_b3_law_japanese_country_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:japanese
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				country_has_primary_culture = cu:japanese
+			}
+		}
+	}
+}
+
+sakuya_b3_law_sakoku_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			AND = {
+				country_has_primary_culture = cu:japanese
+				any_scope_state = {
+					state_region = s:STATE_KYUSHU
+					is_largest_state_in_region = yes
+				}
+			}
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				country_has_primary_culture = cu:japanese
+				any_scope_state = {
+					state_region = s:STATE_KYUSHU
+					is_largest_state_in_region = yes
+				}
+			}
+		}
+	}
+}

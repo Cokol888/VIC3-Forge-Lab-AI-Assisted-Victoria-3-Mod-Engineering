@@ -1,0 +1,37 @@
+{
+  "version": "0.3-beta13",
+  "country_target_modes": [1, 2, 3, 4, 5],
+  "values": [
+    {"id":"n90","label":"-90%","multiplier":-0.90},
+    {"id":"n75","label":"-75%","multiplier":-0.75},
+    {"id":"n50","label":"-50%","multiplier":-0.50},
+    {"id":"n25","label":"-25%","multiplier":-0.25},
+    {"id":"zero","label":"0%","multiplier":0.0},
+    {"id":"p25","label":"+25%","multiplier":0.25},
+    {"id":"p50","label":"+50%","multiplier":0.50},
+    {"id":"p100","label":"+100%","multiplier":1.0},
+    {"id":"p500","label":"+500%","multiplier":5.0}
+  ],
+  "money_steps_percent_of_reserve_cap": [10, 25, 50, 100],
+  "parameters": [
+    {"id":"dividend_efficiency","modifier":"cmp_economy2_dividend_efficiency","modifier_key":"country_government_dividends_efficiency_add","loc_key":"CMP_ECO2_PARAM_DIVIDEND_EFF","icon":"modifier_coins_positive.dds"},
+    {"id":"minting","modifier":"cmp_economy2_minting","modifier_key":"country_minting_mult","loc_key":"CMP_ECO2_PARAM_MINTING","icon":"modifier_coins_positive.dds"},
+    {"id":"construction_cost","modifier":"cmp_economy2_construction_cost","modifier_key":"country_construction_goods_cost_mult","loc_key":"CMP_ECO2_PARAM_CONSTRUCTION_COST","icon":"modifier_gear_positive.dds"},
+    {"id":"government_wages","modifier":"cmp_economy2_government_wages","modifier_key":"country_government_wages_mult","loc_key":"CMP_ECO2_PARAM_GOV_WAGES","icon":"modifier_documents_positive.dds"},
+    {"id":"military_wages","modifier":"cmp_economy2_military_wages","modifier_key":"country_military_wages_mult","loc_key":"CMP_ECO2_PARAM_MIL_WAGES","icon":"modifier_flag_positive.dds"},
+    {"id":"loan_interest","modifier":"cmp_economy2_loan_interest","modifier_key":"country_loan_interest_rate_mult","loc_key":"CMP_ECO2_PARAM_LOAN_INTEREST","icon":"modifier_documents_positive.dds"},
+    {"id":"consumption_tax_cost","modifier":"cmp_economy2_consumption_tax_cost","modifier_key":"country_consumption_tax_cost_mult","loc_key":"CMP_ECO2_PARAM_CONSUMPTION_TAX","icon":"modifier_fist_positive.dds"},
+    {"id":"private_construction","modifier":"cmp_economy2_private_construction","modifier_key":"country_private_construction_allocation_mult","loc_key":"CMP_ECO2_PARAM_PRIVATE_CONSTRUCTION","icon":"modifier_documents_positive.dds"},
+    {"id":"dividend_reinvestment","modifier":"cmp_economy2_dividend_reinvestment","modifier_key":"country_government_dividends_reinvestment_add","loc_key":"CMP_ECO2_PARAM_DIVIDEND_REINVEST","icon":"modifier_coins_positive.dds"},
+    {"id":"dividend_waste","modifier":"cmp_economy2_dividend_waste","modifier_key":"country_government_dividends_waste_add","loc_key":"CMP_ECO2_PARAM_DIVIDEND_WASTE","icon":"modifier_coins_positive.dds"},
+    {"id":"throughput","modifier":"cmp_economy2_throughput","modifier_key":"building_throughput_add","loc_key":"CMP_ECO2_PARAM_THROUGHPUT","icon":"modifier_gear_positive.dds"}
+  ],
+  "policies": [
+    {"id":"force_privatization","modifier":"cmp_economy2_force_privatization","modifier_key":"country_force_privatization_bool","loc_key":"CMP_ECO2_POLICY_FORCE_PRIV"},
+    {"id":"foreign_collectivization","modifier":"cmp_economy2_foreign_collectivization","modifier_key":"country_foreign_collectivization_bool","loc_key":"CMP_ECO2_POLICY_FOREIGN_COLLECT"},
+    {"id":"disable_non_company_privatization","modifier":"cmp_economy2_disable_non_company_privatization","modifier_key":"country_disable_non_company_privatization_bool","loc_key":"CMP_ECO2_POLICY_DISABLE_NONCOMP_PRIV"},
+    {"id":"disable_nationalization","modifier":"cmp_economy2_disable_nationalization","modifier_key":"country_disable_nationalization_bool","loc_key":"CMP_ECO2_POLICY_DISABLE_NAT"},
+    {"id":"disable_uncompensated_nationalization","modifier":"cmp_economy2_disable_uncompensated_nationalization","modifier_key":"country_disable_nationalization_without_compensation_bool","loc_key":"CMP_ECO2_POLICY_DISABLE_NO_COMP_NAT"},
+    {"id":"protect_government_buildings","modifier":"cmp_economy2_protect_government_buildings","modifier_key":"country_government_buildings_protected_bool","loc_key":"CMP_ECO2_POLICY_GOV_BUILD_PROTECT"}
+  ]
+}

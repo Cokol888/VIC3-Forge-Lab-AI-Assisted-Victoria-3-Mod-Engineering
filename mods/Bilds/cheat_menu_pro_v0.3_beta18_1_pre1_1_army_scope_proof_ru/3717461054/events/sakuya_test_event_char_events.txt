@@ -1,0 +1,101 @@
+namespace = sakuya_test_event_char
+
+sakuya_test_event_char.0001 = {
+	type = country_event
+	placement = ROOT
+
+	title = sakuya_test_event_char.0001.t
+	desc = sakuya_test_event_char.0001.d
+	flavor = sakuya_test_event_char.0001.f
+
+	duration = 0
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	trigger = {
+		is_player = yes
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.a
+		create_character = {
+			template = sakuya_izayoi_company_executive
+			on_created = {
+				set_character_immortal = yes
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.b
+		create_character = {
+			template = sakuya_izayoi_general
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.c
+		create_character = {
+			template = sakuya_izayoi_ig_leader
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.admiral
+		create_character = {
+			template = sakuya_izayoi_admiral
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.e
+		create_character = {
+			template = sakuya_izayoi_agitator
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.g
+		create_character = {
+			template = sakuya_izayoi_company_executive
+			on_created = {
+				set_character_immortal = yes
+				set_character_as_ruler = yes
+				add_character_role = politician
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.h
+		trigger = {
+			any_company = {
+				is_company_type = company_type:company_sakuya_gensokyo_industrial_group
+			}
+		}
+		random_company = {
+			limit = {
+				is_company_type = company_type:company_sakuya_gensokyo_industrial_group
+			}
+			save_scope_as = sakuya_test_event_char_company
+		}
+		create_character = {
+			template = sakuya_izayoi_company_executive
+			on_created = {
+				set_character_immortal = yes
+				set_character_as_executive = scope:sakuya_test_event_char_company
+			}
+		}
+	}
+
+	option = {
+		name = sakuya_test_event_char.0001.z
+		default_option = yes
+	}
+}

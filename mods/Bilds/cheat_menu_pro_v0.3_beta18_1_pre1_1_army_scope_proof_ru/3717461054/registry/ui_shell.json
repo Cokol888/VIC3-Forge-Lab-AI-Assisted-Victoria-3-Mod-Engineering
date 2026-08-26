@@ -1,0 +1,270 @@
+{
+  "version": "0.3-beta18.1-pre1.1",
+  "migrated_pages": [
+    "target",
+    "economy",
+    "regions",
+    "population",
+    "politics",
+    "diplomacy",
+    "military",
+    "interface"
+  ],
+  "legacy_entry": "single_workspace_launcher",
+  "convergence": {
+    "single_entry_point": "cmp_workspace_launcher",
+    "global_help_directory": true,
+    "home_reset_preserves": [
+      "cmp_ui_scale_profile",
+      "gameplay_targets",
+      "scripted_gui_selections",
+      "operation_results"
+    ],
+    "workspace_shortcut_contract": [
+      "close_window"
+    ]
+  },
+  "economy_help_topics": [
+    "overview",
+    "money",
+    "modifiers",
+    "policies"
+  ],
+  "interface_help_topics": [
+    "profiles"
+  ],
+  "regions_help_topics": [
+    "overview",
+    "buildings",
+    "resources",
+    "presets",
+    "staffing"
+  ],
+  "population_help_topics": [
+    "overview",
+    "population",
+    "professions",
+    "welfare",
+    "society"
+  ],
+  "politics_help_topics": [
+    "overview",
+    "government",
+    "characters",
+    "interest_groups",
+    "laws",
+    "bloc"
+  ],
+  "diplomacy_help_topics": [
+    "overview",
+    "relations",
+    "subjects",
+    "treaties",
+    "sovereignty",
+    "power_bloc"
+  ],
+  "military_help_topics": [
+    "overview",
+    "army_builder",
+    "army_templates",
+    "army_controls",
+    "fleet_builder",
+    "fleet_templates",
+    "marines",
+    "taskforce"
+  ],
+  "building_categories": [
+    {
+      "id": "all",
+      "label": "CMP_WS_RB_CATEGORY_ALL",
+      "tooltip": "CMP_WS_RB_CATEGORY_ALL_TT",
+      "profiles": []
+    },
+    {
+      "id": "primary",
+      "label": "CMP_WS_RB_CATEGORY_PRIMARY",
+      "tooltip": "CMP_WS_RB_CATEGORY_PRIMARY_TT",
+      "profiles": [
+        "extraction",
+        "agriculture"
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "CMP_WS_RB_CATEGORY_INDUSTRY",
+      "tooltip": "CMP_WS_RB_CATEGORY_INDUSTRY_TT",
+      "profiles": [
+        "light_industry",
+        "heavy_industry",
+        "technology"
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "CMP_WS_RB_CATEGORY_INFRA",
+      "tooltip": "CMP_WS_RB_CATEGORY_INFRA_TT",
+      "profiles": [
+        "power",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "public",
+      "label": "CMP_WS_RB_CATEGORY_PUBLIC",
+      "tooltip": "CMP_WS_RB_CATEGORY_PUBLIC_TT",
+      "profiles": [
+        "government",
+        "education"
+      ]
+    },
+    {
+      "id": "military",
+      "label": "CMP_WS_RB_CATEGORY_MILITARY",
+      "tooltip": "CMP_WS_RB_CATEGORY_MILITARY_TT",
+      "profiles": [
+        "military"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "CMP_WS_RB_CATEGORY_SERVICES",
+      "tooltip": "CMP_WS_RB_CATEGORY_SERVICES_TT",
+      "profiles": [
+        "services",
+        "arts",
+        "trade"
+      ]
+    },
+    {
+      "id": "ownership",
+      "label": "CMP_WS_RB_CATEGORY_OWNERSHIP",
+      "tooltip": "CMP_WS_RB_CATEGORY_OWNERSHIP_TT",
+      "profiles": [
+        "ownership"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "compact",
+      "label": "CMP_WS_PROFILE_90",
+      "description": "CMP_WS_PROFILE_90_DESC",
+      "density_percent": 90,
+      "font_size": 12,
+      "button_height": 44,
+      "target_columns": 5,
+      "group_columns": 3
+    },
+    {
+      "id": "standard",
+      "label": "CMP_WS_PROFILE_100",
+      "description": "CMP_WS_PROFILE_100_DESC",
+      "density_percent": 100,
+      "font_size": 13,
+      "button_height": 48,
+      "target_columns": 5,
+      "group_columns": 3
+    },
+    {
+      "id": "large",
+      "label": "CMP_WS_PROFILE_115",
+      "description": "CMP_WS_PROFILE_115_DESC",
+      "density_percent": 115,
+      "font_size": 15,
+      "button_height": 52,
+      "target_columns": 4,
+      "group_columns": 2
+    },
+    {
+      "id": "xlarge",
+      "label": "CMP_WS_PROFILE_130",
+      "description": "CMP_WS_PROFILE_130_DESC",
+      "density_percent": 130,
+      "font_size": 17,
+      "button_height": 56,
+      "target_columns": 3,
+      "group_columns": 1
+    }
+  ],
+  "target_modes": [
+    {
+      "label": "CMP_WS_TARGET_PLAYER",
+      "effect": "cmp_target_core_select_player",
+      "selected": "cmp_target_core_mode_player_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_COUNTRY",
+      "effect": "cmp_target_core_select_country",
+      "selected": "cmp_target_core_mode_country_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_GROUP_A",
+      "effect": "cmp_target_core_select_group_a",
+      "selected": "cmp_target_core_mode_group_a_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_GROUP_B",
+      "effect": "cmp_target_core_select_group_b",
+      "selected": "cmp_target_core_mode_group_b_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_GROUP_C",
+      "effect": "cmp_target_core_select_group_c",
+      "selected": "cmp_target_core_mode_group_c_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_HOME",
+      "effect": "cmp_target_core_select_home_states",
+      "selected": "cmp_target_core_mode_home_states_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_INCORP",
+      "effect": "cmp_target_core_select_incorporated",
+      "selected": "cmp_target_core_mode_incorporated_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_FOREIGN",
+      "effect": "cmp_target_core_select_foreign_states",
+      "selected": "cmp_target_core_mode_foreign_states_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_CHARACTER",
+      "effect": "cmp_target_core_select_character",
+      "selected": "cmp_target_core_mode_character_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_FLEET",
+      "effect": "cmp_target_core_select_fleet",
+      "selected": "cmp_target_core_mode_fleet_selected"
+    },
+    {
+      "label": "CMP_WS_TARGET_BLOC",
+      "effect": "cmp_target_core_select_power_bloc",
+      "selected": "cmp_target_core_mode_power_bloc_selected"
+    }
+  ],
+  "groups": [
+    {
+      "id": "a",
+      "label": "CMP_WS_GROUP_A",
+      "toggle": "cmp_target_core_toggle_group_a",
+      "clear": "cmp_target_core_clear_group_a",
+      "selected": "cmp_target_core_marked_in_group_a"
+    },
+    {
+      "id": "b",
+      "label": "CMP_WS_GROUP_B",
+      "toggle": "cmp_target_core_toggle_group_b",
+      "clear": "cmp_target_core_clear_group_b",
+      "selected": "cmp_target_core_marked_in_group_b"
+    },
+    {
+      "id": "c",
+      "label": "CMP_WS_GROUP_C",
+      "toggle": "cmp_target_core_toggle_group_c",
+      "clear": "cmp_target_core_clear_group_c",
+      "selected": "cmp_target_core_marked_in_group_c"
+    }
+  ],
+  "build_id": "CMP-0.3-B18-1-PRE1-1-20260823"
+}

@@ -1,0 +1,207 @@
+sakuya_b1_change_current_country_modifier_delta_effect = {
+	if = {
+		limit = { NOT = { has_variable = $VAR$ } }
+		set_variable = { name = $VAR$ value = 0 }
+	}
+	change_variable = { name = $VAR$ add = $DELTA$ }
+	remove_modifier = $MOD$
+	if = {
+		limit = { has_variable = $VAR$ }
+		add_modifier = { name = $MOD$ multiplier = var:$VAR$ }
+	}
+	if = {
+		limit = { var:$VAR$ = 0 }
+		remove_variable = $VAR$
+		remove_modifier = $MOD$
+	}
+}
+
+sakuya_b1_set_current_country_modifier_value_effect = {
+	set_variable = { name = $VAR$ value = $VALUE$ }
+	remove_modifier = $MOD$
+	if = {
+		limit = { has_variable = $VAR$ }
+		add_modifier = { name = $MOD$ multiplier = var:$VAR$ }
+	}
+	if = {
+		limit = { var:$VAR$ = 0 }
+		remove_variable = $VAR$
+		remove_modifier = $MOD$
+	}
+}
+
+sakuya_b1_clear_current_country_modifier_effect = {
+	remove_variable = $VAR$
+	remove_modifier = $MOD$
+}
+
+sakuya_b1_change_marked_country_modifier_delta_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			if = {
+				limit = { NOT = { has_variable = $VAR$ } }
+				set_variable = { name = $VAR$ value = 0 }
+			}
+			change_variable = { name = $VAR$ add = $DELTA$ }
+			remove_modifier = $MOD$
+			if = {
+				limit = { has_variable = $VAR$ }
+				add_modifier = {
+					name = $MOD$
+					multiplier = var:$VAR$
+				}
+			}
+			if = {
+				limit = { var:$VAR$ = 0 }
+				remove_variable = $VAR$
+				remove_modifier = $MOD$
+			}
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_clear_marked_country_modifier_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			sakuya_b1_clear_current_country_modifier_effect = { MOD = $MOD$ VAR = $VAR$ }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_bureaucracy_percent_marked_plus25_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_bureaucracy_percent_var
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent_marked_minus25
+			add_modifier = { name = sakuya_cheat_b1_bureaucracy_percent_marked_plus25 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_bureaucracy_percent_marked_minus25_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_bureaucracy_percent_var
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent_marked_minus25
+			add_modifier = { name = sakuya_cheat_b1_bureaucracy_percent_marked_minus25 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_authority_percent_marked_plus25_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_authority_percent_var
+			remove_modifier = sakuya_cheat_b1_authority_percent
+			remove_modifier = sakuya_cheat_b1_authority_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_authority_percent_marked_minus25
+			add_modifier = { name = sakuya_cheat_b1_authority_percent_marked_plus25 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_authority_percent_marked_minus25_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_authority_percent_var
+			remove_modifier = sakuya_cheat_b1_authority_percent
+			remove_modifier = sakuya_cheat_b1_authority_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_authority_percent_marked_minus25
+			add_modifier = { name = sakuya_cheat_b1_authority_percent_marked_minus25 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_influence_percent_marked_plus25_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_influence_percent_var
+			remove_modifier = sakuya_cheat_b1_influence_percent
+			remove_modifier = sakuya_cheat_b1_influence_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_influence_percent_marked_minus25
+			add_modifier = { name = sakuya_cheat_b1_influence_percent_marked_plus25 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_influence_percent_marked_minus25_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_influence_percent_var
+			remove_modifier = sakuya_cheat_b1_influence_percent
+			remove_modifier = sakuya_cheat_b1_influence_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_influence_percent_marked_minus25
+			add_modifier = { name = sakuya_cheat_b1_influence_percent_marked_minus25 }
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_bureaucracy_percent_marked_clear_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_bureaucracy_percent_var
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_bureaucracy_percent_marked_minus25
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_authority_percent_marked_clear_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_authority_percent_var
+			remove_modifier = sakuya_cheat_b1_authority_percent
+			remove_modifier = sakuya_cheat_b1_authority_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_authority_percent_marked_minus25
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+
+sakuya_b1_influence_percent_marked_clear_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = sakuya_b1_influence_percent_var
+			remove_modifier = sakuya_cheat_b1_influence_percent
+			remove_modifier = sakuya_cheat_b1_influence_percent_marked_plus25
+			remove_modifier = sakuya_cheat_b1_influence_percent_marked_minus25
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}

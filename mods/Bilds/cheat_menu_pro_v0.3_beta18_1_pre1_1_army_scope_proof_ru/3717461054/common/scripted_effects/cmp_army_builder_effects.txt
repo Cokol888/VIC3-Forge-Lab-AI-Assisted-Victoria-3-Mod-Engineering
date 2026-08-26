@@ -1,0 +1,2409 @@
+﻿# Cheat Menu Pro v0.3-beta4 - Technology-aware Army Builder
+
+cmp_army_builder_clear_result_effect = { remove_variable = cmp_army_builder_result }
+cmp_army_builder_clear_selection_effect = { remove_variable = cmp_army_builder_unit_index remove_variable = cmp_army_builder_amount_index remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result cmp_army_builder_clear_result_effect = yes }
+
+cmp_army_builder_select_irregular_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 1 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_line_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 2 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_skirmish_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 3 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_trench_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 4 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_squad_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 5 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_mechanized_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 6 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_modern_mechanized_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 7 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_advanced_mechanized_infantry_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 8 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_modern_tier_marines_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 9 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_advanced_tier_marines_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 10 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_cannon_artillery_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 11 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_mobile_artillery_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 12 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_shrapnel_artillery_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 13 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_siege_artillery_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 14 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_heavy_tank_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 15 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_self_propelled_artillery_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 16 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_rocket_artillery_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 17 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_hussars_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 18 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_dragoons_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 19 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_cuirassiers_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 20 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_lancers_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 21 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_light_tanks_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 22 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_modern_heavy_tank_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 23 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_modern_light_tanks_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 24 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_main_battle_tanks_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 25 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_giant_death_robot_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_unit_index value = 26 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_amount_1_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_amount_index value = 1 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_amount_5_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_amount_index value = 2 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_amount_10_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_amount_index value = 3 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_amount_25_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_amount_index value = 4 } cmp_army_builder_clear_result_effect = yes }
+cmp_army_builder_select_amount_50_effect = { remove_variable = cmp_army_designer_size_index remove_variable = cmp_army_designer_inf_index remove_variable = cmp_army_designer_art_index remove_variable = cmp_army_designer_result remove_variable = cmp_army_amphib_amount_index remove_variable = cmp_army_amphib_result  remove_variable = cmp_army_mixed_preset_index remove_variable = cmp_army_mixed_result  set_variable = { name = cmp_army_builder_amount_index value = 5 } cmp_army_builder_clear_result_effect = yes }
+
+cmp_army_builder_resolve_spawn_state_effect = {
+    clear_saved_scope = cmp_army_builder_state
+    clear_saved_scope = cmp_army_builder_hq_region
+    clear_saved_scope = cmp_army_builder_state_region
+    ordered_scope_state = {
+        limit = { has_decree = decree_sakuya_mark_state }
+        order_by = gdp
+        position = 0
+        check_range_bounds = no
+        save_scope_as = cmp_army_builder_state
+    }
+    if = {
+        limit = { exists = scope:cmp_army_builder_state }
+        scope:cmp_army_builder_state = {
+            region = { save_scope_as = cmp_army_builder_hq_region }
+            state_region = { save_scope_as = cmp_army_builder_state_region }
+        }
+    }
+}
+
+cmp_army_builder_spawn_irregular_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 1 var:cmp_army_builder_amount_index = 1 always = yes exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_irregular_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_irregular_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 1 var:cmp_army_builder_amount_index = 2 always = yes exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_irregular_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_irregular_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 1 var:cmp_army_builder_amount_index = 3 always = yes exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_irregular_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_irregular_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 1 var:cmp_army_builder_amount_index = 4 always = yes exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_irregular_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_irregular_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 1 var:cmp_army_builder_amount_index = 5 always = yes exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_irregular_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_line_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 2 var:cmp_army_builder_amount_index = 1 has_technology_researched = line_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_line_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_line_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 2 var:cmp_army_builder_amount_index = 2 has_technology_researched = line_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_line_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_line_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 2 var:cmp_army_builder_amount_index = 3 has_technology_researched = line_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_line_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_line_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 2 var:cmp_army_builder_amount_index = 4 has_technology_researched = line_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_line_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_line_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 2 var:cmp_army_builder_amount_index = 5 has_technology_researched = line_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_line_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_skirmish_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 3 var:cmp_army_builder_amount_index = 1 has_technology_researched = general_staff exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_skirmish_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_skirmish_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 3 var:cmp_army_builder_amount_index = 2 has_technology_researched = general_staff exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_skirmish_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_skirmish_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 3 var:cmp_army_builder_amount_index = 3 has_technology_researched = general_staff exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_skirmish_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_skirmish_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 3 var:cmp_army_builder_amount_index = 4 has_technology_researched = general_staff exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_skirmish_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_skirmish_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 3 var:cmp_army_builder_amount_index = 5 has_technology_researched = general_staff exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_skirmish_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_trench_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 4 var:cmp_army_builder_amount_index = 1 has_technology_researched = trench_works exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_trench_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_trench_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 4 var:cmp_army_builder_amount_index = 2 has_technology_researched = trench_works exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_trench_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_trench_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 4 var:cmp_army_builder_amount_index = 3 has_technology_researched = trench_works exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_trench_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_trench_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 4 var:cmp_army_builder_amount_index = 4 has_technology_researched = trench_works exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_trench_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_trench_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 4 var:cmp_army_builder_amount_index = 5 has_technology_researched = trench_works exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_trench_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_squad_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 5 var:cmp_army_builder_amount_index = 1 has_technology_researched = nco_training exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_squad_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_squad_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 5 var:cmp_army_builder_amount_index = 2 has_technology_researched = nco_training exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_squad_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_squad_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 5 var:cmp_army_builder_amount_index = 3 has_technology_researched = nco_training exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_squad_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_squad_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 5 var:cmp_army_builder_amount_index = 4 has_technology_researched = nco_training exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_squad_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_squad_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 5 var:cmp_army_builder_amount_index = 5 has_technology_researched = nco_training exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_squad_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mechanized_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 6 var:cmp_army_builder_amount_index = 1 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mechanized_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 6 var:cmp_army_builder_amount_index = 2 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mechanized_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 6 var:cmp_army_builder_amount_index = 3 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mechanized_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 6 var:cmp_army_builder_amount_index = 4 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mechanized_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 6 var:cmp_army_builder_amount_index = 5 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_mechanized_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 7 var:cmp_army_builder_amount_index = 1 has_technology_researched = mechanized_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_mechanized_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 7 var:cmp_army_builder_amount_index = 2 has_technology_researched = mechanized_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_mechanized_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 7 var:cmp_army_builder_amount_index = 3 has_technology_researched = mechanized_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_mechanized_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 7 var:cmp_army_builder_amount_index = 4 has_technology_researched = mechanized_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_mechanized_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 7 var:cmp_army_builder_amount_index = 5 has_technology_researched = mechanized_infantry exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_mechanized_infantry_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 8 var:cmp_army_builder_amount_index = 1 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_mechanized_infantry_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 8 var:cmp_army_builder_amount_index = 2 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_mechanized_infantry_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 8 var:cmp_army_builder_amount_index = 3 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_mechanized_infantry_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 8 var:cmp_army_builder_amount_index = 4 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_mechanized_infantry_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 8 var:cmp_army_builder_amount_index = 5 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_mechanized_infantry
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_tier_marines_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 9 var:cmp_army_builder_amount_index = 1 has_technology_researched = amphibious_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_tier_marines_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 9 var:cmp_army_builder_amount_index = 2 has_technology_researched = amphibious_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_tier_marines_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 9 var:cmp_army_builder_amount_index = 3 has_technology_researched = amphibious_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_tier_marines_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 9 var:cmp_army_builder_amount_index = 4 has_technology_researched = amphibious_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_tier_marines_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 9 var:cmp_army_builder_amount_index = 5 has_technology_researched = amphibious_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_tier_marines_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 10 var:cmp_army_builder_amount_index = 1 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_tier_marines_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 10 var:cmp_army_builder_amount_index = 2 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_tier_marines_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 10 var:cmp_army_builder_amount_index = 3 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_tier_marines_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 10 var:cmp_army_builder_amount_index = 4 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_advanced_tier_marines_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 10 var:cmp_army_builder_amount_index = 5 has_technology_researched = high_performance_apparel exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_advanced_tier_marines
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cannon_artillery_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 11 var:cmp_army_builder_amount_index = 1 has_technology_researched = artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cannon_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cannon_artillery_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 11 var:cmp_army_builder_amount_index = 2 has_technology_researched = artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cannon_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cannon_artillery_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 11 var:cmp_army_builder_amount_index = 3 has_technology_researched = artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cannon_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cannon_artillery_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 11 var:cmp_army_builder_amount_index = 4 has_technology_researched = artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cannon_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cannon_artillery_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 11 var:cmp_army_builder_amount_index = 5 has_technology_researched = artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cannon_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mobile_artillery_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 12 var:cmp_army_builder_amount_index = 1 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mobile_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mobile_artillery_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 12 var:cmp_army_builder_amount_index = 2 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mobile_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mobile_artillery_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 12 var:cmp_army_builder_amount_index = 3 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mobile_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mobile_artillery_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 12 var:cmp_army_builder_amount_index = 4 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mobile_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_mobile_artillery_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 12 var:cmp_army_builder_amount_index = 5 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_mobile_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_shrapnel_artillery_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 13 var:cmp_army_builder_amount_index = 1 has_technology_researched = breech_loading_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_shrapnel_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_shrapnel_artillery_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 13 var:cmp_army_builder_amount_index = 2 has_technology_researched = breech_loading_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_shrapnel_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_shrapnel_artillery_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 13 var:cmp_army_builder_amount_index = 3 has_technology_researched = breech_loading_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_shrapnel_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_shrapnel_artillery_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 13 var:cmp_army_builder_amount_index = 4 has_technology_researched = breech_loading_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_shrapnel_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_shrapnel_artillery_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 13 var:cmp_army_builder_amount_index = 5 has_technology_researched = breech_loading_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_shrapnel_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_siege_artillery_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 14 var:cmp_army_builder_amount_index = 1 has_technology_researched = defense_in_depth exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_siege_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_siege_artillery_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 14 var:cmp_army_builder_amount_index = 2 has_technology_researched = defense_in_depth exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_siege_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_siege_artillery_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 14 var:cmp_army_builder_amount_index = 3 has_technology_researched = defense_in_depth exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_siege_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_siege_artillery_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 14 var:cmp_army_builder_amount_index = 4 has_technology_researched = defense_in_depth exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_siege_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_siege_artillery_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 14 var:cmp_army_builder_amount_index = 5 has_technology_researched = defense_in_depth exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_siege_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_heavy_tank_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 15 var:cmp_army_builder_amount_index = 1 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_heavy_tank_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 15 var:cmp_army_builder_amount_index = 2 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_heavy_tank_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 15 var:cmp_army_builder_amount_index = 3 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_heavy_tank_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 15 var:cmp_army_builder_amount_index = 4 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_heavy_tank_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 15 var:cmp_army_builder_amount_index = 5 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_self_propelled_artillery_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 16 var:cmp_army_builder_amount_index = 1 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_self_propelled_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_self_propelled_artillery_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 16 var:cmp_army_builder_amount_index = 2 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_self_propelled_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_self_propelled_artillery_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 16 var:cmp_army_builder_amount_index = 3 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_self_propelled_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_self_propelled_artillery_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 16 var:cmp_army_builder_amount_index = 4 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_self_propelled_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_self_propelled_artillery_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 16 var:cmp_army_builder_amount_index = 5 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_self_propelled_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_rocket_artillery_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 17 var:cmp_army_builder_amount_index = 1 has_technology_researched = rocket_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_rocket_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_rocket_artillery_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 17 var:cmp_army_builder_amount_index = 2 has_technology_researched = rocket_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_rocket_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_rocket_artillery_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 17 var:cmp_army_builder_amount_index = 3 has_technology_researched = rocket_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_rocket_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_rocket_artillery_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 17 var:cmp_army_builder_amount_index = 4 has_technology_researched = rocket_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_rocket_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_rocket_artillery_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 17 var:cmp_army_builder_amount_index = 5 has_technology_researched = rocket_artillery exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_rocket_artillery
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_hussars_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 18 var:cmp_army_builder_amount_index = 1 has_technology_researched = standing_army exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_hussars
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_hussars_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 18 var:cmp_army_builder_amount_index = 2 has_technology_researched = standing_army exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_hussars
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_hussars_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 18 var:cmp_army_builder_amount_index = 3 has_technology_researched = standing_army exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_hussars
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_hussars_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 18 var:cmp_army_builder_amount_index = 4 has_technology_researched = standing_army exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_hussars
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_hussars_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 18 var:cmp_army_builder_amount_index = 5 has_technology_researched = standing_army exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_hussars
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_dragoons_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 19 var:cmp_army_builder_amount_index = 1 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_dragoons
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_dragoons_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 19 var:cmp_army_builder_amount_index = 2 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_dragoons
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_dragoons_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 19 var:cmp_army_builder_amount_index = 3 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_dragoons
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_dragoons_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 19 var:cmp_army_builder_amount_index = 4 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_dragoons
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_dragoons_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 19 var:cmp_army_builder_amount_index = 5 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_dragoons
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cuirassiers_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 20 var:cmp_army_builder_amount_index = 1 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cuirassiers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cuirassiers_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 20 var:cmp_army_builder_amount_index = 2 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cuirassiers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cuirassiers_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 20 var:cmp_army_builder_amount_index = 3 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cuirassiers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cuirassiers_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 20 var:cmp_army_builder_amount_index = 4 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cuirassiers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_cuirassiers_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 20 var:cmp_army_builder_amount_index = 5 has_technology_researched = military_drill exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_cuirassiers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_lancers_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 21 var:cmp_army_builder_amount_index = 1 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_lancers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_lancers_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 21 var:cmp_army_builder_amount_index = 2 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_lancers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_lancers_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 21 var:cmp_army_builder_amount_index = 3 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_lancers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_lancers_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 21 var:cmp_army_builder_amount_index = 4 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_lancers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_lancers_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 21 var:cmp_army_builder_amount_index = 5 has_technology_researched = napoleonic_warfare exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_lancers
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_light_tanks_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 22 var:cmp_army_builder_amount_index = 1 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_light_tanks_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 22 var:cmp_army_builder_amount_index = 2 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_light_tanks_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 22 var:cmp_army_builder_amount_index = 3 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_light_tanks_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 22 var:cmp_army_builder_amount_index = 4 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_light_tanks_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 22 var:cmp_army_builder_amount_index = 5 has_technology_researched = mobile_armor exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_heavy_tank_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 23 var:cmp_army_builder_amount_index = 1 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_heavy_tank_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 23 var:cmp_army_builder_amount_index = 2 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_heavy_tank_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 23 var:cmp_army_builder_amount_index = 3 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_heavy_tank_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 23 var:cmp_army_builder_amount_index = 4 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_heavy_tank_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 23 var:cmp_army_builder_amount_index = 5 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_heavy_tank
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_light_tanks_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 24 var:cmp_army_builder_amount_index = 1 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_light_tanks_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 24 var:cmp_army_builder_amount_index = 2 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_light_tanks_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 24 var:cmp_army_builder_amount_index = 3 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_light_tanks_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 24 var:cmp_army_builder_amount_index = 4 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_modern_light_tanks_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 24 var:cmp_army_builder_amount_index = 5 has_technology_researched = blitzkrieg exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_modern_light_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_main_battle_tanks_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 25 var:cmp_army_builder_amount_index = 1 has_technology_researched = main_battle_tank exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_main_battle_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_main_battle_tanks_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 25 var:cmp_army_builder_amount_index = 2 has_technology_researched = main_battle_tank exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_main_battle_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_main_battle_tanks_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 25 var:cmp_army_builder_amount_index = 3 has_technology_researched = main_battle_tank exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_main_battle_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_main_battle_tanks_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 25 var:cmp_army_builder_amount_index = 4 has_technology_researched = main_battle_tank exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_main_battle_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_main_battle_tanks_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 25 var:cmp_army_builder_amount_index = 5 has_technology_researched = main_battle_tank exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_main_battle_tanks
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_giant_death_robot_1_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 26 var:cmp_army_builder_amount_index = 1 has_technology_researched = mecha_engineering exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_giant_death_robot
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 1
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_giant_death_robot_5_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 26 var:cmp_army_builder_amount_index = 2 has_technology_researched = mecha_engineering exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_giant_death_robot
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 5
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_giant_death_robot_10_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 26 var:cmp_army_builder_amount_index = 3 has_technology_researched = mecha_engineering exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_giant_death_robot
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 10
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_giant_death_robot_25_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 26 var:cmp_army_builder_amount_index = 4 has_technology_researched = mecha_engineering exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_giant_death_robot
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 25
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_spawn_giant_death_robot_50_effect = {
+    if = {
+        limit = { var:cmp_army_builder_unit_index = 26 var:cmp_army_builder_amount_index = 5 has_technology_researched = mecha_engineering exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        create_military_formation = {
+            type = army
+            hq_region = scope:cmp_army_builder_hq_region
+            combat_unit = {
+                type = unit_type:combat_unit_type_giant_death_robot
+                service_type = regular
+                state_region = scope:cmp_army_builder_state_region
+                count = 50
+            }
+        }
+        set_variable = { name = cmp_army_builder_result value = 1 }
+    }
+}
+
+cmp_army_builder_apply_effect = {
+    remove_variable = cmp_army_builder_result
+    cmp_army_builder_resolve_spawn_state_effect = yes
+    if = {
+        limit = { exists = scope:cmp_army_builder_state exists = scope:cmp_army_builder_hq_region exists = scope:cmp_army_builder_state_region }
+        cmp_army_builder_spawn_irregular_infantry_1_effect = yes
+        cmp_army_builder_spawn_irregular_infantry_5_effect = yes
+        cmp_army_builder_spawn_irregular_infantry_10_effect = yes
+        cmp_army_builder_spawn_irregular_infantry_25_effect = yes
+        cmp_army_builder_spawn_irregular_infantry_50_effect = yes
+        cmp_army_builder_spawn_line_infantry_1_effect = yes
+        cmp_army_builder_spawn_line_infantry_5_effect = yes
+        cmp_army_builder_spawn_line_infantry_10_effect = yes
+        cmp_army_builder_spawn_line_infantry_25_effect = yes
+        cmp_army_builder_spawn_line_infantry_50_effect = yes
+        cmp_army_builder_spawn_skirmish_infantry_1_effect = yes
+        cmp_army_builder_spawn_skirmish_infantry_5_effect = yes
+        cmp_army_builder_spawn_skirmish_infantry_10_effect = yes
+        cmp_army_builder_spawn_skirmish_infantry_25_effect = yes
+        cmp_army_builder_spawn_skirmish_infantry_50_effect = yes
+        cmp_army_builder_spawn_trench_infantry_1_effect = yes
+        cmp_army_builder_spawn_trench_infantry_5_effect = yes
+        cmp_army_builder_spawn_trench_infantry_10_effect = yes
+        cmp_army_builder_spawn_trench_infantry_25_effect = yes
+        cmp_army_builder_spawn_trench_infantry_50_effect = yes
+        cmp_army_builder_spawn_squad_infantry_1_effect = yes
+        cmp_army_builder_spawn_squad_infantry_5_effect = yes
+        cmp_army_builder_spawn_squad_infantry_10_effect = yes
+        cmp_army_builder_spawn_squad_infantry_25_effect = yes
+        cmp_army_builder_spawn_squad_infantry_50_effect = yes
+        cmp_army_builder_spawn_mechanized_infantry_1_effect = yes
+        cmp_army_builder_spawn_mechanized_infantry_5_effect = yes
+        cmp_army_builder_spawn_mechanized_infantry_10_effect = yes
+        cmp_army_builder_spawn_mechanized_infantry_25_effect = yes
+        cmp_army_builder_spawn_mechanized_infantry_50_effect = yes
+        cmp_army_builder_spawn_modern_mechanized_infantry_1_effect = yes
+        cmp_army_builder_spawn_modern_mechanized_infantry_5_effect = yes
+        cmp_army_builder_spawn_modern_mechanized_infantry_10_effect = yes
+        cmp_army_builder_spawn_modern_mechanized_infantry_25_effect = yes
+        cmp_army_builder_spawn_modern_mechanized_infantry_50_effect = yes
+        cmp_army_builder_spawn_advanced_mechanized_infantry_1_effect = yes
+        cmp_army_builder_spawn_advanced_mechanized_infantry_5_effect = yes
+        cmp_army_builder_spawn_advanced_mechanized_infantry_10_effect = yes
+        cmp_army_builder_spawn_advanced_mechanized_infantry_25_effect = yes
+        cmp_army_builder_spawn_advanced_mechanized_infantry_50_effect = yes
+        cmp_army_builder_spawn_modern_tier_marines_1_effect = yes
+        cmp_army_builder_spawn_modern_tier_marines_5_effect = yes
+        cmp_army_builder_spawn_modern_tier_marines_10_effect = yes
+        cmp_army_builder_spawn_modern_tier_marines_25_effect = yes
+        cmp_army_builder_spawn_modern_tier_marines_50_effect = yes
+        cmp_army_builder_spawn_advanced_tier_marines_1_effect = yes
+        cmp_army_builder_spawn_advanced_tier_marines_5_effect = yes
+        cmp_army_builder_spawn_advanced_tier_marines_10_effect = yes
+        cmp_army_builder_spawn_advanced_tier_marines_25_effect = yes
+        cmp_army_builder_spawn_advanced_tier_marines_50_effect = yes
+        cmp_army_builder_spawn_cannon_artillery_1_effect = yes
+        cmp_army_builder_spawn_cannon_artillery_5_effect = yes
+        cmp_army_builder_spawn_cannon_artillery_10_effect = yes
+        cmp_army_builder_spawn_cannon_artillery_25_effect = yes
+        cmp_army_builder_spawn_cannon_artillery_50_effect = yes
+        cmp_army_builder_spawn_mobile_artillery_1_effect = yes
+        cmp_army_builder_spawn_mobile_artillery_5_effect = yes
+        cmp_army_builder_spawn_mobile_artillery_10_effect = yes
+        cmp_army_builder_spawn_mobile_artillery_25_effect = yes
+        cmp_army_builder_spawn_mobile_artillery_50_effect = yes
+        cmp_army_builder_spawn_shrapnel_artillery_1_effect = yes
+        cmp_army_builder_spawn_shrapnel_artillery_5_effect = yes
+        cmp_army_builder_spawn_shrapnel_artillery_10_effect = yes
+        cmp_army_builder_spawn_shrapnel_artillery_25_effect = yes
+        cmp_army_builder_spawn_shrapnel_artillery_50_effect = yes
+        cmp_army_builder_spawn_siege_artillery_1_effect = yes
+        cmp_army_builder_spawn_siege_artillery_5_effect = yes
+        cmp_army_builder_spawn_siege_artillery_10_effect = yes
+        cmp_army_builder_spawn_siege_artillery_25_effect = yes
+        cmp_army_builder_spawn_siege_artillery_50_effect = yes
+        cmp_army_builder_spawn_heavy_tank_1_effect = yes
+        cmp_army_builder_spawn_heavy_tank_5_effect = yes
+        cmp_army_builder_spawn_heavy_tank_10_effect = yes
+        cmp_army_builder_spawn_heavy_tank_25_effect = yes
+        cmp_army_builder_spawn_heavy_tank_50_effect = yes
+        cmp_army_builder_spawn_self_propelled_artillery_1_effect = yes
+        cmp_army_builder_spawn_self_propelled_artillery_5_effect = yes
+        cmp_army_builder_spawn_self_propelled_artillery_10_effect = yes
+        cmp_army_builder_spawn_self_propelled_artillery_25_effect = yes
+        cmp_army_builder_spawn_self_propelled_artillery_50_effect = yes
+        cmp_army_builder_spawn_rocket_artillery_1_effect = yes
+        cmp_army_builder_spawn_rocket_artillery_5_effect = yes
+        cmp_army_builder_spawn_rocket_artillery_10_effect = yes
+        cmp_army_builder_spawn_rocket_artillery_25_effect = yes
+        cmp_army_builder_spawn_rocket_artillery_50_effect = yes
+        cmp_army_builder_spawn_hussars_1_effect = yes
+        cmp_army_builder_spawn_hussars_5_effect = yes
+        cmp_army_builder_spawn_hussars_10_effect = yes
+        cmp_army_builder_spawn_hussars_25_effect = yes
+        cmp_army_builder_spawn_hussars_50_effect = yes
+        cmp_army_builder_spawn_dragoons_1_effect = yes
+        cmp_army_builder_spawn_dragoons_5_effect = yes
+        cmp_army_builder_spawn_dragoons_10_effect = yes
+        cmp_army_builder_spawn_dragoons_25_effect = yes
+        cmp_army_builder_spawn_dragoons_50_effect = yes
+        cmp_army_builder_spawn_cuirassiers_1_effect = yes
+        cmp_army_builder_spawn_cuirassiers_5_effect = yes
+        cmp_army_builder_spawn_cuirassiers_10_effect = yes
+        cmp_army_builder_spawn_cuirassiers_25_effect = yes
+        cmp_army_builder_spawn_cuirassiers_50_effect = yes
+        cmp_army_builder_spawn_lancers_1_effect = yes
+        cmp_army_builder_spawn_lancers_5_effect = yes
+        cmp_army_builder_spawn_lancers_10_effect = yes
+        cmp_army_builder_spawn_lancers_25_effect = yes
+        cmp_army_builder_spawn_lancers_50_effect = yes
+        cmp_army_builder_spawn_light_tanks_1_effect = yes
+        cmp_army_builder_spawn_light_tanks_5_effect = yes
+        cmp_army_builder_spawn_light_tanks_10_effect = yes
+        cmp_army_builder_spawn_light_tanks_25_effect = yes
+        cmp_army_builder_spawn_light_tanks_50_effect = yes
+        cmp_army_builder_spawn_modern_heavy_tank_1_effect = yes
+        cmp_army_builder_spawn_modern_heavy_tank_5_effect = yes
+        cmp_army_builder_spawn_modern_heavy_tank_10_effect = yes
+        cmp_army_builder_spawn_modern_heavy_tank_25_effect = yes
+        cmp_army_builder_spawn_modern_heavy_tank_50_effect = yes
+        cmp_army_builder_spawn_modern_light_tanks_1_effect = yes
+        cmp_army_builder_spawn_modern_light_tanks_5_effect = yes
+        cmp_army_builder_spawn_modern_light_tanks_10_effect = yes
+        cmp_army_builder_spawn_modern_light_tanks_25_effect = yes
+        cmp_army_builder_spawn_modern_light_tanks_50_effect = yes
+        cmp_army_builder_spawn_main_battle_tanks_1_effect = yes
+        cmp_army_builder_spawn_main_battle_tanks_5_effect = yes
+        cmp_army_builder_spawn_main_battle_tanks_10_effect = yes
+        cmp_army_builder_spawn_main_battle_tanks_25_effect = yes
+        cmp_army_builder_spawn_main_battle_tanks_50_effect = yes
+        cmp_army_builder_spawn_giant_death_robot_1_effect = yes
+        cmp_army_builder_spawn_giant_death_robot_5_effect = yes
+        cmp_army_builder_spawn_giant_death_robot_10_effect = yes
+        cmp_army_builder_spawn_giant_death_robot_25_effect = yes
+        cmp_army_builder_spawn_giant_death_robot_50_effect = yes
+    }
+    if = { limit = { NOT = { has_variable = cmp_army_builder_result } } set_variable = { name = cmp_army_builder_result value = -1 } }
+    clear_saved_scope = cmp_army_builder_state
+    clear_saved_scope = cmp_army_builder_hq_region
+    clear_saved_scope = cmp_army_builder_state_region
+}
+

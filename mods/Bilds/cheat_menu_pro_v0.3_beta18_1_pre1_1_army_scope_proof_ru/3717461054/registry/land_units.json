@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "units": [
+    {
+      "id": "irregular_infantry",
+      "unit_type": "combat_unit_type_irregular_infantry",
+      "role": "infantry",
+      "provider": "vanilla",
+      "unlock_technology": null
+    },
+    {
+      "id": "line_infantry",
+      "unit_type": "combat_unit_type_line_infantry",
+      "role": "infantry",
+      "provider": "vanilla",
+      "unlock_technology": "line_infantry"
+    },
+    {
+      "id": "skirmish_infantry",
+      "unit_type": "combat_unit_type_skirmish_infantry",
+      "role": "infantry",
+      "provider": "vanilla",
+      "unlock_technology": "general_staff"
+    },
+    {
+      "id": "trench_infantry",
+      "unit_type": "combat_unit_type_trench_infantry",
+      "role": "infantry",
+      "provider": "vanilla",
+      "unlock_technology": "trench_works"
+    },
+    {
+      "id": "squad_infantry",
+      "unit_type": "combat_unit_type_squad_infantry",
+      "role": "infantry",
+      "provider": "vanilla",
+      "unlock_technology": "nco_training"
+    },
+    {
+      "id": "mechanized_infantry",
+      "unit_type": "combat_unit_type_mechanized_infantry",
+      "role": "infantry",
+      "provider": "vanilla",
+      "unlock_technology": "mobile_armor"
+    },
+    {
+      "id": "modern_mechanized_infantry",
+      "unit_type": "combat_unit_type_modern_mechanized_infantry",
+      "role": "infantry",
+      "provider": "tech_res",
+      "unlock_technology": "mechanized_infantry"
+    },
+    {
+      "id": "advanced_mechanized_infantry",
+      "unit_type": "combat_unit_type_advanced_mechanized_infantry",
+      "role": "infantry",
+      "provider": "tech_res",
+      "unlock_technology": "high_performance_apparel"
+    },
+    {
+      "id": "modern_tier_marines",
+      "unit_type": "combat_unit_type_modern_tier_marines",
+      "role": "marines",
+      "provider": "tech_res",
+      "unlock_technology": "amphibious_warfare"
+    },
+    {
+      "id": "advanced_tier_marines",
+      "unit_type": "combat_unit_type_advanced_tier_marines",
+      "role": "marines",
+      "provider": "tech_res",
+      "unlock_technology": "high_performance_apparel"
+    },
+    {
+      "id": "cannon_artillery",
+      "unit_type": "combat_unit_type_cannon_artillery",
+      "role": "artillery",
+      "provider": "vanilla",
+      "unlock_technology": "artillery"
+    },
+    {
+      "id": "mobile_artillery",
+      "unit_type": "combat_unit_type_mobile_artillery",
+      "role": "artillery",
+      "provider": "vanilla",
+      "unlock_technology": "napoleonic_warfare"
+    },
+    {
+      "id": "shrapnel_artillery",
+      "unit_type": "combat_unit_type_shrapnel_artillery",
+      "role": "artillery",
+      "provider": "vanilla",
+      "unlock_technology": "breech_loading_artillery"
+    },
+    {
+      "id": "siege_artillery",
+      "unit_type": "combat_unit_type_siege_artillery",
+      "role": "artillery",
+      "provider": "vanilla",
+      "unlock_technology": "defense_in_depth"
+    },
+    {
+      "id": "heavy_tank",
+      "unit_type": "combat_unit_type_heavy_tank",
+      "role": "artillery",
+      "provider": "vanilla",
+      "unlock_technology": "mobile_armor"
+    },
+    {
+      "id": "self_propelled_artillery",
+      "unit_type": "combat_unit_type_self_propelled_artillery",
+      "role": "artillery",
+      "provider": "tech_res",
+      "unlock_technology": "mobile_armor"
+    },
+    {
+      "id": "rocket_artillery",
+      "unit_type": "combat_unit_type_rocket_artillery",
+      "role": "artillery",
+      "provider": "tech_res",
+      "unlock_technology": "rocket_artillery"
+    },
+    {
+      "id": "hussars",
+      "unit_type": "combat_unit_type_hussars",
+      "role": "mobile",
+      "provider": "vanilla",
+      "unlock_technology": "standing_army"
+    },
+    {
+      "id": "dragoons",
+      "unit_type": "combat_unit_type_dragoons",
+      "role": "mobile",
+      "provider": "vanilla",
+      "unlock_technology": "military_drill"
+    },
+    {
+      "id": "cuirassiers",
+      "unit_type": "combat_unit_type_cuirassiers",
+      "role": "mobile",
+      "provider": "vanilla",
+      "unlock_technology": "military_drill"
+    },
+    {
+      "id": "lancers",
+      "unit_type": "combat_unit_type_lancers",
+      "role": "mobile",
+      "provider": "vanilla",
+      "unlock_technology": "napoleonic_warfare"
+    },
+    {
+      "id": "light_tanks",
+      "unit_type": "combat_unit_type_light_tanks",
+      "role": "mobile",
+      "provider": "vanilla",
+      "unlock_technology": "mobile_armor"
+    },
+    {
+      "id": "modern_heavy_tank",
+      "unit_type": "combat_unit_type_modern_heavy_tank",
+      "role": "artillery",
+      "provider": "tech_res",
+      "unlock_technology": "blitzkrieg"
+    },
+    {
+      "id": "modern_light_tanks",
+      "unit_type": "combat_unit_type_modern_light_tanks",
+      "role": "mobile",
+      "provider": "tech_res",
+      "unlock_technology": "blitzkrieg"
+    },
+    {
+      "id": "main_battle_tanks",
+      "unit_type": "combat_unit_type_main_battle_tanks",
+      "role": "mobile",
+      "provider": "tech_res",
+      "unlock_technology": "main_battle_tank"
+    },
+    {
+      "id": "giant_death_robot",
+      "unit_type": "combat_unit_type_giant_death_robot",
+      "role": "mobile",
+      "provider": "tech_res",
+      "unlock_technology": "mecha_engineering"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+# Sakuya Cheat Menu Pro - Block 8 Fun Features static modifiers
+
+sakuya_cheat_b8_how_dare_u = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	unit_army_offense_mult = 9999
+	unit_army_defense_mult = 9999
+	military_formation_mobilization_speed_mult = 9999
+	country_navy_goods_cost_mult = -999
+	unit_naval_invasion_efficiency_mult = 9999
+	unit_kill_rate_add = 99999
+	unit_morale_damage_mult = 9999
+	country_prestige_from_army_power_projection_mult = -0.98
+	country_prestige_from_navy_power_projection_mult = -0.98
+}
+
+sakuya_cheat_b8_how_dare_u_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	unit_army_offense_mult = -999
+	unit_army_defense_mult = -999
+	military_formation_mobilization_speed_mult = -999
+	country_navy_goods_cost_mult = 999
+	unit_naval_invasion_efficiency_mult = -999
+	unit_kill_rate_add = -999
+	unit_morale_damage_mult = -999
+	country_prestige_from_army_power_projection_mult = 0.9
+	country_prestige_from_navy_power_projection_mult = 0.9
+}
+
+sakuya_cheat_b8_doomfall = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_revolution_progress_mult = 999
+	state_turmoil_effects_mult = 999
+	state_mortality_turmoil_mult = 999
+	country_radicals_from_legitimacy_mult = 999
+	country_loyalists_from_legitimacy_mult = -999
+	country_legitimacy_base_add = -999
+	interest_group_approval_add = -999
+	country_tax_income_add = -999
+	country_minting_mult = -999
+	country_construction_add = -99999
+	country_construction_goods_cost_mult = 999
+	country_loan_interest_rate_mult = 999
+	country_weekly_innovation_mult = -999
+	state_migration_pull_mult = -999
+	country_mass_migration_attraction_mult = -999
+}
+
+sakuya_cheat_b8_social_collapse = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	country_legitimacy_base_add = -999
+	country_radicals_from_legitimacy_mult = 999
+	country_loyalists_from_legitimacy_mult = -999
+	state_turmoil_effects_mult = 999
+	state_migration_pull_mult = -999
+	country_mass_migration_attraction_mult = -999
+	state_standard_of_living_add = -10
+	interest_group_approval_add = -999
+	country_institution_police_max_investment_add = -999
+	country_institution_home_affairs_max_investment_add = -999
+	country_institution_schools_max_investment_add = -999
+	country_institution_health_system_max_investment_add = -999
+	country_institution_social_security_max_investment_add = -999
+	country_institution_workplace_safety_max_investment_add = -999
+	country_expenses_add = 9999
+country_tax_income_add = -9999
+country_loan_interest_rate_mult = 99
+country_minting_mult = -1
+country_government_wages_mult = 99
+country_military_wages_mult = 99
+country_government_dividends_waste_add = 99
+country_gold_reserve_limit_mult = -1
+country_construction_goods_cost_mult = 99
+country_military_goods_cost_mult = 99
+country_construction_add = -999
+country_max_weekly_construction_progress_add = -999
+country_company_throughput_bonus_add = -1
+country_disable_investment_pool_bool = yes
+country_disallow_trade_bool = yes
+country_weekly_innovation_mult = -1
+country_tech_spread_mult = -1
+country_bureaucracy_mult = -1
+country_authority_mult = -1
+country_influence_mult = -1
+country_bureaucracy_investment_cost_factor_mult = 99
+country_infamy_generation_mult = 99
+country_infamy_decay_mult = -1
+country_improve_relations_speed_mult = -1
+country_tension_decay_mult = -1
+country_diplomatic_play_maneuvers_add = -999
+country_max_declared_interests_mult = -1
+country_liberty_desire_of_subjects_add = 999
+country_disallow_aggressive_plays_bool = yes
+country_cannot_start_law_enactment_bool = yes
+country_law_enactment_stall_mult = 99
+country_revolution_progress_mult = 99
+country_secession_progress_mult = 99
+country_radicals_from_conquest_mult = 99
+country_war_exhaustion_casualties_mult = 99
+}
+
+sakuya_cheat_b8_tab1_tech_research_speed = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_tech_research_speed_small = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_tech_research_speed_small_target_plus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = 0.5
+}
+sakuya_cheat_b8_tab1_tech_research_speed_small_target_minus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = -0.5
+}
+sakuya_cheat_b8_tab1_tech_spread = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_spread_add = 1
+}
+sakuya_cheat_b8_tab1_tech_spread_small = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_spread_add = 1
+}
+sakuya_cheat_b8_tab1_tech_spread_small_target_plus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_spread_add = 50
+}
+sakuya_cheat_b8_tab1_tech_spread_small_target_minus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_spread_add = -50
+}
+sakuya_cheat_b8_tab1_weekly_innovation = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_weekly_innovation_mult = 1
+}
+sakuya_cheat_b8_tab1_weekly_innovation_small = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_weekly_innovation_mult = 1
+}
+sakuya_cheat_b8_tab1_weekly_innovation_small_target_plus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_weekly_innovation_mult = 0.5
+}
+sakuya_cheat_b8_tab1_weekly_innovation_small_target_minus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_weekly_innovation_mult = -0.5
+}
+sakuya_cheat_b8_tab1_ahead_of_time_penalty = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_ahead_of_time_research_penalty_mult = 1
+}
+sakuya_cheat_b8_tab1_tech_group_research_speed = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_group_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_tech_research_speed_2 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_tech_research_speed_2_small = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_tech_research_speed_2_small_target_plus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = 0.5
+}
+sakuya_cheat_b8_tab1_tech_research_speed_2_small_target_minus50 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_tech_research_speed_mult = -0.5
+}
+sakuya_cheat_b8_tab1_weekly_innovation_max = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_weekly_innovation_max_add = 1
+}
+sakuya_cheat_b8_tab1_military_tech_research = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_military_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_production_tech_research = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_production_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_society_tech_research = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_society_tech_research_speed_mult = 1
+}
+sakuya_cheat_b8_tab1_military_tech_spread = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_military_tech_spread_mult = 1
+}
+sakuya_cheat_b8_tab1_production_tech_spread = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_production_tech_spread_mult = 1
+}
+sakuya_cheat_b8_tab1_society_tech_spread = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_society_tech_spread_mult = 1
+}
+sakuya_cheat_b8_tab1_education_access_wealth = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	state_education_access_wealth_add = 1
+}

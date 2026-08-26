@@ -1,0 +1,37 @@
+﻿# Sakuya Cheat Menu Pro - B2 Economy helper effects
+# Event-side helper for code-native force nationalization flow.
+
+sakuya_b2_force_nationalize_target_effect = {
+    if = {
+        limit = {
+            exists = $TARGET$
+            $TARGET$ = {
+                NOT = { is_country_type = decentralized }
+            }
+            nationalization_cost = { target = $TARGET$ value > 0 }
+        }
+
+        $TARGET$ = {
+            remove_variable = sakuya_b2_nat_temp_target
+            set_variable = sakuya_b2_nat_temp_target
+        }
+
+        create_diplomatic_play = {
+            type = dp_force_nationalization
+            target_country = $TARGET$
+            war = no
+        }
+
+        random_diplomatic_play = {
+            limit = {
+                is_diplomatic_play_type = dp_force_nationalization
+                target = { has_variable = sakuya_b2_nat_temp_target }
+            }
+            resolve_play_for = initiator
+        }
+
+        $TARGET$ = {
+            remove_variable = sakuya_b2_nat_temp_target
+        }
+    }
+}

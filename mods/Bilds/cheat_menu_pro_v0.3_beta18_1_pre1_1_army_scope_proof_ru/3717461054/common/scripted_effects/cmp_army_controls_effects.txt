@@ -1,0 +1,449 @@
+﻿# Cheat Menu Pro v0.3-beta5 - Simple Army Controls
+
+cmp_army_controls_clear_result_effect = { remove_variable = cmp_army_controls_result }
+cmp_army_controls_select_target_self_effect = { set_variable = { name = cmp_army_controls_target_index value = 1 } cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_target_marked_effect = { set_variable = { name = cmp_army_controls_target_index value = 2 } cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_clear_selection_effect = { remove_variable = cmp_army_controls_parameter_index remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+
+cmp_army_controls_select_parameter_offense_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 1 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_defense_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 2 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_morale_recovery_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 3 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_mobilization_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 4 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_experience_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 5 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_movement_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 6 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_supply_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 7 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_goods_cost_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 8 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_wages_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 9 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_parameter_war_exhaustion_effect = { set_variable = { name = cmp_army_controls_parameter_index value = 10 } remove_variable = cmp_army_controls_value_index cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_value_1_effect = { set_variable = { name = cmp_army_controls_value_index value = 1 } cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_value_2_effect = { set_variable = { name = cmp_army_controls_value_index value = 2 } cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_value_3_effect = { set_variable = { name = cmp_army_controls_value_index value = 3 } cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_value_4_effect = { set_variable = { name = cmp_army_controls_value_index value = 4 } cmp_army_controls_clear_result_effect = yes }
+cmp_army_controls_select_value_5_effect = { set_variable = { name = cmp_army_controls_value_index value = 5 } cmp_army_controls_clear_result_effect = yes }
+
+cmp_army_controls_resolve_target_effect = {
+    clear_saved_scope = cmp_army_controls_target
+    if = {
+        limit = { OR = { NOT = { has_variable = cmp_army_controls_target_index } var:cmp_army_controls_target_index = 1 } }
+        save_scope_as = cmp_army_controls_target
+    }
+    else_if = {
+        limit = { var:cmp_army_controls_target_index = 2 }
+        every_country = { limit = { has_variable = sakuya_mark_country_target } save_scope_as = cmp_army_controls_target }
+    }
+}
+
+cmp_army_controls_apply_offense_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 1 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_offense add_modifier = { name = cmp_army_control_offense multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_offense_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 1 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_offense add_modifier = { name = cmp_army_control_offense multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_offense_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 1 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_offense add_modifier = { name = cmp_army_control_offense multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_offense_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 1 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_offense add_modifier = { name = cmp_army_control_offense multiplier = 1.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_offense_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 1 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_offense add_modifier = { name = cmp_army_control_offense multiplier = 5.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_defense_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 2 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_defense add_modifier = { name = cmp_army_control_defense multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_defense_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 2 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_defense add_modifier = { name = cmp_army_control_defense multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_defense_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 2 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_defense add_modifier = { name = cmp_army_control_defense multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_defense_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 2 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_defense add_modifier = { name = cmp_army_control_defense multiplier = 1.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_defense_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 2 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_defense add_modifier = { name = cmp_army_control_defense multiplier = 5.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_morale_recovery_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 3 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_morale_recovery add_modifier = { name = cmp_army_control_morale_recovery multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_morale_recovery_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 3 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_morale_recovery add_modifier = { name = cmp_army_control_morale_recovery multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_morale_recovery_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 3 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_morale_recovery add_modifier = { name = cmp_army_control_morale_recovery multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_morale_recovery_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 3 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_morale_recovery add_modifier = { name = cmp_army_control_morale_recovery multiplier = 1.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_morale_recovery_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 3 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_morale_recovery add_modifier = { name = cmp_army_control_morale_recovery multiplier = 5.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_mobilization_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 4 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_mobilization add_modifier = { name = cmp_army_control_mobilization multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_mobilization_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 4 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_mobilization add_modifier = { name = cmp_army_control_mobilization multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_mobilization_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 4 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_mobilization add_modifier = { name = cmp_army_control_mobilization multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_mobilization_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 4 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_mobilization add_modifier = { name = cmp_army_control_mobilization multiplier = 1.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_mobilization_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 4 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_mobilization add_modifier = { name = cmp_army_control_mobilization multiplier = 5.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_experience_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 5 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_experience add_modifier = { name = cmp_army_control_experience multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_experience_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 5 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_experience add_modifier = { name = cmp_army_control_experience multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_experience_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 5 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_experience add_modifier = { name = cmp_army_control_experience multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_experience_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 5 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_experience add_modifier = { name = cmp_army_control_experience multiplier = 1.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_experience_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 5 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_experience add_modifier = { name = cmp_army_control_experience multiplier = 5.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_movement_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 6 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_movement add_modifier = { name = cmp_army_control_movement multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_movement_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 6 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_movement add_modifier = { name = cmp_army_control_movement multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_movement_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 6 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_movement add_modifier = { name = cmp_army_control_movement multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_movement_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 6 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_movement add_modifier = { name = cmp_army_control_movement multiplier = 1.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_movement_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 6 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_movement add_modifier = { name = cmp_army_control_movement multiplier = 5.00 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_supply_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 7 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_supply add_modifier = { name = cmp_army_control_supply multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_supply_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 7 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_supply add_modifier = { name = cmp_army_control_supply multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_supply_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 7 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_supply add_modifier = { name = cmp_army_control_supply multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_supply_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 7 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_supply add_modifier = { name = cmp_army_control_supply multiplier = 0.75 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_supply_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 7 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_supply add_modifier = { name = cmp_army_control_supply multiplier = 0.90 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_goods_cost_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 8 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_goods_cost add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_goods_cost_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 8 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_goods_cost add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_goods_cost_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 8 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_goods_cost add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_goods_cost_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 8 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_goods_cost add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.75 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_goods_cost_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 8 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_goods_cost add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.90 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_wages_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 9 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_wages add_modifier = { name = cmp_army_control_wages multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_wages_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 9 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_wages add_modifier = { name = cmp_army_control_wages multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_wages_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 9 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_wages add_modifier = { name = cmp_army_control_wages multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_wages_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 9 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_wages add_modifier = { name = cmp_army_control_wages multiplier = 0.75 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_wages_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 9 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_wages add_modifier = { name = cmp_army_control_wages multiplier = 0.90 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_war_exhaustion_1_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 10 var:cmp_army_controls_value_index = 1 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_war_exhaustion add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.10 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_war_exhaustion_2_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 10 var:cmp_army_controls_value_index = 2 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_war_exhaustion add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.25 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_war_exhaustion_3_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 10 var:cmp_army_controls_value_index = 3 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_war_exhaustion add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.50 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_war_exhaustion_4_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 10 var:cmp_army_controls_value_index = 4 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_war_exhaustion add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.75 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_war_exhaustion_5_effect = {
+    if = { limit = { var:cmp_army_controls_parameter_index = 10 var:cmp_army_controls_value_index = 5 exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_war_exhaustion add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.90 } } root = { set_variable = { name = cmp_army_controls_result value = 1 } } }
+}
+
+cmp_army_controls_apply_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target has_variable = cmp_army_controls_parameter_index has_variable = cmp_army_controls_value_index }
+        cmp_army_controls_apply_offense_1_effect = yes
+        cmp_army_controls_apply_offense_2_effect = yes
+        cmp_army_controls_apply_offense_3_effect = yes
+        cmp_army_controls_apply_offense_4_effect = yes
+        cmp_army_controls_apply_offense_5_effect = yes
+        cmp_army_controls_apply_defense_1_effect = yes
+        cmp_army_controls_apply_defense_2_effect = yes
+        cmp_army_controls_apply_defense_3_effect = yes
+        cmp_army_controls_apply_defense_4_effect = yes
+        cmp_army_controls_apply_defense_5_effect = yes
+        cmp_army_controls_apply_morale_recovery_1_effect = yes
+        cmp_army_controls_apply_morale_recovery_2_effect = yes
+        cmp_army_controls_apply_morale_recovery_3_effect = yes
+        cmp_army_controls_apply_morale_recovery_4_effect = yes
+        cmp_army_controls_apply_morale_recovery_5_effect = yes
+        cmp_army_controls_apply_mobilization_1_effect = yes
+        cmp_army_controls_apply_mobilization_2_effect = yes
+        cmp_army_controls_apply_mobilization_3_effect = yes
+        cmp_army_controls_apply_mobilization_4_effect = yes
+        cmp_army_controls_apply_mobilization_5_effect = yes
+        cmp_army_controls_apply_experience_1_effect = yes
+        cmp_army_controls_apply_experience_2_effect = yes
+        cmp_army_controls_apply_experience_3_effect = yes
+        cmp_army_controls_apply_experience_4_effect = yes
+        cmp_army_controls_apply_experience_5_effect = yes
+        cmp_army_controls_apply_movement_1_effect = yes
+        cmp_army_controls_apply_movement_2_effect = yes
+        cmp_army_controls_apply_movement_3_effect = yes
+        cmp_army_controls_apply_movement_4_effect = yes
+        cmp_army_controls_apply_movement_5_effect = yes
+        cmp_army_controls_apply_supply_1_effect = yes
+        cmp_army_controls_apply_supply_2_effect = yes
+        cmp_army_controls_apply_supply_3_effect = yes
+        cmp_army_controls_apply_supply_4_effect = yes
+        cmp_army_controls_apply_supply_5_effect = yes
+        cmp_army_controls_apply_goods_cost_1_effect = yes
+        cmp_army_controls_apply_goods_cost_2_effect = yes
+        cmp_army_controls_apply_goods_cost_3_effect = yes
+        cmp_army_controls_apply_goods_cost_4_effect = yes
+        cmp_army_controls_apply_goods_cost_5_effect = yes
+        cmp_army_controls_apply_wages_1_effect = yes
+        cmp_army_controls_apply_wages_2_effect = yes
+        cmp_army_controls_apply_wages_3_effect = yes
+        cmp_army_controls_apply_wages_4_effect = yes
+        cmp_army_controls_apply_wages_5_effect = yes
+        cmp_army_controls_apply_war_exhaustion_1_effect = yes
+        cmp_army_controls_apply_war_exhaustion_2_effect = yes
+        cmp_army_controls_apply_war_exhaustion_3_effect = yes
+        cmp_army_controls_apply_war_exhaustion_4_effect = yes
+        cmp_army_controls_apply_war_exhaustion_5_effect = yes
+    }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+
+cmp_army_controls_reset_parameter_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target has_variable = cmp_army_controls_parameter_index }
+        if = { limit = { var:cmp_army_controls_parameter_index = 1 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_offense } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 2 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_defense } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 3 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_morale_recovery } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 4 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_mobilization } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 5 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_experience } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 6 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_movement } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 7 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_supply } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 8 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_goods_cost } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 9 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_wages } }
+        if = { limit = { var:cmp_army_controls_parameter_index = 10 } scope:cmp_army_controls_target = { remove_modifier = cmp_army_control_war_exhaustion } }
+        set_variable = { name = cmp_army_controls_result value = 2 }
+    }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+
+cmp_army_controls_reset_all_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = {
+        remove_modifier = cmp_army_control_offense
+        remove_modifier = cmp_army_control_defense
+        remove_modifier = cmp_army_control_morale_recovery
+        remove_modifier = cmp_army_control_mobilization
+        remove_modifier = cmp_army_control_experience
+        remove_modifier = cmp_army_control_movement
+        remove_modifier = cmp_army_control_supply
+        remove_modifier = cmp_army_control_goods_cost
+        remove_modifier = cmp_army_control_wages
+        remove_modifier = cmp_army_control_war_exhaustion
+    } set_variable = { name = cmp_army_controls_result value = 3 } }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+
+cmp_army_controls_preset_balanced_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = {
+        remove_modifier = cmp_army_control_offense
+        add_modifier = { name = cmp_army_control_offense multiplier = 0.25 }
+        remove_modifier = cmp_army_control_defense
+        add_modifier = { name = cmp_army_control_defense multiplier = 0.25 }
+        remove_modifier = cmp_army_control_morale_recovery
+        add_modifier = { name = cmp_army_control_morale_recovery multiplier = 0.25 }
+        remove_modifier = cmp_army_control_mobilization
+        add_modifier = { name = cmp_army_control_mobilization multiplier = 0.25 }
+        remove_modifier = cmp_army_control_experience
+        add_modifier = { name = cmp_army_control_experience multiplier = 0.25 }
+        remove_modifier = cmp_army_control_movement
+        add_modifier = { name = cmp_army_control_movement multiplier = 0.25 }
+        remove_modifier = cmp_army_control_supply
+        add_modifier = { name = cmp_army_control_supply multiplier = 0.25 }
+        remove_modifier = cmp_army_control_goods_cost
+        add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.25 }
+        remove_modifier = cmp_army_control_wages
+        add_modifier = { name = cmp_army_control_wages multiplier = 0.25 }
+        remove_modifier = cmp_army_control_war_exhaustion
+        add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.25 }
+    } set_variable = { name = cmp_army_controls_result value = 4 } }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+
+cmp_army_controls_preset_rapid_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = {
+        remove_modifier = cmp_army_control_offense
+        add_modifier = { name = cmp_army_control_offense multiplier = 0.50 }
+        remove_modifier = cmp_army_control_defense
+        add_modifier = { name = cmp_army_control_defense multiplier = 0.50 }
+        remove_modifier = cmp_army_control_morale_recovery
+        add_modifier = { name = cmp_army_control_morale_recovery multiplier = 1.00 }
+        remove_modifier = cmp_army_control_mobilization
+        add_modifier = { name = cmp_army_control_mobilization multiplier = 1.00 }
+        remove_modifier = cmp_army_control_experience
+        add_modifier = { name = cmp_army_control_experience multiplier = 0.25 }
+        remove_modifier = cmp_army_control_movement
+        add_modifier = { name = cmp_army_control_movement multiplier = 1.00 }
+        remove_modifier = cmp_army_control_supply
+        add_modifier = { name = cmp_army_control_supply multiplier = 0.50 }
+        remove_modifier = cmp_army_control_goods_cost
+        add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.50 }
+        remove_modifier = cmp_army_control_wages
+        add_modifier = { name = cmp_army_control_wages multiplier = 0.50 }
+        remove_modifier = cmp_army_control_war_exhaustion
+        add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.50 }
+    } set_variable = { name = cmp_army_controls_result value = 4 } }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+
+cmp_army_controls_preset_economy_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = {
+        remove_modifier = cmp_army_control_offense
+        add_modifier = { name = cmp_army_control_offense multiplier = 0.10 }
+        remove_modifier = cmp_army_control_defense
+        add_modifier = { name = cmp_army_control_defense multiplier = 0.10 }
+        remove_modifier = cmp_army_control_morale_recovery
+        add_modifier = { name = cmp_army_control_morale_recovery multiplier = 0.10 }
+        remove_modifier = cmp_army_control_mobilization
+        add_modifier = { name = cmp_army_control_mobilization multiplier = 0.10 }
+        remove_modifier = cmp_army_control_experience
+        add_modifier = { name = cmp_army_control_experience multiplier = 0.25 }
+        remove_modifier = cmp_army_control_movement
+        add_modifier = { name = cmp_army_control_movement multiplier = 0.10 }
+        remove_modifier = cmp_army_control_supply
+        add_modifier = { name = cmp_army_control_supply multiplier = 0.50 }
+        remove_modifier = cmp_army_control_goods_cost
+        add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.50 }
+        remove_modifier = cmp_army_control_wages
+        add_modifier = { name = cmp_army_control_wages multiplier = 0.50 }
+        remove_modifier = cmp_army_control_war_exhaustion
+        add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.50 }
+    } set_variable = { name = cmp_army_controls_result value = 4 } }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+
+cmp_army_controls_preset_god_effect = {
+    remove_variable = cmp_army_controls_result
+    cmp_army_controls_resolve_target_effect = yes
+    if = { limit = { exists = scope:cmp_army_controls_target } scope:cmp_army_controls_target = {
+        remove_modifier = cmp_army_control_offense
+        add_modifier = { name = cmp_army_control_offense multiplier = 5.00 }
+        remove_modifier = cmp_army_control_defense
+        add_modifier = { name = cmp_army_control_defense multiplier = 5.00 }
+        remove_modifier = cmp_army_control_morale_recovery
+        add_modifier = { name = cmp_army_control_morale_recovery multiplier = 5.00 }
+        remove_modifier = cmp_army_control_mobilization
+        add_modifier = { name = cmp_army_control_mobilization multiplier = 5.00 }
+        remove_modifier = cmp_army_control_experience
+        add_modifier = { name = cmp_army_control_experience multiplier = 5.00 }
+        remove_modifier = cmp_army_control_movement
+        add_modifier = { name = cmp_army_control_movement multiplier = 5.00 }
+        remove_modifier = cmp_army_control_supply
+        add_modifier = { name = cmp_army_control_supply multiplier = 0.90 }
+        remove_modifier = cmp_army_control_goods_cost
+        add_modifier = { name = cmp_army_control_goods_cost multiplier = 0.90 }
+        remove_modifier = cmp_army_control_wages
+        add_modifier = { name = cmp_army_control_wages multiplier = 0.90 }
+        remove_modifier = cmp_army_control_war_exhaustion
+        add_modifier = { name = cmp_army_control_war_exhaustion multiplier = 0.90 }
+    } set_variable = { name = cmp_army_controls_result value = 4 } }
+    if = { limit = { NOT = { has_variable = cmp_army_controls_result } } set_variable = { name = cmp_army_controls_result value = -1 } }
+    clear_saved_scope = cmp_army_controls_target
+}
+

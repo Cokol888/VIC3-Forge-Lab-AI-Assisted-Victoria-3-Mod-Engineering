@@ -1,0 +1,350 @@
+{
+  "schema_version": 2,
+  "phase": "beta18-final",
+  "title": "Navy Rework — beta18 Final",
+  "composition_amounts": [
+    0,
+    1,
+    3,
+    5,
+    10
+  ],
+  "creation_target": {
+    "type": "marked_owned_port_state",
+    "marker": "decree_sakuya_mark_state",
+    "requires_port": true,
+    "hq_scope": "region",
+    "selection_policy": "highest_gdp_marked_port_state"
+  },
+  "presets": [
+    {
+      "id": "escort",
+      "loc_key": "CMP_NAVY18_PRESET_ESCORT",
+      "composition": {
+        "modern_destroyer": 5,
+        "modern_cruiser": 3
+      }
+    },
+    {
+      "id": "battle",
+      "loc_key": "CMP_NAVY18_PRESET_BATTLE",
+      "composition": {
+        "modern_destroyer": 5,
+        "modern_cruiser": 3,
+        "modern_battleship": 1
+      }
+    },
+    {
+      "id": "carrier",
+      "loc_key": "CMP_NAVY18_PRESET_CARRIER",
+      "composition": {
+        "modern_destroyer": 5,
+        "modern_cruiser": 3,
+        "nuclear_carrier": 1
+      }
+    },
+    {
+      "id": "wolfpack",
+      "loc_key": "CMP_NAVY18_PRESET_WOLFPACK",
+      "composition": {
+        "nuclear_submarine": 5
+      }
+    },
+    {
+      "id": "amphibious",
+      "loc_key": "CMP_NAVY18_PRESET_AMPHIBIOUS",
+      "composition": {
+        "modern_destroyer": 3,
+        "modern_cruiser": 1,
+        "modern_battleship": 1
+      }
+    }
+  ],
+  "existing_fleet_mode": {
+    "status": "RUNTIME_PASS",
+    "implementation": "beta18-pre2.4 proved exact MilitaryFormation row scope and native fleet panel bridge; RC1 keeps this route frozen and regressions add-ships without legacy marker fallback",
+    "legacy_marker": "FALLBACK_ONLY",
+    "planned_replacement_phase": "COMPLETE_BETA18"
+  },
+  "transfer": {
+    "status": "RUNTIME_PASS",
+    "source_scope": "ship",
+    "receiver": "sakuya_mark_country_target",
+    "receiver_requirements": [
+      "not_player",
+      "has_port_country=yes"
+    ],
+    "single_effect": "set_ship_owner",
+    "batch_effect": "set_ship_owner_multiple",
+    "batch_cleanup": "source_country.clear_ownership_transfer_fleet=yes",
+    "batch_marker": "cmp_navy18_transfer_batch_target",
+    "batch_max": 20,
+    "blocked_ship_states": [
+      "is_in_battle=yes",
+      "is_flagship=yes",
+      "hit_points<=0"
+    ],
+    "selection_model": "exact ship marker from pre4 + persistent transfer basket on ship objects",
+    "runtime_gate": [
+      "single exact ship",
+      "batch same fleet",
+      "batch across fleets",
+      "receiver no port",
+      "self/missing receiver",
+      "battle/flagship invalidation",
+      "+1 day",
+      "save-load"
+    ],
+    "runtime_evidence": "beta18-RC1 full regression accepted by user: single, batch and cross-Fleet transfer surfaces work correctly."
+  },
+  "amphibious": {
+    "status": "DEFERRED_POST_BETA18_FINAL",
+    "phase": "post-beta18",
+    "rule": "Do not block Navy Final on an invasion assistant; revisit with Army/Military Operations rework."
+  },
+  "supply_ships": {
+    "status": "SUPPORTED_COUNTRY_RESERVE_WRITE_FORMATION_DIAGNOSTIC",
+    "phase": "beta18-final",
+    "write_surface": "add_supply_ships on country",
+    "read_surface": "num_assigned_supply_ships on military_formation (1.13.9)",
+    "direct_assignment": "DEFERRED_UNCONFIRMED"
+  },
+  "flagship": {
+    "status": "RUNTIME_PASS",
+    "phase": "beta18-pre4",
+    "rule": "write allowed only on exact marked ship, player-owned fleet, non-battle ship and catalog-eligible hull",
+    "runtime_evidence": "beta18-pre4 accepted by user: exact Ship selection and flagship set/unset work correctly."
+  },
+  "search": {
+    "status": "DEFERRED",
+    "reason": "SearchBar/SearchResult are documented as added in 1.13.9 while CMP baseline remains 1.13.*"
+  },
+  "provider_snapshot": {
+    "workshop_id": "3472248460",
+    "archive": "529340(1).zip",
+    "files": {
+      "common/ship_types/ztr_navy_ship_types.txt": "c56a2cbbe4b139dcec12b490a1ad0d01c58c5f95e6b4a3daf3f3ed3bd38c9353",
+      "common/ship_modifications/ztr_navy_ship_modifications.txt": "e36f63b6a6ff8888f6b6137cbd9f0a33f5769c5a3e0f8054d508e0faef2bbdb6",
+      "common/ship_modifications/ztr_vanilla_ship_modifications.txt": "60ab7e3dbaba11a9c986d8d2170d405ec00769fc0b15bca6fe437fe71a55bf98",
+      "common/ship_modification_slots/ztr_navy_ship_modification_slots.txt": "79344429cdb5605deb5fe18fcef177e212ac2948b2239d69a7426049df7137d0"
+    }
+  },
+  "vanilla_catalog": {
+    "status": "SUPPORTED_REFERENCE_SNAPSHOT",
+    "registry": "registry/naval_catalog.json",
+    "combat_hulls": 20,
+    "tech_res_hulls": 5,
+    "supply_hulls_read_only": 1,
+    "source_blob_sha": "0831a667153396240093b3967b1191a58bafa2f5",
+    "note": "Full combat hull catalog is now explicit; runtime remains authoritative for patched/provider behavior."
+  },
+  "composer_groups": [
+    {
+      "id": "capital",
+      "loc_key": "CMP_NAVY18_GROUP_CAPITAL",
+      "hulls": [
+        "ship_of_the_line",
+        "monitor",
+        "early_ironclad",
+        "coastal_defense_ship",
+        "modern_ironclad",
+        "pre_dreadnought",
+        "dreadnought",
+        "super_dreadnought",
+        "modern_battleship"
+      ]
+    },
+    {
+      "id": "cruiser",
+      "loc_key": "CMP_NAVY18_GROUP_CRUISER",
+      "hulls": [
+        "frigate",
+        "iron_frigate",
+        "troop_ship",
+        "protected_cruiser",
+        "armored_cruiser",
+        "light_cruiser",
+        "seaplane_tender",
+        "aircraft_carrier",
+        "modern_cruiser",
+        "nuclear_carrier"
+      ]
+    },
+    {
+      "id": "torpedo",
+      "loc_key": "CMP_NAVY18_GROUP_TORPEDO",
+      "hulls": [
+        "torpedo_boat",
+        "torpedo_boat_destroyer",
+        "submarine",
+        "destroyer",
+        "modern_destroyer",
+        "nuclear_submarine"
+      ]
+    }
+  ],
+  "template_workflow": {
+    "instant_spawn": {
+      "status": "SUPPORTED_DEFAULT_TEMPLATE",
+      "note": "script create_military_formation/create_ship receives ship_type, not a user ShipTemplate"
+    },
+    "native_designer": {
+      "status": "SUPPORTED_BRIDGE",
+      "entry": "PopupManager.ToggleShipDesignerPopup"
+    },
+    "native_template_build": {
+      "status": "MANUAL_BRIDGE",
+      "note": "use the native fleet card plus button / construction workflow for explicit templates until a safe direct template argument is proven"
+    }
+  },
+  "fleet_target_core": {
+    "status": "RUNTIME_PASS",
+    "source_of_truth": "per-row MilitaryFormation context + native fleet panel bridge proven in beta18-pre2.4",
+    "selection_action": "InformationPanelBar.OpenMilitaryFormationPanelTab(MilitaryFormation.Self, 'default')",
+    "operation_root": "per-row MilitaryFormation.MakeScope proven; global GetSelectedFormation is not required for exact row targeting",
+    "legacy_marker": "FALLBACK_ONLY",
+    "empty_fleet_add_ships": "RUNTIME_PASS_RC1",
+    "battle_gate": "BLOCK_WHEN_ANY_EXISTING_SHIP_IS_IN_BATTLE",
+    "persistence": "NO_NEW_CMP_TARGET_STATE; native panel/selection observed only",
+    "runtime_gate": "PASS in beta18-pre2.4 and full beta18-RC1 regression",
+    "selection_persistence": "not required for row-direct operations"
+  },
+  "composer2": {
+    "status": "RUNTIME_PASS",
+    "rows": 5,
+    "amounts": [
+      0,
+      1,
+      3,
+      5,
+      10
+    ],
+    "hulls": "registry/naval_catalog.json::combat_hulls",
+    "selection": "each row independently selects any of 25 combat hulls plus amount",
+    "duplicates": "ALLOWED_AND_ACCUMULATED",
+    "creation_strategy": "first non-zero row anchors create_military_formation; save_temporary_scope_as captures new fleet; remaining rows use create_ship against that exact temporary fleet scope",
+    "anchor_scope_key": "cmp_navy18_comp2_new_fleet",
+    "anchor_row_key": "cmp_navy18_comp2_anchor_row",
+    "template_policy": "instant creation uses default template for each ship type",
+    "runtime_gate": "one fleet; 2/3/5 rows; duplicate hull accumulation; locked technology; marked port; immediate/+1 day/save-load",
+    "runtime_result": "beta18-pre3 accepted by user: multi-row mixed fleet creation works correctly"
+  },
+  "ship_control": {
+    "status": "RUNTIME_PASS",
+    "scope": "ship",
+    "selector": "ordered_scope_ship",
+    "ordering": "power_projection",
+    "page_size": 20,
+    "max_slots": 100,
+    "selection_marker": "cmp_navy18_exact_ship_target",
+    "selection_slot_variable": "cmp_navy18_exact_ship_slot",
+    "selection_policy": "select non-destroyed ship at ordered position, then persist exact marker on ship",
+    "diagnostics": [
+      "ship_type",
+      "flagship",
+      "damaged",
+      "in_port",
+      "in_battle",
+      "hit_points_band",
+      "crew_band"
+    ],
+    "writes": [
+      "set_as_flagship=yes",
+      "set_as_flagship=no"
+    ],
+    "deferred_writes": [
+      "kill_ship",
+      "damage_ship_hull",
+      "kill_crew"
+    ],
+    "runtime_evidence": "USER_CONFIRMED_BETA18_PRE4_ALL_FUNCTIONS_WORK"
+  },
+  "retrofit": {
+    "status": "RUNTIME_PASS_NATIVE_BRIDGE",
+    "designer_entry": "PopupManager.ToggleShipDesignerPopup",
+    "fleet_panel_entry": "InformationPanelBar.OpenMilitaryFormationPanelTab(MilitaryFormation.Self, 'default')",
+    "documented_native_commands": [
+      "RetrofitShips",
+      "RetrofitShipsAndStation",
+      "CancelRetrofitShips"
+    ],
+    "direct_cmp_write": "DEFERRED_UNPROVEN_BINDING",
+    "reason": "Native retrofit commands operate native ShipSelection; CMP does not assume its exact Ship marker is the same selection object.",
+    "runtime_gate": [
+      "open designer",
+      "create/edit template",
+      "open selected fleet native panel",
+      "perform native Change Template -> Retrofit",
+      "verify selected ships/fleet",
+      "+1 day",
+      "save-load"
+    ],
+    "runtime_evidence": "beta18-RC1 full regression accepted by user: native Ship Designer / Fleet panel / Change Template -> Retrofit bridge works correctly."
+  },
+  "naval_logistics": {
+    "status": "RUNTIME_PASS",
+    "national_supply_effect": "add_supply_ships",
+    "supply_add_amounts": [
+      1,
+      10,
+      50,
+      100
+    ],
+    "country_maintenance_trigger": "supply_ship_maintenance_fulfillment",
+    "formation_assigned_target": "num_assigned_supply_ships",
+    "formation_assignment_write": "UNCONFIRMED_READ_ONLY",
+    "scope_policy": "reserve write = country; assigned diagnostics = military_formation",
+    "runtime_gate": [
+      "+1/+10/+50/+100 national reserve",
+      "maintenance feedback",
+      "selected fleet assigned supply diagnostics",
+      "+1 day",
+      "save-load"
+    ],
+    "runtime_evidence": "beta18-RC1 full regression accepted by user: national Supply reserve writes and selected-formation diagnostics work correctly."
+  },
+  "rc1": {
+    "status": "RUNTIME_PASS",
+    "release_freeze": true,
+    "new_gameplay_mechanics": 0,
+    "goal": "regress the complete Navy pipeline and remove stale candidate wording without changing proven mechanics",
+    "matrix": [
+      "fleet_composer_2_0",
+      "exact_fleet",
+      "existing_fleet_add_ships",
+      "exact_ship",
+      "flagship",
+      "single_transfer",
+      "batch_transfer_same_fleet",
+      "batch_transfer_cross_fleet",
+      "retrofit_native_bridge",
+      "national_supply_reserve",
+      "assigned_supply_diagnostics",
+      "port_sea_battle_damaged_destroyed",
+      "immediate_tick_save_load",
+      "workspace_90_100_115_130",
+      "no_hidden_fallback",
+      "no_ghost_target"
+    ],
+    "final_gate": "PASSED — beta18 Final promoted 2026-08-22",
+    "runtime_evidence": "USER_CONFIRMED_ALL_RC1_FUNCTIONS_WORK_CORRECTLY"
+  },
+  "final": {
+    "status": "RELEASED_RUNTIME_PASS",
+    "release_date": "2026-08-22",
+    "parent": "beta18-RC1",
+    "feature_freeze": true,
+    "new_gameplay_mechanics": 0,
+    "runtime_evidence": "USER_CONFIRMED_FULL_RC1_PASS",
+    "freeze_manifest": "registry/beta18_final_freeze.json",
+    "legacy_policy": "Hidden legacy Fleet Plans/fallback source retained to avoid post-acceptance gameplay risk; no production Workspace route depends on the legacy persistent fleet marker.",
+    "post_beta18": [
+      "Military Operations / Amphibious Assistant",
+      "Army Rework 2.0",
+      "beta19 Technology 2.0",
+      "beta20 Special & Quick",
+      "Economy / Markets / Regions Rework",
+      "Vanilla CMP Rework"
+    ]
+  }
+}

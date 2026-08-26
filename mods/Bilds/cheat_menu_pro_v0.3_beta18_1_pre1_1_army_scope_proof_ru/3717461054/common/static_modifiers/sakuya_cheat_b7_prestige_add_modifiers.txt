@@ -1,0 +1,4 @@
+sakuya_cheat_b7_prestige_add_player = {
+	icon = "gfx/interface/icons/notification_icons/power_bloc.dds"
+	country_prestige_add = 1
+}

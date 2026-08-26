@@ -1,0 +1,16 @@
+﻿# Military Target UX legacy marker triggers. beta18-pre2.4 Workspace keeps these legacy marker triggers fallback-only.
+# A fleet target is deliberately a single persistent marker on a formation.
+cmp_military_target_fleet_selected_trigger = {
+    any_military_formation = {
+        is_fleet = yes
+        has_variable = cmp_military_target_fleet
+    }
+}
+
+cmp_military_target_fleet_ready_trigger = {
+    any_military_formation = {
+        is_fleet = yes
+        has_variable = cmp_military_target_fleet
+        any_scope_ship = { is_in_battle = no }
+    }
+}

@@ -1,0 +1,460 @@
+namespace = sakuya_main_03_02
+
+sakuya_main_03_02.1 = {
+    type = country_event
+
+    title = SKY_B3_EVT_MARK_CHARACTER_TITLE
+    desc = SKY_B3_EVT_MARK_CHARACTER_DESC
+    flavor = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { has_variable = sakuya_main_03_02_force_empty_notice }
+                desc = SKY_B3_EVT_MARK_CHARACTER_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = { NOT = { has_variable = sakuya_main_03_02_has_any } }
+                desc = SKY_B3_EVT_MARK_CHARACTER_DESC_EMPTY
+            }
+            triggered_desc = {
+                trigger = { always = yes }
+                desc = SKY_B3_EVT_MARK_CHARACTER_DESC_HINT
+            }
+        }
+    }
+
+    event_image = { video = "gfx/event_pictures/southamerica_factory_opening.bk2" }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    duration = 0
+
+    trigger = { is_player = yes }
+
+    immediate = {
+        save_scope_as = sakuya_main_03_02_event_root
+        remove_variable = sakuya_main_03_02_slot_1
+        remove_variable = sakuya_main_03_02_slot_2
+        remove_variable = sakuya_main_03_02_slot_3
+        remove_variable = sakuya_main_03_02_slot_4
+        remove_variable = sakuya_main_03_02_slot_5
+        remove_variable = sakuya_main_03_02_slot_6
+        remove_variable = sakuya_main_03_02_slot_7
+        remove_variable = sakuya_main_03_02_slot_8
+        remove_variable = sakuya_main_03_02_has_next
+        remove_variable = sakuya_main_03_02_has_any
+
+        if = {
+            limit = { has_variable = sakuya_main_03_02_force_empty_notice }
+            remove_variable = sakuya_main_03_02_page_2
+            remove_variable = sakuya_main_03_02_force_empty_notice
+        }
+        else = {
+            every_country = {
+                limit = { has_variable = sakuya_mark_country_target }
+                save_scope_as = sakuya_main_03_02_source_country
+            }
+            if = {
+                limit = { exists = scope:sakuya_main_03_02_source_country }
+                scope:sakuya_main_03_02_source_country = {
+                    if = {
+                        limit = { scope:sakuya_main_03_02_event_root = { has_variable = sakuya_main_03_02_page_2 } }
+                        if = {
+                            limit = { exists = heir }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 7
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 6 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_1 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_1 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 8
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 7 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_2 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_2 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 9
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 8 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_3 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_3 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 10
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 9 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_4 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_4 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 11
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 10 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_5 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_5 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 12
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 11 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_6 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_6 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 13
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 12 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_7 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_7 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 14
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 13 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_8 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_8 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                        }
+                        else = {
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 8
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 7 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_1 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_1 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 9
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 8 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_2 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_2 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 10
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 9 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_3 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_3 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 11
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 10 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_4 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_4 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 12
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 11 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_5 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_5 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 13
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 12 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_6 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_6 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 14
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 13 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_7 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_7 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 15
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 14 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_8 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_8 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                        }
+                    }
+                    else = {
+                        if = { limit = { exists = ruler } ruler = { save_scope_as = sakuya_main_03_02_char_1 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_1 set_variable = sakuya_main_03_02_has_any } } }
+                        if = {
+                            limit = { exists = heir }
+                            heir = { save_scope_as = sakuya_main_03_02_char_2 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_2 set_variable = sakuya_main_03_02_has_any } }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 1
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 0 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_3 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_3 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 2
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 1 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_4 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_4 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 3
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 2 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_5 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_5 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 4
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 3 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_6 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_6 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 5
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 4 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_7 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_7 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 6
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 5 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_8 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_8 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                            if = {
+                                limit = { any_scope_character = { count >= 7 limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } } }
+                                scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_has_next }
+                            }
+                        }
+                        else = {
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 1
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 0 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_2 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_2 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 2
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 1 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_3 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_3 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 3
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 2 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_4 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_4 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 4
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 3 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_5 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_5 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 5
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 4 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_6 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_6 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 6
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 5 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_7 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_7 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                    if = {
+                        limit = {
+                            any_scope_character = {
+                                count >= 7
+                                limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } }
+                            }
+                        }
+                        ordered_scope_character = { position = 6 order_by = popularity check_range_bounds = no limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } save_scope_as = sakuya_main_03_02_char_8 scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_slot_8 set_variable = sakuya_main_03_02_has_any } }
+                    }
+                            if = {
+                                limit = { any_scope_character = { count >= 8 limit = { NOT = { is_ruler = yes } NOT = { is_heir = yes } } } }
+                                scope:sakuya_main_03_02_event_root = { set_variable = sakuya_main_03_02_has_next }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_1
+        trigger = { has_variable = sakuya_main_03_02_slot_1 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_1 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_2
+        trigger = { has_variable = sakuya_main_03_02_slot_2 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_2 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_3
+        trigger = { has_variable = sakuya_main_03_02_slot_3 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_3 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_4
+        trigger = { has_variable = sakuya_main_03_02_slot_4 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_4 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_5
+        trigger = { has_variable = sakuya_main_03_02_slot_5 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_5 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_6
+        trigger = { has_variable = sakuya_main_03_02_slot_6 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_6 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_7
+        trigger = { has_variable = sakuya_main_03_02_slot_7 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_7 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_SLOT_8
+        trigger = { has_variable = sakuya_main_03_02_slot_8 }
+        ai_chance = { base = 0 }
+        sakuya_b3_clear_all_marked_character_effect = yes
+        scope:sakuya_main_03_02_char_8 = { set_variable = sakuya_mark_character_target }
+        every_country = { limit = { is_player = yes } set_variable = sakuya_b3_marked_character_cached }
+        remove_variable = sakuya_main_03_02_page_2
+        set_variable = sakuya_main_force_show
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_NEXT
+        trigger = { has_variable = sakuya_main_03_02_has_next }
+        ai_chance = { base = 0 }
+        set_variable = sakuya_main_03_02_page_2
+        trigger_event = { id = sakuya_main_03_02.1 popup = yes }
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_BACK
+        trigger = { has_variable = sakuya_main_03_02_page_2 }
+        ai_chance = { base = 0 }
+        remove_variable = sakuya_main_03_02_page_2
+        trigger_event = { id = sakuya_main_03_02.1 popup = yes }
+    }
+
+    option = {
+        name = SKY_B3_EVT_MARK_CHARACTER_CLOSE
+        default_option = yes
+        ai_chance = { base = 100 }
+        set_variable = sakuya_main_force_show
+    }
+}
+

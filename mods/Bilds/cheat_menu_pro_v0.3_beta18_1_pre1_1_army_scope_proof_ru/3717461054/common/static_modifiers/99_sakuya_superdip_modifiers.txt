@@ -1,0 +1,89 @@
+sakuya_superdip_insult_01 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_02 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_03 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_04 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_05 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_06 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_07 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_08 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_09 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_10 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_11 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_12 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_13 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_14 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}
+
+sakuya_superdip_insult_15 = {
+	icon = gfx/interface/sakuya/hand.dds
+	country_prestige_from_army_power_projection_mult = -0.25
+	country_prestige_from_navy_power_projection_mult = -0.25
+}

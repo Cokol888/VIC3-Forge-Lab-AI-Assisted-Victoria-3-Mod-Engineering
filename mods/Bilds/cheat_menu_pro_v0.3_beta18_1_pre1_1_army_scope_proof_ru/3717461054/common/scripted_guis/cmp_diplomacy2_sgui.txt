@@ -1,0 +1,44 @@
+# Cheat Menu Pro v0.3 beta16-pre2 - audited Power Bloc membership contract
+
+cmp_diplomacy2_membership_player_join = {
+    scope = country
+    is_valid = { is_player = yes }
+    effect = { cmp_diplomacy2_membership_player_join_effect = yes }
+}
+
+cmp_diplomacy2_membership_country_join = {
+    scope = country
+    is_valid = { is_player = yes }
+    effect = { cmp_diplomacy2_membership_country_join_effect = yes }
+}
+
+cmp_diplomacy2_feedback_joined = {
+    scope = country
+    is_shown = { var:cmp_diplomacy2_feedback = 1 }
+}
+
+cmp_diplomacy2_feedback_bloc_required = {
+    scope = country
+    is_shown = { var:cmp_diplomacy2_feedback = -1 }
+}
+
+cmp_diplomacy2_feedback_country_required = {
+    scope = country
+    is_shown = { var:cmp_diplomacy2_feedback = -2 }
+}
+
+cmp_diplomacy2_feedback_already_member = {
+    scope = country
+    is_shown = { var:cmp_diplomacy2_feedback = -3 }
+}
+
+cmp_diplomacy2_feedback_join_failed = {
+    scope = country
+    is_shown = { var:cmp_diplomacy2_feedback = -4 }
+}
+
+cmp_diplomacy2_feedback_clear = {
+    scope = country
+    is_valid = { is_player = yes }
+    effect = { cmp_diplomacy2_feedback_clear_effect = yes }
+}

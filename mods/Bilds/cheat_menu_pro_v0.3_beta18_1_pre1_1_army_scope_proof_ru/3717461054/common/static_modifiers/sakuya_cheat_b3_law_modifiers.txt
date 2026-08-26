@@ -1,0 +1,43 @@
+﻿# Sakuya Cheat Menu Pro - BTN3 Tab6 Law Modifiers
+
+sakuya_cheat_b3_law_enactment_success = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_law_enactment_success_add = 1
+}
+
+sakuya_cheat_b3_law_enactment_time = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_law_enactment_speed_mult = 1
+}
+
+sakuya_cheat_b3_law_enactment_stall = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_law_enactment_stall_mult = 1
+}
+
+sakuya_cheat_b3_cannot_start_law_enactment = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_cannot_start_law_enactment_bool = yes
+}
+
+sakuya_cheat_b3_cannot_cancel_law_enactment = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_cannot_cancel_law_enactment_bool = yes
+}
+
+sakuya_cheat_b3_law_enactment_max_setbacks = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_law_enactment_max_setbacks_add = 1
+}
+
+sakuya_cheat_b3_enactment_boost = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_law_enactment_success_add = 0.2
+	country_law_enactment_speed_mult = 0.2
+}
+
+sakuya_cheat_b3_enactment_penalty = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_law_enactment_success_add = -0.2
+	country_law_enactment_speed_mult = -0.2
+}

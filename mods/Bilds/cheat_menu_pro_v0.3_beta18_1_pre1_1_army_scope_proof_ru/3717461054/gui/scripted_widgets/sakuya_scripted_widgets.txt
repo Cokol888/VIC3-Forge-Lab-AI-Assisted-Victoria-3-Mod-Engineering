@@ -1,0 +1,4 @@
+gui/sakuya_button.gui = sakuya_button
+gui/main/sakuya_main.gui = sakuya_main_window
+gui/list/sakuya_tag_index_alpha.gui = sakuya_tag_index_alpha_window
+gui/list/sakuya_culture_index.gui = sakuya_culture_index_window

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "release": "beta18 Final",
+  "final_build_id": "CMP-0.3-B18-FINAL-20260822",
+  "parent_build_id": "CMP-0.3-B18-RC1-20260822",
+  "parent_version": "0.3-beta18-RC1",
+  "runtime_acceptance": "USER_CONFIRMED_FULL_RC1_PASS",
+  "new_gameplay_mechanics": 0,
+  "semantic_hash_algorithm": "sha256(remove_comments_and_all_whitespace_outside_quoted_strings)",
+  "semantic_files": {
+    "common/scripted_guis/cmp_military_target_sgui.txt": "d49a165d1a389d97237c8d376b537a3d8356afd4956fd275e87e126c0790ea0d",
+    "common/scripted_effects/cmp_military_target_effects.txt": "dfd67c2e595e2ff7480a64b37ff68147c33da3c74b2c4a48704d521dfafc38b1",
+    "common/scripted_guis/cmp_fleet_builder_sgui.txt": "9f91112058dd71e1ad921b76f889e9ba604029393886c0146938c445a0fddb60",
+    "common/scripted_effects/cmp_fleet_builder_effects.txt": "dd3cc97c46c4701d096d41c03bf9aee4b8ed8ed4177b246ff93967e542007687",
+    "common/scripted_guis/cmp_navy18_catalog_sgui.txt": "6d1f4997aae9840c2efd77a7550e3127c65a56cffae2b692518318bd34efcc14",
+    "common/scripted_effects/cmp_navy18_catalog_effects.txt": "8e8343bdf8eaf43973a507905881a22f5ae023ac96fc3e7f5f80844cd83fa17d",
+    "common/scripted_guis/cmp_navy18_composition_sgui.txt": "071209ba0929a54bf33e069089f64debe2411c73d4c50be56a3ecff59b3d597b",
+    "common/scripted_effects/cmp_navy18_composition_effects.txt": "c4096fe0361b06208165cf5c96f7b8f5f25f2c91406f533bd0220e237fbd4ae7",
+    "common/scripted_guis/cmp_navy18_ship_control_sgui.txt": "3a8997195ebe1e1514cd62d0a7c245c26440cddf1f40a49dcf757a5a54d22413",
+    "common/scripted_effects/cmp_navy18_ship_control_effects.txt": "b424a4f4ce3283526dae8185cd7b226d1d9856cba01745523182234adc99d52d",
+    "common/scripted_guis/cmp_navy18_transfer_sgui.txt": "917ad0ca97f49bef84cb1cb6535cf3be5ffcabbc092ab0152dc491591dea9b41",
+    "common/scripted_effects/cmp_navy18_transfer_effects.txt": "ffc1c0447a04418dedba9ee937ea7af4cd62a9683b953b55fd7e8fe080d8c7a5",
+    "common/scripted_guis/cmp_navy18_logistics_sgui.txt": "3b4fd94a9e84a380ed4f89ed1355cec7756a29d82ebddc47041fb3044884639a",
+    "common/scripted_effects/cmp_navy18_logistics_effects.txt": "5ca16fd1361ca2a5330fc4535e12c8e589133c223ed3703d4916490548d421c8",
+    "generated/workspace_shell.gui.txt": "eb69fd1ed0e9fc654da4f4ef021ec35522908263317624675f2b626fee1c5e0b"
+  },
+  "raw_data_files": {
+    "registry/naval_catalog.json": "383255301117140df0f7017ef5402f1426ed88b5aaaf5329c4ac4b8c7cbaa52b",
+    "registry/ships.json": "372e4678b9ae08d57fc7c09a84dcdd2a8ef9ffdba222945106dc51dc6386ba68",
+    "registry/fleet_builder.json": "a5230a259426b5913b032d9f2ddf96b43486ae5ead2a4d166b402561ffae082a"
+  }
+}

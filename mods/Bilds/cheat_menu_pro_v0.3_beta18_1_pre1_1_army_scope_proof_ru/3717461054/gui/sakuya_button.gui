@@ -1,0 +1,224 @@
+window = {
+    visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+    layer = top
+    name = "sakuya_button"
+    parentanchor = bottom
+    position = { 0 -180 }
+    size = { 80 104 }
+    allow_outside = yes
+    movable = yes
+    onmousehierarchyenter = "[GetVariableSystem.Set('sakuya_button_drag_hover', 'yes')]"
+    onmousehierarchyleave = "[GetVariableSystem.Clear('sakuya_button_drag_hover')]"
+    using = Animation_ShowHide_Quick
+
+    widget = {
+        parentanchor = top
+        position = { 0 0 }
+        size = { 80 24 }
+        alwaystransparent = no
+        alpha = 0
+    }
+
+    widget = {
+        parentanchor = top|right
+        position = { -2 2 }
+        size = { 35 35 }
+        visible = "[And(GetVariableSystem.Exists('sakuya_button_drag_hover'), Not(GetVariableSystem.Exists('sakuya_b9_hide_start_button')))]"
+        alwaystransparent = yes
+        tooltip = "SKY_STARTBTN_MOVE"
+        icon = {
+            parentanchor = center
+            size = { 35 35 }
+            texture = "gfx/interface/sakuya/hand.dds"
+            alpha = 0.8
+            alwaystransparent = yes
+        }
+    }
+
+    widget = {
+        name = "sakuya_start_button_guide"
+        visible = "[And(Not(GetScriptedGui('sakuya_start_button_seen_check').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)), And(Not(GetVariableSystem.Exists('sakuya_kawashiro_force_visible')), Not(GetVariableSystem.Exists('sakuya_b9_hide_start_button'))))]"
+        parentanchor = bottom
+        position = { 76 3 }
+        size = { 400 80 }
+        allow_outside = yes
+        alwaystransparent = yes
+        state = { trigger_on_create = yes name = sakuya_start_guide_move_left position = { 76 3 } duration = 0.8 next = sakuya_start_guide_move_right using = Animation_Curve_Default }
+        state = { name = sakuya_start_guide_move_right position = { 86 3 } duration = 0.8 next = sakuya_start_guide_move_left using = Animation_Curve_Default }
+        icon = {
+            size = { 400 80 }
+            texture = "gfx/interface/sakuya/main/bk.png"
+            alwaystransparent = yes
+        }
+        widget = {
+            position = { 19 18 }
+            size = { 44 44 }
+            alwaystransparent = yes
+            state = { trigger_on_create = yes name = sakuya_start_guide_arrow_left position = { 19 18 } duration = 0.28 next = sakuya_start_guide_arrow_right using = Animation_Curve_Default }
+            state = { name = sakuya_start_guide_arrow_right position = { 28 18 } duration = 0.28 next = sakuya_start_guide_arrow_left using = Animation_Curve_Default }
+            icon = {
+                size = { 44 44 }
+                texture = "gfx/interface/icons/generic_icons/arrow_left.dds"
+                alwaystransparent = yes
+                color = { 0.78 0.64 0.36 1 }
+            }
+        }
+        textbox = {
+            position = { 82 8 }
+            size = { 300 64 }
+            maximumsize = { 300 64 }
+            font = "OpenSans"
+            fontsize = 16
+            fontsize_min = 12
+            autoresize = no
+            multiline = yes
+            align = left|nobaseline
+            text = "SKY_1_1_START_BUTTON_GUIDE"
+        }
+    }
+
+    widget = {
+        name = "sakuya_start_button_glow"
+        visible = "[And(Not(GetScriptedGui('sakuya_start_button_seen_check').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)), And(Not(GetVariableSystem.Exists('sakuya_kawashiro_force_visible')), Not(GetVariableSystem.Exists('sakuya_b9_hide_start_button'))))]"
+        parentanchor = bottom
+        position = { -42 40 }
+        size = { 154 154 }
+        alpha = 0.45
+        allow_outside = yes
+        alwaystransparent = yes
+        state = { trigger_on_create = yes name = sakuya_start_guide_glow_low alpha = 0.35 duration = 0.7 next = sakuya_start_guide_glow_high using = Animation_Curve_Default }
+        state = { name = sakuya_start_guide_glow_high alpha = 0.85 duration = 0.7 next = sakuya_start_guide_glow_low using = Animation_Curve_Default }
+        icon = {
+            size = { 154 154 }
+            texture = "gfx/interface/sakuya/light.dds"
+            alwaystransparent = yes
+        }
+    }
+
+    sidepanel_button_small = {
+        visible = "[And(Not(GetVariableSystem.Exists('sakuya_kawashiro_force_visible')), And(Not(GetVariableSystem.Exists('sakuya_b9_hide_start_button')), Not(GetVariableSystem.Exists('sakuya_b9_disable_shortcut'))))]"
+        tooltip = "SKY_1_2_START_BUTTON_WITH_CULTURE_TT"
+        onclick = "[GetScriptedGui('sakuya_start_button_seen_set').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        onclick = "[GetVariableSystem.Toggle('sakuya_main_visible')]"
+        click_modifiers = {
+            onalt = "[GetScriptedGui('sakuya_start_button_seen_set').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            onalt = "[GetVariableSystem.Set('sakuya_list_culture_window', 'alt_idx')]"
+            onalt = "[GetVariableSystem.Clear('sakuya_main_visible')]"
+            onalt = "[GetScriptedGui('sakuya_main_force_show_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        }
+        using = maplens_generic_sound
+        input_action = "go_to_details"
+
+        name = "sakuya_shortcut_button"
+        parentanchor = bottom
+        position = { 0 0 }
+        size = { 70 70 }
+        alpha = 1
+
+        icon = {
+            size = { 70 70 }
+            visible = "[GetVariableSystem.Exists('sakuya_button_drag_hover')]"
+            texture = "gfx/interface/sakuya/powerbutton_on.png"
+        }
+        icon = {
+            size = { 70 70 }
+            visible = "[Not(GetVariableSystem.Exists('sakuya_button_drag_hover'))]"
+            texture = "gfx/interface/sakuya/powerbutton_off.png"
+        }
+
+        state = {
+            name = _mouse_enter
+            alpha = 1
+            duration = 0.7
+            using = Animation_Curve_Default
+        }
+
+        state = {
+            name = _mouse_leave
+            alpha = 0.7
+            duration = 0.2
+            using = Animation_Curve_Default
+        }
+    }
+
+    sidepanel_button_small = {
+        visible = "[And(Not(GetVariableSystem.Exists('sakuya_kawashiro_force_visible')), And(Not(GetVariableSystem.Exists('sakuya_b9_hide_start_button')), GetVariableSystem.Exists('sakuya_b9_disable_shortcut')))]"
+        tooltip = "SKY_1_2_START_BUTTON_WITH_CULTURE_TT"
+        onclick = "[GetScriptedGui('sakuya_start_button_seen_set').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        onclick = "[GetVariableSystem.Toggle('sakuya_main_visible')]"
+        click_modifiers = {
+            onalt = "[GetScriptedGui('sakuya_start_button_seen_set').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            onalt = "[GetVariableSystem.Set('sakuya_list_culture_window', 'alt_idx')]"
+            onalt = "[GetVariableSystem.Clear('sakuya_main_visible')]"
+            onalt = "[GetScriptedGui('sakuya_main_force_show_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        }
+        using = maplens_generic_sound
+
+        name = "sakuya_shortcut_button_disabled"
+        parentanchor = bottom
+        position = { 0 0 }
+        size = { 70 70 }
+        alpha = 1
+
+        icon = {
+            size = { 70 70 }
+            visible = "[GetVariableSystem.Exists('sakuya_button_drag_hover')]"
+            texture = "gfx/interface/sakuya/powerbutton_on.png"
+        }
+        icon = {
+            size = { 70 70 }
+            visible = "[Not(GetVariableSystem.Exists('sakuya_button_drag_hover'))]"
+            texture = "gfx/interface/sakuya/powerbutton_off.png"
+        }
+
+        state = {
+            name = _mouse_enter
+            alpha = 1
+            duration = 0.7
+            using = Animation_Curve_Default
+        }
+
+        state = {
+            name = _mouse_leave
+            alpha = 0.7
+            duration = 0.2
+            using = Animation_Curve_Default
+        }
+    }
+
+    sidepanel_button_small = {
+        visible = "[And(Not(GetVariableSystem.Exists('sakuya_kawashiro_force_visible')), GetVariableSystem.Exists('sakuya_b9_hide_start_button'))]"
+        tooltip = "SKY_1_2_START_BUTTON_WITH_CULTURE_TT"
+        onclick = "[GetScriptedGui('sakuya_start_button_seen_set').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        onclick = "[GetVariableSystem.Toggle('sakuya_main_visible')]"
+        click_modifiers = {
+            onalt = "[GetScriptedGui('sakuya_start_button_seen_set').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            onalt = "[GetVariableSystem.Set('sakuya_list_culture_window', 'alt_idx')]"
+            onalt = "[GetVariableSystem.Clear('sakuya_main_visible')]"
+            onalt = "[GetScriptedGui('sakuya_main_force_show_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        }
+        using = maplens_generic_sound
+        input_action = "go_to_details"
+
+        name = "sakuya_shortcut_button_hidden_display"
+        parentanchor = bottom
+        position = { 0 0 }
+        size = { 70 70 }
+        alpha = 0
+        alwaystransparent = yes
+
+        state = {
+            name = _mouse_enter
+            alpha = 0
+            duration = 0.1
+            using = Animation_Curve_Default
+        }
+
+        state = {
+            name = _mouse_leave
+            alpha = 0
+            duration = 0.1
+            using = Animation_Curve_Default
+        }
+    }
+}

@@ -1,0 +1,765 @@
+﻿# Sakuya Cheat Menu Pro - Block 5 helper effects
+sakuya_b5_clear_selection_effect = {
+	remove_variable = sakuya_b5_sel_ig_armed_forces
+	remove_variable = sakuya_b5_sel_ig_devout
+	remove_variable = sakuya_b5_sel_ig_industrialists
+	remove_variable = sakuya_b5_sel_ig_intelligentsia
+	remove_variable = sakuya_b5_sel_ig_landowners
+	remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie
+	remove_variable = sakuya_b5_sel_ig_rural_folk
+	remove_variable = sakuya_b5_sel_ig_trade_unions
+}
+
+# ------------------------------
+# Active-state refresh
+# ------------------------------
+sakuya_b5_refresh_selected_approval_active_effect = {
+	remove_variable = sakuya_b5_sel_approval_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_approval_mult
+		}
+		set_variable = sakuya_b5_sel_approval_active
+	}
+}
+
+sakuya_b5_refresh_selected_pol_str_mult_active_effect = {
+	remove_variable = sakuya_b5_sel_pol_str_mult_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_pol_str_mult_mult
+		}
+		set_variable = sakuya_b5_sel_pol_str_mult_active
+	}
+}
+
+sakuya_b5_refresh_selected_pol_str_factor_active_effect = {
+	remove_variable = sakuya_b5_sel_pol_str_factor_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_pol_str_factor_mult
+		}
+		set_variable = sakuya_b5_sel_pol_str_factor_active
+	}
+}
+
+sakuya_b5_refresh_selected_pop_attraction_active_effect = {
+	remove_variable = sakuya_b5_sel_pop_attraction_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_pop_attraction_mult
+		}
+		set_variable = sakuya_b5_sel_pop_attraction_active
+	}
+}
+
+sakuya_b5_refresh_selected_amenability_active_effect = {
+	remove_variable = sakuya_b5_sel_amenability_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_amenability_mult
+		}
+		set_variable = sakuya_b5_sel_amenability_active
+	}
+}
+
+sakuya_b5_refresh_selected_in_gov_approval_active_effect = {
+	remove_variable = sakuya_b5_sel_in_gov_approval_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_in_gov_approval_mult
+		}
+		set_variable = sakuya_b5_sel_in_gov_approval_active
+	}
+}
+
+sakuya_b5_refresh_selected_in_gov_attraction_active_effect = {
+	remove_variable = sakuya_b5_sel_in_gov_attraction_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_in_gov_attraction_mult
+		}
+		set_variable = sakuya_b5_sel_in_gov_attraction_active
+	}
+}
+
+sakuya_b5_refresh_selected_in_opp_approval_active_effect = {
+	remove_variable = sakuya_b5_sel_in_opp_approval_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_in_opp_approval_mult
+		}
+		set_variable = sakuya_b5_sel_in_opp_approval_active
+	}
+}
+
+sakuya_b5_refresh_selected_in_opp_agitator_popularity_active_effect = {
+	remove_variable = sakuya_b5_sel_in_opp_agitator_popularity_active
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_in_opp_agitator_popularity_mult
+		}
+		set_variable = sakuya_b5_sel_in_opp_agitator_popularity_active
+	}
+}
+
+sakuya_b5_refresh_all_selected_active_effect = {
+	sakuya_b5_refresh_selected_approval_active_effect = yes
+	sakuya_b5_refresh_selected_pol_str_mult_active_effect = yes
+	sakuya_b5_refresh_selected_pol_str_factor_active_effect = yes
+	sakuya_b5_refresh_selected_pop_attraction_active_effect = yes
+	sakuya_b5_refresh_selected_amenability_active_effect = yes
+	sakuya_b5_refresh_selected_in_gov_approval_active_effect = yes
+	sakuya_b5_refresh_selected_in_gov_attraction_active_effect = yes
+	sakuya_b5_refresh_selected_in_opp_approval_active_effect = yes
+	sakuya_b5_refresh_selected_in_opp_agitator_popularity_active_effect = yes
+}
+
+# ------------------------------
+# Selected IG - apply modifier to each selected IG
+# Generic helper: removes old modifier, re-adds with current multiplier
+# ------------------------------
+sakuya_b5_apply_sel_ig_modifier_effect = {
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_armed_forces
+			exists = ig:ig_armed_forces
+		}
+		ig:ig_armed_forces = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_devout
+			exists = ig:ig_devout
+		}
+		ig:ig_devout = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_industrialists
+			exists = ig:ig_industrialists
+		}
+		ig:ig_industrialists = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_intelligentsia
+			exists = ig:ig_intelligentsia
+		}
+		ig:ig_intelligentsia = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_landowners
+			exists = ig:ig_landowners
+		}
+		ig:ig_landowners = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_petty_bourgeoisie
+			exists = ig:ig_petty_bourgeoisie
+		}
+		ig:ig_petty_bourgeoisie = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_rural_folk
+			exists = ig:ig_rural_folk
+		}
+		ig:ig_rural_folk = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_trade_unions
+			exists = ig:ig_trade_unions
+		}
+		ig:ig_trade_unions = {
+			remove_modifier = $MOD$
+			if = {
+				limit = {
+					root = {
+						has_variable = $VAR$
+					}
+				}
+				add_modifier = {
+					name = $MOD$
+					multiplier = root.var:$VAR$
+				}
+			}
+		}
+	}
+}
+
+sakuya_b5_clear_sel_ig_modifier_effect = {
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_armed_forces
+			exists = ig:ig_armed_forces
+		}
+		ig:ig_armed_forces = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_devout
+			exists = ig:ig_devout
+		}
+		ig:ig_devout = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_industrialists
+			exists = ig:ig_industrialists
+		}
+		ig:ig_industrialists = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_intelligentsia
+			exists = ig:ig_intelligentsia
+		}
+		ig:ig_intelligentsia = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_landowners
+			exists = ig:ig_landowners
+		}
+		ig:ig_landowners = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_petty_bourgeoisie
+			exists = ig:ig_petty_bourgeoisie
+		}
+		ig:ig_petty_bourgeoisie = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_rural_folk
+			exists = ig:ig_rural_folk
+		}
+		ig:ig_rural_folk = {
+			remove_modifier = $MOD$
+		}
+	}
+	if = {
+		limit = {
+			has_variable = sakuya_b5_sel_ig_trade_unions
+			exists = ig:ig_trade_unions
+		}
+		ig:ig_trade_unions = {
+			remove_modifier = $MOD$
+		}
+	}
+}
+
+# ------------------------------
+# Delta helpers for selected IG modifiers
+# ------------------------------
+sakuya_b5_apply_sel_approval_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_approval_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_approval_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_approval_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_approval_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_approval_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_approval
+		VAR = sakuya_b5_sel_approval_mult
+	}
+	sakuya_b5_refresh_selected_approval_active_effect = yes
+}
+
+sakuya_b5_apply_sel_pol_str_mult_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_pol_str_mult_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_pol_str_mult_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_pol_str_mult_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_pol_str_mult_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_pol_str_mult_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pol_str_mult
+		VAR = sakuya_b5_sel_pol_str_mult_mult
+	}
+	sakuya_b5_refresh_selected_pol_str_mult_active_effect = yes
+}
+
+sakuya_b5_apply_sel_pol_str_factor_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_pol_str_factor_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_pol_str_factor_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_pol_str_factor_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_pol_str_factor_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_pol_str_factor_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pol_str_factor
+		VAR = sakuya_b5_sel_pol_str_factor_mult
+	}
+	sakuya_b5_refresh_selected_pol_str_factor_active_effect = yes
+}
+
+sakuya_b5_apply_sel_pop_attraction_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_pop_attraction_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_pop_attraction_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_pop_attraction_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_pop_attraction_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_pop_attraction_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pop_attraction
+		VAR = sakuya_b5_sel_pop_attraction_mult
+	}
+	sakuya_b5_refresh_selected_pop_attraction_active_effect = yes
+}
+
+sakuya_b5_apply_sel_amenability_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_amenability_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_amenability_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_amenability_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_amenability_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_amenability_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_amenability
+		VAR = sakuya_b5_sel_amenability_mult
+	}
+	sakuya_b5_refresh_selected_amenability_active_effect = yes
+}
+
+sakuya_b5_apply_sel_in_gov_approval_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_in_gov_approval_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_in_gov_approval_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_in_gov_approval_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_in_gov_approval_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_in_gov_approval_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_gov_approval
+		VAR = sakuya_b5_sel_in_gov_approval_mult
+	}
+	sakuya_b5_refresh_selected_in_gov_approval_active_effect = yes
+}
+
+sakuya_b5_apply_sel_in_gov_attraction_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_in_gov_attraction_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_in_gov_attraction_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_in_gov_attraction_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_in_gov_attraction_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_in_gov_attraction_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_gov_attraction
+		VAR = sakuya_b5_sel_in_gov_attraction_mult
+	}
+	sakuya_b5_refresh_selected_in_gov_attraction_active_effect = yes
+}
+
+sakuya_b5_apply_sel_in_opp_approval_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_in_opp_approval_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_in_opp_approval_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_in_opp_approval_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_in_opp_approval_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_in_opp_approval_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_opp_approval
+		VAR = sakuya_b5_sel_in_opp_approval_mult
+	}
+	sakuya_b5_refresh_selected_in_opp_approval_active_effect = yes
+}
+
+sakuya_b5_apply_sel_in_opp_agitator_popularity_delta_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = sakuya_b5_sel_in_opp_agitator_popularity_mult
+			}
+		}
+		set_variable = {
+			name = sakuya_b5_sel_in_opp_agitator_popularity_mult
+			value = 0
+		}
+	}
+	change_variable = {
+		name = sakuya_b5_sel_in_opp_agitator_popularity_mult
+		add = $DELTA$
+	}
+	if = {
+		limit = {
+			var:sakuya_b5_sel_in_opp_agitator_popularity_mult = 0
+		}
+		remove_variable = sakuya_b5_sel_in_opp_agitator_popularity_mult
+	}
+	sakuya_b5_apply_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_opp_agitator_popularity
+		VAR = sakuya_b5_sel_in_opp_agitator_popularity_mult
+	}
+	sakuya_b5_refresh_selected_in_opp_agitator_popularity_active_effect = yes
+}
+
+# ------------------------------
+# Clear effects for selected IG modifiers
+# ------------------------------
+sakuya_b5_run_sel_approval_clear_effect = {
+	remove_variable = sakuya_b5_sel_approval_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_approval
+	}
+	sakuya_b5_refresh_selected_approval_active_effect = yes
+}
+
+sakuya_b5_run_sel_pol_str_mult_clear_effect = {
+	remove_variable = sakuya_b5_sel_pol_str_mult_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pol_str_mult
+	}
+	sakuya_b5_refresh_selected_pol_str_mult_active_effect = yes
+}
+
+sakuya_b5_run_sel_pol_str_factor_clear_effect = {
+	remove_variable = sakuya_b5_sel_pol_str_factor_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pol_str_factor
+	}
+	sakuya_b5_refresh_selected_pol_str_factor_active_effect = yes
+}
+
+sakuya_b5_run_sel_pop_attraction_clear_effect = {
+	remove_variable = sakuya_b5_sel_pop_attraction_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pop_attraction
+	}
+	sakuya_b5_refresh_selected_pop_attraction_active_effect = yes
+}
+
+sakuya_b5_run_sel_amenability_clear_effect = {
+	remove_variable = sakuya_b5_sel_amenability_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_amenability
+	}
+	sakuya_b5_refresh_selected_amenability_active_effect = yes
+}
+
+sakuya_b5_run_sel_in_gov_approval_clear_effect = {
+	remove_variable = sakuya_b5_sel_in_gov_approval_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_gov_approval
+	}
+	sakuya_b5_refresh_selected_in_gov_approval_active_effect = yes
+}
+
+sakuya_b5_run_sel_in_gov_attraction_clear_effect = {
+	remove_variable = sakuya_b5_sel_in_gov_attraction_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_gov_attraction
+	}
+	sakuya_b5_refresh_selected_in_gov_attraction_active_effect = yes
+}
+
+sakuya_b5_run_sel_in_opp_approval_clear_effect = {
+	remove_variable = sakuya_b5_sel_in_opp_approval_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_opp_approval
+	}
+	sakuya_b5_refresh_selected_in_opp_approval_active_effect = yes
+}
+
+sakuya_b5_run_sel_in_opp_agitator_popularity_clear_effect = {
+	remove_variable = sakuya_b5_sel_in_opp_agitator_popularity_mult
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_opp_agitator_popularity
+	}
+	sakuya_b5_refresh_selected_in_opp_agitator_popularity_active_effect = yes
+}
+
+# ------------------------------
+# Clear all selected modifiers
+# ------------------------------
+sakuya_b5_clear_selected_all_modifiers_effect = {
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_approval
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pol_str_mult
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pol_str_factor
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_pop_attraction
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_amenability
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_gov_approval
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_gov_attraction
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_opp_approval
+	}
+	sakuya_b5_clear_sel_ig_modifier_effect = {
+		MOD = sakuya_cheat_b5_sel_in_opp_agitator_popularity
+	}
+	remove_variable = sakuya_b5_sel_approval_mult
+	remove_variable = sakuya_b5_sel_pol_str_mult_mult
+	remove_variable = sakuya_b5_sel_pol_str_factor_mult
+	remove_variable = sakuya_b5_sel_pop_attraction_mult
+	remove_variable = sakuya_b5_sel_amenability_mult
+	remove_variable = sakuya_b5_sel_in_gov_approval_mult
+	remove_variable = sakuya_b5_sel_in_gov_attraction_mult
+	remove_variable = sakuya_b5_sel_in_opp_approval_mult
+	remove_variable = sakuya_b5_sel_in_opp_agitator_popularity_mult
+	remove_variable = sakuya_b5_sel_approval_active
+	remove_variable = sakuya_b5_sel_pol_str_mult_active
+	remove_variable = sakuya_b5_sel_pol_str_factor_active
+	remove_variable = sakuya_b5_sel_pop_attraction_active
+	remove_variable = sakuya_b5_sel_amenability_active
+	remove_variable = sakuya_b5_sel_in_gov_approval_active
+	remove_variable = sakuya_b5_sel_in_gov_attraction_active
+	remove_variable = sakuya_b5_sel_in_opp_approval_active
+	remove_variable = sakuya_b5_sel_in_opp_agitator_popularity_active
+}
+
+# ------------------------------
+# Clear all generic (all-IG) modifiers
+# ------------------------------
+sakuya_b5_clear_all_generic_modifiers_effect = {
+	every_interest_group = {
+		remove_modifier = sakuya_cheat_b5_all_approval
+		remove_modifier = sakuya_cheat_b5_all_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_all_pop_attraction
+	}
+	remove_variable = sakuya_b5_all_approval_mult
+	remove_variable = sakuya_b5_all_approval_active
+	remove_variable = sakuya_b5_all_pol_str_mult_value
+	remove_variable = sakuya_b5_all_pol_str_mult_active
+	remove_variable = sakuya_b5_all_pop_attraction_mult
+	remove_variable = sakuya_b5_all_pop_attraction_active
+}

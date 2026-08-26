@@ -1,0 +1,7645 @@
+# Sakuya Cheat Menu Pro - Culture list scripted guis
+# Generated from Victoria 3 common/cultures definitions.
+
+sakuya_list_culture_clear_selected = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_clear_selection_vars_effect = yes
+	}
+}
+
+sakuya_list_culture_select_idx_cajun = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_cajun TARGET = cu:cajun }
+	}
+}
+
+sakuya_list_culture_select_idx_promethean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_promethean TARGET = cu:promethean }
+	}
+}
+
+sakuya_list_culture_select_idx_yemenite = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yemenite TARGET = cu:yemenite }
+	}
+}
+
+sakuya_list_culture_select_idx_dinka = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_dinka TARGET = cu:dinka }
+	}
+}
+
+sakuya_list_culture_select_idx_east_german = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_east_german TARGET = cu:east_german }
+	}
+}
+
+sakuya_list_culture_select_idx_central_american = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_central_american TARGET = cu:central_american }
+	}
+}
+
+sakuya_list_culture_select_idx_fon = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_fon TARGET = cu:fon }
+	}
+}
+
+sakuya_list_culture_select_idx_danish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_danish TARGET = cu:danish }
+	}
+}
+
+sakuya_list_culture_select_idx_ukrainian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ukrainian TARGET = cu:ukrainian }
+	}
+}
+
+sakuya_list_culture_select_idx_uzbek = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_uzbek TARGET = cu:uzbek }
+	}
+}
+
+sakuya_list_culture_select_idx_udmurt = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_udmurt TARGET = cu:udmurt }
+	}
+}
+
+sakuya_list_culture_select_idx_ugrian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ugrian TARGET = cu:ugrian }
+	}
+}
+
+sakuya_list_culture_select_idx_uruguayan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_uruguayan TARGET = cu:uruguayan }
+	}
+}
+
+sakuya_list_culture_select_idx_armenian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_armenian TARGET = cu:armenian }
+	}
+}
+
+sakuya_list_culture_select_idx_assyrian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_assyrian TARGET = cu:assyrian }
+	}
+}
+
+sakuya_list_culture_select_idx_amazonian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_amazonian TARGET = cu:amazonian }
+	}
+}
+
+sakuya_list_culture_select_idx_amazonic = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_amazonic TARGET = cu:amazonic }
+	}
+}
+
+sakuya_list_culture_select_idx_vietnamese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_vietnamese TARGET = cu:vietnamese }
+	}
+}
+
+sakuya_list_culture_select_idx_tagalog = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tagalog TARGET = cu:tagalog }
+	}
+}
+
+sakuya_list_culture_select_idx_ibo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ibo TARGET = cu:ibo }
+	}
+}
+
+sakuya_list_culture_select_idx_iberian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_iberian TARGET = cu:iberian }
+	}
+}
+
+sakuya_list_culture_select_idx_ibibio = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ibibio TARGET = cu:ibibio }
+	}
+}
+
+sakuya_list_culture_select_idx_ilocano = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ilocano TARGET = cu:ilocano }
+	}
+}
+
+sakuya_list_culture_select_idx_lao = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lao TARGET = cu:lao }
+	}
+}
+
+sakuya_list_culture_select_idx_russian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_russian TARGET = cu:russian }
+	}
+}
+
+sakuya_list_culture_select_idx_paulista = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_paulista TARGET = cu:paulista }
+	}
+}
+
+sakuya_list_culture_select_idx_bulgarian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bulgarian TARGET = cu:bulgarian }
+	}
+}
+
+sakuya_list_culture_select_idx_sindi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sindi TARGET = cu:sindi }
+	}
+}
+
+sakuya_list_culture_select_idx_baluchi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_baluchi TARGET = cu:baluchi }
+	}
+}
+
+sakuya_list_culture_select_idx_sinhala = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sinhala TARGET = cu:sinhala }
+	}
+}
+
+sakuya_list_culture_select_idx_quechua = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_quechua TARGET = cu:quechua }
+	}
+}
+
+sakuya_list_culture_select_idx_kashmiri = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kashmiri TARGET = cu:kashmiri }
+	}
+}
+
+sakuya_list_culture_select_idx_karen = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_karen TARGET = cu:karen }
+	}
+}
+
+sakuya_list_culture_select_idx_khmu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_khmu TARGET = cu:khmu }
+	}
+}
+
+sakuya_list_culture_select_idx_croat = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_croat TARGET = cu:croat }
+	}
+}
+
+sakuya_list_culture_select_idx_cree = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_cree TARGET = cu:cree }
+	}
+}
+
+sakuya_list_culture_select_idx_kachin = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kachin TARGET = cu:kachin }
+	}
+}
+
+sakuya_list_culture_select_idx_kru = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kru TARGET = cu:kru }
+	}
+}
+
+sakuya_list_culture_select_idx_nez_perce = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nez_perce TARGET = cu:nez_perce }
+	}
+}
+
+sakuya_list_culture_select_idx_icelandic = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_icelandic TARGET = cu:icelandic }
+	}
+}
+
+sakuya_list_culture_select_idx_circassian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_circassian TARGET = cu:circassian }
+	}
+}
+
+sakuya_list_culture_select_idx_chewa = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_chewa TARGET = cu:chewa }
+	}
+}
+
+sakuya_list_culture_select_idx_cherokee = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_cherokee TARGET = cu:cherokee }
+	}
+}
+
+sakuya_list_culture_select_idx_chhattisgarhi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_chhattisgarhi TARGET = cu:chhattisgarhi }
+	}
+}
+
+sakuya_list_culture_select_idx_galician = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_galician TARGET = cu:galician }
+	}
+}
+
+sakuya_list_culture_select_idx_cariban = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_cariban TARGET = cu:cariban }
+	}
+}
+
+sakuya_list_culture_select_idx_catalan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_catalan TARGET = cu:catalan }
+	}
+}
+
+sakuya_list_culture_select_idx_nuer = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nuer TARGET = cu:nuer }
+	}
+}
+
+sakuya_list_culture_select_idx_nuba = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nuba TARGET = cu:nuba }
+	}
+}
+
+sakuya_list_culture_select_idx_hungarian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hungarian TARGET = cu:hungarian }
+	}
+}
+
+sakuya_list_culture_select_idx_north_andean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_north_andean TARGET = cu:north_andean }
+	}
+}
+
+sakuya_list_culture_select_idx_north_german = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_north_german TARGET = cu:north_german }
+	}
+}
+
+sakuya_list_culture_select_idx_north_italian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_north_italian TARGET = cu:north_italian }
+	}
+}
+
+sakuya_list_culture_select_idx_north_caucasian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_north_caucasian TARGET = cu:north_caucasian }
+	}
+}
+
+sakuya_list_culture_select_idx_south_andean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_south_andean TARGET = cu:south_andean }
+	}
+}
+
+sakuya_list_culture_select_idx_south_german = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_south_german TARGET = cu:south_german }
+	}
+}
+
+sakuya_list_culture_select_idx_south_italian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_south_italian TARGET = cu:south_italian }
+	}
+}
+
+sakuya_list_culture_select_idx_champa = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_champa TARGET = cu:champa }
+	}
+}
+
+sakuya_list_culture_select_idx_kavango_bantu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kavango_bantu TARGET = cu:kavango_bantu }
+	}
+}
+
+sakuya_list_culture_select_idx_kanuri = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kanuri TARGET = cu:kanuri }
+	}
+}
+
+sakuya_list_culture_select_idx_caddoan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_caddoan TARGET = cu:caddoan }
+	}
+}
+
+sakuya_list_culture_select_idx_kalmyk = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kalmyk TARGET = cu:kalmyk }
+	}
+}
+
+sakuya_list_culture_select_idx_karelian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_karelian TARGET = cu:karelian }
+	}
+}
+
+sakuya_list_culture_select_idx_kannada = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kannada TARGET = cu:kannada }
+	}
+}
+
+sakuya_list_culture_select_idx_lushai = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lushai TARGET = cu:lushai }
+	}
+}
+
+sakuya_list_culture_select_idx_luo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_luo TARGET = cu:luo }
+	}
+}
+
+sakuya_list_culture_select_idx_luri = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_luri TARGET = cu:luri }
+	}
+}
+
+sakuya_list_culture_select_idx_luba = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_luba TARGET = cu:luba }
+	}
+}
+
+sakuya_list_culture_select_idx_ruanda = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ruanda TARGET = cu:ruanda }
+	}
+}
+
+sakuya_list_culture_select_idx_lumad = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lumad TARGET = cu:lumad }
+	}
+}
+
+sakuya_list_culture_select_idx_hindustani = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hindustani TARGET = cu:hindustani }
+	}
+}
+
+sakuya_list_culture_select_idx_ecuadorian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ecuadorian TARGET = cu:ecuadorian }
+	}
+}
+
+sakuya_list_culture_select_idx_gujarati = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_gujarati TARGET = cu:gujarati }
+	}
+}
+
+sakuya_list_culture_select_idx_yuanzhumin = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yuanzhumin TARGET = cu:yuanzhumin }
+	}
+}
+
+sakuya_list_culture_select_idx_kirgiz = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kirgiz TARGET = cu:kirgiz }
+	}
+}
+
+sakuya_list_culture_select_idx_kho = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kho TARGET = cu:kho }
+	}
+}
+
+sakuya_list_culture_select_idx_hazara = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hazara TARGET = cu:hazara }
+	}
+}
+
+sakuya_list_culture_select_idx_haratin = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_haratin TARGET = cu:haratin }
+	}
+}
+
+sakuya_list_culture_select_idx_kazak = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kazak TARGET = cu:kazak }
+	}
+}
+
+sakuya_list_culture_select_idx_colombian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_colombian TARGET = cu:colombian }
+	}
+}
+
+sakuya_list_culture_select_idx_inuit = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_inuit TARGET = cu:inuit }
+	}
+}
+
+sakuya_list_culture_select_idx_teda = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_teda TARGET = cu:teda }
+	}
+}
+
+sakuya_list_culture_select_idx_tuvan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tuvan TARGET = cu:tuvan }
+	}
+}
+
+sakuya_list_culture_select_idx_tupinamba = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tupinamba TARGET = cu:tupinamba }
+	}
+}
+
+sakuya_list_culture_select_idx_tuareg = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tuareg TARGET = cu:tuareg }
+	}
+}
+
+sakuya_list_culture_select_idx_turkmen = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_turkmen TARGET = cu:turkmen }
+	}
+}
+
+sakuya_list_culture_select_idx_turkish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_turkish TARGET = cu:turkish }
+	}
+}
+
+sakuya_list_culture_select_idx_edo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_edo TARGET = cu:edo }
+	}
+}
+
+sakuya_list_culture_select_idx_ewe = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ewe TARGET = cu:ewe }
+	}
+}
+
+sakuya_list_culture_select_idx_kikuyu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kikuyu TARGET = cu:kikuyu }
+	}
+}
+
+sakuya_list_culture_select_idx_kissi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kissi TARGET = cu:kissi }
+	}
+}
+
+sakuya_list_culture_select_idx_tajik = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tajik TARGET = cu:tajik }
+	}
+}
+
+sakuya_list_culture_select_idx_tarascan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tarascan TARGET = cu:tarascan }
+	}
+}
+
+sakuya_list_culture_select_idx_szekely = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_szekely TARGET = cu:szekely }
+	}
+}
+
+sakuya_list_culture_select_idx_senufo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_senufo TARGET = cu:senufo }
+	}
+}
+
+sakuya_list_culture_select_idx_serb = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_serb TARGET = cu:serb }
+	}
+}
+
+sakuya_list_culture_select_idx_sephardic = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sephardic TARGET = cu:sephardic }
+	}
+}
+
+sakuya_list_culture_select_idx_sena = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sena TARGET = cu:sena }
+	}
+}
+
+sakuya_list_culture_select_idx_mexican = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mexican TARGET = cu:mexican }
+	}
+}
+
+sakuya_list_culture_select_idx_zhuang = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_zhuang TARGET = cu:zhuang }
+	}
+}
+
+sakuya_list_culture_select_idx_hawaiian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hawaiian TARGET = cu:hawaiian }
+	}
+}
+
+sakuya_list_culture_select_idx_japanese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_japanese TARGET = cu:japanese }
+	}
+}
+
+sakuya_list_culture_select_idx_lacustrine_bantu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lacustrine_bantu TARGET = cu:lacustrine_bantu }
+	}
+}
+
+sakuya_list_culture_select_idx_occitan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_occitan TARGET = cu:occitan }
+	}
+}
+
+sakuya_list_culture_select_idx_oodham = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_oodham TARGET = cu:oodham }
+	}
+}
+
+sakuya_list_culture_select_idx_ovimbundu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ovimbundu TARGET = cu:ovimbundu }
+	}
+}
+
+sakuya_list_culture_select_idx_oromo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_oromo TARGET = cu:oromo }
+	}
+}
+
+sakuya_list_culture_select_idx_oriya = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_oriya TARGET = cu:oriya }
+	}
+}
+
+sakuya_list_culture_select_idx_venezuelan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_venezuelan TARGET = cu:venezuelan }
+	}
+}
+
+sakuya_list_culture_select_idx_welsh = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_welsh TARGET = cu:welsh }
+	}
+}
+
+sakuya_list_culture_select_idx_bornean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bornean TARGET = cu:bornean }
+	}
+}
+
+sakuya_list_culture_select_idx_mon = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mon TARGET = cu:mon }
+	}
+}
+
+sakuya_list_culture_select_idx_bengali = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bengali TARGET = cu:bengali }
+	}
+}
+
+sakuya_list_culture_select_idx_hakka = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hakka TARGET = cu:hakka }
+	}
+}
+
+sakuya_list_culture_select_idx_micronesian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_micronesian TARGET = cu:micronesian }
+	}
+}
+
+sakuya_list_culture_select_idx_misri = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_misri TARGET = cu:misri }
+	}
+}
+
+sakuya_list_culture_select_idx_fur = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_fur TARGET = cu:fur }
+	}
+}
+
+sakuya_list_culture_select_idx_fulbe = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_fulbe TARGET = cu:fulbe }
+	}
+}
+
+sakuya_list_culture_select_idx_nyamwezi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nyamwezi TARGET = cu:nyamwezi }
+	}
+}
+
+sakuya_list_culture_select_idx_nepali = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nepali TARGET = cu:nepali }
+	}
+}
+
+sakuya_list_culture_select_idx_nilotic = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nilotic TARGET = cu:nilotic }
+	}
+}
+
+sakuya_list_culture_select_idx_bashkir = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bashkir TARGET = cu:bashkir }
+	}
+}
+
+sakuya_list_culture_select_idx_bakongo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bakongo TARGET = cu:bakongo }
+	}
+}
+
+sakuya_list_culture_select_idx_balinese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_balinese TARGET = cu:balinese }
+	}
+}
+
+sakuya_list_culture_select_idx_baguirmi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_baguirmi TARGET = cu:baguirmi }
+	}
+}
+
+sakuya_list_culture_select_idx_bageli = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bageli TARGET = cu:bageli }
+	}
+}
+
+sakuya_list_culture_select_idx_batak = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_batak TARGET = cu:batak }
+	}
+}
+
+sakuya_list_culture_select_idx_patagonian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_patagonian TARGET = cu:patagonian }
+	}
+}
+
+sakuya_list_culture_select_idx_baganda = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_baganda TARGET = cu:baganda }
+	}
+}
+
+sakuya_list_culture_select_idx_paraguayan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_paraguayan TARGET = cu:paraguayan }
+	}
+}
+
+sakuya_list_culture_select_idx_basque = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_basque TARGET = cu:basque }
+	}
+}
+
+sakuya_list_culture_select_idx_bassa = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bassa TARGET = cu:bassa }
+	}
+}
+
+sakuya_list_culture_select_idx_brazilian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_brazilian TARGET = cu:brazilian }
+	}
+}
+
+sakuya_list_culture_select_idx_breton = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_breton TARGET = cu:breton }
+	}
+}
+
+sakuya_list_culture_select_idx_boer = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_boer TARGET = cu:boer }
+	}
+}
+
+sakuya_list_culture_select_idx_buryat = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_buryat TARGET = cu:buryat }
+	}
+}
+
+sakuya_list_culture_select_idx_greek = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_greek TARGET = cu:greek }
+	}
+}
+
+sakuya_list_culture_select_idx_pahari = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_pahari TARGET = cu:pahari }
+	}
+}
+
+sakuya_list_culture_select_idx_pathan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_pathan TARGET = cu:pathan }
+	}
+}
+
+sakuya_list_culture_select_idx_kurdish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_kurdish TARGET = cu:kurdish }
+	}
+}
+
+sakuya_list_culture_select_idx_flemish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_flemish TARGET = cu:flemish }
+	}
+}
+
+sakuya_list_culture_select_idx_yi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yi TARGET = cu:yi }
+	}
+}
+
+sakuya_list_culture_select_idx_deccani = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_deccani TARGET = cu:deccani }
+	}
+}
+
+sakuya_list_culture_select_idx_nguni = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nguni TARGET = cu:nguni }
+	}
+}
+
+sakuya_list_culture_select_idx_yankee = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yankee TARGET = cu:yankee }
+	}
+}
+
+sakuya_list_culture_select_idx_rajput = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_rajput TARGET = cu:rajput }
+	}
+}
+
+sakuya_list_culture_select_idx_latvian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_latvian TARGET = cu:latvian }
+	}
+}
+
+sakuya_list_culture_select_idx_norwegian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_norwegian TARGET = cu:norwegian }
+	}
+}
+
+sakuya_list_culture_select_idx_czech = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_czech TARGET = cu:czech }
+	}
+}
+
+sakuya_list_culture_select_idx_shan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_shan TARGET = cu:shan }
+	}
+}
+
+sakuya_list_culture_select_idx_tigray = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tigray TARGET = cu:tigray }
+	}
+}
+
+sakuya_list_culture_select_idx_moro = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_moro TARGET = cu:moro }
+	}
+}
+
+sakuya_list_culture_select_idx_moluccan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_moluccan TARGET = cu:moluccan }
+	}
+}
+
+sakuya_list_culture_select_idx_slovak = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_slovak TARGET = cu:slovak }
+	}
+}
+
+sakuya_list_culture_select_idx_slovene = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_slovene TARGET = cu:slovene }
+	}
+}
+
+sakuya_list_culture_select_idx_swahili = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_swahili TARGET = cu:swahili }
+	}
+}
+
+sakuya_list_culture_select_idx_panjabi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_panjabi TARGET = cu:panjabi }
+	}
+}
+
+sakuya_list_culture_select_idx_iroquoian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_iroquoian TARGET = cu:iroquoian }
+	}
+}
+
+sakuya_list_culture_select_idx_pashtun = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_pashtun TARGET = cu:pashtun }
+	}
+}
+
+sakuya_list_culture_select_idx_platinean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_platinean TARGET = cu:platinean }
+	}
+}
+
+sakuya_list_culture_select_idx_pueblo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_pueblo TARGET = cu:pueblo }
+	}
+}
+
+sakuya_list_culture_select_idx_chilean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_chilean TARGET = cu:chilean }
+	}
+}
+
+sakuya_list_culture_select_idx_manipuri = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_manipuri TARGET = cu:manipuri }
+	}
+}
+
+sakuya_list_culture_select_idx_mande = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mande TARGET = cu:mande }
+	}
+}
+
+sakuya_list_culture_select_idx_korean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_korean TARGET = cu:korean }
+	}
+}
+
+sakuya_list_culture_select_idx_bundeli = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bundeli TARGET = cu:bundeli }
+	}
+}
+
+sakuya_list_culture_select_idx_griqua = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_griqua TARGET = cu:griqua }
+	}
+}
+
+sakuya_list_culture_select_idx_georgian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_georgian TARGET = cu:georgian }
+	}
+}
+
+sakuya_list_culture_select_idx_songhai = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_songhai TARGET = cu:songhai }
+	}
+}
+
+sakuya_list_culture_select_idx_metis = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_metis TARGET = cu:metis }
+	}
+}
+
+sakuya_list_culture_select_idx_chuvash = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_chuvash TARGET = cu:chuvash }
+	}
+}
+
+sakuya_list_culture_select_idx_bidan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bidan TARGET = cu:bidan }
+	}
+}
+
+sakuya_list_culture_select_idx_bihari = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bihari TARGET = cu:bihari }
+	}
+}
+
+sakuya_list_culture_select_idx_maori = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_maori TARGET = cu:maori }
+	}
+}
+
+sakuya_list_culture_select_idx_han = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_han TARGET = cu:han }
+	}
+}
+
+sakuya_list_culture_select_idx_wolof = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_wolof TARGET = cu:wolof }
+	}
+}
+
+sakuya_list_culture_select_idx_fluvian_bantu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_fluvian_bantu TARGET = cu:fluvian_bantu }
+	}
+}
+
+sakuya_list_culture_select_idx_francoprovencal = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_francoprovencal TARGET = cu:francoprovencal }
+	}
+}
+
+sakuya_list_culture_select_idx_french = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_french TARGET = cu:french }
+	}
+}
+
+sakuya_list_culture_select_idx_franco_canadian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_franco_canadian TARGET = cu:franco_canadian }
+	}
+}
+
+sakuya_list_culture_select_idx_polish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_polish TARGET = cu:polish }
+	}
+}
+
+sakuya_list_culture_select_idx_polynesian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_polynesian TARGET = cu:polynesian }
+	}
+}
+
+sakuya_list_culture_select_idx_persian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_persian TARGET = cu:persian }
+	}
+}
+
+sakuya_list_culture_select_idx_bosniak = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bosniak TARGET = cu:bosniak }
+	}
+}
+
+sakuya_list_culture_select_idx_thai = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_thai TARGET = cu:thai }
+	}
+}
+
+sakuya_list_culture_select_idx_telegu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_telegu TARGET = cu:telegu }
+	}
+}
+
+sakuya_list_culture_select_idx_tamil = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tamil TARGET = cu:tamil }
+	}
+}
+
+sakuya_list_culture_select_idx_paiute = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_paiute TARGET = cu:paiute }
+	}
+}
+
+sakuya_list_culture_select_idx_manchu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_manchu TARGET = cu:manchu }
+	}
+}
+
+sakuya_list_culture_select_idx_australian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_australian TARGET = cu:australian }
+	}
+}
+
+sakuya_list_culture_select_idx_aborigine = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_aborigine TARGET = cu:aborigine }
+	}
+}
+
+sakuya_list_culture_select_idx_javan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_javan TARGET = cu:javan }
+	}
+}
+
+sakuya_list_culture_select_idx_irish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_irish TARGET = cu:irish }
+	}
+}
+
+sakuya_list_culture_select_idx_estonian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_estonian TARGET = cu:estonian }
+	}
+}
+
+sakuya_list_culture_select_idx_mayan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mayan TARGET = cu:mayan }
+	}
+}
+
+sakuya_list_culture_select_idx_bolivian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bolivian TARGET = cu:bolivian }
+	}
+}
+
+sakuya_list_culture_select_idx_bambara = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bambara TARGET = cu:bambara }
+	}
+}
+
+sakuya_list_culture_select_idx_ryukyuan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ryukyuan TARGET = cu:ryukyuan }
+	}
+}
+
+sakuya_list_culture_select_idx_swedish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_swedish TARGET = cu:swedish }
+	}
+}
+
+sakuya_list_culture_select_idx_guajiro = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_guajiro TARGET = cu:guajiro }
+	}
+}
+
+sakuya_list_culture_select_idx_guarani = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_guarani TARGET = cu:guarani }
+	}
+}
+
+sakuya_list_culture_select_idx_wallonian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_wallonian TARGET = cu:wallonian }
+	}
+}
+
+sakuya_list_culture_select_idx_byelorussian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_byelorussian TARGET = cu:byelorussian }
+	}
+}
+
+sakuya_list_culture_select_idx_scottish_gaelic = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_scottish_gaelic TARGET = cu:scottish_gaelic }
+	}
+}
+
+sakuya_list_culture_select_idx_zulu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_zulu TARGET = cu:zulu }
+	}
+}
+
+sakuya_list_culture_select_idx_khoisan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_khoisan TARGET = cu:khoisan }
+	}
+}
+
+sakuya_list_culture_select_idx_comanche = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_comanche TARGET = cu:comanche }
+	}
+}
+
+sakuya_list_culture_select_idx_xhosa = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_xhosa TARGET = cu:xhosa }
+	}
+}
+
+sakuya_list_culture_select_idx_corsican = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_corsican TARGET = cu:corsican }
+	}
+}
+
+sakuya_list_culture_select_idx_peruvian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_peruvian TARGET = cu:peruvian }
+	}
+}
+
+sakuya_list_culture_select_idx_muisca = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_muisca TARGET = cu:muisca }
+	}
+}
+
+sakuya_list_culture_select_idx_muskogean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_muskogean TARGET = cu:muskogean }
+	}
+}
+
+sakuya_list_culture_select_idx_lithuanian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lithuanian TARGET = cu:lithuanian }
+	}
+}
+
+sakuya_list_culture_select_idx_miskito = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_miskito TARGET = cu:miskito }
+	}
+}
+
+sakuya_list_culture_select_idx_mixtec = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mixtec TARGET = cu:mixtec }
+	}
+}
+
+sakuya_list_culture_select_idx_visayan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_visayan TARGET = cu:visayan }
+	}
+}
+
+sakuya_list_culture_select_idx_yue = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yue TARGET = cu:yue }
+	}
+}
+
+sakuya_list_culture_select_idx_sorb = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sorb TARGET = cu:sorb }
+	}
+}
+
+sakuya_list_culture_select_idx_sotho = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sotho TARGET = cu:sotho }
+	}
+}
+
+sakuya_list_culture_select_idx_somali = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_somali TARGET = cu:somali }
+	}
+}
+
+sakuya_list_culture_select_idx_sakuya_nonexistent = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sakuya_nonexistent TARGET = cu:sakuya_nonexistent }
+	}
+}
+
+sakuya_list_culture_select_idx_yao = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yao TARGET = cu:yao }
+	}
+}
+
+sakuya_list_culture_select_idx_yoruba = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yoruba TARGET = cu:yoruba }
+	}
+}
+
+sakuya_list_culture_select_idx_naga = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_naga TARGET = cu:naga }
+	}
+}
+
+sakuya_list_culture_select_idx_nahua = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nahua TARGET = cu:nahua }
+	}
+}
+
+sakuya_list_culture_select_idx_navajo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_navajo TARGET = cu:navajo }
+	}
+}
+
+sakuya_list_culture_select_idx_shona = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_shona TARGET = cu:shona }
+	}
+}
+
+sakuya_list_culture_select_idx_uighur = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_uighur TARGET = cu:uighur }
+	}
+}
+
+sakuya_list_culture_select_idx_burmese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_burmese TARGET = cu:burmese }
+	}
+}
+
+sakuya_list_culture_select_idx_romanian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_romanian TARGET = cu:romanian }
+	}
+}
+
+sakuya_list_culture_select_idx_melanesian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_melanesian TARGET = cu:melanesian }
+	}
+}
+
+sakuya_list_culture_select_idx_aimara = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_aimara TARGET = cu:aimara }
+	}
+}
+
+sakuya_list_culture_select_idx_finnish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_finnish TARGET = cu:finnish }
+	}
+}
+
+sakuya_list_culture_select_idx_fang = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_fang TARGET = cu:fang }
+	}
+}
+
+sakuya_list_culture_select_idx_siouan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_siouan TARGET = cu:siouan }
+	}
+}
+
+sakuya_list_culture_select_idx_sudanese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sudanese TARGET = cu:sudanese }
+	}
+}
+
+sakuya_list_culture_select_idx_sulista = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sulista TARGET = cu:sulista }
+	}
+}
+
+sakuya_list_culture_select_idx_sukuma = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sukuma TARGET = cu:sukuma }
+	}
+}
+
+sakuya_list_culture_select_idx_scottish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_scottish TARGET = cu:scottish }
+	}
+}
+
+sakuya_list_culture_select_idx_sumatran = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sumatran TARGET = cu:sumatran }
+	}
+}
+
+sakuya_list_culture_select_idx_miao = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_miao TARGET = cu:miao }
+	}
+}
+
+sakuya_list_culture_select_idx_british = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_british TARGET = cu:british }
+	}
+}
+
+sakuya_list_culture_select_idx_anglo_canadian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_anglo_canadian TARGET = cu:anglo_canadian }
+	}
+}
+
+sakuya_list_culture_select_idx_tswana = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tswana TARGET = cu:tswana }
+	}
+}
+
+sakuya_list_culture_select_idx_dutch = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_dutch TARGET = cu:dutch }
+	}
+}
+
+sakuya_list_culture_select_idx_mordvin = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mordvin TARGET = cu:mordvin }
+	}
+}
+
+sakuya_list_culture_select_idx_mossi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mossi TARGET = cu:mossi }
+	}
+}
+
+sakuya_list_culture_select_idx_filipino = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_filipino TARGET = cu:filipino }
+	}
+}
+
+sakuya_list_culture_select_idx_filipino_hispanophone = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_filipino_hispanophone TARGET = cu:filipino_hispanophone }
+	}
+}
+
+sakuya_list_culture_select_idx_filipino_mestizo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_filipino_mestizo TARGET = cu:filipino_mestizo }
+	}
+}
+
+sakuya_list_culture_select_idx_salish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_salish TARGET = cu:salish }
+	}
+}
+
+sakuya_list_culture_select_idx_sara = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sara TARGET = cu:sara }
+	}
+}
+
+sakuya_list_culture_select_idx_zapotec = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_zapotec TARGET = cu:zapotec }
+	}
+}
+
+sakuya_list_culture_select_idx_sami = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sami TARGET = cu:sami }
+	}
+}
+
+sakuya_list_culture_select_idx_portuguese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_portuguese TARGET = cu:portuguese }
+	}
+}
+
+sakuya_list_culture_select_idx_tiv = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tiv TARGET = cu:tiv }
+	}
+}
+
+sakuya_list_culture_select_idx_mongol = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mongol TARGET = cu:mongol }
+	}
+}
+
+sakuya_list_culture_select_idx_mongo = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mongo TARGET = cu:mongo }
+	}
+}
+
+sakuya_list_culture_select_idx_tibetan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tibetan TARGET = cu:tibetan }
+	}
+}
+
+sakuya_list_culture_select_idx_siberian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_siberian TARGET = cu:siberian }
+	}
+}
+
+sakuya_list_culture_select_idx_spanish = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_spanish TARGET = cu:spanish }
+	}
+}
+
+sakuya_list_culture_select_idx_caribeno = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_caribeno TARGET = cu:caribeno }
+	}
+}
+
+sakuya_list_culture_select_idx_nordestino = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_nordestino TARGET = cu:nordestino }
+	}
+}
+
+sakuya_list_culture_select_idx_hausa = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hausa TARGET = cu:hausa }
+	}
+}
+
+sakuya_list_culture_select_idx_beja = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_beja TARGET = cu:beja }
+	}
+}
+
+sakuya_list_culture_select_idx_bedouin = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_bedouin TARGET = cu:bedouin }
+	}
+}
+
+sakuya_list_culture_select_idx_gondi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_gondi TARGET = cu:gondi }
+	}
+}
+
+sakuya_list_culture_select_idx_equatorial_bantu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_equatorial_bantu TARGET = cu:equatorial_bantu }
+	}
+}
+
+sakuya_list_culture_select_idx_herero = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_herero TARGET = cu:herero }
+	}
+}
+
+sakuya_list_culture_select_idx_chechen = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_chechen TARGET = cu:chechen }
+	}
+}
+
+sakuya_list_culture_select_idx_dakota = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_dakota TARGET = cu:dakota }
+	}
+}
+
+sakuya_list_culture_select_idx_dayak = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_dayak TARGET = cu:dayak }
+	}
+}
+
+sakuya_list_culture_select_idx_dixie = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_dixie TARGET = cu:dixie }
+	}
+}
+
+sakuya_list_culture_select_idx_dyula = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_dyula TARGET = cu:dyula }
+	}
+}
+
+sakuya_list_culture_select_idx_tonga = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tonga TARGET = cu:tonga }
+	}
+}
+
+sakuya_list_culture_select_idx_sidama = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_sidama TARGET = cu:sidama }
+	}
+}
+
+sakuya_list_culture_select_idx_min = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_min TARGET = cu:min }
+	}
+}
+
+sakuya_list_culture_select_idx_ashkenazi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ashkenazi TARGET = cu:ashkenazi }
+	}
+}
+
+sakuya_list_culture_select_idx_ainu = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_ainu TARGET = cu:ainu }
+	}
+}
+
+sakuya_list_culture_select_idx_alemannic = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_alemannic TARGET = cu:alemannic }
+	}
+}
+
+sakuya_list_culture_select_idx_azerbaijani = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_azerbaijani TARGET = cu:azerbaijani }
+	}
+}
+
+sakuya_list_culture_select_idx_amhara = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_amhara TARGET = cu:amhara }
+	}
+}
+
+sakuya_list_culture_select_idx_algonquian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_algonquian TARGET = cu:algonquian }
+	}
+}
+
+sakuya_list_culture_select_idx_albanian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_albanian TARGET = cu:albanian }
+	}
+}
+
+sakuya_list_culture_select_idx_apache = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_apache TARGET = cu:apache }
+	}
+}
+
+sakuya_list_culture_select_idx_aragonese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_aragonese TARGET = cu:aragonese }
+	}
+}
+
+sakuya_list_culture_select_idx_asturleonese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_asturleonese TARGET = cu:asturleonese }
+	}
+}
+
+sakuya_list_culture_select_idx_argentine = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_argentine TARGET = cu:argentine }
+	}
+}
+
+sakuya_list_culture_select_idx_afar = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_afar TARGET = cu:afar }
+	}
+}
+
+sakuya_list_culture_select_idx_avadhi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_avadhi TARGET = cu:avadhi }
+	}
+}
+
+sakuya_list_culture_select_idx_akan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_akan TARGET = cu:akan }
+	}
+}
+
+sakuya_list_culture_select_idx_assamese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_assamese TARGET = cu:assamese }
+	}
+}
+
+sakuya_list_culture_select_idx_athabaskan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_athabaskan TARGET = cu:athabaskan }
+	}
+}
+
+sakuya_list_culture_select_idx_azande = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_azande TARGET = cu:azande }
+	}
+}
+
+sakuya_list_culture_select_idx_berber = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_berber TARGET = cu:berber }
+	}
+}
+
+sakuya_list_culture_select_idx_lunda = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lunda TARGET = cu:lunda }
+	}
+}
+
+sakuya_list_culture_select_idx_rundi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_rundi TARGET = cu:rundi }
+	}
+}
+
+sakuya_list_culture_select_idx_lomwe = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_lomwe TARGET = cu:lomwe }
+	}
+}
+
+sakuya_list_culture_select_idx_yakut = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_yakut TARGET = cu:yakut }
+	}
+}
+
+sakuya_list_culture_select_idx_hokan = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_hokan TARGET = cu:hokan }
+	}
+}
+
+sakuya_list_culture_select_idx_afro_antillean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_afro_antillean TARGET = cu:afro_antillean }
+	}
+}
+
+sakuya_list_culture_select_idx_afro_brazilian = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_afro_brazilian TARGET = cu:afro_brazilian }
+	}
+}
+
+sakuya_list_culture_select_idx_afro_american = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_afro_american TARGET = cu:afro_american }
+	}
+}
+
+sakuya_list_culture_select_idx_afro_caribbean = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_afro_caribbean TARGET = cu:afro_caribbean }
+	}
+}
+
+sakuya_list_culture_select_idx_afro_caribeno = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_afro_caribeno TARGET = cu:afro_caribeno }
+	}
+}
+
+sakuya_list_culture_select_idx_tatar = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_tatar TARGET = cu:tatar }
+	}
+}
+
+sakuya_list_culture_select_idx_mashriqi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mashriqi TARGET = cu:mashriqi }
+	}
+}
+
+sakuya_list_culture_select_idx_makua = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_makua TARGET = cu:makua }
+	}
+}
+
+sakuya_list_culture_select_idx_marathi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_marathi TARGET = cu:marathi }
+	}
+}
+
+sakuya_list_culture_select_idx_malayalam = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_malayalam TARGET = cu:malayalam }
+	}
+}
+
+sakuya_list_culture_select_idx_malay = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_malay TARGET = cu:malay }
+	}
+}
+
+sakuya_list_culture_select_idx_maghrebi = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_maghrebi TARGET = cu:maghrebi }
+	}
+}
+
+sakuya_list_culture_select_idx_maltese = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_maltese TARGET = cu:maltese }
+	}
+}
+
+sakuya_list_culture_select_idx_maasai = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_maasai TARGET = cu:maasai }
+	}
+}
+
+sakuya_list_culture_select_idx_mazanderani = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mazanderani TARGET = cu:mazanderani }
+	}
+}
+
+sakuya_list_culture_select_idx_malagasy = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_malagasy TARGET = cu:malagasy }
+	}
+}
+
+sakuya_list_culture_select_idx_mari = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_mari TARGET = cu:mari }
+	}
+}
+
+sakuya_list_culture_select_idx_khmer = {
+	scope = country
+	is_shown = { is_player = yes }
+	is_valid = { is_player = yes }
+	effect = {
+		sakuya_list_culture_set_selection_var_effect = { VAR = sakuya_list_culture_name_idx_khmer TARGET = cu:khmer }
+	}
+}
+# Dynamic culture index: player primary cultures and homelands in owned states.
+
+sakuya_list_culture_dynamic_idx_cajun = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:cajun
+			any_scope_state = {
+				state_region = { is_homeland = cu:cajun }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_promethean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:promethean
+			any_scope_state = {
+				state_region = { is_homeland = cu:promethean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yemenite = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yemenite
+			any_scope_state = {
+				state_region = { is_homeland = cu:yemenite }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_dinka = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:dinka
+			any_scope_state = {
+				state_region = { is_homeland = cu:dinka }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_east_german = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:east_german
+			any_scope_state = {
+				state_region = { is_homeland = cu:east_german }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_central_american = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:central_american
+			any_scope_state = {
+				state_region = { is_homeland = cu:central_american }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_fon = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:fon
+			any_scope_state = {
+				state_region = { is_homeland = cu:fon }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_danish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:danish
+			any_scope_state = {
+				state_region = { is_homeland = cu:danish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ukrainian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ukrainian
+			any_scope_state = {
+				state_region = { is_homeland = cu:ukrainian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_uzbek = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:uzbek
+			any_scope_state = {
+				state_region = { is_homeland = cu:uzbek }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_udmurt = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:udmurt
+			any_scope_state = {
+				state_region = { is_homeland = cu:udmurt }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ugrian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ugrian
+			any_scope_state = {
+				state_region = { is_homeland = cu:ugrian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_uruguayan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:uruguayan
+			any_scope_state = {
+				state_region = { is_homeland = cu:uruguayan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_armenian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:armenian
+			any_scope_state = {
+				state_region = { is_homeland = cu:armenian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_assyrian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:assyrian
+			any_scope_state = {
+				state_region = { is_homeland = cu:assyrian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_amazonian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:amazonian
+			any_scope_state = {
+				state_region = { is_homeland = cu:amazonian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_amazonic = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:amazonic
+			any_scope_state = {
+				state_region = { is_homeland = cu:amazonic }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_vietnamese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:vietnamese
+			any_scope_state = {
+				state_region = { is_homeland = cu:vietnamese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tagalog = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tagalog
+			any_scope_state = {
+				state_region = { is_homeland = cu:tagalog }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ibo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ibo
+			any_scope_state = {
+				state_region = { is_homeland = cu:ibo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_iberian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:iberian
+			any_scope_state = {
+				state_region = { is_homeland = cu:iberian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ibibio = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ibibio
+			any_scope_state = {
+				state_region = { is_homeland = cu:ibibio }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ilocano = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ilocano
+			any_scope_state = {
+				state_region = { is_homeland = cu:ilocano }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lao = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lao
+			any_scope_state = {
+				state_region = { is_homeland = cu:lao }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_russian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:russian
+			any_scope_state = {
+				state_region = { is_homeland = cu:russian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_paulista = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:paulista
+			any_scope_state = {
+				state_region = { is_homeland = cu:paulista }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bulgarian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bulgarian
+			any_scope_state = {
+				state_region = { is_homeland = cu:bulgarian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sindi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sindi
+			any_scope_state = {
+				state_region = { is_homeland = cu:sindi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_baluchi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:baluchi
+			any_scope_state = {
+				state_region = { is_homeland = cu:baluchi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sinhala = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sinhala
+			any_scope_state = {
+				state_region = { is_homeland = cu:sinhala }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_quechua = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:quechua
+			any_scope_state = {
+				state_region = { is_homeland = cu:quechua }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kashmiri = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kashmiri
+			any_scope_state = {
+				state_region = { is_homeland = cu:kashmiri }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_karen = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:karen
+			any_scope_state = {
+				state_region = { is_homeland = cu:karen }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_khmu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:khmu
+			any_scope_state = {
+				state_region = { is_homeland = cu:khmu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_croat = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:croat
+			any_scope_state = {
+				state_region = { is_homeland = cu:croat }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_cree = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:cree
+			any_scope_state = {
+				state_region = { is_homeland = cu:cree }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kachin = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kachin
+			any_scope_state = {
+				state_region = { is_homeland = cu:kachin }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kru = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kru
+			any_scope_state = {
+				state_region = { is_homeland = cu:kru }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nez_perce = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nez_perce
+			any_scope_state = {
+				state_region = { is_homeland = cu:nez_perce }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_icelandic = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:icelandic
+			any_scope_state = {
+				state_region = { is_homeland = cu:icelandic }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_circassian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:circassian
+			any_scope_state = {
+				state_region = { is_homeland = cu:circassian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_chewa = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:chewa
+			any_scope_state = {
+				state_region = { is_homeland = cu:chewa }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_cherokee = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:cherokee
+			any_scope_state = {
+				state_region = { is_homeland = cu:cherokee }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_chhattisgarhi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:chhattisgarhi
+			any_scope_state = {
+				state_region = { is_homeland = cu:chhattisgarhi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_galician = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:galician
+			any_scope_state = {
+				state_region = { is_homeland = cu:galician }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_cariban = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:cariban
+			any_scope_state = {
+				state_region = { is_homeland = cu:cariban }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_catalan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:catalan
+			any_scope_state = {
+				state_region = { is_homeland = cu:catalan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nuer = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nuer
+			any_scope_state = {
+				state_region = { is_homeland = cu:nuer }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nuba = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nuba
+			any_scope_state = {
+				state_region = { is_homeland = cu:nuba }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hungarian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hungarian
+			any_scope_state = {
+				state_region = { is_homeland = cu:hungarian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_north_andean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:north_andean
+			any_scope_state = {
+				state_region = { is_homeland = cu:north_andean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_north_german = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:north_german
+			any_scope_state = {
+				state_region = { is_homeland = cu:north_german }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_north_italian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:north_italian
+			any_scope_state = {
+				state_region = { is_homeland = cu:north_italian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_north_caucasian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:north_caucasian
+			any_scope_state = {
+				state_region = { is_homeland = cu:north_caucasian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_south_andean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:south_andean
+			any_scope_state = {
+				state_region = { is_homeland = cu:south_andean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_south_german = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:south_german
+			any_scope_state = {
+				state_region = { is_homeland = cu:south_german }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_south_italian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:south_italian
+			any_scope_state = {
+				state_region = { is_homeland = cu:south_italian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_champa = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:champa
+			any_scope_state = {
+				state_region = { is_homeland = cu:champa }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kavango_bantu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kavango_bantu
+			any_scope_state = {
+				state_region = { is_homeland = cu:kavango_bantu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kanuri = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kanuri
+			any_scope_state = {
+				state_region = { is_homeland = cu:kanuri }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_caddoan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:caddoan
+			any_scope_state = {
+				state_region = { is_homeland = cu:caddoan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kalmyk = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kalmyk
+			any_scope_state = {
+				state_region = { is_homeland = cu:kalmyk }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_karelian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:karelian
+			any_scope_state = {
+				state_region = { is_homeland = cu:karelian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kannada = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kannada
+			any_scope_state = {
+				state_region = { is_homeland = cu:kannada }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lushai = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lushai
+			any_scope_state = {
+				state_region = { is_homeland = cu:lushai }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_luo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:luo
+			any_scope_state = {
+				state_region = { is_homeland = cu:luo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_luri = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:luri
+			any_scope_state = {
+				state_region = { is_homeland = cu:luri }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_luba = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:luba
+			any_scope_state = {
+				state_region = { is_homeland = cu:luba }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ruanda = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ruanda
+			any_scope_state = {
+				state_region = { is_homeland = cu:ruanda }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lumad = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lumad
+			any_scope_state = {
+				state_region = { is_homeland = cu:lumad }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hindustani = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hindustani
+			any_scope_state = {
+				state_region = { is_homeland = cu:hindustani }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ecuadorian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ecuadorian
+			any_scope_state = {
+				state_region = { is_homeland = cu:ecuadorian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_gujarati = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:gujarati
+			any_scope_state = {
+				state_region = { is_homeland = cu:gujarati }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yuanzhumin = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yuanzhumin
+			any_scope_state = {
+				state_region = { is_homeland = cu:yuanzhumin }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kirgiz = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kirgiz
+			any_scope_state = {
+				state_region = { is_homeland = cu:kirgiz }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kho = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kho
+			any_scope_state = {
+				state_region = { is_homeland = cu:kho }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hazara = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hazara
+			any_scope_state = {
+				state_region = { is_homeland = cu:hazara }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_haratin = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:haratin
+			any_scope_state = {
+				state_region = { is_homeland = cu:haratin }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kazak = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kazak
+			any_scope_state = {
+				state_region = { is_homeland = cu:kazak }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_colombian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:colombian
+			any_scope_state = {
+				state_region = { is_homeland = cu:colombian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_inuit = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:inuit
+			any_scope_state = {
+				state_region = { is_homeland = cu:inuit }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_teda = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:teda
+			any_scope_state = {
+				state_region = { is_homeland = cu:teda }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tuvan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tuvan
+			any_scope_state = {
+				state_region = { is_homeland = cu:tuvan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tupinamba = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tupinamba
+			any_scope_state = {
+				state_region = { is_homeland = cu:tupinamba }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tuareg = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tuareg
+			any_scope_state = {
+				state_region = { is_homeland = cu:tuareg }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_turkmen = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:turkmen
+			any_scope_state = {
+				state_region = { is_homeland = cu:turkmen }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_turkish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:turkish
+			any_scope_state = {
+				state_region = { is_homeland = cu:turkish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_edo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:edo
+			any_scope_state = {
+				state_region = { is_homeland = cu:edo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ewe = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ewe
+			any_scope_state = {
+				state_region = { is_homeland = cu:ewe }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kikuyu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kikuyu
+			any_scope_state = {
+				state_region = { is_homeland = cu:kikuyu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kissi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kissi
+			any_scope_state = {
+				state_region = { is_homeland = cu:kissi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tajik = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tajik
+			any_scope_state = {
+				state_region = { is_homeland = cu:tajik }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tarascan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tarascan
+			any_scope_state = {
+				state_region = { is_homeland = cu:tarascan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_szekely = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:szekely
+			any_scope_state = {
+				state_region = { is_homeland = cu:szekely }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_senufo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:senufo
+			any_scope_state = {
+				state_region = { is_homeland = cu:senufo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_serb = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:serb
+			any_scope_state = {
+				state_region = { is_homeland = cu:serb }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sephardic = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sephardic
+			any_scope_state = {
+				state_region = { is_homeland = cu:sephardic }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sena = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sena
+			any_scope_state = {
+				state_region = { is_homeland = cu:sena }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mexican = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mexican
+			any_scope_state = {
+				state_region = { is_homeland = cu:mexican }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_zhuang = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:zhuang
+			any_scope_state = {
+				state_region = { is_homeland = cu:zhuang }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hawaiian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hawaiian
+			any_scope_state = {
+				state_region = { is_homeland = cu:hawaiian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_japanese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:japanese
+			any_scope_state = {
+				state_region = { is_homeland = cu:japanese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lacustrine_bantu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lacustrine_bantu
+			any_scope_state = {
+				state_region = { is_homeland = cu:lacustrine_bantu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_occitan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:occitan
+			any_scope_state = {
+				state_region = { is_homeland = cu:occitan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_oodham = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:oodham
+			any_scope_state = {
+				state_region = { is_homeland = cu:oodham }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ovimbundu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ovimbundu
+			any_scope_state = {
+				state_region = { is_homeland = cu:ovimbundu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_oromo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:oromo
+			any_scope_state = {
+				state_region = { is_homeland = cu:oromo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_oriya = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:oriya
+			any_scope_state = {
+				state_region = { is_homeland = cu:oriya }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_venezuelan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:venezuelan
+			any_scope_state = {
+				state_region = { is_homeland = cu:venezuelan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_welsh = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:welsh
+			any_scope_state = {
+				state_region = { is_homeland = cu:welsh }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bornean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bornean
+			any_scope_state = {
+				state_region = { is_homeland = cu:bornean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mon = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mon
+			any_scope_state = {
+				state_region = { is_homeland = cu:mon }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bengali = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bengali
+			any_scope_state = {
+				state_region = { is_homeland = cu:bengali }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hakka = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hakka
+			any_scope_state = {
+				state_region = { is_homeland = cu:hakka }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_micronesian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:micronesian
+			any_scope_state = {
+				state_region = { is_homeland = cu:micronesian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_misri = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:misri
+			any_scope_state = {
+				state_region = { is_homeland = cu:misri }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_fur = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:fur
+			any_scope_state = {
+				state_region = { is_homeland = cu:fur }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_fulbe = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:fulbe
+			any_scope_state = {
+				state_region = { is_homeland = cu:fulbe }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nyamwezi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nyamwezi
+			any_scope_state = {
+				state_region = { is_homeland = cu:nyamwezi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nepali = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nepali
+			any_scope_state = {
+				state_region = { is_homeland = cu:nepali }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nilotic = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nilotic
+			any_scope_state = {
+				state_region = { is_homeland = cu:nilotic }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bashkir = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bashkir
+			any_scope_state = {
+				state_region = { is_homeland = cu:bashkir }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bakongo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bakongo
+			any_scope_state = {
+				state_region = { is_homeland = cu:bakongo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_balinese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:balinese
+			any_scope_state = {
+				state_region = { is_homeland = cu:balinese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_baguirmi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:baguirmi
+			any_scope_state = {
+				state_region = { is_homeland = cu:baguirmi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bageli = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bageli
+			any_scope_state = {
+				state_region = { is_homeland = cu:bageli }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_batak = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:batak
+			any_scope_state = {
+				state_region = { is_homeland = cu:batak }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_patagonian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:patagonian
+			any_scope_state = {
+				state_region = { is_homeland = cu:patagonian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_baganda = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:baganda
+			any_scope_state = {
+				state_region = { is_homeland = cu:baganda }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_paraguayan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:paraguayan
+			any_scope_state = {
+				state_region = { is_homeland = cu:paraguayan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_basque = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:basque
+			any_scope_state = {
+				state_region = { is_homeland = cu:basque }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bassa = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bassa
+			any_scope_state = {
+				state_region = { is_homeland = cu:bassa }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_brazilian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:brazilian
+			any_scope_state = {
+				state_region = { is_homeland = cu:brazilian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_breton = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:breton
+			any_scope_state = {
+				state_region = { is_homeland = cu:breton }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_boer = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:boer
+			any_scope_state = {
+				state_region = { is_homeland = cu:boer }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_buryat = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:buryat
+			any_scope_state = {
+				state_region = { is_homeland = cu:buryat }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_greek = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:greek
+			any_scope_state = {
+				state_region = { is_homeland = cu:greek }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_pahari = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:pahari
+			any_scope_state = {
+				state_region = { is_homeland = cu:pahari }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_pathan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:pathan
+			any_scope_state = {
+				state_region = { is_homeland = cu:pathan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_kurdish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:kurdish
+			any_scope_state = {
+				state_region = { is_homeland = cu:kurdish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_flemish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:flemish
+			any_scope_state = {
+				state_region = { is_homeland = cu:flemish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yi
+			any_scope_state = {
+				state_region = { is_homeland = cu:yi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_deccani = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:deccani
+			any_scope_state = {
+				state_region = { is_homeland = cu:deccani }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nguni = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nguni
+			any_scope_state = {
+				state_region = { is_homeland = cu:nguni }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yankee = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yankee
+			any_scope_state = {
+				state_region = { is_homeland = cu:yankee }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_rajput = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:rajput
+			any_scope_state = {
+				state_region = { is_homeland = cu:rajput }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_latvian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:latvian
+			any_scope_state = {
+				state_region = { is_homeland = cu:latvian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_norwegian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:norwegian
+			any_scope_state = {
+				state_region = { is_homeland = cu:norwegian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_czech = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:czech
+			any_scope_state = {
+				state_region = { is_homeland = cu:czech }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_shan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:shan
+			any_scope_state = {
+				state_region = { is_homeland = cu:shan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tigray = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tigray
+			any_scope_state = {
+				state_region = { is_homeland = cu:tigray }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_moro = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:moro
+			any_scope_state = {
+				state_region = { is_homeland = cu:moro }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_moluccan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:moluccan
+			any_scope_state = {
+				state_region = { is_homeland = cu:moluccan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_slovak = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:slovak
+			any_scope_state = {
+				state_region = { is_homeland = cu:slovak }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_slovene = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:slovene
+			any_scope_state = {
+				state_region = { is_homeland = cu:slovene }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_swahili = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:swahili
+			any_scope_state = {
+				state_region = { is_homeland = cu:swahili }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_panjabi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:panjabi
+			any_scope_state = {
+				state_region = { is_homeland = cu:panjabi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_iroquoian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:iroquoian
+			any_scope_state = {
+				state_region = { is_homeland = cu:iroquoian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_pashtun = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:pashtun
+			any_scope_state = {
+				state_region = { is_homeland = cu:pashtun }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_platinean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:platinean
+			any_scope_state = {
+				state_region = { is_homeland = cu:platinean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_pueblo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:pueblo
+			any_scope_state = {
+				state_region = { is_homeland = cu:pueblo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_chilean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:chilean
+			any_scope_state = {
+				state_region = { is_homeland = cu:chilean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_manipuri = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:manipuri
+			any_scope_state = {
+				state_region = { is_homeland = cu:manipuri }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mande = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mande
+			any_scope_state = {
+				state_region = { is_homeland = cu:mande }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_korean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:korean
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bundeli = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bundeli
+			any_scope_state = {
+				state_region = { is_homeland = cu:bundeli }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_griqua = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:griqua
+			any_scope_state = {
+				state_region = { is_homeland = cu:griqua }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_georgian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:georgian
+			any_scope_state = {
+				state_region = { is_homeland = cu:georgian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_songhai = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:songhai
+			any_scope_state = {
+				state_region = { is_homeland = cu:songhai }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_metis = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:metis
+			any_scope_state = {
+				state_region = { is_homeland = cu:metis }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_chuvash = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:chuvash
+			any_scope_state = {
+				state_region = { is_homeland = cu:chuvash }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bidan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bidan
+			any_scope_state = {
+				state_region = { is_homeland = cu:bidan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bihari = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bihari
+			any_scope_state = {
+				state_region = { is_homeland = cu:bihari }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_maori = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:maori
+			any_scope_state = {
+				state_region = { is_homeland = cu:maori }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_han = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:han
+			any_scope_state = {
+				state_region = { is_homeland = cu:han }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_wolof = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:wolof
+			any_scope_state = {
+				state_region = { is_homeland = cu:wolof }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_fluvian_bantu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:fluvian_bantu
+			any_scope_state = {
+				state_region = { is_homeland = cu:fluvian_bantu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_francoprovencal = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:francoprovencal
+			any_scope_state = {
+				state_region = { is_homeland = cu:francoprovencal }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_french = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:french
+			any_scope_state = {
+				state_region = { is_homeland = cu:french }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_franco_canadian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:franco_canadian
+			any_scope_state = {
+				state_region = { is_homeland = cu:franco_canadian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_polish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:polish
+			any_scope_state = {
+				state_region = { is_homeland = cu:polish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_polynesian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:polynesian
+			any_scope_state = {
+				state_region = { is_homeland = cu:polynesian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_persian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:persian
+			any_scope_state = {
+				state_region = { is_homeland = cu:persian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bosniak = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bosniak
+			any_scope_state = {
+				state_region = { is_homeland = cu:bosniak }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_thai = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:thai
+			any_scope_state = {
+				state_region = { is_homeland = cu:thai }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_telegu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:telegu
+			any_scope_state = {
+				state_region = { is_homeland = cu:telegu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tamil = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tamil
+			any_scope_state = {
+				state_region = { is_homeland = cu:tamil }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_paiute = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:paiute
+			any_scope_state = {
+				state_region = { is_homeland = cu:paiute }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_manchu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:manchu
+			any_scope_state = {
+				state_region = { is_homeland = cu:manchu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_australian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:australian
+			any_scope_state = {
+				state_region = { is_homeland = cu:australian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_aborigine = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:aborigine
+			any_scope_state = {
+				state_region = { is_homeland = cu:aborigine }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_javan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:javan
+			any_scope_state = {
+				state_region = { is_homeland = cu:javan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_irish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:irish
+			any_scope_state = {
+				state_region = { is_homeland = cu:irish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_estonian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:estonian
+			any_scope_state = {
+				state_region = { is_homeland = cu:estonian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mayan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mayan
+			any_scope_state = {
+				state_region = { is_homeland = cu:mayan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bolivian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bolivian
+			any_scope_state = {
+				state_region = { is_homeland = cu:bolivian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bambara = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bambara
+			any_scope_state = {
+				state_region = { is_homeland = cu:bambara }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ryukyuan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ryukyuan
+			any_scope_state = {
+				state_region = { is_homeland = cu:ryukyuan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_swedish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:swedish
+			any_scope_state = {
+				state_region = { is_homeland = cu:swedish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_guajiro = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:guajiro
+			any_scope_state = {
+				state_region = { is_homeland = cu:guajiro }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_guarani = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:guarani
+			any_scope_state = {
+				state_region = { is_homeland = cu:guarani }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_wallonian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:wallonian
+			any_scope_state = {
+				state_region = { is_homeland = cu:wallonian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_byelorussian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:byelorussian
+			any_scope_state = {
+				state_region = { is_homeland = cu:byelorussian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_scottish_gaelic = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:scottish_gaelic
+			any_scope_state = {
+				state_region = { is_homeland = cu:scottish_gaelic }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_zulu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:zulu
+			any_scope_state = {
+				state_region = { is_homeland = cu:zulu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_khoisan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:khoisan
+			any_scope_state = {
+				state_region = { is_homeland = cu:khoisan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_comanche = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:comanche
+			any_scope_state = {
+				state_region = { is_homeland = cu:comanche }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_xhosa = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:xhosa
+			any_scope_state = {
+				state_region = { is_homeland = cu:xhosa }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_corsican = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:corsican
+			any_scope_state = {
+				state_region = { is_homeland = cu:corsican }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_peruvian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:peruvian
+			any_scope_state = {
+				state_region = { is_homeland = cu:peruvian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_muisca = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:muisca
+			any_scope_state = {
+				state_region = { is_homeland = cu:muisca }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_muskogean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:muskogean
+			any_scope_state = {
+				state_region = { is_homeland = cu:muskogean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lithuanian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lithuanian
+			any_scope_state = {
+				state_region = { is_homeland = cu:lithuanian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_miskito = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:miskito
+			any_scope_state = {
+				state_region = { is_homeland = cu:miskito }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mixtec = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mixtec
+			any_scope_state = {
+				state_region = { is_homeland = cu:mixtec }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_visayan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:visayan
+			any_scope_state = {
+				state_region = { is_homeland = cu:visayan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yue = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yue
+			any_scope_state = {
+				state_region = { is_homeland = cu:yue }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sorb = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sorb
+			any_scope_state = {
+				state_region = { is_homeland = cu:sorb }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sotho = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sotho
+			any_scope_state = {
+				state_region = { is_homeland = cu:sotho }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_somali = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:somali
+			any_scope_state = {
+				state_region = { is_homeland = cu:somali }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sakuya_nonexistent = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sakuya_nonexistent
+			any_scope_state = {
+				state_region = { is_homeland = cu:sakuya_nonexistent }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yao = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yao
+			any_scope_state = {
+				state_region = { is_homeland = cu:yao }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yoruba = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yoruba
+			any_scope_state = {
+				state_region = { is_homeland = cu:yoruba }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_naga = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:naga
+			any_scope_state = {
+				state_region = { is_homeland = cu:naga }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nahua = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nahua
+			any_scope_state = {
+				state_region = { is_homeland = cu:nahua }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_navajo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:navajo
+			any_scope_state = {
+				state_region = { is_homeland = cu:navajo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_shona = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:shona
+			any_scope_state = {
+				state_region = { is_homeland = cu:shona }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_uighur = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:uighur
+			any_scope_state = {
+				state_region = { is_homeland = cu:uighur }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_burmese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:burmese
+			any_scope_state = {
+				state_region = { is_homeland = cu:burmese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_romanian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:romanian
+			any_scope_state = {
+				state_region = { is_homeland = cu:romanian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_melanesian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:melanesian
+			any_scope_state = {
+				state_region = { is_homeland = cu:melanesian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_aimara = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:aimara
+			any_scope_state = {
+				state_region = { is_homeland = cu:aimara }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_finnish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:finnish
+			any_scope_state = {
+				state_region = { is_homeland = cu:finnish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_fang = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:fang
+			any_scope_state = {
+				state_region = { is_homeland = cu:fang }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_siouan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:siouan
+			any_scope_state = {
+				state_region = { is_homeland = cu:siouan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sudanese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sudanese
+			any_scope_state = {
+				state_region = { is_homeland = cu:sudanese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sulista = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sulista
+			any_scope_state = {
+				state_region = { is_homeland = cu:sulista }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sukuma = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sukuma
+			any_scope_state = {
+				state_region = { is_homeland = cu:sukuma }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_scottish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:scottish
+			any_scope_state = {
+				state_region = { is_homeland = cu:scottish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sumatran = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sumatran
+			any_scope_state = {
+				state_region = { is_homeland = cu:sumatran }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_miao = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:miao
+			any_scope_state = {
+				state_region = { is_homeland = cu:miao }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_british = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:british
+			any_scope_state = {
+				state_region = { is_homeland = cu:british }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_anglo_canadian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:anglo_canadian
+			any_scope_state = {
+				state_region = { is_homeland = cu:anglo_canadian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tswana = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tswana
+			any_scope_state = {
+				state_region = { is_homeland = cu:tswana }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_dutch = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:dutch
+			any_scope_state = {
+				state_region = { is_homeland = cu:dutch }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mordvin = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mordvin
+			any_scope_state = {
+				state_region = { is_homeland = cu:mordvin }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mossi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mossi
+			any_scope_state = {
+				state_region = { is_homeland = cu:mossi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_filipino = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:filipino
+			any_scope_state = {
+				state_region = { is_homeland = cu:filipino }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_filipino_hispanophone = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:filipino_hispanophone
+			any_scope_state = {
+				state_region = { is_homeland = cu:filipino_hispanophone }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_filipino_mestizo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:filipino_mestizo
+			any_scope_state = {
+				state_region = { is_homeland = cu:filipino_mestizo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_salish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:salish
+			any_scope_state = {
+				state_region = { is_homeland = cu:salish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sara = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sara
+			any_scope_state = {
+				state_region = { is_homeland = cu:sara }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_zapotec = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:zapotec
+			any_scope_state = {
+				state_region = { is_homeland = cu:zapotec }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sami = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sami
+			any_scope_state = {
+				state_region = { is_homeland = cu:sami }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_portuguese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:portuguese
+			any_scope_state = {
+				state_region = { is_homeland = cu:portuguese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tiv = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tiv
+			any_scope_state = {
+				state_region = { is_homeland = cu:tiv }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mongol = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mongol
+			any_scope_state = {
+				state_region = { is_homeland = cu:mongol }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mongo = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mongo
+			any_scope_state = {
+				state_region = { is_homeland = cu:mongo }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tibetan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tibetan
+			any_scope_state = {
+				state_region = { is_homeland = cu:tibetan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_siberian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:siberian
+			any_scope_state = {
+				state_region = { is_homeland = cu:siberian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_spanish = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:spanish
+			any_scope_state = {
+				state_region = { is_homeland = cu:spanish }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_caribeno = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:caribeno
+			any_scope_state = {
+				state_region = { is_homeland = cu:caribeno }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_nordestino = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:nordestino
+			any_scope_state = {
+				state_region = { is_homeland = cu:nordestino }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hausa = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hausa
+			any_scope_state = {
+				state_region = { is_homeland = cu:hausa }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_beja = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:beja
+			any_scope_state = {
+				state_region = { is_homeland = cu:beja }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_bedouin = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:bedouin
+			any_scope_state = {
+				state_region = { is_homeland = cu:bedouin }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_gondi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:gondi
+			any_scope_state = {
+				state_region = { is_homeland = cu:gondi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_equatorial_bantu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:equatorial_bantu
+			any_scope_state = {
+				state_region = { is_homeland = cu:equatorial_bantu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_herero = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:herero
+			any_scope_state = {
+				state_region = { is_homeland = cu:herero }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_chechen = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:chechen
+			any_scope_state = {
+				state_region = { is_homeland = cu:chechen }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_dakota = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:dakota
+			any_scope_state = {
+				state_region = { is_homeland = cu:dakota }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_dayak = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:dayak
+			any_scope_state = {
+				state_region = { is_homeland = cu:dayak }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_dixie = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:dixie
+			any_scope_state = {
+				state_region = { is_homeland = cu:dixie }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_dyula = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:dyula
+			any_scope_state = {
+				state_region = { is_homeland = cu:dyula }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tonga = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tonga
+			any_scope_state = {
+				state_region = { is_homeland = cu:tonga }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_sidama = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:sidama
+			any_scope_state = {
+				state_region = { is_homeland = cu:sidama }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_min = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:min
+			any_scope_state = {
+				state_region = { is_homeland = cu:min }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ashkenazi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ashkenazi
+			any_scope_state = {
+				state_region = { is_homeland = cu:ashkenazi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_ainu = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:ainu
+			any_scope_state = {
+				state_region = { is_homeland = cu:ainu }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_alemannic = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:alemannic
+			any_scope_state = {
+				state_region = { is_homeland = cu:alemannic }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_azerbaijani = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:azerbaijani
+			any_scope_state = {
+				state_region = { is_homeland = cu:azerbaijani }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_amhara = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:amhara
+			any_scope_state = {
+				state_region = { is_homeland = cu:amhara }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_algonquian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:algonquian
+			any_scope_state = {
+				state_region = { is_homeland = cu:algonquian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_albanian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:albanian
+			any_scope_state = {
+				state_region = { is_homeland = cu:albanian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_apache = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:apache
+			any_scope_state = {
+				state_region = { is_homeland = cu:apache }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_aragonese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:aragonese
+			any_scope_state = {
+				state_region = { is_homeland = cu:aragonese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_asturleonese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:asturleonese
+			any_scope_state = {
+				state_region = { is_homeland = cu:asturleonese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_argentine = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:argentine
+			any_scope_state = {
+				state_region = { is_homeland = cu:argentine }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_afar = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:afar
+			any_scope_state = {
+				state_region = { is_homeland = cu:afar }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_avadhi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:avadhi
+			any_scope_state = {
+				state_region = { is_homeland = cu:avadhi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_akan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:akan
+			any_scope_state = {
+				state_region = { is_homeland = cu:akan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_assamese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:assamese
+			any_scope_state = {
+				state_region = { is_homeland = cu:assamese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_athabaskan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:athabaskan
+			any_scope_state = {
+				state_region = { is_homeland = cu:athabaskan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_azande = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:azande
+			any_scope_state = {
+				state_region = { is_homeland = cu:azande }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_berber = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:berber
+			any_scope_state = {
+				state_region = { is_homeland = cu:berber }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lunda = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lunda
+			any_scope_state = {
+				state_region = { is_homeland = cu:lunda }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_rundi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:rundi
+			any_scope_state = {
+				state_region = { is_homeland = cu:rundi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_lomwe = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:lomwe
+			any_scope_state = {
+				state_region = { is_homeland = cu:lomwe }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_yakut = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:yakut
+			any_scope_state = {
+				state_region = { is_homeland = cu:yakut }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_hokan = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:hokan
+			any_scope_state = {
+				state_region = { is_homeland = cu:hokan }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_afro_antillean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:afro_antillean
+			any_scope_state = {
+				state_region = { is_homeland = cu:afro_antillean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_afro_brazilian = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:afro_brazilian
+			any_scope_state = {
+				state_region = { is_homeland = cu:afro_brazilian }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_afro_american = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:afro_american
+			any_scope_state = {
+				state_region = { is_homeland = cu:afro_american }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_afro_caribbean = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:afro_caribbean
+			any_scope_state = {
+				state_region = { is_homeland = cu:afro_caribbean }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_afro_caribeno = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:afro_caribeno
+			any_scope_state = {
+				state_region = { is_homeland = cu:afro_caribeno }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_tatar = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:tatar
+			any_scope_state = {
+				state_region = { is_homeland = cu:tatar }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mashriqi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mashriqi
+			any_scope_state = {
+				state_region = { is_homeland = cu:mashriqi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_makua = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:makua
+			any_scope_state = {
+				state_region = { is_homeland = cu:makua }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_marathi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:marathi
+			any_scope_state = {
+				state_region = { is_homeland = cu:marathi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_malayalam = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:malayalam
+			any_scope_state = {
+				state_region = { is_homeland = cu:malayalam }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_malay = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:malay
+			any_scope_state = {
+				state_region = { is_homeland = cu:malay }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_maghrebi = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:maghrebi
+			any_scope_state = {
+				state_region = { is_homeland = cu:maghrebi }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_maltese = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:maltese
+			any_scope_state = {
+				state_region = { is_homeland = cu:maltese }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_maasai = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:maasai
+			any_scope_state = {
+				state_region = { is_homeland = cu:maasai }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mazanderani = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mazanderani
+			any_scope_state = {
+				state_region = { is_homeland = cu:mazanderani }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_malagasy = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:malagasy
+			any_scope_state = {
+				state_region = { is_homeland = cu:malagasy }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_mari = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:mari
+			any_scope_state = {
+				state_region = { is_homeland = cu:mari }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+
+sakuya_list_culture_dynamic_idx_khmer = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:khmer
+			any_scope_state = {
+				state_region = { is_homeland = cu:khmer }
+			}
+		}
+	}
+	is_valid = { is_player = yes }
+	effect = { }
+}
+

@@ -1,0 +1,2 @@
+sakuya_b4_civil_war_progress_advance_20 = 0.20
+sakuya_b4_civil_war_progress_retreat_20 = -0.20

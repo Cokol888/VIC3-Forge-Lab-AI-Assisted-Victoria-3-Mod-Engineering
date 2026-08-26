@@ -1,0 +1,414 @@
+﻿# Sakuya Cheat Menu Pro - Block 5 Modifiers (Revised)
+
+sakuya_cheat_b5_all_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_approval_add = 1
+}
+
+sakuya_cheat_b5_all_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_all_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_all_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+
+sakuya_cheat_b5_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+
+sakuya_cheat_b5_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+
+sakuya_cheat_b5_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+
+sakuya_cheat_b5_opp_agitator = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+
+sakuya_cheat_b5_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+
+sakuya_cheat_b5_armed_forces_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_armed_forces_approval_add = 1
+}
+
+sakuya_cheat_b5_devout_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_devout_approval_add = 1
+}
+
+sakuya_cheat_b5_industrialists_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_industrialists_approval_add = 1
+}
+
+sakuya_cheat_b5_intelligentsia_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_intelligentsia_approval_add = 1
+}
+
+sakuya_cheat_b5_landowners_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_landowners_approval_add = 1
+}
+
+sakuya_cheat_b5_petty_bourgeoisie_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_petty_bourgeoisie_approval_add = 1
+}
+
+sakuya_cheat_b5_rural_folk_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_rural_folk_approval_add = 1
+}
+
+sakuya_cheat_b5_trade_unions_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_ig_trade_unions_approval_add = 1
+}
+
+sakuya_cheat_b5_armed_forces_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_armed_forces_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_devout_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_devout_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_industrialists_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_industrialists_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_intelligentsia_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_intelligentsia_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_landowners_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_landowners_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_petty_bourgeoisie_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_rural_folk_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_rural_folk_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_trade_unions_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_trade_unions_pol_str_mult = 1
+}
+
+sakuya_cheat_b5_armed_forces_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_armed_forces_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_devout_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_devout_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_industrialists_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_industrialists_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_intelligentsia_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_intelligentsia_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_landowners_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_landowners_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_petty_bourgeoisie_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_rural_folk_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_rural_folk_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_trade_unions_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_ig_trade_unions_pop_attraction_mult = 1
+}
+
+sakuya_cheat_b5_lobby_leverage = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_lobby_leverage_generation_mult = 1
+}
+
+# IG in_government attraction
+sakuya_cheat_b5_armed_forces_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_devout_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_industrialists_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_intelligentsia_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_landowners_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_petty_bourgeoisie_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_rural_folk_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_trade_unions_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+
+# IG in_opposition approval
+sakuya_cheat_b5_armed_forces_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_devout_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_industrialists_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_intelligentsia_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_landowners_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_petty_bourgeoisie_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_rural_folk_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_trade_unions_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+
+# IG in_opposition agitator popularity
+sakuya_cheat_b5_armed_forces_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_devout_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_industrialists_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_intelligentsia_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_landowners_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_petty_bourgeoisie_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_rural_folk_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+sakuya_cheat_b5_trade_unions_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+
+# IG per-IG amenability (no per-IG effect in V3; uses generic amenability_add as placeholder)
+sakuya_cheat_b5_armed_forces_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_devout_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_industrialists_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_intelligentsia_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_landowners_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_petty_bourgeoisie_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_rural_folk_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_trade_unions_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+
+# IG in_government approval (no per-IG effect in V3; uses generic in_government_approval_add as placeholder)
+sakuya_cheat_b5_armed_forces_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_devout_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_industrialists_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_intelligentsia_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_landowners_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_petty_bourgeoisie_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_rural_folk_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_trade_unions_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+
+# IG per-IG pol_str_factor (no per-IG effect in V3; uses generic pol_str_factor as placeholder)
+sakuya_cheat_b5_armed_forces_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_devout_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_industrialists_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_intelligentsia_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_landowners_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_petty_bourgeoisie_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_rural_folk_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_trade_unions_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+
+# Selected IG modifiers (generic, applied to whichever IG is selected)
+sakuya_cheat_b5_sel_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_approval_add = 1
+}
+sakuya_cheat_b5_sel_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_pol_str_mult = 1
+}
+sakuya_cheat_b5_sel_pol_str_factor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_pol_str_factor = 1
+}
+sakuya_cheat_b5_sel_pop_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_pop_attraction_mult = 1
+}
+sakuya_cheat_b5_sel_amenability = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_amenability_add = 1
+}
+sakuya_cheat_b5_sel_in_gov_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_government_approval_add = 1
+}
+sakuya_cheat_b5_sel_in_gov_attraction = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_in_government_attraction_mult = 1
+}
+sakuya_cheat_b5_sel_in_opp_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_in_opposition_approval_add = 1
+}
+sakuya_cheat_b5_sel_in_opp_agitator_popularity = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_in_opposition_agitator_popularity_add = 1
+}
+

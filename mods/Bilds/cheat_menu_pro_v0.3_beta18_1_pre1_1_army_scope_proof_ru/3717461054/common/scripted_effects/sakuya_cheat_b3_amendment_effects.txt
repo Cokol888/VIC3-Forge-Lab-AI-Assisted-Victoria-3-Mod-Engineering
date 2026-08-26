@@ -1,0 +1,73 @@
+# Sakuya Cheat Menu Pro - Block 3 Amendment Effects
+
+sakuya_b3_amendment_save_selected_ig_effect = {
+	if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces exists = ig:ig_armed_forces } ig:ig_armed_forces = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_devout exists = ig:ig_devout } ig:ig_devout = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists exists = ig:ig_industrialists } ig:ig_industrialists = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia exists = ig:ig_intelligentsia } ig:ig_intelligentsia = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_landowners exists = ig:ig_landowners } ig:ig_landowners = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie exists = ig:ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk exists = ig:ig_rural_folk } ig:ig_rural_folk = { save_scope_as = sakuya_b3_amendment_sponsor } }
+	if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions exists = ig:ig_trade_unions } ig:ig_trade_unions = { save_scope_as = sakuya_b3_amendment_sponsor } }
+}
+
+sakuya_b3_amendment_add_to_law_auto_sponsor_effect = {
+	root = {
+		random_interest_group = {
+			save_scope_as = sakuya_b3_amendment_sponsor
+		}
+	}
+	if = {
+		limit = { exists = scope:sakuya_b3_amendment_sponsor }
+		add_amendment = {
+			type = $TYPE$
+			sponsor = scope:sakuya_b3_amendment_sponsor
+			cooldown = 120
+		}
+	}
+}
+
+sakuya_b3_amendment_add_to_law_selected_sponsor_effect = {
+	root = { sakuya_b3_amendment_save_selected_ig_effect = yes }
+	if = {
+		limit = {
+			NOT = { exists = scope:sakuya_b3_amendment_sponsor }
+		}
+		root = {
+			random_interest_group = {
+				save_scope_as = sakuya_b3_amendment_sponsor
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:sakuya_b3_amendment_sponsor }
+		add_amendment = {
+			type = $TYPE$
+			sponsor = scope:sakuya_b3_amendment_sponsor
+			cooldown = 120
+		}
+	}
+}
+
+sakuya_b3_amendment_add_to_current_law_selected_sponsor_effect = {
+	root = { sakuya_b3_amendment_save_selected_ig_effect = yes }
+	if = {
+		limit = {
+			NOT = { exists = scope:sakuya_b3_amendment_sponsor }
+		}
+		root = {
+			random_interest_group = {
+				save_scope_as = sakuya_b3_amendment_sponsor
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:sakuya_b3_amendment_sponsor }
+		add_amendment = {
+			type = $TYPE$
+			sponsor = scope:sakuya_b3_amendment_sponsor
+			cooldown = 120
+		}
+	}
+}
+

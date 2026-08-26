@@ -1,0 +1,35 @@
+{
+  "government": [
+    {"id":"legitimacy","modifier":"cmp_politics2_legitimacy","kind":"points"},
+    {"id":"authority","modifier":"cmp_politics2_authority","kind":"percent"},
+    {"id":"bureaucracy","modifier":"cmp_politics2_bureaucracy","kind":"percent"},
+    {"id":"influence","modifier":"cmp_politics2_influence","kind":"percent"}
+  ],
+  "institutions": [
+    {"id":"colonial","key":"institution_colonial_affairs","loc":"CMP_POL2_INST_COLONIAL"},
+    {"id":"schools","key":"institution_schools","loc":"CMP_POL2_INST_SCHOOLS"},
+    {"id":"welfare","key":"institution_social_security","loc":"CMP_POL2_INST_WELFARE"},
+    {"id":"workplace","key":"institution_workplace_safety","loc":"CMP_POL2_INST_WORKPLACE"},
+    {"id":"police","key":"institution_police","loc":"CMP_POL2_INST_POLICE"},
+    {"id":"health","key":"institution_health_system","loc":"CMP_POL2_INST_HEALTH"},
+    {"id":"home","key":"institution_home_affairs","loc":"CMP_POL2_INST_HOME"}
+  ],
+  "interest_groups": [
+    {"id":"armed_forces","modifier_key":"ig_armed_forces","loc":"CMP_POL2_IG_ARMED_FORCES"},
+    {"id":"devout","modifier_key":"ig_devout","loc":"CMP_POL2_IG_DEVOUT"},
+    {"id":"industrialists","modifier_key":"ig_industrialists","loc":"CMP_POL2_IG_INDUSTRIALISTS"},
+    {"id":"intelligentsia","modifier_key":"ig_intelligentsia","loc":"CMP_POL2_IG_INTELLIGENTSIA"},
+    {"id":"landowners","modifier_key":"ig_landowners","loc":"CMP_POL2_IG_LANDOWNERS"},
+    {"id":"petty_bourgeoisie","modifier_key":"ig_petty_bourgeoisie","loc":"CMP_POL2_IG_PETTY_BOURGEOISIE"},
+    {"id":"rural_folk","modifier_key":"ig_rural_folk","loc":"CMP_POL2_IG_RURAL_FOLK"},
+    {"id":"trade_unions","modifier_key":"ig_trade_unions","loc":"CMP_POL2_IG_TRADE_UNIONS"}
+  ],
+  "traits": [
+    {"id":"ambitious","loc":"CMP_POL2_TRAIT_AMBITIOUS"},
+    {"id":"charismatic","loc":"CMP_POL2_TRAIT_CHARISMATIC"},
+    {"id":"brave","loc":"CMP_POL2_TRAIT_BRAVE"},
+    {"id":"innovative","loc":"CMP_POL2_TRAIT_INNOVATIVE"},
+    {"id":"meticulous","loc":"CMP_POL2_TRAIT_METICULOUS"},
+    {"id":"persistent","loc":"CMP_POL2_TRAIT_PERSISTENT"}
+  ]
+}

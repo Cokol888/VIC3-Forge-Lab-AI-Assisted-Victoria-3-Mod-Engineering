@@ -1,0 +1,2285 @@
+# ============================================================
+# Panel 4 - 发起博弈 / 战争 效果
+# ROOT = 发起者国家
+# scope:sakuya_dp_target = 目标国家
+# scope:sakuya_dp_player = 玩家（存有战争借口变量）
+# ============================================================
+
+sakuya_b4_clear_marked_navy_lists_effect = {
+    every_country = {
+        limit = { has_variable_list = sakuya_main_04_01_marked_navy_list }
+        clear_variable_list = sakuya_main_04_01_marked_navy_list
+    }
+}
+
+# 解析目标州（用于 state-based wargoals）
+# 正向（玩家攻目标）：目标国家有标记州(sakuya_mark_foreign_state_target) → 用它，否则用首都
+# 反向（目标攻玩家）：玩家有标记州(decree_sakuya_mark_state) → 用它，否则用首都
+# 结果保存为 scope:sakuya_dp_target_state
+sakuya_b4_resolve_marked_political_movement_effect = {
+    remove_variable = sakuya_b4_marked_political_movement_found
+    every_political_movement = {
+        limit = { has_variable = sakuya_main_04_03_marked_political_movement }
+        save_scope_as = sakuya_b4_marked_political_movement_scope
+        root = { set_variable = sakuya_b4_marked_political_movement_found }
+    }
+    if = {
+        limit = {
+            NOT = { has_variable = sakuya_b4_marked_political_movement_found }
+        }
+        every_country = {
+            limit = {
+                any_political_movement = { has_variable = sakuya_main_04_03_marked_political_movement }
+            }
+            every_political_movement = {
+                limit = { has_variable = sakuya_main_04_03_marked_political_movement }
+                save_scope_as = sakuya_b4_marked_political_movement_scope
+                root = { set_variable = sakuya_b4_marked_political_movement_found }
+            }
+        }
+    }
+}
+
+sakuya_b4_clear_player_shipyard_construction_capacity_effect = {
+    remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity
+    remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_default
+    remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_shift
+    remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_alt
+    remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_ctrl
+    every_scope_state = {
+        every_scope_building = {
+            limit = { is_building_type = building_shipyard }
+            remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity
+            remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_default
+            remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_shift
+            remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_alt
+            remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_ctrl
+        }
+    }
+}
+
+sakuya_b4_disable_ship_construction_queue_risk_effect = {
+    every_country = {
+        remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity
+        remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_default
+        remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_shift
+        remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_alt
+        remove_modifier = sakuya_cheat_b4_navy_ship_construction_capacity_ctrl
+        remove_modifier = sakuya_cheat_b4_navy_supply_ship_ratio
+        remove_modifier = sakuya_cheat_b4_113_ship_construction_capacity
+        remove_modifier = sakuya_cheat_b4_113_ship_construction_capacity_small
+        remove_modifier = sakuya_cheat_b4_113_supply_ship_ratio
+        remove_variable = sakuya_b4_navy_ship_construction_capacity_mult
+        remove_variable = sakuya_b4_navy_ship_construction_capacity_active
+        remove_variable = sakuya_b4_navy_supply_ship_ratio_mult
+        remove_variable = sakuya_b4_navy_supply_ship_ratio_active
+        remove_variable = sakuya_b4_113_ship_construction_capacity_mult
+        remove_variable = sakuya_b4_113_ship_construction_capacity_small_mult
+        remove_variable = sakuya_b4_113_ship_construction_capacity_active
+        remove_variable = sakuya_b4_113_supply_ship_ratio_mult
+        remove_variable = sakuya_b4_113_supply_ship_ratio_active
+    }
+}
+
+sakuya_b4_pm_pop_attraction_change_self_effect = {
+    if = { limit = { NOT = { has_variable = sakuya_b4_pm_pop_attraction_value } } set_variable = { name = sakuya_b4_pm_pop_attraction_value value = 0 } }
+    change_variable = { name = sakuya_b4_pm_pop_attraction_value add = $VALUE$ }
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction
+    add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction multiplier = var:sakuya_b4_pm_pop_attraction_value }
+    set_variable = sakuya_b4_pm_pop_attraction_active
+    if = { limit = { var:sakuya_b4_pm_pop_attraction_value = 0 } remove_modifier = sakuya_cheat_b4_pm_pop_attraction remove_variable = sakuya_b4_pm_pop_attraction_value remove_variable = sakuya_b4_pm_pop_attraction_active }
+}
+
+sakuya_b4_pm_pop_attraction_change_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = { sakuya_b4_pm_pop_attraction_change_self_effect = { VALUE = $VALUE$ } }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_pop_attraction_add_ctrl_effect = { sakuya_b4_pm_pop_attraction_change_effect = { VALUE = 10 } }
+sakuya_b4_pm_pop_attraction_add_right_effect = { sakuya_b4_pm_pop_attraction_change_effect = { VALUE = 99999.99 } }
+sakuya_b4_pm_pop_attraction_sub_alt_effect = { sakuya_b4_pm_pop_attraction_change_effect = { VALUE = -0.05 } }
+sakuya_b4_pm_pop_attraction_sub_shift_effect = { sakuya_b4_pm_pop_attraction_change_effect = { VALUE = -999.99 } }
+sakuya_b4_pm_pop_attraction_sub_ctrl_effect = { sakuya_b4_pm_pop_attraction_change_effect = { VALUE = -10 } }
+
+sakuya_b4_pm_radicalism_change_self_effect = {
+    if = { limit = { NOT = { has_variable = sakuya_b4_pm_radicalism_value } } set_variable = { name = sakuya_b4_pm_radicalism_value value = 0 } }
+    change_variable = { name = sakuya_b4_pm_radicalism_value add = $VALUE$ }
+    remove_modifier = sakuya_cheat_b4_pm_radicalism
+    add_modifier = { name = sakuya_cheat_b4_pm_radicalism multiplier = var:sakuya_b4_pm_radicalism_value }
+    set_variable = sakuya_b4_pm_radicalism_active
+    if = { limit = { var:sakuya_b4_pm_radicalism_value = 0 } remove_modifier = sakuya_cheat_b4_pm_radicalism remove_variable = sakuya_b4_pm_radicalism_value remove_variable = sakuya_b4_pm_radicalism_active }
+}
+
+sakuya_b4_pm_radicalism_change_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = { sakuya_b4_pm_radicalism_change_self_effect = { VALUE = $VALUE$ } }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_add_ctrl_effect = { sakuya_b4_pm_radicalism_change_effect = { VALUE = 10 } }
+sakuya_b4_pm_radicalism_add_right_effect = { sakuya_b4_pm_radicalism_change_effect = { VALUE = 99999.99 } }
+sakuya_b4_pm_radicalism_sub_alt_effect = { sakuya_b4_pm_radicalism_change_effect = { VALUE = -0.05 } }
+sakuya_b4_pm_radicalism_sub_shift_effect = { sakuya_b4_pm_radicalism_change_effect = { VALUE = -999.99 } }
+sakuya_b4_pm_radicalism_sub_ctrl_effect = { sakuya_b4_pm_radicalism_change_effect = { VALUE = -10 } }
+
+sakuya_b4_pm_radicalism_enactment_change_self_effect = {
+    if = { limit = { NOT = { has_variable = sakuya_b4_pm_radicalism_enactment_value } } set_variable = { name = sakuya_b4_pm_radicalism_enactment_value value = 0 } }
+    change_variable = { name = sakuya_b4_pm_radicalism_enactment_value add = $VALUE$ }
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval
+    add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval multiplier = var:sakuya_b4_pm_radicalism_enactment_value }
+    add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval multiplier = var:sakuya_b4_pm_radicalism_enactment_value }
+    set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    if = { limit = { var:sakuya_b4_pm_radicalism_enactment_value = 0 } remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval remove_variable = sakuya_b4_pm_radicalism_enactment_value remove_variable = sakuya_b4_pm_radicalism_enactment_approval_active remove_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active }
+}
+
+sakuya_b4_pm_radicalism_enactment_change_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = { sakuya_b4_pm_radicalism_enactment_change_self_effect = { VALUE = $VALUE$ } }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_add_ctrl_effect = { sakuya_b4_pm_radicalism_enactment_change_effect = { VALUE = 10 } }
+sakuya_b4_pm_radicalism_enactment_add_right_effect = { sakuya_b4_pm_radicalism_enactment_change_effect = { VALUE = 99999.99 } }
+sakuya_b4_pm_radicalism_enactment_sub_alt_effect = { sakuya_b4_pm_radicalism_enactment_change_effect = { VALUE = -0.05 } }
+sakuya_b4_pm_radicalism_enactment_sub_shift_effect = { sakuya_b4_pm_radicalism_enactment_change_effect = { VALUE = -999.99 } }
+sakuya_b4_pm_radicalism_enactment_sub_ctrl_effect = { sakuya_b4_pm_radicalism_enactment_change_effect = { VALUE = -10 } }
+
+sakuya_b4_pm_pop_attraction_add_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_01 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_02 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_03 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_04 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_05 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_06 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_07 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_08 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_09 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p020_10 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+}
+
+sakuya_b4_pm_pop_attraction_sub_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_01 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_02 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_03 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_04 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_05 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_06 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_07 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_08 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_09 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_n020_10 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+}
+
+sakuya_b4_pm_pop_attraction_add_alt_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p005_01 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p005_02 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p005_03 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p005_04 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p005_05 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+}
+
+sakuya_b4_pm_pop_attraction_add_shift_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p200_01 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p200_02 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p200_03 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p200_04 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_pop_attraction_p200_05 }
+        set_variable = sakuya_b4_pm_pop_attraction_active
+    }
+}
+
+sakuya_b4_pm_pop_attraction_clear_self_effect = {
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_01
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_02
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_03
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_04
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_05
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_06
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_07
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_08
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_09
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p020_10
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_01
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_02
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_03
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_04
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_05
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_06
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_07
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_08
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_09
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_n020_10
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_01
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_02
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_03
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_04
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p005_05
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_01
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_02
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_03
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_04
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction_p200_05
+    remove_modifier = sakuya_cheat_b4_pm_pop_attraction
+    remove_variable = sakuya_b4_pm_pop_attraction_value
+    remove_variable = sakuya_b4_pm_pop_attraction_active
+}
+
+sakuya_b4_pm_pop_attraction_add_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_pop_attraction_add_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_pop_attraction_add_shift_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_pop_attraction_add_shift_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_pop_attraction_add_alt_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_pop_attraction_add_alt_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_pop_attraction_sub_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_pop_attraction_sub_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_pop_attraction_clear_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_pop_attraction_clear_self_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_character_attraction_add_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_01 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_02 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_03 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_04 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_05 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_06 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_07 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_08 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_09 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p020_10 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+}
+
+sakuya_b4_pm_character_attraction_sub_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_01 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_02 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_03 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_04 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_05 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_06 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_07 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_08 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_09 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_n020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_n020_10 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+}
+
+sakuya_b4_pm_character_attraction_add_alt_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p005_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p005_01 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p005_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p005_02 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p005_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p005_03 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p005_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p005_04 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p005_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p005_05 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+}
+
+sakuya_b4_pm_character_attraction_add_shift_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p200_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p200_01 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p200_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p200_02 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p200_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p200_03 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p200_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p200_04 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_character_attraction_p200_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_character_attraction_p200_05 }
+        set_variable = sakuya_b4_pm_character_attraction_active
+    }
+}
+
+sakuya_b4_pm_character_attraction_clear_self_effect = {
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_01
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_02
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_03
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_04
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_05
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_06
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_07
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_08
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_09
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p020_10
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_01
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_02
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_03
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_04
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_05
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_06
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_07
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_08
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_09
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_n020_10
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p005_01
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p005_02
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p005_03
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p005_04
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p005_05
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p200_01
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p200_02
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p200_03
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p200_04
+    remove_modifier = sakuya_cheat_b4_pm_character_attraction_p200_05
+    remove_variable = sakuya_b4_pm_character_attraction_value
+    remove_variable = sakuya_b4_pm_character_attraction_active
+}
+
+sakuya_b4_pm_character_attraction_add_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_character_attraction_add_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_character_attraction_add_shift_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_character_attraction_add_shift_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_character_attraction_add_alt_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_character_attraction_add_alt_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_character_attraction_sub_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_character_attraction_sub_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_character_attraction_clear_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_character_attraction_clear_self_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_add_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_01 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_02 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_03 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_04 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_05 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_06 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_07 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_08 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_09 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p020_10 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+}
+
+sakuya_b4_pm_radicalism_sub_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_01 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_02 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_03 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_04 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_05 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_06 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_07 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_08 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_09 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_n020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_n020_10 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+}
+
+sakuya_b4_pm_radicalism_add_alt_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p005_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p005_01 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p005_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p005_02 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p005_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p005_03 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p005_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p005_04 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p005_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p005_05 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+}
+
+sakuya_b4_pm_radicalism_add_shift_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p200_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p200_01 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p200_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p200_02 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p200_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p200_03 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p200_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p200_04 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_p200_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_p200_05 }
+        set_variable = sakuya_b4_pm_radicalism_active
+    }
+}
+
+sakuya_b4_pm_radicalism_clear_self_effect = {
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_06
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_07
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_08
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_09
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p020_10
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_06
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_07
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_08
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_09
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_n020_10
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p005_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p005_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p005_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p005_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p005_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p200_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p200_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p200_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p200_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_p200_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism
+    remove_variable = sakuya_b4_pm_radicalism_value
+    remove_variable = sakuya_b4_pm_radicalism_active
+}
+
+sakuya_b4_pm_radicalism_add_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_add_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_add_shift_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_add_shift_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_add_alt_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_add_alt_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_sub_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_sub_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_clear_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_clear_self_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_add_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_06 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_07 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_08 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_09 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_10 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_sub_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_06 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_07 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_08 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_09 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_10 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_add_alt_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_add_shift_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_clear_self_effect = {
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_06
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_07
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_08
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_09
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p020_10
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_06
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_07
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_08
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_09
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_n020_10
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p005_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval_p200_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_approval
+    remove_variable = sakuya_b4_pm_radicalism_enactment_approval_value
+    remove_variable = sakuya_b4_pm_radicalism_enactment_value
+    remove_variable = sakuya_b4_pm_radicalism_enactment_approval_active
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_add_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_approval_add_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_add_shift_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_approval_add_shift_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_add_alt_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_approval_add_alt_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_sub_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_approval_sub_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_approval_clear_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_approval_clear_self_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_add_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_06 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_07 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_08 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_09 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_10 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_sub_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_06 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_06 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_07 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_07 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_08 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_08 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_09 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_09 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_10 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_10 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_add_alt_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_add_shift_stack_effect = {
+    if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_01 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_01 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_02 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_02 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_03 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_03 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_04 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_04 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+    else_if = {
+        limit = { NOT = { has_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_05 } }
+        add_modifier = { name = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_05 }
+        set_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+    }
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_clear_self_effect = {
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_06
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_07
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_08
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_09
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p020_10
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_06
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_07
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_08
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_09
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_n020_10
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p005_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_01
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_02
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_03
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_04
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval_p200_05
+    remove_modifier = sakuya_cheat_b4_pm_radicalism_enactment_disapproval
+    remove_variable = sakuya_b4_pm_radicalism_enactment_disapproval_value
+    remove_variable = sakuya_b4_pm_radicalism_enactment_value
+    remove_variable = sakuya_b4_pm_radicalism_enactment_disapproval_active
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_add_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_disapproval_add_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_add_shift_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_disapproval_add_shift_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_add_alt_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_disapproval_add_alt_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_sub_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_disapproval_sub_stack_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_pm_radicalism_enactment_disapproval_clear_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            sakuya_b4_pm_radicalism_enactment_disapproval_clear_self_effect = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_set_marked_political_movement_bolstering_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            set_suppression = no
+            set_bolstering = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_set_marked_political_movement_suppression_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            set_bolstering = no
+            set_suppression = yes
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_clear_marked_political_movement_bolster_suppress_effect = {
+    sakuya_b4_resolve_marked_political_movement_effect = yes
+    if = {
+        limit = {
+            has_variable = sakuya_b4_marked_political_movement_found
+            exists = scope:sakuya_b4_marked_political_movement_scope
+        }
+        scope:sakuya_b4_marked_political_movement_scope = {
+            set_bolstering = no
+            set_suppression = no
+        }
+    }
+    remove_variable = sakuya_b4_marked_political_movement_found
+}
+
+sakuya_b4_resolve_target_state_effect = {
+    # 默认：使用目标国家的首都
+    scope:sakuya_dp_target = {
+        capital = { save_scope_as = sakuya_dp_target_state }
+    }
+    # 如果 ROOT == 玩家（正向），在目标国家找外国州标记
+    if = {
+        limit = { is_player = yes }
+        scope:sakuya_dp_target = {
+            random_scope_state = {
+                limit = { has_variable = sakuya_mark_foreign_state_target }
+                save_scope_as = sakuya_dp_target_state
+            }
+        }
+    }
+    # 如果 ROOT != 玩家（反向，目标攻玩家），在玩家（=sakuya_dp_target）找法令标记
+    else = {
+        scope:sakuya_dp_target = {
+            random_scope_state = {
+                limit = { has_decree = decree_sakuya_mark_state }
+                save_scope_as = sakuya_dp_target_state
+            }
+        }
+    }
+}
+
+# 发起博弈（外交博弈，不直接开战）
+sakuya_b4_create_dp_effect = {
+    # 先解析目标州
+    sakuya_b4_resolve_target_state_effect = yes
+    # A类 - 领土（需要 target_state）
+    if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_conquer_state } }
+        create_diplomatic_play = { type = dp_conquer_state target_state = scope:sakuya_dp_target_state }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_return_state } }
+        create_diplomatic_play = { type = dp_return_state target_state = scope:sakuya_dp_target_state }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_take_treaty_port } }
+        create_diplomatic_play = { type = dp_take_treaty_port target_state = scope:sakuya_dp_target_state }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_unification } }
+        create_diplomatic_play = { type = dp_annex_war target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_annex_country } }
+        create_diplomatic_play = { type = dp_annex_war target_country = scope:sakuya_dp_target }
+    }
+    # B类 - 附庸
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_make_protectorate } }
+        create_diplomatic_play = { type = dp_make_protectorate target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_make_dominion } }
+        create_diplomatic_play = { type = dp_make_dominion target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_make_tributary } }
+        create_diplomatic_play = { type = dp_make_tributary target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_reduce_autonomy } }
+        create_diplomatic_play = { type = dp_reduce_autonomy target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_transfer_subject } }
+        create_diplomatic_play = { type = dp_transfer_subject target_country = scope:sakuya_dp_target }
+    }
+    # C类 - 政治
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_regime_change } }
+        create_diplomatic_play = { type = dp_regime_change target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_ban_slavery } }
+        create_diplomatic_play = { type = dp_ban_slavery target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_open_market } }
+        create_diplomatic_play = { type = dp_open_market target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_force_nationalization } }
+        create_diplomatic_play = { type = dp_force_nationalization target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_foreign_investment_rights } }
+        create_diplomatic_play = { type = dp_give_foreign_investment_rights target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_humiliation } }
+        create_diplomatic_play = { type = dp_humiliation target_country = scope:sakuya_dp_target }
+    }
+    # D类 - 解放
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_independence } }
+        create_diplomatic_play = { type = dp_independence target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_liberate_country } }
+        create_diplomatic_play = { type = dp_liberate_country target_state = scope:sakuya_dp_target_state }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_liberate_subject } }
+        create_diplomatic_play = { type = dp_liberate_subject target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_increase_autonomy } }
+        create_diplomatic_play = { type = dp_increase_autonomy target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_contain_threat } }
+        create_diplomatic_play = { type = dp_contain_threat target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_leave_power_bloc } }
+        create_diplomatic_play = { type = dp_leave_power_bloc target_country = scope:sakuya_dp_target }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_join_power_bloc } }
+        create_diplomatic_play = { type = dp_join_power_bloc target_country = scope:sakuya_dp_target }
+    }
+}
+
+# 发起战争（直接开战，war = yes）
+sakuya_b4_create_war_effect = {
+    # 先解析目标州
+    sakuya_b4_resolve_target_state_effect = yes
+    # A类 - 领土（需要 target_state）
+    if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_conquer_state } }
+        create_diplomatic_play = { type = dp_conquer_state target_state = scope:sakuya_dp_target_state war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_return_state } }
+        create_diplomatic_play = { type = dp_return_state target_state = scope:sakuya_dp_target_state war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_take_treaty_port } }
+        create_diplomatic_play = { type = dp_take_treaty_port target_state = scope:sakuya_dp_target_state war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_unification } }
+        create_diplomatic_play = { type = dp_annex_war target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_annex_country } }
+        create_diplomatic_play = { type = dp_annex_war target_country = scope:sakuya_dp_target war = yes }
+    }
+    # B类 - 附庸
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_make_protectorate } }
+        create_diplomatic_play = { type = dp_make_protectorate target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_make_dominion } }
+        create_diplomatic_play = { type = dp_make_dominion target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_make_tributary } }
+        create_diplomatic_play = { type = dp_make_tributary target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_reduce_autonomy } }
+        create_diplomatic_play = { type = dp_reduce_autonomy target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_transfer_subject } }
+        create_diplomatic_play = { type = dp_transfer_subject target_country = scope:sakuya_dp_target war = yes }
+    }
+    # C类 - 政治
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_regime_change } }
+        create_diplomatic_play = { type = dp_regime_change target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_ban_slavery } }
+        create_diplomatic_play = { type = dp_ban_slavery target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_open_market } }
+        create_diplomatic_play = { type = dp_open_market target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_force_nationalization } }
+        create_diplomatic_play = { type = dp_force_nationalization target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_foreign_investment_rights } }
+        create_diplomatic_play = { type = dp_give_foreign_investment_rights target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_humiliation } }
+        create_diplomatic_play = { type = dp_humiliation target_country = scope:sakuya_dp_target war = yes }
+    }
+    # D类 - 解放
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_independence } }
+        create_diplomatic_play = { type = dp_independence target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_liberate_country } }
+        create_diplomatic_play = { type = dp_liberate_country target_state = scope:sakuya_dp_target_state war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_liberate_subject } }
+        create_diplomatic_play = { type = dp_liberate_subject target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_increase_autonomy } }
+        create_diplomatic_play = { type = dp_increase_autonomy target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_contain_threat } }
+        create_diplomatic_play = { type = dp_contain_threat target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_leave_power_bloc } }
+        create_diplomatic_play = { type = dp_leave_power_bloc target_country = scope:sakuya_dp_target war = yes }
+    }
+    else_if = {
+        limit = { scope:sakuya_dp_player = { has_variable = sakuya_b4_wg_join_power_bloc } }
+        create_diplomatic_play = { type = dp_join_power_bloc target_country = scope:sakuya_dp_target war = yes }
+    }
+}
+
+# ============================================================
+# 结束博弈
+# ROOT = 玩家国家（has sakuya_b4_selected_dp）
+# ============================================================
+
+# 结束博弈 - 发起方胜利
+sakuya_b4_end_dp_initiator_win_effect = {
+    var:sakuya_b4_selected_dp = {
+        resolve_play_for = initiator
+        end_play = yes
+    }
+    remove_variable = sakuya_b4_selected_dp
+}
+
+# 结束博弈 - 目标方胜利
+sakuya_b4_end_dp_target_win_effect = {
+    var:sakuya_b4_selected_dp = {
+        resolve_play_for = target
+        end_play = yes
+    }
+    remove_variable = sakuya_b4_selected_dp
+}
+
+# 结束博弈 - 单纯结束（无胜负）
+sakuya_b4_end_dp_cancel_effect = {
+    var:sakuya_b4_selected_dp = {
+        end_play = yes
+    }
+    remove_variable = sakuya_b4_selected_dp
+}
+
+# ============================================================
+# 加入博弈
+# ROOT = 玩家国家（has sakuya_b4_selected_dp）
+# ============================================================
+
+# 玩家加入发起方
+sakuya_b4_join_dp_player_initiator_effect = {
+    var:sakuya_b4_selected_dp = {
+        add_initiator_backers = { root }
+    }
+}
+
+# 玩家加入目标方
+sakuya_b4_join_dp_player_target_effect = {
+    var:sakuya_b4_selected_dp = {
+        add_target_backers = { root }
+    }
+}
+
+# 目标国加入发起方
+sakuya_b4_join_dp_marked_initiator_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        save_scope_as = sakuya_b4_join_marked
+    }
+    if = {
+        limit = { exists = scope:sakuya_b4_join_marked }
+        var:sakuya_b4_selected_dp = {
+            add_initiator_backers = { scope:sakuya_b4_join_marked }
+        }
+    }
+}
+
+# 目标国加入目标方
+sakuya_b4_join_dp_marked_target_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        save_scope_as = sakuya_b4_join_marked
+    }
+    if = {
+        limit = { exists = scope:sakuya_b4_join_marked }
+        var:sakuya_b4_selected_dp = {
+            add_target_backers = { scope:sakuya_b4_join_marked }
+        }
+    }
+}
+
+# ============================================================
+# 退出博弈
+# ROOT = 玩家国家（has sakuya_b4_selected_dp）
+# ============================================================
+
+# 玩家退出博弈
+sakuya_b4_leave_dp_player_effect = {
+    var:sakuya_b4_selected_dp = {
+        if = {
+            limit = { is_diplomatic_play_involved_with = root }
+            add_diplomatic_play_war_support = { target = root value = -200 }
+        }
+        remove_initiator_backers = { root }
+        remove_target_backers = { root }
+    }
+}
+
+# 目标国退出博弈
+sakuya_b4_leave_dp_marked_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        save_scope_as = sakuya_b4_leave_marked
+    }
+    if = {
+        limit = { exists = scope:sakuya_b4_leave_marked }
+        var:sakuya_b4_selected_dp = {
+            if = {
+                limit = { is_diplomatic_play_involved_with = scope:sakuya_b4_leave_marked }
+                add_diplomatic_play_war_support = { target = scope:sakuya_b4_leave_marked value = -200 }
+            }
+            remove_initiator_backers = { scope:sakuya_b4_leave_marked }
+            remove_target_backers = { scope:sakuya_b4_leave_marked }
+        }
+    }
+}
+
+# ============================================================
+# 激化度（Escalation）
+# ROOT = 玩家国家（has sakuya_b4_selected_dp）
+# ============================================================
+
+# +20
+sakuya_b4_escalation_add_effect = {
+    var:sakuya_b4_selected_dp = {
+        add_escalation = 20
+    }
+}
+
+# -20
+sakuya_b4_escalation_sub_effect = {
+    var:sakuya_b4_selected_dp = {
+        add_escalation = -20
+    }
+}
+
+# 拉满
+sakuya_b4_escalation_max_effect = {
+    var:sakuya_b4_selected_dp = {
+        add_escalation = 200
+    }
+}
+
+# 归零
+sakuya_b4_escalation_min_effect = {
+    var:sakuya_b4_selected_dp = {
+        add_escalation = -200
+    }
+}
+
+# ============================================================
+# 战争辅助
+# ROOT = 玩家国家（has sakuya_b4_selected_war）
+# sakuya_b4_selected_war = war scope
+# ============================================================
+
+# 缓存标记国家
+sakuya_b4_cache_marked_country_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        save_scope_as = sakuya_b4_war_marked_country_scope
+    }
+}
+
+# 缓存战争所属博弈的发起方/目标方
+sakuya_b4_cache_war_side_scopes_effect = {
+    var:sakuya_b4_selected_war = {
+        diplomatic_play = {
+            initiator = { save_scope_as = sakuya_b4_war_initiator_side_scope }
+            target = { save_scope_as = sakuya_b4_war_target_side_scope }
+        }
+    }
+}
+
+# 战争支持默认优先作用于玩家；若玩家不在战争中，则优先作用于标记国；否则回退到发起方
+sakuya_b4_resolve_war_support_target_effect = {
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    scope:sakuya_b4_war_initiator_side_scope = {
+        save_scope_as = sakuya_b4_war_support_country_scope
+    }
+    if = {
+        limit = {
+            var:sakuya_b4_selected_war = {
+                is_war_participant = root
+            }
+        }
+        save_scope_as = sakuya_b4_war_support_country_scope
+    }
+    else = {
+        sakuya_b4_cache_marked_country_effect = yes
+        if = {
+            limit = {
+                exists = scope:sakuya_b4_war_marked_country_scope
+                var:sakuya_b4_selected_war = {
+                    is_war_participant = scope:sakuya_b4_war_marked_country_scope
+                }
+            }
+            scope:sakuya_b4_war_marked_country_scope = {
+                save_scope_as = sakuya_b4_war_support_country_scope
+            }
+        }
+    }
+}
+
+# ============================================================
+# 加入战争
+# ROOT = 玩家国家（has sakuya_b4_selected_war）
+# 默认加入发起方（initiator side）
+# ============================================================
+
+# 玩家加入战争（发起方）
+sakuya_b4_join_war_player_effect = {
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    var:sakuya_b4_selected_war = {
+        join_war = { target = root side = scope:sakuya_b4_war_initiator_side_scope }
+    }
+}
+
+# 标记国加入战争（发起方）
+sakuya_b4_join_war_marked_effect = {
+    sakuya_b4_cache_marked_country_effect = yes
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b4_war_marked_country_scope }
+        var:sakuya_b4_selected_war = {
+            join_war = { target = scope:sakuya_b4_war_marked_country_scope side = scope:sakuya_b4_war_initiator_side_scope }
+        }
+    }
+}
+
+# 玩家加入战争（目标方）
+sakuya_b4_join_war_player_target_effect = {
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    var:sakuya_b4_selected_war = {
+        join_war = { target = root side = scope:sakuya_b4_war_target_side_scope }
+    }
+}
+
+# 标记国加入战争（目标方）
+sakuya_b4_join_war_marked_target_effect = {
+    sakuya_b4_cache_marked_country_effect = yes
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    if = {
+        limit = { exists = scope:sakuya_b4_war_marked_country_scope }
+        var:sakuya_b4_selected_war = {
+            join_war = { target = scope:sakuya_b4_war_marked_country_scope side = scope:sakuya_b4_war_target_side_scope }
+        }
+    }
+}
+
+# 玩家退出战争（best effort：通过战争所属博弈移除该国）
+sakuya_b4_leave_war_player_effect = {
+    if = {
+        limit = {
+            var:sakuya_b4_selected_war = {
+                is_war_participant = root
+            }
+        }
+        var:sakuya_b4_selected_war = {
+            add_war_war_support = { target = root value = -200 }
+            diplomatic_play = {
+                remove_initiator_backers = { root }
+                remove_target_backers = { root }
+            }
+        }
+    }
+}
+
+# 标记国退出战争（best effort：通过战争所属博弈移除该国）
+sakuya_b4_leave_war_marked_effect = {
+    sakuya_b4_cache_marked_country_effect = yes
+    if = {
+        limit = {
+            exists = scope:sakuya_b4_war_marked_country_scope
+            var:sakuya_b4_selected_war = {
+                is_war_participant = scope:sakuya_b4_war_marked_country_scope
+            }
+        }
+        var:sakuya_b4_selected_war = {
+            add_war_war_support = { target = scope:sakuya_b4_war_marked_country_scope value = -200 }
+            diplomatic_play = {
+                remove_initiator_backers = { scope:sakuya_b4_war_marked_country_scope }
+                remove_target_backers = { scope:sakuya_b4_war_marked_country_scope }
+            }
+        }
+    }
+}
+
+# ============================================================
+# 结束战争
+# ROOT = 玩家国家（has sakuya_b4_selected_war）
+# ============================================================
+
+# 无条件结束
+sakuya_b4_end_war_cancel_effect = {
+    var:sakuya_b4_selected_war = {
+        diplomatic_play = {
+            set_war = no
+            end_play = yes
+        }
+    }
+    remove_variable = sakuya_b4_selected_war
+}
+
+# 发起方胜利
+sakuya_b4_end_war_initiator_win_effect = {
+    var:sakuya_b4_selected_war = {
+        diplomatic_play = {
+            set_war = no
+            resolve_play_for = initiator
+            end_play = yes
+        }
+    }
+    remove_variable = sakuya_b4_selected_war
+}
+
+# 目标方胜利
+sakuya_b4_end_war_target_win_effect = {
+    var:sakuya_b4_selected_war = {
+        diplomatic_play = {
+            set_war = no
+            resolve_play_for = target
+            end_play = yes
+        }
+    }
+    remove_variable = sakuya_b4_selected_war
+}
+
+# ============================================================
+# 战争支持度
+# ROOT = 玩家国家（has sakuya_b4_selected_war）
+# ============================================================
+
+# +25
+sakuya_b4_war_support_add_effect = {
+    sakuya_b4_resolve_war_support_target_effect = yes
+    var:sakuya_b4_selected_war = {
+        add_war_war_support = { target = scope:sakuya_b4_war_support_country_scope value = 25 }
+    }
+}
+
+# -25
+sakuya_b4_war_support_sub_effect = {
+    sakuya_b4_resolve_war_support_target_effect = yes
+    var:sakuya_b4_selected_war = {
+        add_war_war_support = { target = scope:sakuya_b4_war_support_country_scope value = -25 }
+    }
+}
+
+# +100
+sakuya_b4_war_support_max_effect = {
+    sakuya_b4_resolve_war_support_target_effect = yes
+    var:sakuya_b4_selected_war = {
+        add_war_war_support = { target = scope:sakuya_b4_war_support_country_scope value = 100 }
+    }
+}
+
+# -100
+sakuya_b4_war_support_min_effect = {
+    sakuya_b4_resolve_war_support_target_effect = yes
+    var:sakuya_b4_selected_war = {
+        add_war_war_support = { target = scope:sakuya_b4_war_support_country_scope value = -100 }
+    }
+}
+
+# 目标方 +25
+sakuya_b4_war_support_target_add_effect = {
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    var:sakuya_b4_selected_war = {
+        add_war_war_support = { target = scope:sakuya_b4_war_target_side_scope value = 25 }
+    }
+}
+
+# 目标方 -25
+sakuya_b4_war_support_target_sub_effect = {
+    sakuya_b4_cache_war_side_scopes_effect = yes
+    var:sakuya_b4_selected_war = {
+        add_war_war_support = { target = scope:sakuya_b4_war_target_side_scope value = -25 }
+    }
+}
+
+# === B4 HOME / POLITICAL MOVEMENT CIVIL WAR PROGRESS BEGIN ===
+sakuya_b4_pm_revolution_progress_country_add_effect = {
+    every_political_movement = {
+        limit = {
+            OR = {
+                is_revolutionary = yes
+                is_secessionist = yes
+            }
+        }
+        civil_war ?= {
+            add_civil_war_progress = sakuya_b4_civil_war_progress_advance_20
+        }
+    }
+}
+
+sakuya_b4_pm_revolution_progress_country_sub_effect = {
+    every_political_movement = {
+        limit = {
+            OR = {
+                is_revolutionary = yes
+                is_secessionist = yes
+            }
+        }
+        civil_war ?= {
+            add_civil_war_progress = sakuya_b4_civil_war_progress_retreat_20
+        }
+    }
+}
+
+sakuya_b4_pm_revolution_progress_target_add_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        sakuya_b4_pm_revolution_progress_country_add_effect = yes
+    }
+}
+
+sakuya_b4_pm_revolution_progress_target_sub_effect = {
+    every_country = {
+        limit = { has_variable = sakuya_mark_country_target }
+        sakuya_b4_pm_revolution_progress_country_sub_effect = yes
+    }
+}
+# === B4 HOME / POLITICAL MOVEMENT CIVIL WAR PROGRESS END ===
+
+# SKY_B4_113_REWORK_START
+sakuya_b4_113_change_country_modifier_delta_effect = {
+	if = { limit = { NOT = { has_variable = $VAR$ } } set_variable = { name = $VAR$ value = 0 } }
+	change_variable = { name = $VAR$ add = $DELTA$ }
+	if = { limit = { var:$VAR$ = 0 } remove_variable = $VAR$ }
+	remove_modifier = $MOD$
+	if = { limit = { has_variable = $VAR$ } add_modifier = { name = $MOD$ multiplier = var:$VAR$ } }
+}
+sakuya_b4_113_clear_country_modifier_effect = { remove_variable = $VAR$ remove_modifier = $MOD$ }
+sakuya_b4_113_change_marked_country_modifier_delta_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			if = { limit = { NOT = { has_variable = $VAR$ } } set_variable = { name = $VAR$ value = 0 } }
+			change_variable = { name = $VAR$ add = $DELTA$ }
+			if = { limit = { var:$VAR$ = 0 } remove_variable = $VAR$ }
+			remove_modifier = $MOD$
+			if = { limit = { has_variable = $VAR$ } add_modifier = { name = $MOD$ multiplier = var:$VAR$ } }
+			set_variable = $ACTIVE$
+		}
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+sakuya_b4_113_change_marked_country_modifier_plus_02_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = $VAR$
+			remove_modifier = $MOD$
+			remove_modifier = $FIXED_MOD$
+			add_modifier = { name = $FIXED_MOD$ }
+			set_variable = $ACTIVE$
+		}
+		set_variable = $ACTIVE$
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+sakuya_b4_113_change_marked_country_modifier_plus_20_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = { has_variable = sakuya_b3_marked_country_found exists = scope:sakuya_b3_marked_country_scope }
+		scope:sakuya_b3_marked_country_scope = {
+			remove_variable = $VAR$
+			remove_modifier = $MOD$
+			remove_modifier = $FIXED_MOD$
+			add_modifier = { name = $FIXED_MOD$ }
+			set_variable = $ACTIVE$
+		}
+		set_variable = $ACTIVE$
+	}
+	remove_variable = sakuya_b3_marked_country_found
+}
+sakuya_b4_113_apply_all_states_modifier_effect = {
+	every_scope_state = { remove_modifier = $MOD$ }
+	if = { limit = { has_variable = $VAR$ } every_scope_state = { add_modifier = { name = $MOD$ multiplier = root.var:$VAR$ } } }
+}
+sakuya_b4_113_change_all_states_modifier_delta_effect = {
+	if = { limit = { NOT = { has_variable = $VAR$ } } set_variable = { name = $VAR$ value = 0 } }
+	change_variable = { name = $VAR$ add = $DELTA$ }
+	if = { limit = { var:$VAR$ = 0 } remove_variable = $VAR$ }
+	sakuya_b4_113_apply_all_states_modifier_effect = { MOD = $MOD$ VAR = $VAR$ }
+}
+sakuya_b4_113_clear_all_states_modifier_effect = { remove_variable = $VAR$ every_scope_state = { remove_modifier = $MOD$ } }
+sakuya_b4_113_apply_naval_admin_modifier_effect = {
+	every_scope_state = { every_scope_building = { limit = { is_building_type = building_naval_administration } remove_modifier = $MOD$ } }
+	if = { limit = { has_variable = $VAR$ } every_scope_state = { every_scope_building = { limit = { is_building_type = building_naval_administration } add_modifier = { name = $MOD$ multiplier = root.var:$VAR$ } } } }
+}
+sakuya_b4_113_change_naval_admin_modifier_delta_effect = {
+	if = { limit = { NOT = { has_variable = $VAR$ } } set_variable = { name = $VAR$ value = 0 } }
+	change_variable = { name = $VAR$ add = $DELTA$ }
+	if = { limit = { var:$VAR$ = 0 } remove_variable = $VAR$ }
+	sakuya_b4_113_apply_naval_admin_modifier_effect = { MOD = $MOD$ VAR = $VAR$ }
+}
+sakuya_b4_113_clear_naval_admin_modifier_effect = {
+	remove_variable = $VAR$
+	every_scope_state = { every_scope_building = { limit = { is_building_type = building_naval_administration } remove_modifier = $MOD$ } }
+}
+# SKY_B4_113_REWORK_END

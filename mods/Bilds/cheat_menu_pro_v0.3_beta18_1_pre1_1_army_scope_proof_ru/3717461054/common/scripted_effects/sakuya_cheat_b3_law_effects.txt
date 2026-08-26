@@ -1,0 +1,17 @@
+# Sakuya Cheat Menu Pro - Block 3 Law helper effects
+
+sakuya_b3_activate_law_player_effect = {
+	activate_law = law_type:$LAW$
+}
+
+sakuya_b3_activate_law_marked_country_effect = {
+	sakuya_b3_resolve_marked_country_effect = yes
+	if = {
+		limit = {
+			exists = scope:sakuya_b3_marked_country_scope
+		}
+		scope:sakuya_b3_marked_country_scope = {
+			activate_law = law_type:$LAW$
+		}
+	}
+}

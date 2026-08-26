@@ -1,0 +1,190 @@
+# BTN3 Tab2 Country
+
+sakuya_b3_country_gov_size_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_gov_size } }
+sakuya_b3_country_gov_size_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_size VAR = sakuya_b3_country_gov_size_var DELTA = 1 } } }
+sakuya_b3_country_gov_size_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_size VAR = sakuya_b3_country_gov_size_var DELTA = 10 } } }
+sakuya_b3_country_gov_size_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_size VAR = sakuya_b3_country_gov_size_var DELTA = 2 } } }
+sakuya_b3_country_gov_size_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_size VAR = sakuya_b3_country_gov_size_var DELTA = -1 } } }
+sakuya_b3_country_gov_size_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_gov_size VAR = sakuya_b3_country_gov_size_var } } }
+
+sakuya_b3_country_ig_incoherence_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_ig_incoherence } }
+sakuya_b3_country_ig_incoherence_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_ig_incoherence VAR = sakuya_b3_country_ig_incoherence_var DELTA = -0.2 } } }
+sakuya_b3_country_ig_incoherence_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_ig_incoherence VAR = sakuya_b3_country_ig_incoherence_var DELTA = -200 } } }
+sakuya_b3_country_ig_incoherence_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_ig_incoherence VAR = sakuya_b3_country_ig_incoherence_var DELTA = -0.05 } } }
+sakuya_b3_country_ig_incoherence_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_ig_incoherence VAR = sakuya_b3_country_ig_incoherence_var DELTA = 0.2 } } }
+sakuya_b3_country_ig_incoherence_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_ig_incoherence VAR = sakuya_b3_country_ig_incoherence_var } } }
+
+sakuya_b3_country_votes_legitimacy_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_votes_legitimacy } }
+sakuya_b3_country_votes_legitimacy_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_votes_legitimacy VAR = sakuya_b3_country_votes_legitimacy_var DELTA = 10 } } }
+sakuya_b3_country_votes_legitimacy_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_votes_legitimacy VAR = sakuya_b3_country_votes_legitimacy_var DELTA = 100 } } }
+sakuya_b3_country_votes_legitimacy_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_votes_legitimacy VAR = sakuya_b3_country_votes_legitimacy_var DELTA = 2 } } }
+sakuya_b3_country_votes_legitimacy_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_votes_legitimacy VAR = sakuya_b3_country_votes_legitimacy_var DELTA = -10 } } }
+sakuya_b3_country_votes_legitimacy_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_votes_legitimacy VAR = sakuya_b3_country_votes_legitimacy_var } } }
+
+sakuya_b3_country_clout_legitimacy_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_clout_legitimacy } }
+sakuya_b3_country_clout_legitimacy_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_clout_legitimacy VAR = sakuya_b3_country_clout_legitimacy_var DELTA = 10 } } }
+sakuya_b3_country_clout_legitimacy_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_clout_legitimacy VAR = sakuya_b3_country_clout_legitimacy_var DELTA = 100 } } }
+sakuya_b3_country_clout_legitimacy_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_clout_legitimacy VAR = sakuya_b3_country_clout_legitimacy_var DELTA = 2 } } }
+sakuya_b3_country_clout_legitimacy_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_clout_legitimacy VAR = sakuya_b3_country_clout_legitimacy_var DELTA = -10 } } }
+sakuya_b3_country_clout_legitimacy_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_clout_legitimacy VAR = sakuya_b3_country_clout_legitimacy_var } } }
+
+sakuya_b3_country_gov_ig_attraction_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_gov_ig_attraction } }
+sakuya_b3_country_gov_ig_attraction_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_ig_attraction VAR = sakuya_b3_country_gov_ig_attraction_var DELTA = 0.2 } } }
+sakuya_b3_country_gov_ig_attraction_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_ig_attraction VAR = sakuya_b3_country_gov_ig_attraction_var DELTA = 200 } } }
+sakuya_b3_country_gov_ig_attraction_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_ig_attraction VAR = sakuya_b3_country_gov_ig_attraction_var DELTA = 0.05 } } }
+sakuya_b3_country_gov_ig_attraction_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_gov_ig_attraction VAR = sakuya_b3_country_gov_ig_attraction_var DELTA = -0.2 } } }
+sakuya_b3_country_gov_ig_attraction_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_gov_ig_attraction VAR = sakuya_b3_country_gov_ig_attraction_var } } }
+
+sakuya_b3_country_electoral_confidence_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_electoral_confidence } }
+sakuya_b3_country_electoral_confidence_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_electoral_confidence VAR = sakuya_b3_country_electoral_confidence_var DELTA = 1 } } }
+sakuya_b3_country_electoral_confidence_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_electoral_confidence VAR = sakuya_b3_country_electoral_confidence_var DELTA = 10 } } }
+sakuya_b3_country_electoral_confidence_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_electoral_confidence VAR = sakuya_b3_country_electoral_confidence_var DELTA = 0.05 } } }
+sakuya_b3_country_electoral_confidence_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_electoral_confidence VAR = sakuya_b3_country_electoral_confidence_var DELTA = -1 } } }
+sakuya_b3_country_electoral_confidence_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_electoral_confidence VAR = sakuya_b3_country_electoral_confidence_var } } }
+
+sakuya_b3_country_pop_pol_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_pop_pol } }
+sakuya_b3_country_pop_pol_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pop_pol VAR = sakuya_b3_country_pop_pol_var DELTA = 1 } } }
+sakuya_b3_country_pop_pol_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pop_pol VAR = sakuya_b3_country_pop_pol_var DELTA = 100 } } }
+sakuya_b3_country_pop_pol_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pop_pol VAR = sakuya_b3_country_pop_pol_var DELTA = 0.05 } } }
+sakuya_b3_country_pop_pol_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pop_pol VAR = sakuya_b3_country_pop_pol_var DELTA = -1 } } }
+sakuya_b3_country_pop_pol_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_pop_pol VAR = sakuya_b3_country_pop_pol_var } } }
+
+sakuya_b3_country_wealth_pol_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_wealth_pol } }
+sakuya_b3_country_wealth_pol_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_wealth_pol VAR = sakuya_b3_country_wealth_pol_var DELTA = 0.2 } } }
+sakuya_b3_country_wealth_pol_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_wealth_pol VAR = sakuya_b3_country_wealth_pol_var DELTA = 100 } } }
+sakuya_b3_country_wealth_pol_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_wealth_pol VAR = sakuya_b3_country_wealth_pol_var DELTA = 0.05 } } }
+sakuya_b3_country_wealth_pol_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_wealth_pol VAR = sakuya_b3_country_wealth_pol_var DELTA = -0.2 } } }
+sakuya_b3_country_wealth_pol_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_wealth_pol VAR = sakuya_b3_country_wealth_pol_var } } }
+
+sakuya_b3_country_vote_power_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_vote_power } }
+sakuya_b3_country_vote_power_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_power VAR = sakuya_b3_country_vote_power_var DELTA = 20 } } }
+sakuya_b3_country_vote_power_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_power VAR = sakuya_b3_country_vote_power_var DELTA = 10000 } } }
+sakuya_b3_country_vote_power_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_power VAR = sakuya_b3_country_vote_power_var DELTA = 1 } } }
+sakuya_b3_country_vote_power_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_power VAR = sakuya_b3_country_vote_power_var DELTA = -20 } } }
+sakuya_b3_country_vote_power_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_vote_power VAR = sakuya_b3_country_vote_power_var } } }
+
+sakuya_b3_country_literacy_vote_power_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_literacy_vote_power } }
+sakuya_b3_country_literacy_vote_power_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_literacy_vote_power VAR = sakuya_b3_country_literacy_vote_power_var DELTA = 20 } } }
+sakuya_b3_country_literacy_vote_power_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_literacy_vote_power VAR = sakuya_b3_country_literacy_vote_power_var DELTA = 10000 } } }
+sakuya_b3_country_literacy_vote_power_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_literacy_vote_power VAR = sakuya_b3_country_literacy_vote_power_var DELTA = 1 } } }
+sakuya_b3_country_literacy_vote_power_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_literacy_vote_power VAR = sakuya_b3_country_literacy_vote_power_var DELTA = -20 } } }
+sakuya_b3_country_literacy_vote_power_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_literacy_vote_power VAR = sakuya_b3_country_literacy_vote_power_var } } }
+
+sakuya_b3_country_vote_wealth_threshold_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_vote_wealth_threshold } }
+sakuya_b3_country_vote_wealth_threshold_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_wealth_threshold VAR = sakuya_b3_country_vote_wealth_threshold_var DELTA = 10 } } }
+sakuya_b3_country_vote_wealth_threshold_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_wealth_threshold VAR = sakuya_b3_country_vote_wealth_threshold_var DELTA = 100 } } }
+sakuya_b3_country_vote_wealth_threshold_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_wealth_threshold VAR = sakuya_b3_country_vote_wealth_threshold_var DELTA = 1 } } }
+sakuya_b3_country_vote_wealth_threshold_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_vote_wealth_threshold VAR = sakuya_b3_country_vote_wealth_threshold_var DELTA = -10 } } }
+sakuya_b3_country_vote_wealth_threshold_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_vote_wealth_threshold VAR = sakuya_b3_country_vote_wealth_threshold_var } } }
+
+sakuya_b3_country_headofstate_legitimacy_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_headofstate_legitimacy } }
+sakuya_b3_country_headofstate_legitimacy_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_headofstate_legitimacy VAR = sakuya_b3_country_headofstate_legitimacy_var DELTA = 10 } } }
+sakuya_b3_country_headofstate_legitimacy_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_headofstate_legitimacy VAR = sakuya_b3_country_headofstate_legitimacy_var DELTA = 100 } } }
+sakuya_b3_country_headofstate_legitimacy_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_headofstate_legitimacy VAR = sakuya_b3_country_headofstate_legitimacy_var DELTA = 2 } } }
+sakuya_b3_country_headofstate_legitimacy_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_headofstate_legitimacy VAR = sakuya_b3_country_headofstate_legitimacy_var DELTA = -10 } } }
+sakuya_b3_country_headofstate_legitimacy_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_headofstate_legitimacy VAR = sakuya_b3_country_headofstate_legitimacy_var } } }
+
+sakuya_b3_country_colony_growth_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_colony_growth } }
+sakuya_b3_country_colony_growth_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_colony_growth VAR = sakuya_b3_country_colony_growth_var DELTA = 0.2 } } }
+sakuya_b3_country_colony_growth_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_colony_growth VAR = sakuya_b3_country_colony_growth_var DELTA = 10 } } }
+sakuya_b3_country_colony_growth_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_colony_growth VAR = sakuya_b3_country_colony_growth_var DELTA = 0.05 } } }
+sakuya_b3_country_colony_growth_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_colony_growth VAR = sakuya_b3_country_colony_growth_var DELTA = -0.2 } } }
+sakuya_b3_country_colony_growth_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_colony_growth VAR = sakuya_b3_country_colony_growth_var } } }
+
+sakuya_b3_country_tension_decay_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_tension_decay } }
+sakuya_b3_country_tension_decay_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_tension_decay VAR = sakuya_b3_country_tension_decay_var DELTA = 0.2 } } }
+sakuya_b3_country_tension_decay_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_tension_decay VAR = sakuya_b3_country_tension_decay_var DELTA = 200 } } }
+sakuya_b3_country_tension_decay_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_tension_decay VAR = sakuya_b3_country_tension_decay_var DELTA = 0.05 } } }
+sakuya_b3_country_tension_decay_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_tension_decay VAR = sakuya_b3_country_tension_decay_var DELTA = -0.2 } } }
+sakuya_b3_country_tension_decay_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_tension_decay VAR = sakuya_b3_country_tension_decay_var } } }
+
+sakuya_b3_country_incorporation_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_incorporation } }
+sakuya_b3_country_incorporation_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_incorporation VAR = sakuya_b3_country_incorporation_var DELTA = 0.2 } } }
+sakuya_b3_country_incorporation_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_incorporation VAR = sakuya_b3_country_incorporation_var DELTA = 200 } } }
+sakuya_b3_country_incorporation_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_incorporation VAR = sakuya_b3_country_incorporation_var DELTA = 0.05 } } }
+sakuya_b3_country_incorporation_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_incorporation VAR = sakuya_b3_country_incorporation_var DELTA = -0.2 } } }
+sakuya_b3_country_incorporation_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_incorporation VAR = sakuya_b3_country_incorporation_var } } }
+
+sakuya_b3_country_unincorp_output_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_unincorp_output } }
+sakuya_b3_country_unincorp_output_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_output VAR = sakuya_b3_country_unincorp_output_var DELTA = 0.2 } } }
+sakuya_b3_country_unincorp_output_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_output VAR = sakuya_b3_country_unincorp_output_var DELTA = 200 } } }
+sakuya_b3_country_unincorp_output_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_output VAR = sakuya_b3_country_unincorp_output_var DELTA = 0.05 } } }
+sakuya_b3_country_unincorp_output_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_output VAR = sakuya_b3_country_unincorp_output_var DELTA = -0.2 } } }
+sakuya_b3_country_unincorp_output_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_unincorp_output VAR = sakuya_b3_country_unincorp_output_var } } }
+
+sakuya_b3_country_unincorp_migration_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_unincorp_migration } }
+sakuya_b3_country_unincorp_migration_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_migration VAR = sakuya_b3_country_unincorp_migration_var DELTA = 0.2 } } }
+sakuya_b3_country_unincorp_migration_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_migration VAR = sakuya_b3_country_unincorp_migration_var DELTA = 200 } } }
+sakuya_b3_country_unincorp_migration_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_migration VAR = sakuya_b3_country_unincorp_migration_var DELTA = 0.05 } } }
+sakuya_b3_country_unincorp_migration_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_migration VAR = sakuya_b3_country_unincorp_migration_var DELTA = -0.2 } } }
+sakuya_b3_country_unincorp_migration_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_unincorp_migration VAR = sakuya_b3_country_unincorp_migration_var } } }
+
+sakuya_b3_country_unincorp_wages_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_unincorp_wages } }
+sakuya_b3_country_unincorp_wages_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_wages VAR = sakuya_b3_country_unincorp_wages_var DELTA = -0.2 } } }
+sakuya_b3_country_unincorp_wages_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_wages VAR = sakuya_b3_country_unincorp_wages_var DELTA = -200 } } }
+sakuya_b3_country_unincorp_wages_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_wages VAR = sakuya_b3_country_unincorp_wages_var DELTA = -0.05 } } }
+sakuya_b3_country_unincorp_wages_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_unincorp_wages VAR = sakuya_b3_country_unincorp_wages_var DELTA = 0.2 } } }
+sakuya_b3_country_unincorp_wages_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_unincorp_wages VAR = sakuya_b3_country_unincorp_wages_var } } }
+
+sakuya_b3_country_education_fervor_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_education_fervor } }
+sakuya_b3_country_education_fervor_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_fervor VAR = sakuya_b3_country_education_fervor_var DELTA = 20 } } }
+sakuya_b3_country_education_fervor_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_fervor VAR = sakuya_b3_country_education_fervor_var DELTA = 1000 } } }
+sakuya_b3_country_education_fervor_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_fervor VAR = sakuya_b3_country_education_fervor_var DELTA = 5 } } }
+sakuya_b3_country_education_fervor_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_fervor VAR = sakuya_b3_country_education_fervor_var DELTA = -20 } } }
+sakuya_b3_country_education_fervor_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_education_fervor VAR = sakuya_b3_country_education_fervor_var } } }
+
+sakuya_b3_country_education_access_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_education_access } }
+sakuya_b3_country_education_access_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access VAR = sakuya_b3_country_education_access_var DELTA = 0.2 } } }
+sakuya_b3_country_education_access_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access VAR = sakuya_b3_country_education_access_var DELTA = 200 } } }
+sakuya_b3_country_education_access_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access VAR = sakuya_b3_country_education_access_var DELTA = 0.05 } } }
+sakuya_b3_country_education_access_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access VAR = sakuya_b3_country_education_access_var DELTA = -0.2 } } }
+sakuya_b3_country_education_access_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_education_access VAR = sakuya_b3_country_education_access_var } } }
+
+sakuya_b3_country_education_access_wealth_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_education_access_wealth } }
+sakuya_b3_country_education_access_wealth_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access_wealth VAR = sakuya_b3_country_education_access_wealth_var DELTA = 0.2 } } }
+sakuya_b3_country_education_access_wealth_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access_wealth VAR = sakuya_b3_country_education_access_wealth_var DELTA = 200 } } }
+sakuya_b3_country_education_access_wealth_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access_wealth VAR = sakuya_b3_country_education_access_wealth_var DELTA = 0.05 } } }
+sakuya_b3_country_education_access_wealth_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_education_access_wealth VAR = sakuya_b3_country_education_access_wealth_var DELTA = -0.2 } } }
+sakuya_b3_country_education_access_wealth_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_education_access_wealth VAR = sakuya_b3_country_education_access_wealth_var } } }
+
+sakuya_b3_country_food_security_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_food_security } }
+sakuya_b3_country_food_security_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_food_security VAR = sakuya_b3_country_food_security_var DELTA = 0.2 } } }
+sakuya_b3_country_food_security_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_food_security VAR = sakuya_b3_country_food_security_var DELTA = 200 } } }
+sakuya_b3_country_food_security_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_food_security VAR = sakuya_b3_country_food_security_var DELTA = 0.05 } } }
+sakuya_b3_country_food_security_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_food_security VAR = sakuya_b3_country_food_security_var DELTA = -0.2 } } }
+sakuya_b3_country_food_security_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_food_security VAR = sakuya_b3_country_food_security_var } } }
+
+sakuya_b3_country_pollution_health_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_pollution_health } }
+sakuya_b3_country_pollution_health_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pollution_health VAR = sakuya_b3_country_pollution_health_var DELTA = 0.2 } } }
+sakuya_b3_country_pollution_health_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pollution_health VAR = sakuya_b3_country_pollution_health_var DELTA = 200 } } }
+sakuya_b3_country_pollution_health_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pollution_health VAR = sakuya_b3_country_pollution_health_var DELTA = 0.05 } } }
+sakuya_b3_country_pollution_health_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_pollution_health VAR = sakuya_b3_country_pollution_health_var DELTA = -0.2 } } }
+sakuya_b3_country_pollution_health_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_pollution_health VAR = sakuya_b3_country_pollution_health_var } } }
+
+sakuya_b3_country_working_conditions_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_working_conditions } }
+sakuya_b3_country_working_conditions_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_conditions VAR = sakuya_b3_country_working_conditions_var DELTA = 0.2 } } }
+sakuya_b3_country_working_conditions_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_conditions VAR = sakuya_b3_country_working_conditions_var DELTA = 200 } } }
+sakuya_b3_country_working_conditions_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_conditions VAR = sakuya_b3_country_working_conditions_var DELTA = 0.05 } } }
+sakuya_b3_country_working_conditions_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_conditions VAR = sakuya_b3_country_working_conditions_var DELTA = -0.2 } } }
+sakuya_b3_country_working_conditions_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_working_conditions VAR = sakuya_b3_country_working_conditions_var } } }
+
+sakuya_b3_country_coup_resistance_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_coup_resistance } }
+sakuya_b3_country_coup_resistance_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_coup_resistance VAR = sakuya_b3_country_coup_resistance_var DELTA = 1 } } }
+sakuya_b3_country_coup_resistance_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_coup_resistance VAR = sakuya_b3_country_coup_resistance_var DELTA = 100 } } }
+sakuya_b3_country_coup_resistance_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_coup_resistance VAR = sakuya_b3_country_coup_resistance_var DELTA = 0.05 } } }
+sakuya_b3_country_coup_resistance_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_coup_resistance VAR = sakuya_b3_country_coup_resistance_var DELTA = -1 } } }
+sakuya_b3_country_coup_resistance_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_coup_resistance VAR = sakuya_b3_country_coup_resistance_var } } }
+
+sakuya_b3_country_harvest_protection_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_harvest_protection } }
+sakuya_b3_country_harvest_protection_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_harvest_protection VAR = sakuya_b3_country_harvest_protection_var DELTA = -0.2 } } }
+sakuya_b3_country_harvest_protection_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_harvest_protection VAR = sakuya_b3_country_harvest_protection_var DELTA = -200 } } }
+sakuya_b3_country_harvest_protection_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_harvest_protection VAR = sakuya_b3_country_harvest_protection_var DELTA = -0.05 } } }
+sakuya_b3_country_harvest_protection_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_harvest_protection VAR = sakuya_b3_country_harvest_protection_var DELTA = 0.2 } } }
+sakuya_b3_country_harvest_protection_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_harvest_protection VAR = sakuya_b3_country_harvest_protection_var } } }
+
+sakuya_b3_country_working_adult_ratio_check = { scope = country is_shown = { is_player = yes has_modifier = sakuya_cheat_b3_country_working_adult_ratio } }
+sakuya_b3_country_working_adult_ratio_add = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_adult_ratio VAR = sakuya_b3_country_working_adult_ratio_var DELTA = 0.1 } } }
+sakuya_b3_country_working_adult_ratio_add_shift = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_adult_ratio VAR = sakuya_b3_country_working_adult_ratio_var DELTA = 1 } } }
+sakuya_b3_country_working_adult_ratio_add_alt = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_adult_ratio VAR = sakuya_b3_country_working_adult_ratio_var DELTA = 0.05 } } }
+sakuya_b3_country_working_adult_ratio_sub = { scope = country effect = { sakuya_b3_lawmod_player_change_modifier_delta_effect = { MOD = sakuya_cheat_b3_country_working_adult_ratio VAR = sakuya_b3_country_working_adult_ratio_var DELTA = -0.1 } } }
+sakuya_b3_country_working_adult_ratio_clear = { scope = country effect = { sakuya_b3_lawmod_player_clear_modifier_effect = { MOD = sakuya_cheat_b3_country_working_adult_ratio VAR = sakuya_b3_country_working_adult_ratio_var } } }

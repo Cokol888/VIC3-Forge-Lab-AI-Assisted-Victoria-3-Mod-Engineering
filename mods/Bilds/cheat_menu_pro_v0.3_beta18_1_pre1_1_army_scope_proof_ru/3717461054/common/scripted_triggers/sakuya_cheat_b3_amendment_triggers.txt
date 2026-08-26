@@ -1,0 +1,840 @@
+# Sakuya Cheat Menu Pro - Block 3 Amendment Triggers
+
+sakuya_b3_amendment_has_single_selected_ig_trigger = {
+	OR = {
+		AND = { has_variable = sakuya_b5_sel_ig_armed_forces NOT = { OR = { has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_rural_folk has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_devout NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_rural_folk has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_industrialists NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_rural_folk has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_intelligentsia NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_rural_folk has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_landowners NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_rural_folk has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_rural_folk has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_rural_folk NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_trade_unions } } }
+		AND = { has_variable = sakuya_b5_sel_ig_trade_unions NOT = { OR = { has_variable = sakuya_b5_sel_ig_armed_forces has_variable = sakuya_b5_sel_ig_devout has_variable = sakuya_b5_sel_ig_industrialists has_variable = sakuya_b5_sel_ig_intelligentsia has_variable = sakuya_b5_sel_ig_landowners has_variable = sakuya_b5_sel_ig_petty_bourgeoisie has_variable = sakuya_b5_sel_ig_rural_folk } } }
+	}
+}
+
+# Sakuya generated amendment active_has scripted triggers start
+sakuya_b3_amendment_active_has_amendment_geheime_staatskonferenz_metternich = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_geheime_staatskonferenz_metternich
+					has_amendment = amendment_type:sakuya_amendment_geheime_staatskonferenz_metternich
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_geheime_staatskonferenz_kolowrat = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_geheime_staatskonferenz_kolowrat
+					has_amendment = amendment_type:sakuya_amendment_geheime_staatskonferenz_kolowrat
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_reinstated_fueros = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_citizenship ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_reinstated_fueros
+					has_amendment = amendment_type:sakuya_amendment_reinstated_fueros
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_economic_regeneration_1 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_economic_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_economic_regeneration_1
+					has_amendment = amendment_type:sakuya_amendment_economic_regeneration_1
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_economic_regeneration_2 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_economic_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_economic_regeneration_2
+					has_amendment = amendment_type:sakuya_amendment_economic_regeneration_2
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_frugal_ordinance = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_edo_social_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_frugal_ordinance
+					has_amendment = amendment_type:sakuya_amendment_frugal_ordinance
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_corporate_state_nominating_body_tu = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_corporate_state_nominating_body_tu
+					has_amendment = amendment_type:sakuya_amendment_corporate_state_nominating_body_tu
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_corporate_state_nominating_body_id = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_corporate_state_nominating_body_id
+					has_amendment = amendment_type:sakuya_amendment_corporate_state_nominating_body_id
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_corporate_state_nominating_body_it = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_corporate_state_nominating_body_it
+					has_amendment = amendment_type:sakuya_amendment_corporate_state_nominating_body_it
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_ragged_schools = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_childrens_rights ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_ragged_schools
+					has_amendment = amendment_type:sakuya_amendment_ragged_schools
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_religious_workhouses = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_welfare ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_religious_workhouses
+					has_amendment = amendment_type:sakuya_amendment_religious_workhouses
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_veterans_pensions = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_welfare ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_veterans_pensions
+					has_amendment = amendment_type:sakuya_amendment_veterans_pensions
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_agricultural_communes = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_agricultural_communes
+					has_amendment = amendment_type:sakuya_amendment_agricultural_communes
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_cult_of_personality = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_cult_of_personality
+					has_amendment = amendment_type:sakuya_amendment_cult_of_personality
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_farmers_cooperatives = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_farmers_cooperatives
+					has_amendment = amendment_type:sakuya_amendment_farmers_cooperatives
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_vertically_integrated_agriculture = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_vertically_integrated_agriculture
+					has_amendment = amendment_type:sakuya_amendment_vertically_integrated_agriculture
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_sovereign_of_the_nation = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_sovereign_of_the_nation
+					has_amendment = amendment_type:sakuya_amendment_sovereign_of_the_nation
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_malthusian_foundations = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_welfare ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_malthusian_foundations
+					has_amendment = amendment_type:sakuya_amendment_malthusian_foundations
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_welfare_pro_employer_bias = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_welfare ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_welfare_pro_employer_bias
+					has_amendment = amendment_type:sakuya_amendment_welfare_pro_employer_bias
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_migration_religious_restrictions = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_migration ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_migration_religious_restrictions
+					has_amendment = amendment_type:sakuya_amendment_migration_religious_restrictions
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_migration_tariff_exemptions = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_migration ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_migration_tariff_exemptions
+					has_amendment = amendment_type:sakuya_amendment_migration_tariff_exemptions
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_short_term_tax_cuts = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_taxation ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_short_term_tax_cuts
+					has_amendment = amendment_type:sakuya_amendment_short_term_tax_cuts
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_draconian_blasphemy_laws = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_draconian_blasphemy_laws
+					has_amendment = amendment_type:sakuya_amendment_draconian_blasphemy_laws
+				}
+			}
+			active_law:lawgroup_church_and_state ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_draconian_blasphemy_laws
+					has_amendment = amendment_type:sakuya_amendment_draconian_blasphemy_laws
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_degenerate_art = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_citizenship ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_degenerate_art
+					has_amendment = amendment_type:sakuya_amendment_degenerate_art
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_prussian_education = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_prussian_education
+					has_amendment = amendment_type:sakuya_amendment_prussian_education
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_co_ed_schools = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_co_ed_schools
+					has_amendment = amendment_type:sakuya_amendment_co_ed_schools
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_single_sex_education = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_single_sex_education
+					has_amendment = amendment_type:sakuya_amendment_single_sex_education
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_state_anti_clericalism = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_church_and_state ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_state_anti_clericalism
+					has_amendment = amendment_type:sakuya_amendment_state_anti_clericalism
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_voting_age_18 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_voting_age_18
+					has_amendment = amendment_type:sakuya_amendment_voting_age_18
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_voting_age_21 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_voting_age_21
+					has_amendment = amendment_type:sakuya_amendment_voting_age_21
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_voting_age_25 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_voting_age_25
+					has_amendment = amendment_type:sakuya_amendment_voting_age_25
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_voter_suppression_policies = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_voter_suppression_policies
+					has_amendment = amendment_type:sakuya_amendment_voter_suppression_policies
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_homestead_acts = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_homestead_acts
+					has_amendment = amendment_type:sakuya_amendment_homestead_acts
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_extraterritoriality_rights = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_extraterritoriality_rights
+					has_amendment = amendment_type:sakuya_amendment_extraterritoriality_rights
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_open_legal_questions = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_open_legal_questions
+					has_amendment = amendment_type:sakuya_amendment_open_legal_questions
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_industrial_socialization = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_industrial_socialization
+					has_amendment = amendment_type:sakuya_amendment_industrial_socialization
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_shop_councils = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_shop_councils
+					has_amendment = amendment_type:sakuya_amendment_shop_councils
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_foreign_investment_seizures = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_foreign_investment_seizures
+					has_amendment = amendment_type:sakuya_amendment_foreign_investment_seizures
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_redemption_payments = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_redemption_payments
+					has_amendment = amendment_type:sakuya_amendment_redemption_payments
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_individual_redemption_payments = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_land_reform ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_individual_redemption_payments
+					has_amendment = amendment_type:sakuya_amendment_individual_redemption_payments
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_provided_school_supplies = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_childrens_rights ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_provided_school_supplies
+					has_amendment = amendment_type:sakuya_amendment_provided_school_supplies
+				}
+			}
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_provided_school_supplies
+					has_amendment = amendment_type:sakuya_amendment_provided_school_supplies
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_unfunded_school_supplies = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_childrens_rights ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_unfunded_school_supplies
+					has_amendment = amendment_type:sakuya_amendment_unfunded_school_supplies
+				}
+			}
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_unfunded_school_supplies
+					has_amendment = amendment_type:sakuya_amendment_unfunded_school_supplies
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_workhouse_regulations = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_welfare ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_workhouse_regulations
+					has_amendment = amendment_type:sakuya_amendment_workhouse_regulations
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_nativist_labour_market = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_migration ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_nativist_labour_market
+					has_amendment = amendment_type:sakuya_amendment_nativist_labour_market
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_preserved_bureaucratic_caste = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_bureaucracy ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_preserved_bureaucratic_caste
+					has_amendment = amendment_type:sakuya_amendment_preserved_bureaucratic_caste
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_restricted_colonial_outsourcing = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_colonization ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_restricted_colonial_outsourcing
+					has_amendment = amendment_type:sakuya_amendment_restricted_colonial_outsourcing
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_church_organised_schools = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_church_organised_schools
+					has_amendment = amendment_type:sakuya_amendment_church_organised_schools
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_secular_school_system = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_education_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_secular_school_system
+					has_amendment = amendment_type:sakuya_amendment_secular_school_system
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_taikunate = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_taikunate
+					has_amendment = amendment_type:sakuya_amendment_taikunate
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_zaibatsu_oligopoly_1 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_economic_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_zaibatsu_oligopoly_1
+					has_amendment = amendment_type:sakuya_amendment_zaibatsu_oligopoly_1
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_zaibatsu_oligopoly_2 = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_economic_system ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_zaibatsu_oligopoly_2
+					has_amendment = amendment_type:sakuya_amendment_zaibatsu_oligopoly_2
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_reformed_shinsengumi = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_internal_security ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_reformed_shinsengumi
+					has_amendment = amendment_type:sakuya_amendment_reformed_shinsengumi
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_american_second_amendment = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_governance_principles ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_american_second_amendment
+					has_amendment = amendment_type:sakuya_amendment_american_second_amendment
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_american_fugitive_slaves_act = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_slavery ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_american_fugitive_slaves_act
+					has_amendment = amendment_type:sakuya_amendment_american_fugitive_slaves_act
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_200_franc_suffrage = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_200_franc_suffrage
+					has_amendment = amendment_type:sakuya_amendment_200_franc_suffrage
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_chamber_of_procurators = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_chamber_of_procurators
+					has_amendment = amendment_type:sakuya_amendment_chamber_of_procurators
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_chamber_of_gentleman_deputies = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_chamber_of_gentleman_deputies
+					has_amendment = amendment_type:sakuya_amendment_chamber_of_gentleman_deputies
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_haiti_polish_naturalization = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_citizenship ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_haiti_polish_naturalization
+					has_amendment = amendment_type:sakuya_amendment_haiti_polish_naturalization
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_racialized_subjecthood = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_citizenship ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_racialized_subjecthood
+					has_amendment = amendment_type:sakuya_amendment_racialized_subjecthood
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_geheime_staatskonferenz = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_geheime_staatskonferenz
+					has_amendment = amendment_type:sakuya_amendment_geheime_staatskonferenz
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_electoral_clientelism = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_electoral_clientelism
+					has_amendment = amendment_type:sakuya_amendment_electoral_clientelism
+				}
+			}
+		}
+	
+}
+
+sakuya_b3_amendment_active_has_amendment_tradition_of_free_elections = {
+		is_player = yes
+		OR = {
+			active_law:lawgroup_distribution_of_power ?= {
+				OR = {
+					has_amendment = amendment_type:amendment_tradition_of_free_elections
+					has_amendment = amendment_type:sakuya_amendment_tradition_of_free_elections
+				}
+			}
+		}
+	
+}
+# Sakuya generated amendment active_has scripted triggers end

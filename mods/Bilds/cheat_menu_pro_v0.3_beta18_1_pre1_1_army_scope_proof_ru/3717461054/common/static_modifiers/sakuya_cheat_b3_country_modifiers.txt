@@ -1,0 +1,27 @@
+sakuya_cheat_b3_country_gov_size = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" country_legitimacy_govt_size_add = 1 }
+sakuya_cheat_b3_country_ig_incoherence = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" country_legitimacy_ideological_incoherence_mult = 1 }
+sakuya_cheat_b3_country_votes_legitimacy = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" country_legitimacy_govt_total_votes_add = 1 }
+sakuya_cheat_b3_country_clout_legitimacy = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" country_legitimacy_govt_total_clout_add = 1 }
+sakuya_cheat_b3_country_gov_ig_attraction = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds" interest_group_in_government_attraction_mult = 1 }
+sakuya_cheat_b3_country_electoral_confidence = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" country_electoral_confidence_impact_mult = 1 }
+sakuya_cheat_b3_country_pop_pol = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds" state_pop_pol_str_add = 1 }
+sakuya_cheat_b3_country_wealth_pol = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds" state_political_strength_from_wealth_mult = 1 }
+sakuya_cheat_b3_country_vote_power = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds" country_voting_power_base_add = 1 }
+sakuya_cheat_b3_country_literacy_vote_power = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds" country_voting_power_from_literacy_add = 1 }
+sakuya_cheat_b3_country_vote_wealth_threshold = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds" country_voting_power_wealth_threshold_add = 1 }
+sakuya_cheat_b3_country_headofstate_legitimacy = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" country_legitimacy_headofstate_add = 1 }
+sakuya_cheat_b3_country_colony_growth = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" state_colony_growth_creation_factor = 1 }
+sakuya_cheat_b3_country_tension_decay = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds" country_tension_decay_mult = 1 }
+sakuya_cheat_b3_country_incorporation = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" state_incorporation_speed_mult = 1 }
+sakuya_cheat_b3_country_unincorp_output = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds" building_unincorporated_subsistence_output_mult = 1 building_group_bg_manufacturing_unincorporated_throughput_add = 1 building_group_bg_plantations_unincorporated_throughput_add = 1 building_group_bg_mining_unincorporated_throughput_add = 1 building_group_bg_logging_unincorporated_throughput_add = 1 building_group_bg_rubber_unincorporated_throughput_add = 1 }
+sakuya_cheat_b3_country_unincorp_migration = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds" state_migration_pull_unincorporated_mult = 1 }
+sakuya_cheat_b3_country_unincorp_wages = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds" state_unincorporated_starting_wages_mult = 1 }
+sakuya_cheat_b3_country_education_fervor = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds" country_education_fervor_add = 1 state_education_access_add = 0.025 state_assimilation_mult = 0.025 }
+sakuya_cheat_b3_country_education_access = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds" state_education_access_add = 1 }
+sakuya_cheat_b3_country_education_access_wealth = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds" state_education_access_wealth_add = 1 }
+sakuya_cheat_b3_country_food_security = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds" state_food_security_add = 1 }
+sakuya_cheat_b3_country_pollution_health = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds" state_pollution_reduction_health_mult = 1 }
+sakuya_cheat_b3_country_working_conditions = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds" building_working_conditions_mult = -1 }
+sakuya_cheat_b3_country_coup_resistance = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds" country_coup_resistance_mult = 1 }
+sakuya_cheat_b3_country_harvest_protection = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds" state_harvest_condition_drought_impact_mult = 1 state_harvest_condition_flood_impact_mult = 1 state_harvest_condition_wildfire_impact_mult = 1 state_harvest_condition_extreme_winds_impact_mult = 1 state_harvest_condition_torrential_rains_impact_mult = 1 state_harvest_condition_hailstorm_impact_mult = 1 state_harvest_condition_heatwave_impact_mult = 1 state_harvest_condition_disease_outbreak_impact_mult = 1 }
+sakuya_cheat_b3_country_working_adult_ratio = { icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds" state_working_adult_ratio_add = 1 }

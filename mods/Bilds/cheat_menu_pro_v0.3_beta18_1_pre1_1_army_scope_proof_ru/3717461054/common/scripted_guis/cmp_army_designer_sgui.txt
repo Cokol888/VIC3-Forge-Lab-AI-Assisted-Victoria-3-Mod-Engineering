@@ -1,0 +1,28 @@
+﻿# Cheat Menu Pro v0.3-beta7 - Army Template Designer GUI
+cmp_army_designer_size_25_selected = { scope = country is_shown = { var:cmp_army_designer_size_index = 1 } }
+cmp_army_designer_select_size_25 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_size_25_effect = yes } }
+cmp_army_designer_size_50_selected = { scope = country is_shown = { var:cmp_army_designer_size_index = 2 } }
+cmp_army_designer_select_size_50 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_size_50_effect = yes } }
+cmp_army_designer_size_75_selected = { scope = country is_shown = { var:cmp_army_designer_size_index = 3 } }
+cmp_army_designer_select_size_75 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_size_75_effect = yes } }
+cmp_army_designer_size_100_selected = { scope = country is_shown = { var:cmp_army_designer_size_index = 4 } }
+cmp_army_designer_select_size_100 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_size_100_effect = yes } }
+cmp_army_designer_inf_40_selected = { scope = country is_shown = { var:cmp_army_designer_inf_index = 1 } }
+cmp_army_designer_select_inf_40 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_inf_40_effect = yes } }
+cmp_army_designer_inf_50_selected = { scope = country is_shown = { var:cmp_army_designer_inf_index = 2 } }
+cmp_army_designer_select_inf_50 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_inf_50_effect = yes } }
+cmp_army_designer_inf_60_selected = { scope = country is_shown = { var:cmp_army_designer_inf_index = 3 } }
+cmp_army_designer_select_inf_60 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_inf_60_effect = yes } }
+cmp_army_designer_inf_70_selected = { scope = country is_shown = { var:cmp_army_designer_inf_index = 4 } }
+cmp_army_designer_select_inf_70 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_inf_70_effect = yes } }
+cmp_army_designer_art_10_selected = { scope = country is_shown = { var:cmp_army_designer_art_index = 1 } }
+cmp_army_designer_select_art_10 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_art_10_effect = yes } }
+cmp_army_designer_art_20_selected = { scope = country is_shown = { var:cmp_army_designer_art_index = 2 } }
+cmp_army_designer_select_art_20 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_art_20_effect = yes } }
+cmp_army_designer_art_30_selected = { scope = country is_shown = { var:cmp_army_designer_art_index = 3 } }
+cmp_army_designer_select_art_30 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_select_art_30_effect = yes } }
+cmp_army_designer_ready = { scope = country is_shown = { has_variable = cmp_army_designer_size_index has_variable = cmp_army_designer_inf_index has_variable = cmp_army_designer_art_index OR = { has_technology_researched = rocket_artillery has_technology_researched = blitzkrieg has_technology_researched = mobile_armor has_technology_researched = defense_in_depth has_technology_researched = breech_loading_artillery has_technology_researched = napoleonic_warfare has_technology_researched = artillery } OR = { AND = { var:cmp_army_designer_inf_index = 4 var:cmp_army_designer_art_index = 3 } OR = { has_technology_researched = mecha_engineering has_technology_researched = main_battle_tank has_technology_researched = blitzkrieg has_technology_researched = mobile_armor has_technology_researched = napoleonic_warfare has_technology_researched = military_drill has_technology_researched = standing_army } } any_scope_state = { has_decree = decree_sakuya_mark_state } } }
+cmp_army_designer_apply = { scope = country is_valid = { is_player = yes has_variable = cmp_army_designer_size_index has_variable = cmp_army_designer_inf_index has_variable = cmp_army_designer_art_index OR = { has_technology_researched = rocket_artillery has_technology_researched = blitzkrieg has_technology_researched = mobile_armor has_technology_researched = defense_in_depth has_technology_researched = breech_loading_artillery has_technology_researched = napoleonic_warfare has_technology_researched = artillery } OR = { AND = { var:cmp_army_designer_inf_index = 4 var:cmp_army_designer_art_index = 3 } OR = { has_technology_researched = mecha_engineering has_technology_researched = main_battle_tank has_technology_researched = blitzkrieg has_technology_researched = mobile_armor has_technology_researched = napoleonic_warfare has_technology_researched = military_drill has_technology_researched = standing_army } } any_scope_state = { has_decree = decree_sakuya_mark_state } } effect = { cmp_army_designer_apply_effect = yes } }
+cmp_army_designer_result_created = { scope = country is_shown = { var:cmp_army_designer_result = 1 } }
+cmp_army_designer_result_failed = { scope = country is_shown = { var:cmp_army_designer_result = 2 } }
+cmp_army_designer_clear = { scope = country is_valid = { is_player = yes } effect = { cmp_army_designer_clear_selection_effect = yes } }

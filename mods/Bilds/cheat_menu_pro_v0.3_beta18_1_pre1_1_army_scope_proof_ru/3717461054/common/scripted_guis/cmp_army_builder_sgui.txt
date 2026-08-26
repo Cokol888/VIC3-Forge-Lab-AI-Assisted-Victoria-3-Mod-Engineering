@@ -1,0 +1,137 @@
+﻿# Cheat Menu Pro v0.3-beta4 - Army Builder Scripted GUI
+
+cmp_army_builder_has_marked_state_check = { scope = country is_shown = { any_scope_state = { has_decree = decree_sakuya_mark_state } } }
+cmp_army_builder_has_unit_check = { scope = country is_shown = { has_variable = cmp_army_builder_unit_index } }
+cmp_army_builder_has_amount_check = { scope = country is_shown = { has_variable = cmp_army_builder_amount_index } }
+cmp_army_builder_result_created_check = { scope = country is_shown = { var:cmp_army_builder_result = 1 } }
+cmp_army_builder_result_failed_check = { scope = country is_shown = { var:cmp_army_builder_result = -1 } }
+cmp_army_builder_clear = { scope = country is_shown = { is_player = yes } effect = { cmp_army_builder_clear_selection_effect = yes } }
+
+cmp_army_builder_unit_irregular_infantry_available = { scope = country is_shown = { always = yes } }
+cmp_army_builder_unit_irregular_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 1 } }
+cmp_army_builder_select_irregular_infantry = { scope = country is_valid = { always = yes } effect = { cmp_army_builder_select_irregular_infantry_effect = yes } }
+cmp_army_builder_unit_line_infantry_available = { scope = country is_shown = { has_technology_researched = line_infantry } }
+cmp_army_builder_unit_line_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 2 } }
+cmp_army_builder_select_line_infantry = { scope = country is_valid = { has_technology_researched = line_infantry } effect = { cmp_army_builder_select_line_infantry_effect = yes } }
+cmp_army_builder_unit_skirmish_infantry_available = { scope = country is_shown = { has_technology_researched = general_staff } }
+cmp_army_builder_unit_skirmish_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 3 } }
+cmp_army_builder_select_skirmish_infantry = { scope = country is_valid = { has_technology_researched = general_staff } effect = { cmp_army_builder_select_skirmish_infantry_effect = yes } }
+cmp_army_builder_unit_trench_infantry_available = { scope = country is_shown = { has_technology_researched = trench_works } }
+cmp_army_builder_unit_trench_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 4 } }
+cmp_army_builder_select_trench_infantry = { scope = country is_valid = { has_technology_researched = trench_works } effect = { cmp_army_builder_select_trench_infantry_effect = yes } }
+cmp_army_builder_unit_squad_infantry_available = { scope = country is_shown = { has_technology_researched = nco_training } }
+cmp_army_builder_unit_squad_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 5 } }
+cmp_army_builder_select_squad_infantry = { scope = country is_valid = { has_technology_researched = nco_training } effect = { cmp_army_builder_select_squad_infantry_effect = yes } }
+cmp_army_builder_unit_mechanized_infantry_available = { scope = country is_shown = { has_technology_researched = mobile_armor } }
+cmp_army_builder_unit_mechanized_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 6 } }
+cmp_army_builder_select_mechanized_infantry = { scope = country is_valid = { has_technology_researched = mobile_armor } effect = { cmp_army_builder_select_mechanized_infantry_effect = yes } }
+cmp_army_builder_unit_modern_mechanized_infantry_available = { scope = country is_shown = { has_technology_researched = mechanized_infantry } }
+cmp_army_builder_unit_modern_mechanized_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 7 } }
+cmp_army_builder_select_modern_mechanized_infantry = { scope = country is_valid = { has_technology_researched = mechanized_infantry } effect = { cmp_army_builder_select_modern_mechanized_infantry_effect = yes } }
+cmp_army_builder_unit_advanced_mechanized_infantry_available = { scope = country is_shown = { has_technology_researched = high_performance_apparel } }
+cmp_army_builder_unit_advanced_mechanized_infantry_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 8 } }
+cmp_army_builder_select_advanced_mechanized_infantry = { scope = country is_valid = { has_technology_researched = high_performance_apparel } effect = { cmp_army_builder_select_advanced_mechanized_infantry_effect = yes } }
+cmp_army_builder_unit_modern_tier_marines_available = { scope = country is_shown = { has_technology_researched = amphibious_warfare } }
+cmp_army_builder_unit_modern_tier_marines_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 9 } }
+cmp_army_builder_select_modern_tier_marines = { scope = country is_valid = { has_technology_researched = amphibious_warfare } effect = { cmp_army_builder_select_modern_tier_marines_effect = yes } }
+cmp_army_builder_unit_advanced_tier_marines_available = { scope = country is_shown = { has_technology_researched = high_performance_apparel } }
+cmp_army_builder_unit_advanced_tier_marines_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 10 } }
+cmp_army_builder_select_advanced_tier_marines = { scope = country is_valid = { has_technology_researched = high_performance_apparel } effect = { cmp_army_builder_select_advanced_tier_marines_effect = yes } }
+cmp_army_builder_unit_cannon_artillery_available = { scope = country is_shown = { has_technology_researched = artillery } }
+cmp_army_builder_unit_cannon_artillery_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 11 } }
+cmp_army_builder_select_cannon_artillery = { scope = country is_valid = { has_technology_researched = artillery } effect = { cmp_army_builder_select_cannon_artillery_effect = yes } }
+cmp_army_builder_unit_mobile_artillery_available = { scope = country is_shown = { has_technology_researched = napoleonic_warfare } }
+cmp_army_builder_unit_mobile_artillery_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 12 } }
+cmp_army_builder_select_mobile_artillery = { scope = country is_valid = { has_technology_researched = napoleonic_warfare } effect = { cmp_army_builder_select_mobile_artillery_effect = yes } }
+cmp_army_builder_unit_shrapnel_artillery_available = { scope = country is_shown = { has_technology_researched = breech_loading_artillery } }
+cmp_army_builder_unit_shrapnel_artillery_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 13 } }
+cmp_army_builder_select_shrapnel_artillery = { scope = country is_valid = { has_technology_researched = breech_loading_artillery } effect = { cmp_army_builder_select_shrapnel_artillery_effect = yes } }
+cmp_army_builder_unit_siege_artillery_available = { scope = country is_shown = { has_technology_researched = defense_in_depth } }
+cmp_army_builder_unit_siege_artillery_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 14 } }
+cmp_army_builder_select_siege_artillery = { scope = country is_valid = { has_technology_researched = defense_in_depth } effect = { cmp_army_builder_select_siege_artillery_effect = yes } }
+cmp_army_builder_unit_heavy_tank_available = { scope = country is_shown = { has_technology_researched = mobile_armor } }
+cmp_army_builder_unit_heavy_tank_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 15 } }
+cmp_army_builder_select_heavy_tank = { scope = country is_valid = { has_technology_researched = mobile_armor } effect = { cmp_army_builder_select_heavy_tank_effect = yes } }
+cmp_army_builder_unit_self_propelled_artillery_available = { scope = country is_shown = { has_technology_researched = mobile_armor } }
+cmp_army_builder_unit_self_propelled_artillery_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 16 } }
+cmp_army_builder_select_self_propelled_artillery = { scope = country is_valid = { has_technology_researched = mobile_armor } effect = { cmp_army_builder_select_self_propelled_artillery_effect = yes } }
+cmp_army_builder_unit_rocket_artillery_available = { scope = country is_shown = { has_technology_researched = rocket_artillery } }
+cmp_army_builder_unit_rocket_artillery_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 17 } }
+cmp_army_builder_select_rocket_artillery = { scope = country is_valid = { has_technology_researched = rocket_artillery } effect = { cmp_army_builder_select_rocket_artillery_effect = yes } }
+cmp_army_builder_unit_hussars_available = { scope = country is_shown = { has_technology_researched = standing_army } }
+cmp_army_builder_unit_hussars_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 18 } }
+cmp_army_builder_select_hussars = { scope = country is_valid = { has_technology_researched = standing_army } effect = { cmp_army_builder_select_hussars_effect = yes } }
+cmp_army_builder_unit_dragoons_available = { scope = country is_shown = { has_technology_researched = military_drill } }
+cmp_army_builder_unit_dragoons_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 19 } }
+cmp_army_builder_select_dragoons = { scope = country is_valid = { has_technology_researched = military_drill } effect = { cmp_army_builder_select_dragoons_effect = yes } }
+cmp_army_builder_unit_cuirassiers_available = { scope = country is_shown = { has_technology_researched = military_drill } }
+cmp_army_builder_unit_cuirassiers_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 20 } }
+cmp_army_builder_select_cuirassiers = { scope = country is_valid = { has_technology_researched = military_drill } effect = { cmp_army_builder_select_cuirassiers_effect = yes } }
+cmp_army_builder_unit_lancers_available = { scope = country is_shown = { has_technology_researched = napoleonic_warfare } }
+cmp_army_builder_unit_lancers_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 21 } }
+cmp_army_builder_select_lancers = { scope = country is_valid = { has_technology_researched = napoleonic_warfare } effect = { cmp_army_builder_select_lancers_effect = yes } }
+cmp_army_builder_unit_light_tanks_available = { scope = country is_shown = { has_technology_researched = mobile_armor } }
+cmp_army_builder_unit_light_tanks_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 22 } }
+cmp_army_builder_select_light_tanks = { scope = country is_valid = { has_technology_researched = mobile_armor } effect = { cmp_army_builder_select_light_tanks_effect = yes } }
+cmp_army_builder_unit_modern_heavy_tank_available = { scope = country is_shown = { has_technology_researched = blitzkrieg } }
+cmp_army_builder_unit_modern_heavy_tank_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 23 } }
+cmp_army_builder_select_modern_heavy_tank = { scope = country is_valid = { has_technology_researched = blitzkrieg } effect = { cmp_army_builder_select_modern_heavy_tank_effect = yes } }
+cmp_army_builder_unit_modern_light_tanks_available = { scope = country is_shown = { has_technology_researched = blitzkrieg } }
+cmp_army_builder_unit_modern_light_tanks_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 24 } }
+cmp_army_builder_select_modern_light_tanks = { scope = country is_valid = { has_technology_researched = blitzkrieg } effect = { cmp_army_builder_select_modern_light_tanks_effect = yes } }
+cmp_army_builder_unit_main_battle_tanks_available = { scope = country is_shown = { has_technology_researched = main_battle_tank } }
+cmp_army_builder_unit_main_battle_tanks_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 25 } }
+cmp_army_builder_select_main_battle_tanks = { scope = country is_valid = { has_technology_researched = main_battle_tank } effect = { cmp_army_builder_select_main_battle_tanks_effect = yes } }
+cmp_army_builder_unit_giant_death_robot_available = { scope = country is_shown = { has_technology_researched = mecha_engineering } }
+cmp_army_builder_unit_giant_death_robot_selected = { scope = country is_shown = { var:cmp_army_builder_unit_index = 26 } }
+cmp_army_builder_select_giant_death_robot = { scope = country is_valid = { has_technology_researched = mecha_engineering } effect = { cmp_army_builder_select_giant_death_robot_effect = yes } }
+cmp_army_builder_amount_1_selected = { scope = country is_shown = { var:cmp_army_builder_amount_index = 1 } }
+cmp_army_builder_select_amount_1 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_builder_select_amount_1_effect = yes } }
+cmp_army_builder_amount_5_selected = { scope = country is_shown = { var:cmp_army_builder_amount_index = 2 } }
+cmp_army_builder_select_amount_5 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_builder_select_amount_5_effect = yes } }
+cmp_army_builder_amount_10_selected = { scope = country is_shown = { var:cmp_army_builder_amount_index = 3 } }
+cmp_army_builder_select_amount_10 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_builder_select_amount_10_effect = yes } }
+cmp_army_builder_amount_25_selected = { scope = country is_shown = { var:cmp_army_builder_amount_index = 4 } }
+cmp_army_builder_select_amount_25 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_builder_select_amount_25_effect = yes } }
+cmp_army_builder_amount_50_selected = { scope = country is_shown = { var:cmp_army_builder_amount_index = 5 } }
+cmp_army_builder_select_amount_50 = { scope = country is_valid = { is_player = yes } effect = { cmp_army_builder_select_amount_50_effect = yes } }
+
+cmp_army_builder_apply = {
+    scope = country
+    is_valid = {
+        is_player = yes
+        has_variable = cmp_army_builder_unit_index
+        has_variable = cmp_army_builder_amount_index
+        any_scope_state = { has_decree = decree_sakuya_mark_state }
+        OR = {
+            AND = { var:cmp_army_builder_unit_index = 1 always = yes }
+            AND = { var:cmp_army_builder_unit_index = 2 has_technology_researched = line_infantry }
+            AND = { var:cmp_army_builder_unit_index = 3 has_technology_researched = general_staff }
+            AND = { var:cmp_army_builder_unit_index = 4 has_technology_researched = trench_works }
+            AND = { var:cmp_army_builder_unit_index = 5 has_technology_researched = nco_training }
+            AND = { var:cmp_army_builder_unit_index = 6 has_technology_researched = mobile_armor }
+            AND = { var:cmp_army_builder_unit_index = 7 has_technology_researched = mechanized_infantry }
+            AND = { var:cmp_army_builder_unit_index = 8 has_technology_researched = high_performance_apparel }
+            AND = { var:cmp_army_builder_unit_index = 9 has_technology_researched = amphibious_warfare }
+            AND = { var:cmp_army_builder_unit_index = 10 has_technology_researched = high_performance_apparel }
+            AND = { var:cmp_army_builder_unit_index = 11 has_technology_researched = artillery }
+            AND = { var:cmp_army_builder_unit_index = 12 has_technology_researched = napoleonic_warfare }
+            AND = { var:cmp_army_builder_unit_index = 13 has_technology_researched = breech_loading_artillery }
+            AND = { var:cmp_army_builder_unit_index = 14 has_technology_researched = defense_in_depth }
+            AND = { var:cmp_army_builder_unit_index = 15 has_technology_researched = mobile_armor }
+            AND = { var:cmp_army_builder_unit_index = 16 has_technology_researched = mobile_armor }
+            AND = { var:cmp_army_builder_unit_index = 17 has_technology_researched = rocket_artillery }
+            AND = { var:cmp_army_builder_unit_index = 18 has_technology_researched = standing_army }
+            AND = { var:cmp_army_builder_unit_index = 19 has_technology_researched = military_drill }
+            AND = { var:cmp_army_builder_unit_index = 20 has_technology_researched = military_drill }
+            AND = { var:cmp_army_builder_unit_index = 21 has_technology_researched = napoleonic_warfare }
+            AND = { var:cmp_army_builder_unit_index = 22 has_technology_researched = mobile_armor }
+            AND = { var:cmp_army_builder_unit_index = 23 has_technology_researched = blitzkrieg }
+            AND = { var:cmp_army_builder_unit_index = 24 has_technology_researched = blitzkrieg }
+            AND = { var:cmp_army_builder_unit_index = 25 has_technology_researched = main_battle_tank }
+            AND = { var:cmp_army_builder_unit_index = 26 has_technology_researched = mecha_engineering }
+        }
+    }
+    effect = { cmp_army_builder_apply_effect = yes }
+}
+

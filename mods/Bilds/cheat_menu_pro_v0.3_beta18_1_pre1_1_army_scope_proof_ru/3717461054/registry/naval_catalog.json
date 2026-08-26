@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "phase": "beta18-pre2",
+  "title": "Full Naval Catalog & Native Ship Designer Bridge",
+  "catalog_amounts": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "groups": {
+    "all": {
+      "loc_key": "CMP_NAVY18_CAT_ALL"
+    },
+    "capital": {
+      "loc_key": "CMP_NAVY18_CAT_CAPITAL"
+    },
+    "cruiser": {
+      "loc_key": "CMP_NAVY18_CAT_CRUISER"
+    },
+    "torpedo": {
+      "loc_key": "CMP_NAVY18_CAT_TORPEDO"
+    },
+    "tech_res": {
+      "loc_key": "CMP_NAVY18_CAT_TECH_RES"
+    }
+  },
+  "combat_hulls": [
+    {
+      "id": "ship_of_the_line",
+      "ship_type": "ship_type_ship_of_the_line",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "drydocks",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Линейный корабль",
+      "name_en": "Ship of the Line"
+    },
+    {
+      "id": "monitor",
+      "ship_type": "ship_type_monitor",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "ironclad_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": false,
+      "name_ru": "Монитор",
+      "name_en": "Monitor"
+    },
+    {
+      "id": "early_ironclad",
+      "ship_type": "ship_type_early_ironclad",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "ironclad_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Ранний броненосец",
+      "name_en": "Early Ironclad"
+    },
+    {
+      "id": "coastal_defense_ship",
+      "ship_type": "ship_type_coastal_defense_ship",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "monitor_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": false,
+      "name_ru": "Корабль береговой обороны",
+      "name_en": "Coastal Defense Ship"
+    },
+    {
+      "id": "modern_ironclad",
+      "ship_type": "ship_type_modern_ironclad",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "monitor_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Современный броненосец",
+      "name_en": "Modern Ironclad"
+    },
+    {
+      "id": "pre_dreadnought",
+      "ship_type": "ship_type_pre_dreadnought",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "pre_dreadnought_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Додредноут",
+      "name_en": "Pre-Dreadnought"
+    },
+    {
+      "id": "dreadnought",
+      "ship_type": "ship_type_dreadnought",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "dreadnought_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Дредноут",
+      "name_en": "Dreadnought"
+    },
+    {
+      "id": "super_dreadnought",
+      "ship_type": "ship_type_super_dreadnought",
+      "provider": "vanilla",
+      "group": "capital",
+      "unlock_technology": "battleship_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Супердредноут",
+      "name_en": "Super Dreadnought"
+    },
+    {
+      "id": "frigate",
+      "ship_type": "ship_type_frigate",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": null,
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Фрегат",
+      "name_en": "Frigate"
+    },
+    {
+      "id": "iron_frigate",
+      "ship_type": "ship_type_iron_frigate",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "ironclad_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Железный фрегат",
+      "name_en": "Iron Frigate"
+    },
+    {
+      "id": "troop_ship",
+      "ship_type": "ship_type_troop_ship",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "ironclad_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": false,
+      "name_ru": "Войсковой транспорт",
+      "name_en": "Troop Ship"
+    },
+    {
+      "id": "protected_cruiser",
+      "ship_type": "ship_type_protected_cruiser",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "sea_lane_strategies",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Бронепалубный крейсер",
+      "name_en": "Protected Cruiser"
+    },
+    {
+      "id": "armored_cruiser",
+      "ship_type": "ship_type_armored_cruiser",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "pre_dreadnought_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Бронированный крейсер",
+      "name_en": "Armored Cruiser"
+    },
+    {
+      "id": "light_cruiser",
+      "ship_type": "ship_type_light_cruiser",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "dreadnought_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Лёгкий крейсер",
+      "name_en": "Light Cruiser"
+    },
+    {
+      "id": "seaplane_tender",
+      "ship_type": "ship_type_seaplane_tender",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "dreadnought_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Гидроавианосец",
+      "name_en": "Seaplane Tender"
+    },
+    {
+      "id": "aircraft_carrier",
+      "ship_type": "ship_type_aircraft_carrier",
+      "provider": "vanilla",
+      "group": "cruiser",
+      "unlock_technology": "carrier_tech",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Авианосец",
+      "name_en": "Aircraft Carrier"
+    },
+    {
+      "id": "torpedo_boat",
+      "ship_type": "ship_type_torpedo_boat",
+      "provider": "vanilla",
+      "group": "torpedo",
+      "unlock_technology": "self_propelled_torpedoes",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": false,
+      "name_ru": "Торпедная лодка",
+      "name_en": "Torpedo Boat"
+    },
+    {
+      "id": "torpedo_boat_destroyer",
+      "ship_type": "ship_type_torpedo_boat_destroyer",
+      "provider": "vanilla",
+      "group": "torpedo",
+      "unlock_technology": "sea_lane_strategies",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Истребитель миноносцев",
+      "name_en": "Torpedo Boat Destroyer"
+    },
+    {
+      "id": "submarine",
+      "ship_type": "ship_type_submarine",
+      "provider": "vanilla",
+      "group": "torpedo",
+      "unlock_technology": "submarine",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": false,
+      "name_ru": "Подводная лодка",
+      "name_en": "Submarine"
+    },
+    {
+      "id": "destroyer",
+      "ship_type": "ship_type_destroyer",
+      "provider": "vanilla",
+      "group": "torpedo",
+      "unlock_technology": "destroyer",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Эсминец",
+      "name_en": "Destroyer"
+    },
+    {
+      "id": "modern_destroyer",
+      "ship_type": "ship_type_modern_destroyer",
+      "provider": "tech_res",
+      "group": "torpedo",
+      "unlock_technology": "modern_naval_doctrine",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Современный эсминец",
+      "name_en": "Modern Destroyer"
+    },
+    {
+      "id": "modern_cruiser",
+      "ship_type": "ship_type_modern_cruiser",
+      "provider": "tech_res",
+      "group": "cruiser",
+      "unlock_technology": "modern_battleships",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Современный крейсер",
+      "name_en": "Modern Cruiser"
+    },
+    {
+      "id": "modern_battleship",
+      "ship_type": "ship_type_modern_battleship",
+      "provider": "tech_res",
+      "group": "capital",
+      "unlock_technology": "modern_battleships",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Современный линкор",
+      "name_en": "Modern Battleship"
+    },
+    {
+      "id": "nuclear_carrier",
+      "ship_type": "ship_type_nuclear_carrier",
+      "provider": "tech_res",
+      "group": "cruiser",
+      "unlock_technology": "integrated_naval_air_tactics",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": true,
+      "name_ru": "Современный авианосец",
+      "name_en": "Modern Carrier"
+    },
+    {
+      "id": "nuclear_submarine",
+      "ship_type": "ship_type_nuclear_submarine",
+      "provider": "tech_res",
+      "group": "torpedo",
+      "unlock_technology": "nuclear_submarine",
+      "coverage_status": "SUPPORTED",
+      "native_ship_designer": true,
+      "can_be_flagship": false,
+      "name_ru": "Современная подлодка",
+      "name_en": "Modern Submarine"
+    }
+  ],
+  "supply_ships": [
+    {
+      "id": "supply_ship",
+      "ship_type": "ship_type_supply_ship",
+      "provider": "vanilla",
+      "group": "supply",
+      "unlock_technology": null,
+      "coverage_status": "READ_ONLY",
+      "native_ship_designer": true,
+      "name_ru": "Судно снабжения",
+      "name_en": "Supply Ship",
+      "reason": "Supply-ship assignment/build workflow remains behind beta18-pre5 discovery; the hull is documented and shown read-only."
+    }
+  ],
+  "designer_bridge": {
+    "status": "SUPPORTED_NATIVE_ENTRY",
+    "action": "PopupManager.ToggleShipDesignerPopup",
+    "visibility_gate": "HasDlcFeature('ship_designer')",
+    "write_policy": "CMP does not call ShipDesignerPopup.CreateTemplate/EditTemplate/SetShipTemplate. Native UI owns template writes.",
+    "evidence": "Vanilla panel_military.gui uses PopupManager.ToggleShipDesignerPopup for Create Ship Template."
+  },
+  "creation_semantics": {
+    "status": "SUPPORTED_DEFAULT_TEMPLATE",
+    "rule": "Catalog creation creates one new fleet with one ship type and count. The engine resolves its normal/default ship template; explicit template selection is deferred to Fleet Composer 2.0 discovery.",
+    "hq": "highest-GDP marked owned port state",
+    "hidden_fallback": false
+  },
+  "source_snapshots": {
+    "vanilla_ship_types": {
+      "repository": "settintotrieste/V3-Vanilla-Extract",
+      "commit": "fa9678c4f570385ccb91bcdf1e25f82f93499b2f",
+      "path": "game/common/ship_types/00_ship_types.txt",
+      "blob_sha": "0831a667153396240093b3967b1191a58bafa2f5",
+      "role": "Discovery/reference for Victoria 3 1.13 naval IDs/groups/technology gates; runtime remains authoritative."
+    },
+    "tech_res_workshop": "3472248460"
+  }
+}

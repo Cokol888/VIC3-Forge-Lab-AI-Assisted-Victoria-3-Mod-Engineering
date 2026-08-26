@@ -1,0 +1,29 @@
+prestige_good_sakuya_moon_clock = {
+	base_good = tools
+	prestige_bonus = 2.0
+	texture = "gfx/interface/sakuya/hand.dds"
+}
+
+prestige_good_sakuya_hisoutensoku = {
+	base_good = automobiles
+	prestige_bonus = 2.0
+	texture = "gfx/interface/sakuya/kawashiro.dds"
+}
+
+prestige_good_sakuya_bunbunmaru = {
+	base_good = rubber
+	prestige_bonus = 2.0
+	texture = "gfx/interface/sakuya/aya.dds"
+}
+
+prestige_good_sakuya_magic_broom = {
+	base_good = engines
+	prestige_bonus = 2.0
+	texture = "gfx/interface/sakuya/marisa.dds"
+}
+
+prestige_good_sakuya_ice_crystal = {
+	base_good = glass
+	prestige_bonus = 2.0
+	texture = "gfx/interface/sakuya/crino.dds"
+}

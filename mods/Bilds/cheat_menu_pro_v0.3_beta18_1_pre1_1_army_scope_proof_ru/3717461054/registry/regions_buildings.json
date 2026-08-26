@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "building_amounts": [
+    1,
+    5,
+    10,
+    25,
+    50,
+    100
+  ],
+  "add_exact_max_existing_level": 1000,
+  "resource_capable_buildings": [
+    "coal_mine",
+    "iron_mine",
+    "lead_mine",
+    "sulfur_mine",
+    "gold_mine",
+    "gold_field",
+    "logging_camp",
+    "rubber_plantation",
+    "fishing_wharf",
+    "whaling_station",
+    "oil_rig",
+    "water_plant",
+    "bauxite_mine",
+    "copper_mine",
+    "commonores_mine",
+    "advancedores_mine",
+    "natural_gas_rig",
+    "rare_earths_mine",
+    "uranium_mine"
+  ],
+  "presets": [
+    {
+      "id": "industrial_core",
+      "buildings": {
+        "tooling_workshop": 10,
+        "steel_mill": 10,
+        "motor_industry": 5,
+        "power_plant": 10,
+        "railway": 10,
+        "construction_sector": 5
+      }
+    },
+    {
+      "id": "heavy_industry",
+      "buildings": {
+        "steel_mill": 20,
+        "motor_industry": 10,
+        "chemical_plant": 10,
+        "explosives_factory": 5,
+        "power_plant": 10,
+        "railway": 10
+      }
+    },
+    {
+      "id": "military_industry",
+      "buildings": {
+        "arms_industry": 15,
+        "artillery_foundry": 10,
+        "munition_plant": 15,
+        "steel_mill": 10,
+        "explosives_factory": 10,
+        "railway": 5
+      }
+    },
+    {
+      "id": "infrastructure_hub",
+      "buildings": {
+        "railway": 20,
+        "port": 10,
+        "construction_sector": 10,
+        "power_plant": 10
+      }
+    }
+  ],
+  "staffing_occupancy_targets": [
+    50,
+    75,
+    90,
+    100
+  ],
+  "building_operation_contract": {
+    "availability_gate": "can_construct_building + can_queue_building_levels(1)",
+    "add_policy": "best_effort_until_state_limit",
+    "set_policy": "safe_raise_or_equal_only; lowering is blocked to avoid destructive recreate",
+    "remove_policy": "whole_building_only",
+    "preset_policy": "per_state_best_effort_with_availability_gate"
+  }
+}

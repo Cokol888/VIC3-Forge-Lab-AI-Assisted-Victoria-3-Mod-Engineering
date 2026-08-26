@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "phase": "beta18.1-pre1.1",
+  "title": "Military Operations — Army Scope Proof",
+  "runtime_status": "STATIC_PASS_RUNTIME_PENDING",
+  "baseline_victoria": "1.13.10",
+  "goal": "Prove exact native-selected Army MilitaryFormation transport read-only before building an Army picker or readiness assistant.",
+  "source_contract": {
+    "script_docs": "Victoria-3-Modding-Co-op/Modding-Digests 1.13.x; exact GUI list accessor remains unproven",
+    "final_navy_baseline": "CMP-0.3-B18-FINAL-20260822",
+    "navy_semantic_freeze": "registry/beta18_final_freeze.json",
+    "postfinal_navy_workspace_freeze": "registry/beta18_postfinal_navy_freeze.json"
+  },
+  "capabilities": [
+    {
+      "id": "country_total_marine_capacity",
+      "surface": "event_target/value",
+      "symbol": "total_marine_capacity",
+      "scope": "country",
+      "status": "SUPPORTED_READ_ONLY",
+      "planned_use": "Country-level amphibious capacity diagnostic."
+    },
+    {
+      "id": "invasion_has_marines",
+      "surface": "trigger",
+      "symbol": "invasion_has_marines",
+      "scope": "invasion",
+      "status": "SUPPORTED_READ_ONLY_NEEDS_INVASION_SCOPE",
+      "planned_use": "Validate whether a selected native invasion includes marine combat units."
+    },
+    {
+      "id": "is_naval_invasion",
+      "surface": "trigger",
+      "symbol": "is_naval_invasion",
+      "scope": "invasion",
+      "status": "SUPPORTED_READ_ONLY_NEEDS_INVASION_SCOPE",
+      "planned_use": "Reject non-naval invasion contexts."
+    },
+    {
+      "id": "exact_fleet_context",
+      "surface": "gui/scripted_gui bridge",
+      "symbol": "MilitaryFormation.MakeScope",
+      "scope": "military_formation",
+      "status": "RUNTIME_PASS_REUSED_FROM_BETA18",
+      "planned_use": "Fleet readiness diagnostics without persistent CMP fleet markers."
+    },
+    {
+      "id": "fleet_supply_diagnostics",
+      "surface": "event_target/value",
+      "symbol": "num_assigned_supply_ships",
+      "scope": "military_formation",
+      "status": "RUNTIME_PASS_READ_ONLY_REUSED_FROM_BETA18",
+      "planned_use": "Display assigned supply ships for the exact fleet."
+    },
+    {
+      "id": "fleet_battle_diagnostics",
+      "surface": "event_target/value",
+      "symbol": "num_ships_in_battle",
+      "scope": "military_formation",
+      "status": "SUPPORTED_READ_ONLY",
+      "planned_use": "Block readiness when the selected fleet is engaged."
+    },
+    {
+      "id": "fleet_port_distance_diagnostics",
+      "surface": "trigger",
+      "symbol": "has_ship_outside_max_port_distance",
+      "scope": "military_formation",
+      "status": "SUPPORTED_READ_ONLY",
+      "planned_use": "Warn about invalid/extended fleet deployment range."
+    },
+    {
+      "id": "marine_unit_catalog",
+      "surface": "project registry",
+      "symbol": "role=marines",
+      "scope": "combat_unit_type",
+      "status": "PARTIAL_PROVIDER_BOUND",
+      "planned_use": "Current CMP registry contains two verified Tech & Res marine tiers; vanilla/other-provider coverage requires discovery before a universal assistant."
+    },
+    {
+      "id": "native_invasion_ui_bridge",
+      "surface": "GUI",
+      "symbol": "invasion_panel/invasion_planner",
+      "scope": "native_ui",
+      "status": "DISCOVERY_REQUIRED",
+      "planned_use": "Open native invasion workflow only after an exact callable entry point is proven."
+    },
+    {
+      "id": "direct_auto_attach_marines",
+      "surface": "write",
+      "symbol": null,
+      "scope": "army/fleet",
+      "status": "DEFERRED_UNCONFIRMED",
+      "planned_use": "No fake auto-attach until a documented engine contract is proven."
+    },
+    {
+      "id": "direct_start_naval_invasion",
+      "surface": "write",
+      "symbol": null,
+      "scope": "invasion",
+      "status": "DEFERRED_UNCONFIRMED",
+      "planned_use": "Assistant/checklist only until native or scripting contract is proven."
+    },
+    {
+      "id": "native_selected_army_observer",
+      "surface": "GUI",
+      "symbol": "GetSelectedFormation.IsArmy / MilitaryFormation.GetNameNoFormatting",
+      "scope": "military_formation",
+      "status": "STATIC_IMPLEMENTED_RUNTIME_PENDING",
+      "planned_use": "Observe exact Army selected by native Victoria 3 UI without a CMP marker."
+    },
+    {
+      "id": "exact_army_make_scope_probe",
+      "surface": "GUI → ScriptedGui",
+      "symbol": "MilitaryFormation.MakeScope",
+      "scope": "military_formation",
+      "status": "STATIC_IMPLEMENTED_RUNTIME_PENDING",
+      "planned_use": "Prove exact selected Army root transport and player ownership at runtime."
+    },
+    {
+      "id": "country_army_list_accessor",
+      "surface": "GUI data model",
+      "symbol": null,
+      "scope": "country",
+      "status": "DISCOVERY_UNRESOLVED",
+      "planned_use": "Required for a self-contained CMP Army picker; no guessed GetMilitaryFormationsArmy API is emitted."
+    },
+    {
+      "id": "selected_army_marine_count",
+      "surface": "read-only diagnostic",
+      "symbol": null,
+      "scope": "military_formation/combat_unit",
+      "status": "DISCOVERY_UNRESOLVED",
+      "planned_use": "Universal Marine count/classification requires a proven combat-unit traversal/classifier."
+    }
+  ],
+  "legacy_audit": {
+    "existing_amphibious_builder": {
+      "files": [
+        "common/scripted_effects/cmp_army_amphib_effects.txt",
+        "common/scripted_guis/cmp_army_amphib_sgui.txt"
+      ],
+      "behavior": "Creates a new marine Army in a marked port state using verified Tech & Res marine unit types.",
+      "status": "LEGACY_EXISTING_WRITE_NOT_MILITARY_OPERATIONS_ASSISTANT",
+      "decision": "Do not extend or reinterpret during discovery. Preserve for regression until Army Rework 2.0 replaces it.",
+      "sha256": {
+        "common/scripted_effects/cmp_army_amphib_effects.txt": "95e8ae03ca9d83c949f1fc41ce9901e6e11f558fd512bb4f1471d7ce7a8f691e",
+        "common/scripted_guis/cmp_army_amphib_sgui.txt": "ccb1d02c9c4d25f6eb1a7857b1c4a8e41d90405d8b9a057f84475c518644adb4"
+      }
+    },
+    "legacy_fleet_taskforce_prepare": {
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "decision": "Do not use as the new amphibious assistant foundation because it predates beta18 exact Fleet architecture."
+    }
+  },
+  "pre1_scope": {
+    "new_gameplay_writes": 0,
+    "workspace_changes": 1,
+    "workspace_change_type": "READ_ONLY_ARMY_SCOPE_PROBE",
+    "navy_gameplay_changes": 0,
+    "new_persistent_markers": 0,
+    "deliverables": [
+      "read-only exact Army observer",
+      "MilitaryFormation root/owner probes",
+      "post-Final Navy scoped freeze",
+      "validator",
+      "runtime checklist"
+    ]
+  },
+  "promotion_gate": "pre1.1 requires runtime PASS for native-selected exact Army name, MakeScope root probe, owner/is_army probe, native panel reopen, +1 day, save/load and Workspace 90/100/115/130. Army-list accessor, Marine count and callable invasion bridge remain separate discovery items."
+}

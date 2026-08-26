@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_release": "beta18 Final",
+  "source_build_id": "CMP-0.3-B18-FINAL-20260822",
+  "purpose": "Allow independent post-beta18 UI additions while preserving accepted Navy widgets semantically.",
+  "normalization": "remove_comments_and_all_whitespace_outside_quoted_strings",
+  "workspace_surface": {
+    "selector": "named blocks: cmp_workspace_fleet_picker + cmp_workspace_navy18_{catalog,new,existing,shipctrl,transfer,logistics}_{compact,standard,large,xlarge}",
+    "expected_block_count": 28,
+    "semantic_sha256": "8d402e4837c8b98f253da65a17096e25367c99d352ed6f1be9852fb1e6a533b1"
+  },
+  "historical_full_freeze": "registry/beta18_final_freeze.json"
+}

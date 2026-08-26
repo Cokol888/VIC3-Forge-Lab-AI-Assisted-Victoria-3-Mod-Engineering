@@ -1,0 +1,118 @@
+﻿# Military Target UX beta18-pre2.3: legacy marker fallback + native MilitaryFormation production probes.
+cmp_military_target_fleet_root_probe = {
+    scope = military_formation
+    is_shown = {
+        is_fleet = yes
+        owner = { is_player = yes }
+    }
+}
+
+cmp_military_target_fleet_select = {
+    scope = military_formation
+    is_shown = {
+        is_fleet = yes
+        owner = { is_player = yes }
+    }
+    is_valid = {
+        is_fleet = yes
+        owner = { is_player = yes }
+    }
+    effect = {
+        save_scope_as = cmp_military_target_candidate
+        owner = {
+            cmp_military_target_clear_fleet_effect = yes
+            set_variable = { name = cmp_military_target_diag_direct_click value = 1 }
+            add_to_variable_list = {
+                name = sakuya_main_04_01_marked_navy_list
+                target = scope:cmp_military_target_candidate
+            }
+            set_variable = { name = cmp_military_target_feedback value = 1 }
+            set_variable = { name = cmp_target_core_mode value = 10 }
+        }
+        set_variable = cmp_military_target_fleet
+        clear_saved_scope = cmp_military_target_candidate
+    }
+}
+
+cmp_military_target_fleet_entry_selected = {
+    scope = military_formation
+    is_shown = {
+        is_fleet = yes
+        owner = { is_player = yes }
+        has_variable = cmp_military_target_fleet
+    }
+}
+
+cmp_military_target_fleet_diag_click_seen = {
+    scope = country
+    is_shown = { var:cmp_military_target_diag_direct_click = 1 }
+}
+
+cmp_military_target_fleet_diag_marker_seen = {
+    scope = country
+    is_shown = { cmp_military_target_fleet_selected_trigger = yes }
+}
+cmp_military_target_fleet_selected = {
+    scope = country
+    is_shown = { cmp_military_target_fleet_selected_trigger = yes }
+}
+
+cmp_military_target_fleet_ready = {
+    scope = country
+    is_shown = { cmp_military_target_fleet_ready_trigger = yes }
+}
+
+cmp_military_target_fleet_blocked = {
+    scope = country
+    is_shown = {
+        cmp_military_target_fleet_selected_trigger = yes
+        NOT = { cmp_military_target_fleet_ready_trigger = yes }
+    }
+}
+
+cmp_military_target_fleet_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    is_valid = {
+        OR = {
+            cmp_military_target_fleet_selected_trigger = yes
+            has_variable_list = sakuya_main_04_01_marked_navy_list
+        }
+    }
+    effect = { cmp_military_target_clear_fleet_effect = yes }
+}
+
+# beta18-pre2.4 fleet-scope proof endpoints.
+# The row itself already has a MilitaryFormation GUI datacontext.
+# root_probe intentionally uses only always=yes to isolate MakeScope -> ScriptedGui transport.
+cmp_military_native_fleet_root_probe = {
+    scope = military_formation
+    is_shown = { always = yes }
+}
+
+cmp_military_native_fleet_owner_probe = {
+    scope = military_formation
+    is_shown = { owner = { is_player = yes } }
+}
+
+# These operational probes are evaluated only from GUI contexts already known to be fleets.
+cmp_military_native_fleet_ready = {
+    scope = military_formation
+    is_shown = {
+        owner = { is_player = yes }
+        NOT = { any_scope_ship = { is_in_battle = yes } }
+    }
+}
+
+cmp_military_native_fleet_blocked_battle = {
+    scope = military_formation
+    is_shown = {
+        owner = { is_player = yes }
+        any_scope_ship = { is_in_battle = yes }
+    }
+}
+
+cmp_military_native_fleet_owned = {
+    scope = military_formation
+    is_shown = { owner = { is_player = yes } }
+}

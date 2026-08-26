@@ -1,0 +1,6762 @@
+# Generated for Cheat Menu Pro btn8 tab2 famous character summons. Source fields are copied from vanilla character_templates.
+
+sakuya_famous_marx_agitator = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_karl_marx
+	age = 30
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+	is_agitator = yes
+		traits = {
+			direct
+			persistent
+			literary
+		}
+}
+
+sakuya_famous_marx_ruler = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_karl_marx
+	age = 30
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+		traits = {
+			direct
+			persistent
+			literary
+		}
+}
+
+sakuya_famous_marx_general = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_karl_marx
+	age = 30
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+	is_general = yes
+		traits = {
+			direct
+			persistent
+			literary
+		}
+}
+
+sakuya_famous_marx_admiral = {
+	first_name = Karl_Heinrich
+	last_name = Marx
+	historical = yes
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_karl_marx
+	age = 30
+	ideology = ideology_communist
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	home_region = STATE_RHINELAND
+	is_admiral = yes
+		traits = {
+			direct
+			persistent
+			literary
+		}
+}
+
+sakuya_famous_engels_agitator = {
+	first_name = Friedrich
+	last_name = Engels
+	historical = yes
+	culture = cu:north_german
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_RUHR
+	dna = dna_friedrich_engels
+	age = 30
+	is_agitator = yes
+		traits = {
+	        literary
+	        hedonist
+	        charismatic
+		}
+}
+
+sakuya_famous_engels_ruler = {
+	first_name = Friedrich
+	last_name = Engels
+	historical = yes
+	culture = cu:north_german
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_RUHR
+	dna = dna_friedrich_engels
+	age = 30
+		traits = {
+	        literary
+	        hedonist
+	        charismatic
+		}
+}
+
+sakuya_famous_engels_general = {
+	first_name = Friedrich
+	last_name = Engels
+	historical = yes
+	culture = cu:north_german
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_RUHR
+	dna = dna_friedrich_engels
+	age = 30
+	is_general = yes
+		traits = {
+	        literary
+	        hedonist
+	        charismatic
+		}
+}
+
+sakuya_famous_engels_admiral = {
+	first_name = Friedrich
+	last_name = Engels
+	historical = yes
+	culture = cu:north_german
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_RUHR
+	dna = dna_friedrich_engels
+	age = 30
+	is_admiral = yes
+		traits = {
+	        literary
+	        hedonist
+	        charismatic
+		}
+}
+
+sakuya_famous_proudhon_agitator = {
+	first_name = Pierre-Joseph
+	last_name = Proudhon
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	dna = dna_proudhon
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_agitator = yes
+		traits = {
+			erudite # dude taught himself Latin
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_proudhon_ruler = {
+	first_name = Pierre-Joseph
+	last_name = Proudhon
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	dna = dna_proudhon
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+		traits = {
+			erudite # dude taught himself Latin
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_proudhon_general = {
+	first_name = Pierre-Joseph
+	last_name = Proudhon
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	dna = dna_proudhon
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_general = yes
+		traits = {
+			erudite # dude taught himself Latin
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_proudhon_admiral = {
+	first_name = Pierre-Joseph
+	last_name = Proudhon
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	dna = dna_proudhon
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_admiral = yes
+		traits = {
+			erudite # dude taught himself Latin
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_bakunin_agitator = {
+	first_name = Mikhail
+	last_name = Bakunin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_bakunin
+	age = 30
+	is_agitator = yes
+		traits = {
+			firebrand
+	        persistent
+	        bigoted
+		}
+}
+
+sakuya_famous_bakunin_ruler = {
+	first_name = Mikhail
+	last_name = Bakunin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_bakunin
+	age = 30
+		traits = {
+			firebrand
+	        persistent
+	        bigoted
+		}
+}
+
+sakuya_famous_bakunin_general = {
+	first_name = Mikhail
+	last_name = Bakunin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_bakunin
+	age = 30
+	is_general = yes
+		traits = {
+			firebrand
+	        persistent
+	        bigoted
+		}
+}
+
+sakuya_famous_bakunin_admiral = {
+	first_name = Mikhail
+	last_name = Bakunin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_bakunin
+	age = 30
+	is_admiral = yes
+		traits = {
+			firebrand
+	        persistent
+	        bigoted
+		}
+}
+
+sakuya_famous_kropotkin_agitator = {
+	first_name = Pyotr
+	last_name = Kropotkin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_kropotkin
+	age = 30
+	is_agitator = yes
+		traits = {
+			direct
+	        inspirational_orator
+		}
+}
+
+sakuya_famous_kropotkin_ruler = {
+	first_name = Pyotr
+	last_name = Kropotkin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_kropotkin
+	age = 30
+		traits = {
+			direct
+	        inspirational_orator
+		}
+}
+
+sakuya_famous_kropotkin_general = {
+	first_name = Pyotr
+	last_name = Kropotkin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_kropotkin
+	age = 30
+	is_general = yes
+		traits = {
+			direct
+	        inspirational_orator
+		}
+}
+
+sakuya_famous_kropotkin_admiral = {
+	first_name = Pyotr
+	last_name = Kropotkin
+	historical = yes
+	culture = cu:russian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	home_region = STATE_MOSCOW
+	dna = dna_kropotkin
+	age = 30
+	is_admiral = yes
+		traits = {
+			direct
+	        inspirational_orator
+		}
+}
+
+sakuya_famous_lenin_agitator = {
+	first_name = Vladimir
+	last_name = Lenin
+	historical = yes
+	home_region = STATE_TARTARIA
+	female = no
+	culture = cu:russian
+	religion = rel:atheist
+	interest_group = ig_trade_unions
+	ideology = ideology_vanguardist
+	dna = dna_lenin
+	age = 30
+	is_agitator = yes
+	    traits = {
+	        firebrand
+	        charismatic
+	        reckless
+	    }
+}
+
+sakuya_famous_lenin_ruler = {
+	first_name = Vladimir
+	last_name = Lenin
+	historical = yes
+	home_region = STATE_TARTARIA
+	female = no
+	culture = cu:russian
+	religion = rel:atheist
+	interest_group = ig_trade_unions
+	ideology = ideology_vanguardist
+	dna = dna_lenin
+	age = 30
+	    traits = {
+	        firebrand
+	        charismatic
+	        reckless
+	    }
+}
+
+sakuya_famous_lenin_general = {
+	first_name = Vladimir
+	last_name = Lenin
+	historical = yes
+	home_region = STATE_TARTARIA
+	female = no
+	culture = cu:russian
+	religion = rel:atheist
+	interest_group = ig_trade_unions
+	ideology = ideology_vanguardist
+	dna = dna_lenin
+	age = 30
+	is_general = yes
+	    traits = {
+	        firebrand
+	        charismatic
+	        reckless
+	    }
+}
+
+sakuya_famous_lenin_admiral = {
+	first_name = Vladimir
+	last_name = Lenin
+	historical = yes
+	home_region = STATE_TARTARIA
+	female = no
+	culture = cu:russian
+	religion = rel:atheist
+	interest_group = ig_trade_unions
+	ideology = ideology_vanguardist
+	dna = dna_lenin
+	age = 30
+	is_admiral = yes
+	    traits = {
+	        firebrand
+	        charismatic
+	        reckless
+	    }
+}
+
+sakuya_famous_trotsky_agitator = {
+	first_name = Leon_2
+	last_name = Trotsky
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_vanguardist
+	home_region = STATE_CHERSON
+	dna = dna_trotsky
+	age = 30
+	is_agitator = yes
+		traits = {
+			innovative
+	        charismatic
+	        persistent
+		}
+}
+
+sakuya_famous_trotsky_ruler = {
+	first_name = Leon_2
+	last_name = Trotsky
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_vanguardist
+	home_region = STATE_CHERSON
+	dna = dna_trotsky
+	age = 30
+		traits = {
+			innovative
+	        charismatic
+	        persistent
+		}
+}
+
+sakuya_famous_trotsky_general = {
+	first_name = Leon_2
+	last_name = Trotsky
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_vanguardist
+	home_region = STATE_CHERSON
+	dna = dna_trotsky
+	age = 30
+	is_general = yes
+		traits = {
+			innovative
+	        charismatic
+	        persistent
+		}
+}
+
+sakuya_famous_trotsky_admiral = {
+	first_name = Leon_2
+	last_name = Trotsky
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_vanguardist
+	home_region = STATE_CHERSON
+	dna = dna_trotsky
+	age = 30
+	is_admiral = yes
+		traits = {
+			innovative
+	        charismatic
+	        persistent
+		}
+}
+
+sakuya_famous_luxemburg_agitator = {
+	first_name = Rosa
+	last_name = Luxemburg
+	historical = yes
+	culture = cu:polish
+	religion = rel:atheist
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_rosa_luxemburg
+	age = 30
+	home_region = STATE_LESSER_POLAND
+	is_agitator = yes
+		traits = {
+			firebrand
+	        brave
+	        romantic
+		}
+}
+
+sakuya_famous_luxemburg_ruler = {
+	first_name = Rosa
+	last_name = Luxemburg
+	historical = yes
+	culture = cu:polish
+	religion = rel:atheist
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_rosa_luxemburg
+	age = 30
+	home_region = STATE_LESSER_POLAND
+		traits = {
+			firebrand
+	        brave
+	        romantic
+		}
+}
+
+sakuya_famous_luxemburg_general = {
+	first_name = Rosa
+	last_name = Luxemburg
+	historical = yes
+	culture = cu:polish
+	religion = rel:atheist
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_rosa_luxemburg
+	age = 30
+	home_region = STATE_LESSER_POLAND
+	is_general = yes
+		traits = {
+			firebrand
+	        brave
+	        romantic
+		}
+}
+
+sakuya_famous_luxemburg_admiral = {
+	first_name = Rosa
+	last_name = Luxemburg
+	historical = yes
+	culture = cu:polish
+	religion = rel:atheist
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_rosa_luxemburg
+	age = 30
+	home_region = STATE_LESSER_POLAND
+	is_admiral = yes
+		traits = {
+			firebrand
+	        brave
+	        romantic
+		}
+}
+
+sakuya_famous_liebknecht_agitator = {
+	first_name = Karl
+	last_name = Liebknecht
+	historical = yes
+	culture = cu:north_german
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_karl_liebknecht
+	age = 30
+	home_region = STATE_SAXONY
+	is_agitator = yes
+		traits = {
+			erudite
+			experienced_political_operator
+			charismatic
+		}
+}
+
+sakuya_famous_liebknecht_ruler = {
+	first_name = Karl
+	last_name = Liebknecht
+	historical = yes
+	culture = cu:north_german
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_karl_liebknecht
+	age = 30
+	home_region = STATE_SAXONY
+		traits = {
+			erudite
+			experienced_political_operator
+			charismatic
+		}
+}
+
+sakuya_famous_liebknecht_general = {
+	first_name = Karl
+	last_name = Liebknecht
+	historical = yes
+	culture = cu:north_german
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_karl_liebknecht
+	age = 30
+	home_region = STATE_SAXONY
+	is_general = yes
+		traits = {
+			erudite
+			experienced_political_operator
+			charismatic
+		}
+}
+
+sakuya_famous_liebknecht_admiral = {
+	first_name = Karl
+	last_name = Liebknecht
+	historical = yes
+	culture = cu:north_german
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_karl_liebknecht
+	age = 30
+	home_region = STATE_SAXONY
+	is_admiral = yes
+		traits = {
+			erudite
+			experienced_political_operator
+			charismatic
+		}
+}
+
+sakuya_famous_lassalle_agitator = {
+	first_name = Ferdinand
+	last_name = Lassalle
+	historical = yes
+	culture = cu:north_german
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_social_democrat
+	dna = dna_lassalle
+	age = 30
+	home_region = STATE_LOWER_SILESIA
+	is_agitator = yes
+		traits = {
+			inspirational_orator
+	        arrogant
+	        ambitious
+		}
+}
+
+sakuya_famous_lassalle_ruler = {
+	first_name = Ferdinand
+	last_name = Lassalle
+	historical = yes
+	culture = cu:north_german
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_social_democrat
+	dna = dna_lassalle
+	age = 30
+	home_region = STATE_LOWER_SILESIA
+		traits = {
+			inspirational_orator
+	        arrogant
+	        ambitious
+		}
+}
+
+sakuya_famous_lassalle_general = {
+	first_name = Ferdinand
+	last_name = Lassalle
+	historical = yes
+	culture = cu:north_german
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_social_democrat
+	dna = dna_lassalle
+	age = 30
+	home_region = STATE_LOWER_SILESIA
+	is_general = yes
+		traits = {
+			inspirational_orator
+	        arrogant
+	        ambitious
+		}
+}
+
+sakuya_famous_lassalle_admiral = {
+	first_name = Ferdinand
+	last_name = Lassalle
+	historical = yes
+	culture = cu:north_german
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_social_democrat
+	dna = dna_lassalle
+	age = 30
+	home_region = STATE_LOWER_SILESIA
+	is_admiral = yes
+		traits = {
+			inspirational_orator
+	        arrogant
+	        ambitious
+		}
+}
+
+sakuya_famous_sorel_agitator = {
+	first_name = Georges
+	last_name = Sorel
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_nihilist
+	dna = dna_georges_sorel
+	age = 30
+	home_region = STATE_NORMANDY
+	is_agitator = yes
+		traits = {
+			erudite
+	        innovative
+	        engineer
+		}
+}
+
+sakuya_famous_sorel_ruler = {
+	first_name = Georges
+	last_name = Sorel
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_nihilist
+	dna = dna_georges_sorel
+	age = 30
+	home_region = STATE_NORMANDY
+		traits = {
+			erudite
+	        innovative
+	        engineer
+		}
+}
+
+sakuya_famous_sorel_general = {
+	first_name = Georges
+	last_name = Sorel
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_nihilist
+	dna = dna_georges_sorel
+	age = 30
+	home_region = STATE_NORMANDY
+	is_general = yes
+		traits = {
+			erudite
+	        innovative
+	        engineer
+		}
+}
+
+sakuya_famous_sorel_admiral = {
+	first_name = Georges
+	last_name = Sorel
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_nihilist
+	dna = dna_georges_sorel
+	age = 30
+	home_region = STATE_NORMANDY
+	is_admiral = yes
+		traits = {
+			erudite
+	        innovative
+	        engineer
+		}
+}
+
+sakuya_famous_blanqui_agitator = {
+	first_name = Louis
+	last_name = Blanqui
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_blanqui
+	age = 30
+	home_region = STATE_PROVENCE
+	is_agitator = yes
+	    traits = {
+	        direct
+	        basic_political_operator
+	        ambitious
+	    }
+}
+
+sakuya_famous_blanqui_ruler = {
+	first_name = Louis
+	last_name = Blanqui
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_blanqui
+	age = 30
+	home_region = STATE_PROVENCE
+	    traits = {
+	        direct
+	        basic_political_operator
+	        ambitious
+	    }
+}
+
+sakuya_famous_blanqui_general = {
+	first_name = Louis
+	last_name = Blanqui
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_blanqui
+	age = 30
+	home_region = STATE_PROVENCE
+	is_general = yes
+	    traits = {
+	        direct
+	        basic_political_operator
+	        ambitious
+	    }
+}
+
+sakuya_famous_blanqui_admiral = {
+	first_name = Louis
+	last_name = Blanqui
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	dna = dna_blanqui
+	age = 30
+	home_region = STATE_PROVENCE
+	is_admiral = yes
+	    traits = {
+	        direct
+	        basic_political_operator
+	        ambitious
+	    }
+}
+
+sakuya_famous_delescluze_agitator = {
+	first_name = Louis_Charles
+	last_name = Delescluze
+	historical = yes
+	female = no
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_louis_delescluze
+	age = 30
+	home_region = STATE_NORMANDY
+	is_agitator = yes
+	    traits = {
+	        literary
+	        inspirational_orator
+	        brave
+	    }
+}
+
+sakuya_famous_delescluze_ruler = {
+	first_name = Louis_Charles
+	last_name = Delescluze
+	historical = yes
+	female = no
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_louis_delescluze
+	age = 30
+	home_region = STATE_NORMANDY
+	    traits = {
+	        literary
+	        inspirational_orator
+	        brave
+	    }
+}
+
+sakuya_famous_delescluze_general = {
+	first_name = Louis_Charles
+	last_name = Delescluze
+	historical = yes
+	female = no
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_louis_delescluze
+	age = 30
+	home_region = STATE_NORMANDY
+	is_general = yes
+	    traits = {
+	        literary
+	        inspirational_orator
+	        brave
+	    }
+}
+
+sakuya_famous_delescluze_admiral = {
+	first_name = Louis_Charles
+	last_name = Delescluze
+	historical = yes
+	female = no
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_louis_delescluze
+	age = 30
+	home_region = STATE_NORMANDY
+	is_admiral = yes
+	    traits = {
+	        literary
+	        inspirational_orator
+	        brave
+	    }
+}
+
+sakuya_famous_louise_michel_agitator = {
+	first_name = Louise
+	last_name = Michel
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_feminist
+	dna = dna_louise_michel
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_agitator = yes
+		traits = {
+			brave
+			firebrand
+			persistent
+		}
+}
+
+sakuya_famous_louise_michel_ruler = {
+	first_name = Louise
+	last_name = Michel
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_feminist
+	dna = dna_louise_michel
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+		traits = {
+			brave
+			firebrand
+			persistent
+		}
+}
+
+sakuya_famous_louise_michel_general = {
+	first_name = Louise
+	last_name = Michel
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_feminist
+	dna = dna_louise_michel
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_general = yes
+		traits = {
+			brave
+			firebrand
+			persistent
+		}
+}
+
+sakuya_famous_louise_michel_admiral = {
+	first_name = Louise
+	last_name = Michel
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_feminist
+	dna = dna_louise_michel
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_admiral = yes
+		traits = {
+			brave
+			firebrand
+			persistent
+		}
+}
+
+sakuya_famous_malatesta_agitator = {
+	first_name = Errico
+	last_name = Malatesta
+	historical = yes
+	culture = cu:south_italian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	dna = dna_malatesta
+	age = 30
+	home_region = STATE_CAMPANIA
+	is_agitator = yes
+		traits = {
+			persistent
+			charismatic
+			inspirational_orator
+		}
+}
+
+sakuya_famous_malatesta_ruler = {
+	first_name = Errico
+	last_name = Malatesta
+	historical = yes
+	culture = cu:south_italian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	dna = dna_malatesta
+	age = 30
+	home_region = STATE_CAMPANIA
+		traits = {
+			persistent
+			charismatic
+			inspirational_orator
+		}
+}
+
+sakuya_famous_malatesta_general = {
+	first_name = Errico
+	last_name = Malatesta
+	historical = yes
+	culture = cu:south_italian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	dna = dna_malatesta
+	age = 30
+	home_region = STATE_CAMPANIA
+	is_general = yes
+		traits = {
+			persistent
+			charismatic
+			inspirational_orator
+		}
+}
+
+sakuya_famous_malatesta_admiral = {
+	first_name = Errico
+	last_name = Malatesta
+	historical = yes
+	culture = cu:south_italian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	dna = dna_malatesta
+	age = 30
+	home_region = STATE_CAMPANIA
+	is_admiral = yes
+		traits = {
+			persistent
+			charismatic
+			inspirational_orator
+		}
+}
+
+sakuya_famous_debs_agitator = {
+	first_name = Eugene
+	last_name = Debs
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_social_democrat
+	home_region = STATE_INDIANA
+	dna = dna_debs_eugene
+	age = 30
+	is_agitator = yes
+		traits = {
+			demagogue
+			charismatic
+			honorable
+		}
+}
+
+sakuya_famous_debs_ruler = {
+	first_name = Eugene
+	last_name = Debs
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_social_democrat
+	home_region = STATE_INDIANA
+	dna = dna_debs_eugene
+	age = 30
+		traits = {
+			demagogue
+			charismatic
+			honorable
+		}
+}
+
+sakuya_famous_debs_general = {
+	first_name = Eugene
+	last_name = Debs
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_social_democrat
+	home_region = STATE_INDIANA
+	dna = dna_debs_eugene
+	age = 30
+	is_general = yes
+		traits = {
+			demagogue
+			charismatic
+			honorable
+		}
+}
+
+sakuya_famous_debs_admiral = {
+	first_name = Eugene
+	last_name = Debs
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_social_democrat
+	home_region = STATE_INDIANA
+	dna = dna_debs_eugene
+	age = 30
+	is_admiral = yes
+		traits = {
+			demagogue
+			charismatic
+			honorable
+		}
+}
+
+sakuya_famous_zapata_agitator = {
+	first_name = Emiliano
+	last_name = Zapata
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	dna = dna_zapata
+	age = 30
+	home_region = STATE_MEXICO
+	is_agitator = yes
+		traits = {
+			honorable
+			celebrity_commander
+			direct
+		}
+}
+
+sakuya_famous_zapata_ruler = {
+	first_name = Emiliano
+	last_name = Zapata
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	dna = dna_zapata
+	age = 30
+	home_region = STATE_MEXICO
+		traits = {
+			honorable
+			celebrity_commander
+			direct
+		}
+}
+
+sakuya_famous_zapata_general = {
+	first_name = Emiliano
+	last_name = Zapata
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	dna = dna_zapata
+	age = 30
+	home_region = STATE_MEXICO
+	is_general = yes
+		traits = {
+			honorable
+			celebrity_commander
+			direct
+		}
+}
+
+sakuya_famous_zapata_admiral = {
+	first_name = Emiliano
+	last_name = Zapata
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	dna = dna_zapata
+	age = 30
+	home_region = STATE_MEXICO
+	is_admiral = yes
+		traits = {
+			honorable
+			celebrity_commander
+			direct
+		}
+}
+
+sakuya_famous_madero_agitator = {
+	first_name = Francisco
+	last_name = Madero
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	dna = dna_francisco_madero
+	age = 30
+	home_region = STATE_RIO_GRANDE
+	is_agitator = yes
+		traits = {
+			honorable
+			charismatic
+			basic_diplomat
+		}
+}
+
+sakuya_famous_madero_ruler = {
+	first_name = Francisco
+	last_name = Madero
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	dna = dna_francisco_madero
+	age = 30
+	home_region = STATE_RIO_GRANDE
+		traits = {
+			honorable
+			charismatic
+			basic_diplomat
+		}
+}
+
+sakuya_famous_madero_general = {
+	first_name = Francisco
+	last_name = Madero
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	dna = dna_francisco_madero
+	age = 30
+	home_region = STATE_RIO_GRANDE
+	is_general = yes
+		traits = {
+			honorable
+			charismatic
+			basic_diplomat
+		}
+}
+
+sakuya_famous_madero_admiral = {
+	first_name = Francisco
+	last_name = Madero
+	historical = yes
+	culture = cu:mexican
+	religion = rel:catholic
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	dna = dna_francisco_madero
+	age = 30
+	home_region = STATE_RIO_GRANDE
+	is_admiral = yes
+		traits = {
+			honorable
+			charismatic
+			basic_diplomat
+		}
+}
+
+sakuya_famous_sun_yat_sen_agitator = {
+	first_name = Sun
+	last_name = Yat_Sen
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	home_region = STATE_GUANGDONG
+	dna = dna_sun_yat_sen
+	age = 30
+	is_agitator = yes
+		traits = {
+			erudite
+	        persistent
+	        ambitious
+		}
+}
+
+sakuya_famous_sun_yat_sen_ruler = {
+	first_name = Sun
+	last_name = Yat_Sen
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	home_region = STATE_GUANGDONG
+	dna = dna_sun_yat_sen
+	age = 30
+		traits = {
+			erudite
+	        persistent
+	        ambitious
+		}
+}
+
+sakuya_famous_sun_yat_sen_general = {
+	first_name = Sun
+	last_name = Yat_Sen
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	home_region = STATE_GUANGDONG
+	dna = dna_sun_yat_sen
+	age = 30
+	is_general = yes
+		traits = {
+			erudite
+	        persistent
+	        ambitious
+		}
+}
+
+sakuya_famous_sun_yat_sen_admiral = {
+	first_name = Sun
+	last_name = Yat_Sen
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	home_region = STATE_GUANGDONG
+	dna = dna_sun_yat_sen
+	age = 30
+	is_admiral = yes
+		traits = {
+			erudite
+	        persistent
+	        ambitious
+		}
+}
+
+sakuya_famous_gandhi_agitator = {
+	first_name = Mohandas
+	last_name = Gandhi
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	dna = dna_mahatma_gandhi
+	age = 30
+	ideology = ideology_humanitarian
+	home_region = STATE_GUJARAT
+	is_agitator = yes
+		traits = {
+			persistent
+			inspirational_orator
+			charismatic
+		}
+}
+
+sakuya_famous_gandhi_ruler = {
+	first_name = Mohandas
+	last_name = Gandhi
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	dna = dna_mahatma_gandhi
+	age = 30
+	ideology = ideology_humanitarian
+	home_region = STATE_GUJARAT
+		traits = {
+			persistent
+			inspirational_orator
+			charismatic
+		}
+}
+
+sakuya_famous_gandhi_general = {
+	first_name = Mohandas
+	last_name = Gandhi
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	dna = dna_mahatma_gandhi
+	age = 30
+	ideology = ideology_humanitarian
+	home_region = STATE_GUJARAT
+	is_general = yes
+		traits = {
+			persistent
+			inspirational_orator
+			charismatic
+		}
+}
+
+sakuya_famous_gandhi_admiral = {
+	first_name = Mohandas
+	last_name = Gandhi
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:hindu
+	interest_group = ig_intelligentsia
+	dna = dna_mahatma_gandhi
+	age = 30
+	ideology = ideology_humanitarian
+	home_region = STATE_GUJARAT
+	is_admiral = yes
+		traits = {
+			persistent
+			inspirational_orator
+			charismatic
+		}
+}
+
+sakuya_famous_douglass_agitator = {
+	first_name = Frederick
+	last_name = Douglass
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_douglass
+	age = 30
+	home_region = STATE_MASSACHUSETTS
+	is_agitator = yes
+		traits = {
+			firebrand
+			imposing
+			persistent
+		}
+}
+
+sakuya_famous_douglass_ruler = {
+	first_name = Frederick
+	last_name = Douglass
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_douglass
+	age = 30
+	home_region = STATE_MASSACHUSETTS
+		traits = {
+			firebrand
+			imposing
+			persistent
+		}
+}
+
+sakuya_famous_douglass_general = {
+	first_name = Frederick
+	last_name = Douglass
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_douglass
+	age = 30
+	home_region = STATE_MASSACHUSETTS
+	is_general = yes
+		traits = {
+			firebrand
+			imposing
+			persistent
+		}
+}
+
+sakuya_famous_douglass_admiral = {
+	first_name = Frederick
+	last_name = Douglass
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_douglass
+	age = 30
+	home_region = STATE_MASSACHUSETTS
+	is_admiral = yes
+		traits = {
+			firebrand
+			imposing
+			persistent
+		}
+}
+
+sakuya_famous_tubman_agitator = {
+	first_name = Harriet
+	last_name = Tubman
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_harriet_tubman
+	age = 30
+	home_region = STATE_PENNSYLVANIA
+	is_agitator = yes
+		traits = {
+			brave
+			charismatic
+			direct
+		}
+}
+
+sakuya_famous_tubman_ruler = {
+	first_name = Harriet
+	last_name = Tubman
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_harriet_tubman
+	age = 30
+	home_region = STATE_PENNSYLVANIA
+		traits = {
+			brave
+			charismatic
+			direct
+		}
+}
+
+sakuya_famous_tubman_general = {
+	first_name = Harriet
+	last_name = Tubman
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_harriet_tubman
+	age = 30
+	home_region = STATE_PENNSYLVANIA
+	is_general = yes
+		traits = {
+			brave
+			charismatic
+			direct
+		}
+}
+
+sakuya_famous_tubman_admiral = {
+	first_name = Harriet
+	last_name = Tubman
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_harriet_tubman
+	age = 30
+	home_region = STATE_PENNSYLVANIA
+	is_admiral = yes
+		traits = {
+			brave
+			charismatic
+			direct
+		}
+}
+
+sakuya_famous_susan_anthony_agitator = {
+	first_name = Susan
+	last_name = Anthony
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	home_region = STATE_NEW_YORK
+	dna = dna_susan_b_anthony
+	age = 30
+	is_agitator = yes
+		traits = {
+			persistent
+			demagogue
+			honorable
+		}
+}
+
+sakuya_famous_susan_anthony_ruler = {
+	first_name = Susan
+	last_name = Anthony
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	home_region = STATE_NEW_YORK
+	dna = dna_susan_b_anthony
+	age = 30
+		traits = {
+			persistent
+			demagogue
+			honorable
+		}
+}
+
+sakuya_famous_susan_anthony_general = {
+	first_name = Susan
+	last_name = Anthony
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	home_region = STATE_NEW_YORK
+	dna = dna_susan_b_anthony
+	age = 30
+	is_general = yes
+		traits = {
+			persistent
+			demagogue
+			honorable
+		}
+}
+
+sakuya_famous_susan_anthony_admiral = {
+	first_name = Susan
+	last_name = Anthony
+	historical = yes
+	culture = cu:yankee
+	religion = rel:protestant
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	home_region = STATE_NEW_YORK
+	dna = dna_susan_b_anthony
+	age = 30
+	is_admiral = yes
+		traits = {
+			persistent
+			demagogue
+			honorable
+		}
+}
+
+sakuya_famous_pankhurst_agitator = {
+	first_name = Emmeline
+	last_name = Pankhurst
+	historical = yes
+	culture = cu:british
+	female = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_feminist
+	home_region = STATE_LANCASHIRE
+	dna = dna_emmeline_pankhurst
+	age = 30
+	is_agitator = yes
+	    traits = {
+	        persistent
+	        firebrand
+	    }
+}
+
+sakuya_famous_pankhurst_ruler = {
+	first_name = Emmeline
+	last_name = Pankhurst
+	historical = yes
+	culture = cu:british
+	female = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_feminist
+	home_region = STATE_LANCASHIRE
+	dna = dna_emmeline_pankhurst
+	age = 30
+	    traits = {
+	        persistent
+	        firebrand
+	    }
+}
+
+sakuya_famous_pankhurst_general = {
+	first_name = Emmeline
+	last_name = Pankhurst
+	historical = yes
+	culture = cu:british
+	female = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_feminist
+	home_region = STATE_LANCASHIRE
+	dna = dna_emmeline_pankhurst
+	age = 30
+	is_general = yes
+	    traits = {
+	        persistent
+	        firebrand
+	    }
+}
+
+sakuya_famous_pankhurst_admiral = {
+	first_name = Emmeline
+	last_name = Pankhurst
+	historical = yes
+	culture = cu:british
+	female = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_feminist
+	home_region = STATE_LANCASHIRE
+	dna = dna_emmeline_pankhurst
+	age = 30
+	is_admiral = yes
+	    traits = {
+	        persistent
+	        firebrand
+	    }
+}
+
+sakuya_famous_web_du_bois_agitator = {
+	first_name = William
+	last_name = Du_Bois
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_democrat
+	home_region = STATE_GEORGIA
+	dna = dna_web_du_bois
+	age = 30
+	is_agitator = yes
+		traits = {
+			erudite
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_web_du_bois_ruler = {
+	first_name = William
+	last_name = Du_Bois
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_democrat
+	home_region = STATE_GEORGIA
+	dna = dna_web_du_bois
+	age = 30
+		traits = {
+			erudite
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_web_du_bois_general = {
+	first_name = William
+	last_name = Du_Bois
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_democrat
+	home_region = STATE_GEORGIA
+	dna = dna_web_du_bois
+	age = 30
+	is_general = yes
+		traits = {
+			erudite
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_web_du_bois_admiral = {
+	first_name = William
+	last_name = Du_Bois
+	historical = yes
+	culture = cu:afro_american
+	religion = rel:protestant
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_democrat
+	home_region = STATE_GEORGIA
+	dna = dna_web_du_bois
+	age = 30
+	is_admiral = yes
+		traits = {
+			erudite
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_luis_gama_agitator = {
+	first_name = Luis_2
+	last_name = Gama
+	historical = yes
+	culture = cu:afro_brazilian
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_luis_gama
+	age = 30
+	home_region = STATE_BAHIA
+	is_agitator = yes
+		traits = {
+			erudite
+	        meticulous
+		}
+}
+
+sakuya_famous_luis_gama_ruler = {
+	first_name = Luis_2
+	last_name = Gama
+	historical = yes
+	culture = cu:afro_brazilian
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_luis_gama
+	age = 30
+	home_region = STATE_BAHIA
+		traits = {
+			erudite
+	        meticulous
+		}
+}
+
+sakuya_famous_luis_gama_general = {
+	first_name = Luis_2
+	last_name = Gama
+	historical = yes
+	culture = cu:afro_brazilian
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_luis_gama
+	age = 30
+	home_region = STATE_BAHIA
+	is_general = yes
+		traits = {
+			erudite
+	        meticulous
+		}
+}
+
+sakuya_famous_luis_gama_admiral = {
+	first_name = Luis_2
+	last_name = Gama
+	historical = yes
+	culture = cu:afro_brazilian
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_luis_gama
+	age = 30
+	home_region = STATE_BAHIA
+	is_admiral = yes
+		traits = {
+			erudite
+	        meticulous
+		}
+}
+
+sakuya_famous_john_brown_agitator = {
+	first_name = John
+	last_name = Brown
+	historical = yes
+	culture = cu:yankee
+	female = no
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_john_brown
+	age = 30
+	home_region = STATE_CONNECTICUT
+	is_agitator = yes
+	    traits = {
+	        reserved
+	        firebrand
+	        reckless
+	    }
+}
+
+sakuya_famous_john_brown_ruler = {
+	first_name = John
+	last_name = Brown
+	historical = yes
+	culture = cu:yankee
+	female = no
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_john_brown
+	age = 30
+	home_region = STATE_CONNECTICUT
+	    traits = {
+	        reserved
+	        firebrand
+	        reckless
+	    }
+}
+
+sakuya_famous_john_brown_general = {
+	first_name = John
+	last_name = Brown
+	historical = yes
+	culture = cu:yankee
+	female = no
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_john_brown
+	age = 30
+	home_region = STATE_CONNECTICUT
+	is_general = yes
+	    traits = {
+	        reserved
+	        firebrand
+	        reckless
+	    }
+}
+
+sakuya_famous_john_brown_admiral = {
+	first_name = John
+	last_name = Brown
+	historical = yes
+	culture = cu:yankee
+	female = no
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_john_brown
+	age = 30
+	home_region = STATE_CONNECTICUT
+	is_admiral = yes
+	    traits = {
+	        reserved
+	        firebrand
+	        reckless
+	    }
+}
+
+sakuya_famous_jose_patrocinio_agitator = {
+	first_name = JosE_
+	last_name = do_PatrocI_nio
+	historical = yes
+	culture = cu:afro_brazilian
+	religion = rel:catholic
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_jose_do_patrocinio
+	age = 30
+	home_region = STATE_RIO_DE_JANEIRO
+	is_agitator = yes
+		traits = {
+			literary
+			persistent
+			demagogue
+		}
+}
+
+sakuya_famous_jose_patrocinio_ruler = {
+	first_name = JosE_
+	last_name = do_PatrocI_nio
+	historical = yes
+	culture = cu:afro_brazilian
+	religion = rel:catholic
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_jose_do_patrocinio
+	age = 30
+	home_region = STATE_RIO_DE_JANEIRO
+		traits = {
+			literary
+			persistent
+			demagogue
+		}
+}
+
+sakuya_famous_jose_patrocinio_general = {
+	first_name = JosE_
+	last_name = do_PatrocI_nio
+	historical = yes
+	culture = cu:afro_brazilian
+	religion = rel:catholic
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_jose_do_patrocinio
+	age = 30
+	home_region = STATE_RIO_DE_JANEIRO
+	is_general = yes
+		traits = {
+			literary
+			persistent
+			demagogue
+		}
+}
+
+sakuya_famous_jose_patrocinio_admiral = {
+	first_name = JosE_
+	last_name = do_PatrocI_nio
+	historical = yes
+	culture = cu:afro_brazilian
+	religion = rel:catholic
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_abolitionist
+	dna = dna_jose_do_patrocinio
+	age = 30
+	home_region = STATE_RIO_DE_JANEIRO
+	is_admiral = yes
+		traits = {
+			literary
+			persistent
+			demagogue
+		}
+}
+
+sakuya_famous_mazzini_agitator = {
+	first_name = Giuseppe
+	last_name = Mazzini
+	historical = yes
+	culture = cu:north_italian
+	dna = dna_mazzini
+	age = 30
+	interest_group = ig_intelligentsia
+	female = no
+	ideology = ideology_radical
+	home_region = STATE_PIEDMONT
+	is_agitator = yes
+		traits = {
+			firebrand
+			persistent # the man did NOT STOP
+		}
+}
+
+sakuya_famous_mazzini_ruler = {
+	first_name = Giuseppe
+	last_name = Mazzini
+	historical = yes
+	culture = cu:north_italian
+	dna = dna_mazzini
+	age = 30
+	interest_group = ig_intelligentsia
+	female = no
+	ideology = ideology_radical
+	home_region = STATE_PIEDMONT
+		traits = {
+			firebrand
+			persistent # the man did NOT STOP
+		}
+}
+
+sakuya_famous_mazzini_general = {
+	first_name = Giuseppe
+	last_name = Mazzini
+	historical = yes
+	culture = cu:north_italian
+	dna = dna_mazzini
+	age = 30
+	interest_group = ig_intelligentsia
+	female = no
+	ideology = ideology_radical
+	home_region = STATE_PIEDMONT
+	is_general = yes
+		traits = {
+			firebrand
+			persistent # the man did NOT STOP
+		}
+}
+
+sakuya_famous_mazzini_admiral = {
+	first_name = Giuseppe
+	last_name = Mazzini
+	historical = yes
+	culture = cu:north_italian
+	dna = dna_mazzini
+	age = 30
+	interest_group = ig_intelligentsia
+	female = no
+	ideology = ideology_radical
+	home_region = STATE_PIEDMONT
+	is_admiral = yes
+		traits = {
+			firebrand
+			persistent # the man did NOT STOP
+		}
+}
+
+sakuya_famous_orla_lehmann_agitator = {
+	first_name = Orla
+	last_name = Lehmann
+	historical = yes
+	culture = cu:danish
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ELBE
+	is_agitator = yes
+		traits = {
+			literary
+			demagogue
+			charismatic
+		}
+}
+
+sakuya_famous_orla_lehmann_ruler = {
+	first_name = Orla
+	last_name = Lehmann
+	historical = yes
+	culture = cu:danish
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ELBE
+		traits = {
+			literary
+			demagogue
+			charismatic
+		}
+}
+
+sakuya_famous_orla_lehmann_general = {
+	first_name = Orla
+	last_name = Lehmann
+	historical = yes
+	culture = cu:danish
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ELBE
+	is_general = yes
+		traits = {
+			literary
+			demagogue
+			charismatic
+		}
+}
+
+sakuya_famous_orla_lehmann_admiral = {
+	first_name = Orla
+	last_name = Lehmann
+	historical = yes
+	culture = cu:danish
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ELBE
+	is_admiral = yes
+		traits = {
+			literary
+			demagogue
+			charismatic
+		}
+}
+
+sakuya_famous_bismarck_agitator = {
+	first_name = Otto
+	last_name = von_Bismarck
+	historical = yes
+	interest_group = ig_landowners
+	female = no
+	home_region = STATE_BRANDENBURG
+	dna = dna_otto_von_bismarck
+	age = 30
+	ideology = ideology_royalist
+	is_agitator = yes
+		traits = {
+			persistent
+			ambitious
+			masterful_diplomat
+			experienced_political_operator
+			demagogue
+		}
+}
+
+sakuya_famous_bismarck_ruler = {
+	first_name = Otto
+	last_name = von_Bismarck
+	historical = yes
+	interest_group = ig_landowners
+	female = no
+	home_region = STATE_BRANDENBURG
+	dna = dna_otto_von_bismarck
+	age = 30
+	ideology = ideology_royalist
+		traits = {
+			persistent
+			ambitious
+			masterful_diplomat
+			experienced_political_operator
+			demagogue
+		}
+}
+
+sakuya_famous_bismarck_general = {
+	first_name = Otto
+	last_name = von_Bismarck
+	historical = yes
+	interest_group = ig_landowners
+	female = no
+	home_region = STATE_BRANDENBURG
+	dna = dna_otto_von_bismarck
+	age = 30
+	ideology = ideology_royalist
+	is_general = yes
+		traits = {
+			persistent
+			ambitious
+			masterful_diplomat
+			experienced_political_operator
+			demagogue
+		}
+}
+
+sakuya_famous_bismarck_admiral = {
+	first_name = Otto
+	last_name = von_Bismarck
+	historical = yes
+	interest_group = ig_landowners
+	female = no
+	home_region = STATE_BRANDENBURG
+	dna = dna_otto_von_bismarck
+	age = 30
+	ideology = ideology_royalist
+	is_admiral = yes
+		traits = {
+			persistent
+			ambitious
+			masterful_diplomat
+			experienced_political_operator
+			demagogue
+		}
+}
+
+sakuya_famous_lincoln_agitator = {
+	first_name = Abraham
+	last_name = Lincoln
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_petty_bourgeoisie
+	dna = dna_abraham_lincoln
+	age = 30
+	home_region = STATE_ILLINOIS
+	is_agitator = yes
+	    traits = {
+	        experienced_political_operator
+	        inspirational_orator
+	        tactful
+	    }
+}
+
+sakuya_famous_lincoln_ruler = {
+	first_name = Abraham
+	last_name = Lincoln
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_petty_bourgeoisie
+	dna = dna_abraham_lincoln
+	age = 30
+	home_region = STATE_ILLINOIS
+	    traits = {
+	        experienced_political_operator
+	        inspirational_orator
+	        tactful
+	    }
+}
+
+sakuya_famous_lincoln_general = {
+	first_name = Abraham
+	last_name = Lincoln
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_petty_bourgeoisie
+	dna = dna_abraham_lincoln
+	age = 30
+	home_region = STATE_ILLINOIS
+	is_general = yes
+	    traits = {
+	        experienced_political_operator
+	        inspirational_orator
+	        tactful
+	    }
+}
+
+sakuya_famous_lincoln_admiral = {
+	first_name = Abraham
+	last_name = Lincoln
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_petty_bourgeoisie
+	dna = dna_abraham_lincoln
+	age = 30
+	home_region = STATE_ILLINOIS
+	is_admiral = yes
+	    traits = {
+	        experienced_political_operator
+	        inspirational_orator
+	        tactful
+	    }
+}
+
+sakuya_famous_clemenceau_agitator = {
+	first_name = Georges
+	last_name = Clemenceau
+	historical = yes
+	culture = cu:french
+	female = no
+	religion = rel:catholic
+	ideology = ideology_radical
+	interest_group = ig_intelligentsia
+	dna = dna_georges_clemenceau
+	age = 30
+	home_region = STATE_POITOU
+	is_agitator = yes
+	    traits = {
+	        experienced_political_operator
+	        persistent
+	        direct
+	    }
+}
+
+sakuya_famous_clemenceau_ruler = {
+	first_name = Georges
+	last_name = Clemenceau
+	historical = yes
+	culture = cu:french
+	female = no
+	religion = rel:catholic
+	ideology = ideology_radical
+	interest_group = ig_intelligentsia
+	dna = dna_georges_clemenceau
+	age = 30
+	home_region = STATE_POITOU
+	    traits = {
+	        experienced_political_operator
+	        persistent
+	        direct
+	    }
+}
+
+sakuya_famous_clemenceau_general = {
+	first_name = Georges
+	last_name = Clemenceau
+	historical = yes
+	culture = cu:french
+	female = no
+	religion = rel:catholic
+	ideology = ideology_radical
+	interest_group = ig_intelligentsia
+	dna = dna_georges_clemenceau
+	age = 30
+	home_region = STATE_POITOU
+	is_general = yes
+	    traits = {
+	        experienced_political_operator
+	        persistent
+	        direct
+	    }
+}
+
+sakuya_famous_clemenceau_admiral = {
+	first_name = Georges
+	last_name = Clemenceau
+	historical = yes
+	culture = cu:french
+	female = no
+	religion = rel:catholic
+	ideology = ideology_radical
+	interest_group = ig_intelligentsia
+	dna = dna_georges_clemenceau
+	age = 30
+	home_region = STATE_POITOU
+	is_admiral = yes
+	    traits = {
+	        experienced_political_operator
+	        persistent
+	        direct
+	    }
+}
+
+sakuya_famous_cavour_agitator = {
+	first_name = Camillo
+	last_name = Benso
+	historical = yes
+	culture = cu:north_italian
+	female = no
+	religion = rel:catholic
+	dna = dna_count_of_cavour
+	age = 30
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_PIEDMONT
+	is_agitator = yes
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_cavour_ruler = {
+	first_name = Camillo
+	last_name = Benso
+	historical = yes
+	culture = cu:north_italian
+	female = no
+	religion = rel:catholic
+	dna = dna_count_of_cavour
+	age = 30
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_PIEDMONT
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_cavour_general = {
+	first_name = Camillo
+	last_name = Benso
+	historical = yes
+	culture = cu:north_italian
+	female = no
+	religion = rel:catholic
+	dna = dna_count_of_cavour
+	age = 30
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_PIEDMONT
+	is_general = yes
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_cavour_admiral = {
+	first_name = Camillo
+	last_name = Benso
+	historical = yes
+	culture = cu:north_italian
+	female = no
+	religion = rel:catholic
+	dna = dna_count_of_cavour
+	age = 30
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_PIEDMONT
+	is_admiral = yes
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_napoleon_iii_agitator = {
+	first_name = "Louis-Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	dna = dna_emperor_napoleon_03
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_agitator = yes
+	    traits = {
+	        ambitious
+	        experienced_political_operator
+	        demagogue
+	    }
+}
+
+sakuya_famous_napoleon_iii_ruler = {
+	first_name = "Louis-Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	dna = dna_emperor_napoleon_03
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	    traits = {
+	        ambitious
+	        experienced_political_operator
+	        demagogue
+	    }
+}
+
+sakuya_famous_napoleon_iii_general = {
+	first_name = "Louis-Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	dna = dna_emperor_napoleon_03
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_general = yes
+	    traits = {
+	        ambitious
+	        experienced_political_operator
+	        demagogue
+	    }
+}
+
+sakuya_famous_napoleon_iii_admiral = {
+	first_name = "Louis-Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_bonapartist
+	dna = dna_emperor_napoleon_03
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_admiral = yes
+	    traits = {
+	        ambitious
+	        experienced_political_operator
+	        demagogue
+	    }
+}
+
+sakuya_famous_juarez_agitator = {
+	first_name = Benito
+	last_name = Juarez
+	historical = yes
+	culture = cu:zapotec
+	female = no
+	religion = rel:catholic
+	ideology = ideology_modernizer_leader
+	interest_group = ig_intelligentsia
+	dna = dna_benito_juarez
+	age = 30
+	home_region = STATE_OAXACA
+	is_agitator = yes
+	    traits = {
+	        experienced_political_operator
+	        direct
+	        persistent
+	    }
+}
+
+sakuya_famous_juarez_ruler = {
+	first_name = Benito
+	last_name = Juarez
+	historical = yes
+	culture = cu:zapotec
+	female = no
+	religion = rel:catholic
+	ideology = ideology_modernizer_leader
+	interest_group = ig_intelligentsia
+	dna = dna_benito_juarez
+	age = 30
+	home_region = STATE_OAXACA
+	    traits = {
+	        experienced_political_operator
+	        direct
+	        persistent
+	    }
+}
+
+sakuya_famous_juarez_general = {
+	first_name = Benito
+	last_name = Juarez
+	historical = yes
+	culture = cu:zapotec
+	female = no
+	religion = rel:catholic
+	ideology = ideology_modernizer_leader
+	interest_group = ig_intelligentsia
+	dna = dna_benito_juarez
+	age = 30
+	home_region = STATE_OAXACA
+	is_general = yes
+	    traits = {
+	        experienced_political_operator
+	        direct
+	        persistent
+	    }
+}
+
+sakuya_famous_juarez_admiral = {
+	first_name = Benito
+	last_name = Juarez
+	historical = yes
+	culture = cu:zapotec
+	female = no
+	religion = rel:catholic
+	ideology = ideology_modernizer_leader
+	interest_group = ig_intelligentsia
+	dna = dna_benito_juarez
+	age = 30
+	home_region = STATE_OAXACA
+	is_admiral = yes
+	    traits = {
+	        experienced_political_operator
+	        direct
+	        persistent
+	    }
+}
+
+sakuya_famous_disraeli_agitator = {
+	first_name = Benjamin
+	last_name = Disraeli
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_benjamin_disraeli
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	is_agitator = yes
+	    traits = {
+	        expert_political_operator
+	        ambitious
+	        romantic
+	    }
+}
+
+sakuya_famous_disraeli_ruler = {
+	first_name = Benjamin
+	last_name = Disraeli
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_benjamin_disraeli
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	    traits = {
+	        expert_political_operator
+	        ambitious
+	        romantic
+	    }
+}
+
+sakuya_famous_disraeli_general = {
+	first_name = Benjamin
+	last_name = Disraeli
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_benjamin_disraeli
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	is_general = yes
+	    traits = {
+	        expert_political_operator
+	        ambitious
+	        romantic
+	    }
+}
+
+sakuya_famous_disraeli_admiral = {
+	first_name = Benjamin
+	last_name = Disraeli
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_benjamin_disraeli
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	is_admiral = yes
+	    traits = {
+	        expert_political_operator
+	        ambitious
+	        romantic
+	    }
+}
+
+sakuya_famous_gladstone_agitator = {
+	first_name = William
+	last_name = Gladstone
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_LANCASHIRE
+	dna = dna_william_ewart_gladstone
+	age = 30
+	is_agitator = yes
+	    traits = {
+	        expert_political_operator
+	        charismatic
+	        inspirational_orator
+	    }
+}
+
+sakuya_famous_gladstone_ruler = {
+	first_name = William
+	last_name = Gladstone
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_LANCASHIRE
+	dna = dna_william_ewart_gladstone
+	age = 30
+	    traits = {
+	        expert_political_operator
+	        charismatic
+	        inspirational_orator
+	    }
+}
+
+sakuya_famous_gladstone_general = {
+	first_name = William
+	last_name = Gladstone
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_LANCASHIRE
+	dna = dna_william_ewart_gladstone
+	age = 30
+	is_general = yes
+	    traits = {
+	        expert_political_operator
+	        charismatic
+	        inspirational_orator
+	    }
+}
+
+sakuya_famous_gladstone_admiral = {
+	first_name = William
+	last_name = Gladstone
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_LANCASHIRE
+	dna = dna_william_ewart_gladstone
+	age = 30
+	is_admiral = yes
+	    traits = {
+	        expert_political_operator
+	        charismatic
+	        inspirational_orator
+	    }
+}
+
+sakuya_famous_palmerston_agitator = {
+	first_name = Henry
+	last_name = Temple
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_lord_palmerston
+	age = 30
+	is_agitator = yes
+	    traits = {
+	        experienced_diplomat
+	        charismatic
+	        persistent
+	    }
+}
+
+sakuya_famous_palmerston_ruler = {
+	first_name = Henry
+	last_name = Temple
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_lord_palmerston
+	age = 30
+	    traits = {
+	        experienced_diplomat
+	        charismatic
+	        persistent
+	    }
+}
+
+sakuya_famous_palmerston_general = {
+	first_name = Henry
+	last_name = Temple
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_lord_palmerston
+	age = 30
+	is_general = yes
+	    traits = {
+	        experienced_diplomat
+	        charismatic
+	        persistent
+	    }
+}
+
+sakuya_famous_palmerston_admiral = {
+	first_name = Henry
+	last_name = Temple
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_landowners
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_lord_palmerston
+	age = 30
+	is_admiral = yes
+	    traits = {
+	        experienced_diplomat
+	        charismatic
+	        persistent
+	    }
+}
+
+sakuya_famous_cixi_agitator = {
+	first_name = Cixi
+	last_name = Yehe_Nara
+	historical = yes
+	culture = cu:manchu
+	female = yes
+	ideology = ideology_royalist
+	interest_group = ig_landowners
+	home_region = STATE_BEIJING
+	dna = dna_empress_dowager_cixi
+	age = 30
+	is_agitator = yes
+	    traits = {
+	       ambitious
+	       reckless
+	       experienced_political_operator
+	    }
+}
+
+sakuya_famous_cixi_ruler = {
+	first_name = Cixi
+	last_name = Yehe_Nara
+	historical = yes
+	culture = cu:manchu
+	female = yes
+	ideology = ideology_royalist
+	interest_group = ig_landowners
+	home_region = STATE_BEIJING
+	dna = dna_empress_dowager_cixi
+	age = 30
+	    traits = {
+	       ambitious
+	       reckless
+	       experienced_political_operator
+	    }
+}
+
+sakuya_famous_cixi_general = {
+	first_name = Cixi
+	last_name = Yehe_Nara
+	historical = yes
+	culture = cu:manchu
+	female = yes
+	ideology = ideology_royalist
+	interest_group = ig_landowners
+	home_region = STATE_BEIJING
+	dna = dna_empress_dowager_cixi
+	age = 30
+	is_general = yes
+	    traits = {
+	       ambitious
+	       reckless
+	       experienced_political_operator
+	    }
+}
+
+sakuya_famous_cixi_admiral = {
+	first_name = Cixi
+	last_name = Yehe_Nara
+	historical = yes
+	culture = cu:manchu
+	female = yes
+	ideology = ideology_royalist
+	interest_group = ig_landowners
+	home_region = STATE_BEIJING
+	dna = dna_empress_dowager_cixi
+	age = 30
+	is_admiral = yes
+	    traits = {
+	       ambitious
+	       reckless
+	       experienced_political_operator
+	    }
+}
+
+sakuya_famous_hong_xiuquan_agitator = {
+	age = 30
+	first_name = Xiuquan
+	last_name = Hong
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	historical = yes
+	ideology = ideology_theocrat
+	home_region = STATE_GUANGDONG
+	is_agitator = yes
+		traits = {
+			inspirational_orator
+			persistent
+			psychological_affliction
+		}
+}
+
+sakuya_famous_hong_xiuquan_ruler = {
+	age = 30
+	first_name = Xiuquan
+	last_name = Hong
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	historical = yes
+	ideology = ideology_theocrat
+	home_region = STATE_GUANGDONG
+		traits = {
+			inspirational_orator
+			persistent
+			psychological_affliction
+		}
+}
+
+sakuya_famous_hong_xiuquan_general = {
+	age = 30
+	first_name = Xiuquan
+	last_name = Hong
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	historical = yes
+	ideology = ideology_theocrat
+	home_region = STATE_GUANGDONG
+	is_general = yes
+		traits = {
+			inspirational_orator
+			persistent
+			psychological_affliction
+		}
+}
+
+sakuya_famous_hong_xiuquan_admiral = {
+	age = 30
+	first_name = Xiuquan
+	last_name = Hong
+	culture = cu:hakka
+	religion = rel:protestant
+	interest_group = ig_devout
+	historical = yes
+	ideology = ideology_theocrat
+	home_region = STATE_GUANGDONG
+	is_admiral = yes
+		traits = {
+			inspirational_orator
+			persistent
+			psychological_affliction
+		}
+}
+
+sakuya_famous_abdelkader_agitator = {
+	age = 30
+	first_name = "Abdelkader"
+	last_name = "El_Djezairi"
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	home_region = STATE_ORAN
+	is_agitator = yes
+		traits = {
+			charismatic
+			pious
+			experienced_defensive_strategist
+		}
+}
+
+sakuya_famous_abdelkader_ruler = {
+	age = 30
+	first_name = "Abdelkader"
+	last_name = "El_Djezairi"
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	home_region = STATE_ORAN
+		traits = {
+			charismatic
+			pious
+			experienced_defensive_strategist
+		}
+}
+
+sakuya_famous_abdelkader_general = {
+	age = 30
+	first_name = "Abdelkader"
+	last_name = "El_Djezairi"
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	home_region = STATE_ORAN
+	is_general = yes
+		traits = {
+			charismatic
+			pious
+			experienced_defensive_strategist
+		}
+}
+
+sakuya_famous_abdelkader_admiral = {
+	age = 30
+	first_name = "Abdelkader"
+	last_name = "El_Djezairi"
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	home_region = STATE_ORAN
+	is_admiral = yes
+		traits = {
+			charismatic
+			pious
+			experienced_defensive_strategist
+		}
+}
+
+sakuya_famous_tewodros_agitator = {
+	first_name = Tewodros
+	last_name = Solomon
+	historical = yes
+	dna = dna_emperor_tewodros_02
+	age = 30
+	interest_group = ig_landowners
+	culture = cu:amhara
+	religion = rel:oriental_orthodox
+	ideology = ideology_royalist
+	home_region = STATE_GONDER
+	is_agitator = yes
+		traits = {
+			romantic
+			experienced_offensive_planner
+		}
+}
+
+sakuya_famous_tewodros_ruler = {
+	first_name = Tewodros
+	last_name = Solomon
+	historical = yes
+	dna = dna_emperor_tewodros_02
+	age = 30
+	interest_group = ig_landowners
+	culture = cu:amhara
+	religion = rel:oriental_orthodox
+	ideology = ideology_royalist
+	home_region = STATE_GONDER
+		traits = {
+			romantic
+			experienced_offensive_planner
+		}
+}
+
+sakuya_famous_tewodros_general = {
+	first_name = Tewodros
+	last_name = Solomon
+	historical = yes
+	dna = dna_emperor_tewodros_02
+	age = 30
+	interest_group = ig_landowners
+	culture = cu:amhara
+	religion = rel:oriental_orthodox
+	ideology = ideology_royalist
+	home_region = STATE_GONDER
+	is_general = yes
+		traits = {
+			romantic
+			experienced_offensive_planner
+		}
+}
+
+sakuya_famous_tewodros_admiral = {
+	first_name = Tewodros
+	last_name = Solomon
+	historical = yes
+	dna = dna_emperor_tewodros_02
+	age = 30
+	interest_group = ig_landowners
+	culture = cu:amhara
+	religion = rel:oriental_orthodox
+	ideology = ideology_royalist
+	home_region = STATE_GONDER
+	is_admiral = yes
+		traits = {
+			romantic
+			experienced_offensive_planner
+		}
+}
+
+sakuya_famous_duleep_singh_agitator = {
+	first_name = "Duleep"
+	last_name = "Singh"
+	female = no
+	dna = dna_duleep_singh
+	age = 30
+	historical = yes
+	home_region = STATE_PUNJAB
+	culture = cu:panjabi
+	religion = rel:sikh
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	is_agitator = yes
+		traits = {
+			romantic
+			charismatic
+		}
+}
+
+sakuya_famous_duleep_singh_ruler = {
+	first_name = "Duleep"
+	last_name = "Singh"
+	female = no
+	dna = dna_duleep_singh
+	age = 30
+	historical = yes
+	home_region = STATE_PUNJAB
+	culture = cu:panjabi
+	religion = rel:sikh
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+		traits = {
+			romantic
+			charismatic
+		}
+}
+
+sakuya_famous_duleep_singh_general = {
+	first_name = "Duleep"
+	last_name = "Singh"
+	female = no
+	dna = dna_duleep_singh
+	age = 30
+	historical = yes
+	home_region = STATE_PUNJAB
+	culture = cu:panjabi
+	religion = rel:sikh
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	is_general = yes
+		traits = {
+			romantic
+			charismatic
+		}
+}
+
+sakuya_famous_duleep_singh_admiral = {
+	first_name = "Duleep"
+	last_name = "Singh"
+	female = no
+	dna = dna_duleep_singh
+	age = 30
+	historical = yes
+	home_region = STATE_PUNJAB
+	culture = cu:panjabi
+	religion = rel:sikh
+	interest_group = ig_armed_forces
+	ideology = ideology_royalist
+	is_admiral = yes
+		traits = {
+			romantic
+			charismatic
+		}
+}
+
+sakuya_famous_pedro_ii_agitator = {
+	first_name = "Pedro"
+	last_name = "de_Braganca"
+	historical = yes
+	culture = primary_culture
+	dna = dna_emperor_pedro_02
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	home_region = STATE_RIO_DE_JANEIRO
+	is_agitator = yes
+	    traits = {
+	        meticulous
+	    }
+}
+
+sakuya_famous_pedro_ii_ruler = {
+	first_name = "Pedro"
+	last_name = "de_Braganca"
+	historical = yes
+	culture = primary_culture
+	dna = dna_emperor_pedro_02
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	home_region = STATE_RIO_DE_JANEIRO
+	    traits = {
+	        meticulous
+	    }
+}
+
+sakuya_famous_pedro_ii_general = {
+	first_name = "Pedro"
+	last_name = "de_Braganca"
+	historical = yes
+	culture = primary_culture
+	dna = dna_emperor_pedro_02
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	home_region = STATE_RIO_DE_JANEIRO
+	is_general = yes
+	    traits = {
+	        meticulous
+	    }
+}
+
+sakuya_famous_pedro_ii_admiral = {
+	first_name = "Pedro"
+	last_name = "de_Braganca"
+	historical = yes
+	culture = primary_culture
+	dna = dna_emperor_pedro_02
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	home_region = STATE_RIO_DE_JANEIRO
+	is_admiral = yes
+	    traits = {
+	        meticulous
+	    }
+}
+
+sakuya_famous_muhammad_ali_agitator = {
+	first_name = "Muhammad_Ali"
+	last_name = "al-_Alawi"
+	historical = yes
+	culture = cu:albanian
+	dna = dna_muhammad_ali
+	age = 30
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+	is_agitator = yes
+		traits = {
+			ambitious
+			persistent
+			innovative
+		}
+}
+
+sakuya_famous_muhammad_ali_ruler = {
+	first_name = "Muhammad_Ali"
+	last_name = "al-_Alawi"
+	historical = yes
+	culture = cu:albanian
+	dna = dna_muhammad_ali
+	age = 30
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+		traits = {
+			ambitious
+			persistent
+			innovative
+		}
+}
+
+sakuya_famous_muhammad_ali_general = {
+	first_name = "Muhammad_Ali"
+	last_name = "al-_Alawi"
+	historical = yes
+	culture = cu:albanian
+	dna = dna_muhammad_ali
+	age = 30
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+	is_general = yes
+		traits = {
+			ambitious
+			persistent
+			innovative
+		}
+}
+
+sakuya_famous_muhammad_ali_admiral = {
+	first_name = "Muhammad_Ali"
+	last_name = "al-_Alawi"
+	historical = yes
+	culture = cu:albanian
+	dna = dna_muhammad_ali
+	age = 30
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+	is_admiral = yes
+		traits = {
+			ambitious
+			persistent
+			innovative
+		}
+}
+
+sakuya_famous_ibrahim_pasha_agitator = {
+	first_name = Ibrahim
+	last_name = "al-_Alawi"
+	historical = yes
+	dna = dna_ibrahim_pasha
+	age = 30
+	culture = cu:misri
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+	is_agitator = yes
+		traits = {
+			persistent
+			experienced_offensive_planner
+			pillager
+		}
+}
+
+sakuya_famous_ibrahim_pasha_ruler = {
+	first_name = Ibrahim
+	last_name = "al-_Alawi"
+	historical = yes
+	dna = dna_ibrahim_pasha
+	age = 30
+	culture = cu:misri
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+		traits = {
+			persistent
+			experienced_offensive_planner
+			pillager
+		}
+}
+
+sakuya_famous_ibrahim_pasha_general = {
+	first_name = Ibrahim
+	last_name = "al-_Alawi"
+	historical = yes
+	dna = dna_ibrahim_pasha
+	age = 30
+	culture = cu:misri
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+	is_general = yes
+		traits = {
+			persistent
+			experienced_offensive_planner
+			pillager
+		}
+}
+
+sakuya_famous_ibrahim_pasha_admiral = {
+	first_name = Ibrahim
+	last_name = "al-_Alawi"
+	historical = yes
+	dna = dna_ibrahim_pasha
+	age = 30
+	culture = cu:misri
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	home_region = STATE_LOWER_EGYPT
+	is_admiral = yes
+		traits = {
+			persistent
+			experienced_offensive_planner
+			pillager
+		}
+}
+
+sakuya_famous_mustafa_reshid_agitator = {
+	first_name = "Mustafa_Reshid"
+	last_name = "Pasha"
+	historical = yes
+	culture = primary_culture
+	dna = dna_mustafa_reshid_pasha
+	age = 30
+	home_region = STATE_EASTERN_THRACE
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	is_agitator = yes
+		traits = {
+			experienced_political_operator
+			experienced_diplomat
+			persistent
+		}
+}
+
+sakuya_famous_mustafa_reshid_ruler = {
+	first_name = "Mustafa_Reshid"
+	last_name = "Pasha"
+	historical = yes
+	culture = primary_culture
+	dna = dna_mustafa_reshid_pasha
+	age = 30
+	home_region = STATE_EASTERN_THRACE
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+		traits = {
+			experienced_political_operator
+			experienced_diplomat
+			persistent
+		}
+}
+
+sakuya_famous_mustafa_reshid_general = {
+	first_name = "Mustafa_Reshid"
+	last_name = "Pasha"
+	historical = yes
+	culture = primary_culture
+	dna = dna_mustafa_reshid_pasha
+	age = 30
+	home_region = STATE_EASTERN_THRACE
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	is_general = yes
+		traits = {
+			experienced_political_operator
+			experienced_diplomat
+			persistent
+		}
+}
+
+sakuya_famous_mustafa_reshid_admiral = {
+	first_name = "Mustafa_Reshid"
+	last_name = "Pasha"
+	historical = yes
+	culture = primary_culture
+	dna = dna_mustafa_reshid_pasha
+	age = 30
+	home_region = STATE_EASTERN_THRACE
+	interest_group = ig_intelligentsia
+	ideology = ideology_modernizer_leader
+	is_admiral = yes
+		traits = {
+			experienced_political_operator
+			experienced_diplomat
+			persistent
+		}
+}
+
+sakuya_famous_witte_agitator = {
+	first_name = Sergei
+	last_name = Witte
+	historical = yes
+	culture = cu:russian
+	female = no
+	age = 30
+	religion = rel:orthodox
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_INGRIA
+	is_agitator = yes
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_witte_ruler = {
+	first_name = Sergei
+	last_name = Witte
+	historical = yes
+	culture = cu:russian
+	female = no
+	age = 30
+	religion = rel:orthodox
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_INGRIA
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_witte_general = {
+	first_name = Sergei
+	last_name = Witte
+	historical = yes
+	culture = cu:russian
+	female = no
+	age = 30
+	religion = rel:orthodox
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_INGRIA
+	is_general = yes
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_witte_admiral = {
+	first_name = Sergei
+	last_name = Witte
+	historical = yes
+	culture = cu:russian
+	female = no
+	age = 30
+	religion = rel:orthodox
+	ideology = ideology_reformer
+	interest_group = ig_industrialists
+	home_region = STATE_INGRIA
+	is_admiral = yes
+	    traits = {
+	        experienced_political_operator
+	        meticulous
+	        innovative
+	    }
+}
+
+sakuya_famous_jinnah_agitator = {
+	first_name = Muhammad_Ali
+	last_name = Jinnah
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	dna = dna_muhammad_ali_jinnah
+	age = 30
+	ideology = ideology_social_democrat
+	home_region = STATE_SINDH
+	is_agitator = yes
+		traits = {
+			direct
+			ambitious
+			expert_political_operator
+		}
+}
+
+sakuya_famous_jinnah_ruler = {
+	first_name = Muhammad_Ali
+	last_name = Jinnah
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	dna = dna_muhammad_ali_jinnah
+	age = 30
+	ideology = ideology_social_democrat
+	home_region = STATE_SINDH
+		traits = {
+			direct
+			ambitious
+			expert_political_operator
+		}
+}
+
+sakuya_famous_jinnah_general = {
+	first_name = Muhammad_Ali
+	last_name = Jinnah
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	dna = dna_muhammad_ali_jinnah
+	age = 30
+	ideology = ideology_social_democrat
+	home_region = STATE_SINDH
+	is_general = yes
+		traits = {
+			direct
+			ambitious
+			expert_political_operator
+		}
+}
+
+sakuya_famous_jinnah_admiral = {
+	first_name = Muhammad_Ali
+	last_name = Jinnah
+	historical = yes
+	female = no
+	culture = cu:gujarati
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	dna = dna_muhammad_ali_jinnah
+	age = 30
+	ideology = ideology_social_democrat
+	home_region = STATE_SINDH
+	is_admiral = yes
+		traits = {
+			direct
+			ambitious
+			expert_political_operator
+		}
+}
+
+sakuya_famous_wilde_agitator = {
+	first_name = Oscar
+	last_name = Wilde
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_oscar_wilde
+	age = 30
+	interest_group = ig_intelligentsia
+	religion = rel:catholic
+	home_region = STATE_LEINSTER
+	is_agitator = yes
+		traits = {
+			romantic
+		}
+}
+
+sakuya_famous_wilde_ruler = {
+	first_name = Oscar
+	last_name = Wilde
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_oscar_wilde
+	age = 30
+	interest_group = ig_intelligentsia
+	religion = rel:catholic
+	home_region = STATE_LEINSTER
+		traits = {
+			romantic
+		}
+}
+
+sakuya_famous_wilde_general = {
+	first_name = Oscar
+	last_name = Wilde
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_oscar_wilde
+	age = 30
+	interest_group = ig_intelligentsia
+	religion = rel:catholic
+	home_region = STATE_LEINSTER
+	is_general = yes
+		traits = {
+			romantic
+		}
+}
+
+sakuya_famous_wilde_admiral = {
+	first_name = Oscar
+	last_name = Wilde
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_oscar_wilde
+	age = 30
+	interest_group = ig_intelligentsia
+	religion = rel:catholic
+	home_region = STATE_LEINSTER
+	is_admiral = yes
+		traits = {
+			romantic
+		}
+}
+
+sakuya_famous_victor_hugo_agitator = {
+	first_name = Victor
+	last_name = Hugo
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_republican_leader
+	dna = dna_victor_hugo
+	age = 30
+	home_region = STATE_FRANCHE_COMTE
+	is_agitator = yes
+		traits = {
+			direct
+	        brave
+	        literary
+		}
+}
+
+sakuya_famous_victor_hugo_ruler = {
+	first_name = Victor
+	last_name = Hugo
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_republican_leader
+	dna = dna_victor_hugo
+	age = 30
+	home_region = STATE_FRANCHE_COMTE
+		traits = {
+			direct
+	        brave
+	        literary
+		}
+}
+
+sakuya_famous_victor_hugo_general = {
+	first_name = Victor
+	last_name = Hugo
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_republican_leader
+	dna = dna_victor_hugo
+	age = 30
+	home_region = STATE_FRANCHE_COMTE
+	is_general = yes
+		traits = {
+			direct
+	        brave
+	        literary
+		}
+}
+
+sakuya_famous_victor_hugo_admiral = {
+	first_name = Victor
+	last_name = Hugo
+	historical = yes
+	culture = cu:french
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_republican_leader
+	dna = dna_victor_hugo
+	age = 30
+	home_region = STATE_FRANCHE_COMTE
+	is_admiral = yes
+		traits = {
+			direct
+	        brave
+	        literary
+		}
+}
+
+sakuya_famous_dickens_agitator = {
+	first_name = Charles
+	last_name = Dickens
+	historical = yes
+	culture = cu:british
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_reformer
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_dickens
+	age = 30
+	is_agitator = yes
+		traits = {
+			cautious
+	        literary
+	        persistent
+		}
+}
+
+sakuya_famous_dickens_ruler = {
+	first_name = Charles
+	last_name = Dickens
+	historical = yes
+	culture = cu:british
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_reformer
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_dickens
+	age = 30
+		traits = {
+			cautious
+	        literary
+	        persistent
+		}
+}
+
+sakuya_famous_dickens_general = {
+	first_name = Charles
+	last_name = Dickens
+	historical = yes
+	culture = cu:british
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_reformer
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_dickens
+	age = 30
+	is_general = yes
+		traits = {
+			cautious
+	        literary
+	        persistent
+		}
+}
+
+sakuya_famous_dickens_admiral = {
+	first_name = Charles
+	last_name = Dickens
+	historical = yes
+	culture = cu:british
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_reformer
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_dickens
+	age = 30
+	is_admiral = yes
+		traits = {
+			cautious
+	        literary
+	        persistent
+		}
+}
+
+sakuya_famous_mark_twain_agitator = {
+	first_name = Samuel
+	last_name = Clemens
+	historical = yes
+	culture = cu:dixie
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_intelligentsia
+	home_region = STATE_MISSOURI
+	is_agitator = yes
+	    traits = {
+	        literary
+	        erudite
+	        reckless
+	    }
+}
+
+sakuya_famous_mark_twain_ruler = {
+	first_name = Samuel
+	last_name = Clemens
+	historical = yes
+	culture = cu:dixie
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_intelligentsia
+	home_region = STATE_MISSOURI
+	    traits = {
+	        literary
+	        erudite
+	        reckless
+	    }
+}
+
+sakuya_famous_mark_twain_general = {
+	first_name = Samuel
+	last_name = Clemens
+	historical = yes
+	culture = cu:dixie
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_intelligentsia
+	home_region = STATE_MISSOURI
+	is_general = yes
+	    traits = {
+	        literary
+	        erudite
+	        reckless
+	    }
+}
+
+sakuya_famous_mark_twain_admiral = {
+	first_name = Samuel
+	last_name = Clemens
+	historical = yes
+	culture = cu:dixie
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	interest_group = ig_intelligentsia
+	home_region = STATE_MISSOURI
+	is_admiral = yes
+	    traits = {
+	        literary
+	        erudite
+	        reckless
+	    }
+}
+
+sakuya_famous_ibsen_agitator = {
+	first_name = Henrik
+	last_name = Ibsen
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	female = no
+	dna = dna_ibsen
+	age = 30
+	home_region = STATE_EASTERN_NORWAY
+	is_agitator = yes
+		traits = {
+			romantic
+			innovative
+			literary
+		}
+}
+
+sakuya_famous_ibsen_ruler = {
+	first_name = Henrik
+	last_name = Ibsen
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	female = no
+	dna = dna_ibsen
+	age = 30
+	home_region = STATE_EASTERN_NORWAY
+		traits = {
+			romantic
+			innovative
+			literary
+		}
+}
+
+sakuya_famous_ibsen_general = {
+	first_name = Henrik
+	last_name = Ibsen
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	female = no
+	dna = dna_ibsen
+	age = 30
+	home_region = STATE_EASTERN_NORWAY
+	is_general = yes
+		traits = {
+			romantic
+			innovative
+			literary
+		}
+}
+
+sakuya_famous_ibsen_admiral = {
+	first_name = Henrik
+	last_name = Ibsen
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	female = no
+	dna = dna_ibsen
+	age = 30
+	home_region = STATE_EASTERN_NORWAY
+	is_admiral = yes
+		traits = {
+			romantic
+			innovative
+			literary
+		}
+}
+
+sakuya_famous_zola_agitator = {
+	first_name = Emile
+	last_name = Zola
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_ILE_DE_FRANCE
+	is_agitator = yes
+		traits = {
+			persistent
+			meticulous
+			inspirational_orator
+		}
+}
+
+sakuya_famous_zola_ruler = {
+	first_name = Emile
+	last_name = Zola
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_ILE_DE_FRANCE
+		traits = {
+			persistent
+			meticulous
+			inspirational_orator
+		}
+}
+
+sakuya_famous_zola_general = {
+	first_name = Emile
+	last_name = Zola
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_ILE_DE_FRANCE
+	is_general = yes
+		traits = {
+			persistent
+			meticulous
+			inspirational_orator
+		}
+}
+
+sakuya_famous_zola_admiral = {
+	first_name = Emile
+	last_name = Zola
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_ILE_DE_FRANCE
+	is_admiral = yes
+		traits = {
+			persistent
+			meticulous
+			inspirational_orator
+		}
+}
+
+sakuya_famous_brandes_agitator = {
+	first_name = Georg
+	last_name = Brandes
+	historical = yes
+	culture = cu:danish
+	religion = rel:jewish
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ZEALAND
+	is_agitator = yes
+		traits = {
+			erudite
+			inspirational_orator
+			ambitious
+		}
+}
+
+sakuya_famous_brandes_ruler = {
+	first_name = Georg
+	last_name = Brandes
+	historical = yes
+	culture = cu:danish
+	religion = rel:jewish
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ZEALAND
+		traits = {
+			erudite
+			inspirational_orator
+			ambitious
+		}
+}
+
+sakuya_famous_brandes_general = {
+	first_name = Georg
+	last_name = Brandes
+	historical = yes
+	culture = cu:danish
+	religion = rel:jewish
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ZEALAND
+	is_general = yes
+		traits = {
+			erudite
+			inspirational_orator
+			ambitious
+		}
+}
+
+sakuya_famous_brandes_admiral = {
+	first_name = Georg
+	last_name = Brandes
+	historical = yes
+	culture = cu:danish
+	religion = rel:jewish
+	female = no
+	age = 30
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+	home_region = STATE_ZEALAND
+	is_admiral = yes
+		traits = {
+			erudite
+			inspirational_orator
+			ambitious
+		}
+}
+
+sakuya_famous_bjornson_agitator = {
+	first_name = Bjornstjerne
+	last_name = Bjornson
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_EASTERN_NORWAY
+	is_agitator = yes
+		traits = {
+			literary
+			inspirational_orator
+			cautious
+		}
+}
+
+sakuya_famous_bjornson_ruler = {
+	first_name = Bjornstjerne
+	last_name = Bjornson
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_EASTERN_NORWAY
+		traits = {
+			literary
+			inspirational_orator
+			cautious
+		}
+}
+
+sakuya_famous_bjornson_general = {
+	first_name = Bjornstjerne
+	last_name = Bjornson
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_EASTERN_NORWAY
+	is_general = yes
+		traits = {
+			literary
+			inspirational_orator
+			cautious
+		}
+}
+
+sakuya_famous_bjornson_admiral = {
+	first_name = Bjornstjerne
+	last_name = Bjornson
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_EASTERN_NORWAY
+	is_admiral = yes
+		traits = {
+			literary
+			inspirational_orator
+			cautious
+		}
+}
+
+sakuya_famous_comte_agitator = {
+	first_name = Auguste
+	last_name = Comte
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_positivist
+	home_region = STATE_LANGUEDOC
+	is_agitator = yes
+		traits = {
+			charismatic
+			sickly
+			erudite
+		}
+}
+
+sakuya_famous_comte_ruler = {
+	first_name = Auguste
+	last_name = Comte
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_positivist
+	home_region = STATE_LANGUEDOC
+		traits = {
+			charismatic
+			sickly
+			erudite
+		}
+}
+
+sakuya_famous_comte_general = {
+	first_name = Auguste
+	last_name = Comte
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_positivist
+	home_region = STATE_LANGUEDOC
+	is_general = yes
+		traits = {
+			charismatic
+			sickly
+			erudite
+		}
+}
+
+sakuya_famous_comte_admiral = {
+	first_name = Auguste
+	last_name = Comte
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_positivist
+	home_region = STATE_LANGUEDOC
+	is_admiral = yes
+		traits = {
+			charismatic
+			sickly
+			erudite
+		}
+}
+
+sakuya_famous_gorky_agitator = {
+	first_name = Maxim
+	last_name = Gorky
+	historical = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_NIZHNY_NOVGOROD
+	is_agitator = yes
+		traits = {
+			bigoted
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_gorky_ruler = {
+	first_name = Maxim
+	last_name = Gorky
+	historical = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_NIZHNY_NOVGOROD
+		traits = {
+			bigoted
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_gorky_general = {
+	first_name = Maxim
+	last_name = Gorky
+	historical = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_NIZHNY_NOVGOROD
+	is_general = yes
+		traits = {
+			bigoted
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_gorky_admiral = {
+	first_name = Maxim
+	last_name = Gorky
+	historical = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	female = no
+	age = 30
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	home_region = STATE_NIZHNY_NOVGOROD
+	is_admiral = yes
+		traits = {
+			bigoted
+			literary
+			charismatic
+		}
+}
+
+sakuya_famous_john_stuart_mill_agitator = {
+	first_name = John
+	last_name = Mill
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_industrialists
+	ideology = ideology_utilitarian_leader
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_john_stuart_mill
+	age = 30
+	is_agitator = yes
+		traits = {
+			erudite
+	        basic_colonial_administrator
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_john_stuart_mill_ruler = {
+	first_name = John
+	last_name = Mill
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_industrialists
+	ideology = ideology_utilitarian_leader
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_john_stuart_mill
+	age = 30
+		traits = {
+			erudite
+	        basic_colonial_administrator
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_john_stuart_mill_general = {
+	first_name = John
+	last_name = Mill
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_industrialists
+	ideology = ideology_utilitarian_leader
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_john_stuart_mill
+	age = 30
+	is_general = yes
+		traits = {
+			erudite
+	        basic_colonial_administrator
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_john_stuart_mill_admiral = {
+	first_name = John
+	last_name = Mill
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_industrialists
+	ideology = ideology_utilitarian_leader
+	home_region = STATE_HOME_COUNTIES
+	dna = dna_john_stuart_mill
+	age = 30
+	is_admiral = yes
+		traits = {
+			erudite
+	        basic_colonial_administrator
+			ambitious
+			persistent
+		}
+}
+
+sakuya_famous_tocqueville_agitator = {
+	first_name = Alexis
+	last_name = de_Tocqueville
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+	dna = dna_alexis_de_tocqueville
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_agitator = yes
+		traits = {
+			literary
+			honorable
+			basic_political_operator
+		}
+}
+
+sakuya_famous_tocqueville_ruler = {
+	first_name = Alexis
+	last_name = de_Tocqueville
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+	dna = dna_alexis_de_tocqueville
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+		traits = {
+			literary
+			honorable
+			basic_political_operator
+		}
+}
+
+sakuya_famous_tocqueville_general = {
+	first_name = Alexis
+	last_name = de_Tocqueville
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+	dna = dna_alexis_de_tocqueville
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_general = yes
+		traits = {
+			literary
+			honorable
+			basic_political_operator
+		}
+}
+
+sakuya_famous_tocqueville_admiral = {
+	first_name = Alexis
+	last_name = de_Tocqueville
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+	dna = dna_alexis_de_tocqueville
+	age = 30
+	home_region = STATE_ILE_DE_FRANCE
+	is_admiral = yes
+		traits = {
+			literary
+			honorable
+			basic_political_operator
+		}
+}
+
+sakuya_famous_rabindranath_tagore_agitator = {
+	first_name = Rabindranath
+	last_name = Tagore
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_rabindranath_tagore
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_landowners
+	home_region = STATE_WEST_BENGAL
+	is_agitator = yes
+	    traits = {
+	        literary
+	        romantic
+	        charismatic
+	    }
+}
+
+sakuya_famous_rabindranath_tagore_ruler = {
+	first_name = Rabindranath
+	last_name = Tagore
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_rabindranath_tagore
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_landowners
+	home_region = STATE_WEST_BENGAL
+	    traits = {
+	        literary
+	        romantic
+	        charismatic
+	    }
+}
+
+sakuya_famous_rabindranath_tagore_general = {
+	first_name = Rabindranath
+	last_name = Tagore
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_rabindranath_tagore
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_landowners
+	home_region = STATE_WEST_BENGAL
+	is_general = yes
+	    traits = {
+	        literary
+	        romantic
+	        charismatic
+	    }
+}
+
+sakuya_famous_rabindranath_tagore_admiral = {
+	first_name = Rabindranath
+	last_name = Tagore
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_rabindranath_tagore
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_landowners
+	home_region = STATE_WEST_BENGAL
+	is_admiral = yes
+	    traits = {
+	        literary
+	        romantic
+	        charismatic
+	    }
+}
+
+sakuya_famous_vivekananda_agitator = {
+	first_name = Swami
+	last_name = Vivekananda
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_swami_vivekananda
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_devout
+	home_region = STATE_WEST_BENGAL
+	is_agitator = yes
+	    traits = {
+	        pious
+	        erudite
+	        sickly
+	    }
+}
+
+sakuya_famous_vivekananda_ruler = {
+	first_name = Swami
+	last_name = Vivekananda
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_swami_vivekananda
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_devout
+	home_region = STATE_WEST_BENGAL
+	    traits = {
+	        pious
+	        erudite
+	        sickly
+	    }
+}
+
+sakuya_famous_vivekananda_general = {
+	first_name = Swami
+	last_name = Vivekananda
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_swami_vivekananda
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_devout
+	home_region = STATE_WEST_BENGAL
+	is_general = yes
+	    traits = {
+	        pious
+	        erudite
+	        sickly
+	    }
+}
+
+sakuya_famous_vivekananda_admiral = {
+	first_name = Swami
+	last_name = Vivekananda
+	historical = yes
+	culture = cu:bengali
+	female = no
+	dna = dna_swami_vivekananda
+	age = 30
+	religion = rel:hindu
+	ideology = ideology_reformer
+	interest_group = ig_devout
+	home_region = STATE_WEST_BENGAL
+	is_admiral = yes
+	    traits = {
+	        pious
+	        erudite
+	        sickly
+	    }
+}
+
+sakuya_famous_garibaldi_agitator = {
+	first_name = Giuseppe
+	last_name = Garibaldi
+	historical = yes
+	culture = cu:north_italian
+	religion = rel:catholic
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_giuseppe_garibaldi
+	age = 30
+	ideology = ideology_radical
+	home_region = STATE_PROVENCE
+	is_agitator = yes
+		traits = {
+			brave
+			basic_offensive_planner
+		}
+}
+
+sakuya_famous_garibaldi_ruler = {
+	first_name = Giuseppe
+	last_name = Garibaldi
+	historical = yes
+	culture = cu:north_italian
+	religion = rel:catholic
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_giuseppe_garibaldi
+	age = 30
+	ideology = ideology_radical
+	home_region = STATE_PROVENCE
+		traits = {
+			brave
+			basic_offensive_planner
+		}
+}
+
+sakuya_famous_garibaldi_general = {
+	first_name = Giuseppe
+	last_name = Garibaldi
+	historical = yes
+	culture = cu:north_italian
+	religion = rel:catholic
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_giuseppe_garibaldi
+	age = 30
+	ideology = ideology_radical
+	home_region = STATE_PROVENCE
+	is_general = yes
+		traits = {
+			brave
+			basic_offensive_planner
+		}
+}
+
+sakuya_famous_garibaldi_admiral = {
+	first_name = Giuseppe
+	last_name = Garibaldi
+	historical = yes
+	culture = cu:north_italian
+	religion = rel:catholic
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_giuseppe_garibaldi
+	age = 30
+	ideology = ideology_radical
+	home_region = STATE_PROVENCE
+	is_admiral = yes
+		traits = {
+			brave
+			basic_offensive_planner
+		}
+}
+
+sakuya_famous_jules_brunet_agitator = {
+	first_name = Jules
+	last_name = Brunet
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	dna = dna_jules_brunet
+	age = 30
+	home_region = STATE_NORMANDY
+	is_agitator = yes
+		traits = {
+			ambitious
+			brave
+			basic_diplomat
+		}
+}
+
+sakuya_famous_jules_brunet_ruler = {
+	first_name = Jules
+	last_name = Brunet
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	dna = dna_jules_brunet
+	age = 30
+	home_region = STATE_NORMANDY
+		traits = {
+			ambitious
+			brave
+			basic_diplomat
+		}
+}
+
+sakuya_famous_jules_brunet_general = {
+	first_name = Jules
+	last_name = Brunet
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	dna = dna_jules_brunet
+	age = 30
+	home_region = STATE_NORMANDY
+	is_general = yes
+		traits = {
+			ambitious
+			brave
+			basic_diplomat
+		}
+}
+
+sakuya_famous_jules_brunet_admiral = {
+	first_name = Jules
+	last_name = Brunet
+	historical = yes
+	culture = cu:french
+	religion = rel:catholic
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	dna = dna_jules_brunet
+	age = 30
+	home_region = STATE_NORMANDY
+	is_admiral = yes
+		traits = {
+			ambitious
+			brave
+			basic_diplomat
+		}
+}
+
+sakuya_famous_enver_pasha_agitator = {
+	first_name = Enver
+	last_name = Pasha
+	historical = yes
+	culture = cu:turkish
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_pasha_enver
+	age = 30
+	home_region = STATE_SKOPIA
+	is_agitator = yes
+		traits = {
+			celebrity_commander
+			ambitious
+			direct
+		}
+}
+
+sakuya_famous_enver_pasha_ruler = {
+	first_name = Enver
+	last_name = Pasha
+	historical = yes
+	culture = cu:turkish
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_pasha_enver
+	age = 30
+	home_region = STATE_SKOPIA
+		traits = {
+			celebrity_commander
+			ambitious
+			direct
+		}
+}
+
+sakuya_famous_enver_pasha_general = {
+	first_name = Enver
+	last_name = Pasha
+	historical = yes
+	culture = cu:turkish
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_pasha_enver
+	age = 30
+	home_region = STATE_SKOPIA
+	is_general = yes
+		traits = {
+			celebrity_commander
+			ambitious
+			direct
+		}
+}
+
+sakuya_famous_enver_pasha_admiral = {
+	first_name = Enver
+	last_name = Pasha
+	historical = yes
+	culture = cu:turkish
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_pasha_enver
+	age = 30
+	home_region = STATE_SKOPIA
+	is_admiral = yes
+		traits = {
+			celebrity_commander
+			ambitious
+			direct
+		}
+}
+
+sakuya_famous_ahmed_urabi_agitator = {
+	first_name = Ahmed
+	last_name = Urabi
+	historical = yes
+	culture = cu:misri
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_orabi_ahmed_pasha
+	age = 30
+	home_region = STATE_LOWER_EGYPT
+	is_agitator = yes
+		traits = {
+			celebrity_commander
+			brave
+			direct
+		}
+}
+
+sakuya_famous_ahmed_urabi_ruler = {
+	first_name = Ahmed
+	last_name = Urabi
+	historical = yes
+	culture = cu:misri
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_orabi_ahmed_pasha
+	age = 30
+	home_region = STATE_LOWER_EGYPT
+		traits = {
+			celebrity_commander
+			brave
+			direct
+		}
+}
+
+sakuya_famous_ahmed_urabi_general = {
+	first_name = Ahmed
+	last_name = Urabi
+	historical = yes
+	culture = cu:misri
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_orabi_ahmed_pasha
+	age = 30
+	home_region = STATE_LOWER_EGYPT
+	is_general = yes
+		traits = {
+			celebrity_commander
+			brave
+			direct
+		}
+}
+
+sakuya_famous_ahmed_urabi_admiral = {
+	first_name = Ahmed
+	last_name = Urabi
+	historical = yes
+	culture = cu:misri
+	religion = rel:sunni
+	female = no
+	interest_group = ig_armed_forces
+	ideology = ideology_ethno_nationalist
+	dna = dna_orabi_ahmed_pasha
+	age = 30
+	home_region = STATE_LOWER_EGYPT
+	is_admiral = yes
+		traits = {
+			celebrity_commander
+			brave
+			direct
+		}
+}
+
+sakuya_famous_lee_agitator = {
+	first_name = Robert
+	last_name = Lee
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_landowners
+	home_region = STATE_VIRGINIA
+	dna = dna_robert_e_lee
+	age = 30
+	is_agitator = yes
+		traits = {
+			experienced_defensive_strategist
+			innovative
+			direct
+		}
+}
+
+sakuya_famous_lee_ruler = {
+	first_name = Robert
+	last_name = Lee
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_landowners
+	home_region = STATE_VIRGINIA
+	dna = dna_robert_e_lee
+	age = 30
+		traits = {
+			experienced_defensive_strategist
+			innovative
+			direct
+		}
+}
+
+sakuya_famous_lee_general = {
+	first_name = Robert
+	last_name = Lee
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_landowners
+	home_region = STATE_VIRGINIA
+	dna = dna_robert_e_lee
+	age = 30
+	is_general = yes
+		traits = {
+			experienced_defensive_strategist
+			innovative
+			direct
+		}
+}
+
+sakuya_famous_lee_admiral = {
+	first_name = Robert
+	last_name = Lee
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_landowners
+	home_region = STATE_VIRGINIA
+	dna = dna_robert_e_lee
+	age = 30
+	is_admiral = yes
+		traits = {
+			experienced_defensive_strategist
+			innovative
+			direct
+		}
+}
+
+sakuya_famous_sherman_agitator = {
+	first_name = William_Tecumseh
+	last_name = Sherman
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_OHIO
+	dna = dna_sherman
+	age = 30
+	is_agitator = yes
+		traits = {
+			expert_offensive_planner
+			resupply_commander
+			pillager
+		}
+}
+
+sakuya_famous_sherman_ruler = {
+	first_name = William_Tecumseh
+	last_name = Sherman
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_OHIO
+	dna = dna_sherman
+	age = 30
+		traits = {
+			expert_offensive_planner
+			resupply_commander
+			pillager
+		}
+}
+
+sakuya_famous_sherman_general = {
+	first_name = William_Tecumseh
+	last_name = Sherman
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_OHIO
+	dna = dna_sherman
+	age = 30
+	is_general = yes
+		traits = {
+			expert_offensive_planner
+			resupply_commander
+			pillager
+		}
+}
+
+sakuya_famous_sherman_admiral = {
+	first_name = William_Tecumseh
+	last_name = Sherman
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_OHIO
+	dna = dna_sherman
+	age = 30
+	is_admiral = yes
+		traits = {
+			expert_offensive_planner
+			resupply_commander
+			pillager
+		}
+}
+
+sakuya_famous_grant_agitator = {
+	first_name = Ulysses
+	last_name = Grant
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_radical
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_ILLINOIS
+	dna = dna_ulysses_s_grant
+	age = 30
+	is_agitator = yes
+		traits = {
+			experienced_offensive_planner
+			persistent
+			alcoholic
+		}
+}
+
+sakuya_famous_grant_ruler = {
+	first_name = Ulysses
+	last_name = Grant
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_radical
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_ILLINOIS
+	dna = dna_ulysses_s_grant
+	age = 30
+		traits = {
+			experienced_offensive_planner
+			persistent
+			alcoholic
+		}
+}
+
+sakuya_famous_grant_general = {
+	first_name = Ulysses
+	last_name = Grant
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_radical
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_ILLINOIS
+	dna = dna_ulysses_s_grant
+	age = 30
+	is_general = yes
+		traits = {
+			experienced_offensive_planner
+			persistent
+			alcoholic
+		}
+}
+
+sakuya_famous_grant_admiral = {
+	first_name = Ulysses
+	last_name = Grant
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_radical
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_ILLINOIS
+	dna = dna_ulysses_s_grant
+	age = 30
+	is_admiral = yes
+		traits = {
+			experienced_offensive_planner
+			persistent
+			alcoholic
+		}
+}
+
+sakuya_famous_pershing_agitator = {
+	first_name = John
+	last_name = Pershing
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_armed_forces
+	home_region = STATE_MISSOURI
+	dna = dna_pershing
+	age = 30
+	is_agitator = yes
+		traits = {
+			experienced_offensive_planner
+			persistent
+			reserved
+		}
+}
+
+sakuya_famous_pershing_ruler = {
+	first_name = John
+	last_name = Pershing
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_armed_forces
+	home_region = STATE_MISSOURI
+	dna = dna_pershing
+	age = 30
+		traits = {
+			experienced_offensive_planner
+			persistent
+			reserved
+		}
+}
+
+sakuya_famous_pershing_general = {
+	first_name = John
+	last_name = Pershing
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_armed_forces
+	home_region = STATE_MISSOURI
+	dna = dna_pershing
+	age = 30
+	is_general = yes
+		traits = {
+			experienced_offensive_planner
+			persistent
+			reserved
+		}
+}
+
+sakuya_famous_pershing_admiral = {
+	first_name = John
+	last_name = Pershing
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_armed_forces
+	home_region = STATE_MISSOURI
+	dna = dna_pershing
+	age = 30
+	is_admiral = yes
+		traits = {
+			experienced_offensive_planner
+			persistent
+			reserved
+		}
+}
+
+sakuya_famous_gordon_agitator = {
+	first_name = Charles_George
+	last_name = Gordon
+	historical = yes
+	culture = cu:british
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_armed_forces
+	home_region = STATE_HOME_COUNTIES
+	is_agitator = yes
+	    traits = {
+	        explorer
+	        charismatic
+	        brave
+	    }
+}
+
+sakuya_famous_gordon_ruler = {
+	first_name = Charles_George
+	last_name = Gordon
+	historical = yes
+	culture = cu:british
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_armed_forces
+	home_region = STATE_HOME_COUNTIES
+	    traits = {
+	        explorer
+	        charismatic
+	        brave
+	    }
+}
+
+sakuya_famous_gordon_general = {
+	first_name = Charles_George
+	last_name = Gordon
+	historical = yes
+	culture = cu:british
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_armed_forces
+	home_region = STATE_HOME_COUNTIES
+	is_general = yes
+	    traits = {
+	        explorer
+	        charismatic
+	        brave
+	    }
+}
+
+sakuya_famous_gordon_admiral = {
+	first_name = Charles_George
+	last_name = Gordon
+	historical = yes
+	culture = cu:british
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_abolitionist
+	interest_group = ig_armed_forces
+	home_region = STATE_HOME_COUNTIES
+	is_admiral = yes
+	    traits = {
+	        explorer
+	        charismatic
+	        brave
+	    }
+}
+
+sakuya_famous_kitchener_agitator = {
+	first_name = Herbert
+	last_name = Kitchener
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_herbert_kitchener
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	home_region = STATE_MUNSTER
+	interest_group = ig_armed_forces
+	is_agitator = yes
+	    traits = {
+	        surveyor
+	        pillager
+	    }
+}
+
+sakuya_famous_kitchener_ruler = {
+	first_name = Herbert
+	last_name = Kitchener
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_herbert_kitchener
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	home_region = STATE_MUNSTER
+	interest_group = ig_armed_forces
+	    traits = {
+	        surveyor
+	        pillager
+	    }
+}
+
+sakuya_famous_kitchener_general = {
+	first_name = Herbert
+	last_name = Kitchener
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_herbert_kitchener
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	home_region = STATE_MUNSTER
+	interest_group = ig_armed_forces
+	is_general = yes
+	    traits = {
+	        surveyor
+	        pillager
+	    }
+}
+
+sakuya_famous_kitchener_admiral = {
+	first_name = Herbert
+	last_name = Kitchener
+	historical = yes
+	culture = cu:british
+	female = no
+	dna = dna_herbert_kitchener
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_jingoist_leader
+	home_region = STATE_MUNSTER
+	interest_group = ig_armed_forces
+	is_admiral = yes
+	    traits = {
+	        surveyor
+	        pillager
+	    }
+}
+
+sakuya_famous_ada_lovelace_agitator = {
+	first_name = Ada
+	last_name = Lovelace
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	female = yes
+	dna = dna_ada_lovelace
+	age = 30
+	home_region = STATE_HOME_COUNTIES
+	is_agitator = yes
+		traits = {
+			romantic
+			innovative
+			literary
+			cancer
+		}
+}
+
+sakuya_famous_ada_lovelace_ruler = {
+	first_name = Ada
+	last_name = Lovelace
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	female = yes
+	dna = dna_ada_lovelace
+	age = 30
+	home_region = STATE_HOME_COUNTIES
+		traits = {
+			romantic
+			innovative
+			literary
+			cancer
+		}
+}
+
+sakuya_famous_ada_lovelace_general = {
+	first_name = Ada
+	last_name = Lovelace
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	female = yes
+	dna = dna_ada_lovelace
+	age = 30
+	home_region = STATE_HOME_COUNTIES
+	is_general = yes
+		traits = {
+			romantic
+			innovative
+			literary
+			cancer
+		}
+}
+
+sakuya_famous_ada_lovelace_admiral = {
+	first_name = Ada
+	last_name = Lovelace
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	female = yes
+	dna = dna_ada_lovelace
+	age = 30
+	home_region = STATE_HOME_COUNTIES
+	is_admiral = yes
+		traits = {
+			romantic
+			innovative
+			literary
+			cancer
+		}
+}
+
+sakuya_famous_freud_agitator = {
+	first_name = Sigismund_Schlomo
+	last_name = Freud
+	historical = yes
+	interest_group = ig_intelligentsia
+	female = no
+	dna = dna_sigmund_freud
+	age = 30
+	religion = rel:jewish
+	culture = cu:ashkenazi
+	ideology = ideology_nihilist
+	home_region = STATE_MORAVIA
+	is_agitator = yes
+	    traits = {
+	        ambitious
+	        charismatic
+	        cocaine_addiction
+	    }
+}
+
+sakuya_famous_freud_ruler = {
+	first_name = Sigismund_Schlomo
+	last_name = Freud
+	historical = yes
+	interest_group = ig_intelligentsia
+	female = no
+	dna = dna_sigmund_freud
+	age = 30
+	religion = rel:jewish
+	culture = cu:ashkenazi
+	ideology = ideology_nihilist
+	home_region = STATE_MORAVIA
+	    traits = {
+	        ambitious
+	        charismatic
+	        cocaine_addiction
+	    }
+}
+
+sakuya_famous_freud_general = {
+	first_name = Sigismund_Schlomo
+	last_name = Freud
+	historical = yes
+	interest_group = ig_intelligentsia
+	female = no
+	dna = dna_sigmund_freud
+	age = 30
+	religion = rel:jewish
+	culture = cu:ashkenazi
+	ideology = ideology_nihilist
+	home_region = STATE_MORAVIA
+	is_general = yes
+	    traits = {
+	        ambitious
+	        charismatic
+	        cocaine_addiction
+	    }
+}
+
+sakuya_famous_freud_admiral = {
+	first_name = Sigismund_Schlomo
+	last_name = Freud
+	historical = yes
+	interest_group = ig_intelligentsia
+	female = no
+	dna = dna_sigmund_freud
+	age = 30
+	religion = rel:jewish
+	culture = cu:ashkenazi
+	ideology = ideology_nihilist
+	home_region = STATE_MORAVIA
+	is_admiral = yes
+	    traits = {
+	        ambitious
+	        charismatic
+	        cocaine_addiction
+	    }
+}
+
+sakuya_famous_nightingale_agitator = {
+	first_name = Florence
+	last_name = Nightingale
+	female = yes
+	interest_group = ig_intelligentsia
+	dna = dna_florence_nightingale
+	age = 30
+	culture = cu:british
+	ideology = ideology_humanitarian
+	home_region = STATE_HOME_COUNTIES
+	historical = yes
+	is_agitator = yes
+	    traits = {
+	        literary
+	        aesthete
+	        erudite
+	    }
+}
+
+sakuya_famous_nightingale_ruler = {
+	first_name = Florence
+	last_name = Nightingale
+	female = yes
+	interest_group = ig_intelligentsia
+	dna = dna_florence_nightingale
+	age = 30
+	culture = cu:british
+	ideology = ideology_humanitarian
+	home_region = STATE_HOME_COUNTIES
+	historical = yes
+	    traits = {
+	        literary
+	        aesthete
+	        erudite
+	    }
+}
+
+sakuya_famous_nightingale_general = {
+	first_name = Florence
+	last_name = Nightingale
+	female = yes
+	interest_group = ig_intelligentsia
+	dna = dna_florence_nightingale
+	age = 30
+	culture = cu:british
+	ideology = ideology_humanitarian
+	home_region = STATE_HOME_COUNTIES
+	historical = yes
+	is_general = yes
+	    traits = {
+	        literary
+	        aesthete
+	        erudite
+	    }
+}
+
+sakuya_famous_nightingale_admiral = {
+	first_name = Florence
+	last_name = Nightingale
+	female = yes
+	interest_group = ig_intelligentsia
+	dna = dna_florence_nightingale
+	age = 30
+	culture = cu:british
+	ideology = ideology_humanitarian
+	home_region = STATE_HOME_COUNTIES
+	historical = yes
+	is_admiral = yes
+	    traits = {
+	        literary
+	        aesthete
+	        erudite
+	    }
+}
+
+sakuya_famous_einstein_agitator = {
+	first_name = Albert
+	last_name = Einstein
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:jewish
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	female = no
+	dna = dna_albert_einstein
+	age = 30
+	home_region = STATE_WURTTEMBERG
+	is_agitator = yes
+		traits = {
+			innovative
+			ambitious
+			literary
+		}
+}
+
+sakuya_famous_einstein_ruler = {
+	first_name = Albert
+	last_name = Einstein
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:jewish
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	female = no
+	dna = dna_albert_einstein
+	age = 30
+	home_region = STATE_WURTTEMBERG
+		traits = {
+			innovative
+			ambitious
+			literary
+		}
+}
+
+sakuya_famous_einstein_general = {
+	first_name = Albert
+	last_name = Einstein
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:jewish
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	female = no
+	dna = dna_albert_einstein
+	age = 30
+	home_region = STATE_WURTTEMBERG
+	is_general = yes
+		traits = {
+			innovative
+			ambitious
+			literary
+		}
+}
+
+sakuya_famous_einstein_admiral = {
+	first_name = Albert
+	last_name = Einstein
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:jewish
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	female = no
+	dna = dna_albert_einstein
+	age = 30
+	home_region = STATE_WURTTEMBERG
+	is_admiral = yes
+		traits = {
+			innovative
+			ambitious
+			literary
+		}
+}
+
+sakuya_famous_edison_agitator = {
+	first_name = Thomas
+	last_name = Edison
+	historical = yes
+	culture = cu:yankee
+	dna = dna_thomas_edison
+	age = 30
+	female = no
+	religion = rel:atheist
+	ideology = ideology_pacifist
+	interest_group = ig_intelligentsia
+	home_region = STATE_NEW_JERSEY
+	is_agitator = yes
+	    traits = {
+	        ambitious
+	        engineer
+	        imperious
+	    }
+}
+
+sakuya_famous_edison_ruler = {
+	first_name = Thomas
+	last_name = Edison
+	historical = yes
+	culture = cu:yankee
+	dna = dna_thomas_edison
+	age = 30
+	female = no
+	religion = rel:atheist
+	ideology = ideology_pacifist
+	interest_group = ig_intelligentsia
+	home_region = STATE_NEW_JERSEY
+	    traits = {
+	        ambitious
+	        engineer
+	        imperious
+	    }
+}
+
+sakuya_famous_edison_general = {
+	first_name = Thomas
+	last_name = Edison
+	historical = yes
+	culture = cu:yankee
+	dna = dna_thomas_edison
+	age = 30
+	female = no
+	religion = rel:atheist
+	ideology = ideology_pacifist
+	interest_group = ig_intelligentsia
+	home_region = STATE_NEW_JERSEY
+	is_general = yes
+	    traits = {
+	        ambitious
+	        engineer
+	        imperious
+	    }
+}
+
+sakuya_famous_edison_admiral = {
+	first_name = Thomas
+	last_name = Edison
+	historical = yes
+	culture = cu:yankee
+	dna = dna_thomas_edison
+	age = 30
+	female = no
+	religion = rel:atheist
+	ideology = ideology_pacifist
+	interest_group = ig_intelligentsia
+	home_region = STATE_NEW_JERSEY
+	is_admiral = yes
+	    traits = {
+	        ambitious
+	        engineer
+	        imperious
+	    }
+}
+
+sakuya_famous_henry_ford_agitator = {
+	first_name = Henry
+	last_name = Ford
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = protestant
+	ideology = ideology_ethno_nationalist
+	interest_group = ig_industrialists
+	dna = dna_henry_ford
+	age = 30
+	home_region = STATE_MICHIGAN
+	is_agitator = yes
+	    traits = {
+	        bigoted
+	        ambitious
+	        imperious
+	        engineer
+	    }
+}
+
+sakuya_famous_henry_ford_ruler = {
+	first_name = Henry
+	last_name = Ford
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = protestant
+	ideology = ideology_ethno_nationalist
+	interest_group = ig_industrialists
+	dna = dna_henry_ford
+	age = 30
+	home_region = STATE_MICHIGAN
+	    traits = {
+	        bigoted
+	        ambitious
+	        imperious
+	        engineer
+	    }
+}
+
+sakuya_famous_henry_ford_general = {
+	first_name = Henry
+	last_name = Ford
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = protestant
+	ideology = ideology_ethno_nationalist
+	interest_group = ig_industrialists
+	dna = dna_henry_ford
+	age = 30
+	home_region = STATE_MICHIGAN
+	is_general = yes
+	    traits = {
+	        bigoted
+	        ambitious
+	        imperious
+	        engineer
+	    }
+}
+
+sakuya_famous_henry_ford_admiral = {
+	first_name = Henry
+	last_name = Ford
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = protestant
+	ideology = ideology_ethno_nationalist
+	interest_group = ig_industrialists
+	dna = dna_henry_ford
+	age = 30
+	home_region = STATE_MICHIGAN
+	is_admiral = yes
+	    traits = {
+	        bigoted
+	        ambitious
+	        imperious
+	        engineer
+	    }
+}
+
+sakuya_famous_brunel_agitator = {
+	first_name = Isambard
+	last_name = Kingdom_Brunel
+	historical = yes
+	culture = cu:british
+	dna = dna_isambard_kingdom_brunel
+	age = 30
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	home_region = STATE_HOME_COUNTIES
+	is_agitator = yes
+	    traits = {
+	        engineer
+	        basic_entrepreneur
+	        literary
+	    }
+}
+
+sakuya_famous_brunel_ruler = {
+	first_name = Isambard
+	last_name = Kingdom_Brunel
+	historical = yes
+	culture = cu:british
+	dna = dna_isambard_kingdom_brunel
+	age = 30
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	home_region = STATE_HOME_COUNTIES
+	    traits = {
+	        engineer
+	        basic_entrepreneur
+	        literary
+	    }
+}
+
+sakuya_famous_brunel_general = {
+	first_name = Isambard
+	last_name = Kingdom_Brunel
+	historical = yes
+	culture = cu:british
+	dna = dna_isambard_kingdom_brunel
+	age = 30
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	home_region = STATE_HOME_COUNTIES
+	is_general = yes
+	    traits = {
+	        engineer
+	        basic_entrepreneur
+	        literary
+	    }
+}
+
+sakuya_famous_brunel_admiral = {
+	first_name = Isambard
+	last_name = Kingdom_Brunel
+	historical = yes
+	culture = cu:british
+	dna = dna_isambard_kingdom_brunel
+	age = 30
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	home_region = STATE_HOME_COUNTIES
+	is_admiral = yes
+	    traits = {
+	        engineer
+	        basic_entrepreneur
+	        literary
+	    }
+}
+
+sakuya_famous_keynes_agitator = {
+	first_name = John
+	last_name = Keynes
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:atheist
+	ideology = ideology_protectionist
+	home_region = STATE_EAST_ANGLIA
+	interest_group = ig_intelligentsia
+	dna = dna_john_maynard_keynes
+	age = 30
+	is_agitator = yes
+	    traits = {
+	        wrathful
+	        expensive_tastes
+	        erudite
+	    }
+}
+
+sakuya_famous_keynes_ruler = {
+	first_name = John
+	last_name = Keynes
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:atheist
+	ideology = ideology_protectionist
+	home_region = STATE_EAST_ANGLIA
+	interest_group = ig_intelligentsia
+	dna = dna_john_maynard_keynes
+	age = 30
+	    traits = {
+	        wrathful
+	        expensive_tastes
+	        erudite
+	    }
+}
+
+sakuya_famous_keynes_general = {
+	first_name = John
+	last_name = Keynes
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:atheist
+	ideology = ideology_protectionist
+	home_region = STATE_EAST_ANGLIA
+	interest_group = ig_intelligentsia
+	dna = dna_john_maynard_keynes
+	age = 30
+	is_general = yes
+	    traits = {
+	        wrathful
+	        expensive_tastes
+	        erudite
+	    }
+}
+
+sakuya_famous_keynes_admiral = {
+	first_name = John
+	last_name = Keynes
+	historical = yes
+	culture = cu:british
+	female = no
+	religion = rel:atheist
+	ideology = ideology_protectionist
+	home_region = STATE_EAST_ANGLIA
+	interest_group = ig_intelligentsia
+	dna = dna_john_maynard_keynes
+	age = 30
+	is_admiral = yes
+	    traits = {
+	        wrathful
+	        expensive_tastes
+	        erudite
+	    }
+}
+
+sakuya_famous_jp_morgan_agitator = {
+	first_name = John_Pierpont
+	last_name = Morgan
+	historical = yes
+	culture = cu:yankee
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_NEW_YORK
+	is_agitator = yes
+	    traits = {
+	        imposing
+	        pious
+	        sickly
+	    }
+}
+
+sakuya_famous_jp_morgan_ruler = {
+	first_name = John_Pierpont
+	last_name = Morgan
+	historical = yes
+	culture = cu:yankee
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_NEW_YORK
+	    traits = {
+	        imposing
+	        pious
+	        sickly
+	    }
+}
+
+sakuya_famous_jp_morgan_general = {
+	first_name = John_Pierpont
+	last_name = Morgan
+	historical = yes
+	culture = cu:yankee
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_NEW_YORK
+	is_general = yes
+	    traits = {
+	        imposing
+	        pious
+	        sickly
+	    }
+}
+
+sakuya_famous_jp_morgan_admiral = {
+	first_name = John_Pierpont
+	last_name = Morgan
+	historical = yes
+	culture = cu:yankee
+	female = no
+	age = 30
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_NEW_YORK
+	is_admiral = yes
+	    traits = {
+	        imposing
+	        pious
+	        sickly
+	    }
+}
+
+sakuya_famous_rockefeller_agitator = {
+	first_name = John
+	last_name = Rockefeller
+	historical = yes
+	dna = dna_john_d_rockefeller
+	age = 30
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_OHIO
+	is_agitator = yes
+	    traits = {
+	        ambitious
+	        persistent
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_rockefeller_ruler = {
+	first_name = John
+	last_name = Rockefeller
+	historical = yes
+	dna = dna_john_d_rockefeller
+	age = 30
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_OHIO
+	    traits = {
+	        ambitious
+	        persistent
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_rockefeller_general = {
+	first_name = John
+	last_name = Rockefeller
+	historical = yes
+	dna = dna_john_d_rockefeller
+	age = 30
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_OHIO
+	is_general = yes
+	    traits = {
+	        ambitious
+	        persistent
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_rockefeller_admiral = {
+	first_name = John
+	last_name = Rockefeller
+	historical = yes
+	dna = dna_john_d_rockefeller
+	age = 30
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	interest_group = ig_industrialists
+	home_region = STATE_OHIO
+	is_admiral = yes
+	    traits = {
+	        ambitious
+	        persistent
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_carnegie_agitator = {
+	first_name = Andrew
+	last_name = Carnegie
+	historical = yes
+	dna = dna_andrew_carnegie
+	age = 30
+	culture = cu:scottish
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_industrialists
+	home_region = STATE_PENNSYLVANIA
+	is_agitator = yes
+	    traits = {
+	        ambitious
+	        literary
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_carnegie_ruler = {
+	first_name = Andrew
+	last_name = Carnegie
+	historical = yes
+	dna = dna_andrew_carnegie
+	age = 30
+	culture = cu:scottish
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_industrialists
+	home_region = STATE_PENNSYLVANIA
+	    traits = {
+	        ambitious
+	        literary
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_carnegie_general = {
+	first_name = Andrew
+	last_name = Carnegie
+	historical = yes
+	dna = dna_andrew_carnegie
+	age = 30
+	culture = cu:scottish
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_industrialists
+	home_region = STATE_PENNSYLVANIA
+	is_general = yes
+	    traits = {
+	        ambitious
+	        literary
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_carnegie_admiral = {
+	first_name = Andrew
+	last_name = Carnegie
+	historical = yes
+	dna = dna_andrew_carnegie
+	age = 30
+	culture = cu:scottish
+	female = no
+	religion = rel:protestant
+	ideology = ideology_market_liberal
+	interest_group = ig_industrialists
+	home_region = STATE_PENNSYLVANIA
+	is_admiral = yes
+	    traits = {
+	        ambitious
+	        literary
+	        basic_entrepreneur
+	    }
+}
+
+sakuya_famous_jamshedji_tata_agitator = {
+	first_name = Jamshedji
+	last_name = Tata
+	historical = yes
+	culture = cu:gujarati
+	female = no
+	dna = dna_jamshedji_tata
+	age = 30
+	religion = rel:animist
+	ideology = ideology_reformer
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_GUJARAT
+	is_agitator = yes
+	    traits = {
+	        tactful
+	        ambitious
+	        erudite
+	    }
+}
+
+sakuya_famous_jamshedji_tata_ruler = {
+	first_name = Jamshedji
+	last_name = Tata
+	historical = yes
+	culture = cu:gujarati
+	female = no
+	dna = dna_jamshedji_tata
+	age = 30
+	religion = rel:animist
+	ideology = ideology_reformer
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_GUJARAT
+	    traits = {
+	        tactful
+	        ambitious
+	        erudite
+	    }
+}
+
+sakuya_famous_jamshedji_tata_general = {
+	first_name = Jamshedji
+	last_name = Tata
+	historical = yes
+	culture = cu:gujarati
+	female = no
+	dna = dna_jamshedji_tata
+	age = 30
+	religion = rel:animist
+	ideology = ideology_reformer
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_GUJARAT
+	is_general = yes
+	    traits = {
+	        tactful
+	        ambitious
+	        erudite
+	    }
+}
+
+sakuya_famous_jamshedji_tata_admiral = {
+	first_name = Jamshedji
+	last_name = Tata
+	historical = yes
+	culture = cu:gujarati
+	female = no
+	dna = dna_jamshedji_tata
+	age = 30
+	religion = rel:animist
+	ideology = ideology_reformer
+	interest_group = ig_petty_bourgeoisie
+	home_region = STATE_GUJARAT
+	is_admiral = yes
+	    traits = {
+	        tactful
+	        ambitious
+	        erudite
+	    }
+}
+
+sakuya_famous_dwarkanath_tagore_agitator = {
+	first_name = Dwarkanath
+	last_name = Tagore
+	historical = yes
+	dna = dna_dwarkanath_tagore
+	age = 30
+	culture = cu:bengali
+	religion = rel:hindu
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_WEST_BENGAL
+	is_agitator = yes
+		traits = {
+	        hedonist
+	        ambitious
+	        expensive_tastes
+		}
+}
+
+sakuya_famous_dwarkanath_tagore_ruler = {
+	first_name = Dwarkanath
+	last_name = Tagore
+	historical = yes
+	dna = dna_dwarkanath_tagore
+	age = 30
+	culture = cu:bengali
+	religion = rel:hindu
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_WEST_BENGAL
+		traits = {
+	        hedonist
+	        ambitious
+	        expensive_tastes
+		}
+}
+
+sakuya_famous_dwarkanath_tagore_general = {
+	first_name = Dwarkanath
+	last_name = Tagore
+	historical = yes
+	dna = dna_dwarkanath_tagore
+	age = 30
+	culture = cu:bengali
+	religion = rel:hindu
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_WEST_BENGAL
+	is_general = yes
+		traits = {
+	        hedonist
+	        ambitious
+	        expensive_tastes
+		}
+}
+
+sakuya_famous_dwarkanath_tagore_admiral = {
+	first_name = Dwarkanath
+	last_name = Tagore
+	historical = yes
+	dna = dna_dwarkanath_tagore
+	age = 30
+	culture = cu:bengali
+	religion = rel:hindu
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate
+	home_region = STATE_WEST_BENGAL
+	is_admiral = yes
+		traits = {
+	        hedonist
+	        ambitious
+	        expensive_tastes
+		}
+}
+
+sakuya_famous_norton_agitator = {
+	first_name = Joshua
+	last_name = Norton
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_humanitarian_royalist
+	home_region = STATE_CALIFORNIA
+	dna = dna_emperor_norton
+	age = 30
+	is_agitator = yes
+		traits = {
+			charismatic
+			honorable
+			ambitious
+		}
+}
+
+sakuya_famous_norton_ruler = {
+	first_name = Joshua
+	last_name = Norton
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_humanitarian_royalist
+	home_region = STATE_CALIFORNIA
+	dna = dna_emperor_norton
+	age = 30
+		traits = {
+			charismatic
+			honorable
+			ambitious
+		}
+}
+
+sakuya_famous_norton_general = {
+	first_name = Joshua
+	last_name = Norton
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_humanitarian_royalist
+	home_region = STATE_CALIFORNIA
+	dna = dna_emperor_norton
+	age = 30
+	is_general = yes
+		traits = {
+			charismatic
+			honorable
+			ambitious
+		}
+}
+
+sakuya_famous_norton_admiral = {
+	first_name = Joshua
+	last_name = Norton
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_humanitarian_royalist
+	home_region = STATE_CALIFORNIA
+	dna = dna_emperor_norton
+	age = 30
+	is_admiral = yes
+		traits = {
+			charismatic
+			honorable
+			ambitious
+		}
+}
+

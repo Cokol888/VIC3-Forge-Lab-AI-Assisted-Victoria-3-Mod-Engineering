@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "base_mod": {
+    "workshop_id": "3717461054",
+    "name": "Cheat Menu Pro",
+    "supported_game_version": "1.13.*",
+    "archive_name": "529340(2).zip",
+    "archive_sha256": "e224c417004058f7c7bb7a7a7488e128e560d1ac520c2fcd65437dc6b00246af",
+    "subtree": "529340/3717461054",
+    "file_count": 194,
+    "uncompressed_bytes": 59260589,
+    "canonical_tree_sha256": "14e8cf28554629c535ded123cfa83824227b4e4d3659de343533eb056ead8792",
+    "canonical_tree_algorithm": "sha256(relative-path-normalized sha256sum lines sorted by absolute source path)"
+  },
+  "collection_safety": {
+    "archive_contains_multiple_workshop_items": true,
+    "excluded_workshop_ids": [
+      "3227982912",
+      "3385002128",
+      "3472248460",
+      "3729163251"
+    ]
+  },
+  "repaired_overlay_file": {
+    "path": "common/scripted_guis/sakuya_cheat_b4_sgui.txt",
+    "source_line_count": 5387,
+    "patched_line_count": 5391,
+    "patched_sha256": "bb490ed358f7d052600b321116b1941ece8cf21b68beb99e5824397d037006e0",
+    "required_changes": [
+      "clear_ownership_transfer_fleet after player batch transfer",
+      "clear_ownership_transfer_fleet in marked receiving country"
+    ]
+  }
+}

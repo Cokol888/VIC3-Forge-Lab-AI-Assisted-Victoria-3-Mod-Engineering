@@ -1,0 +1,4652 @@
+﻿# Cheat Menu Pro - Panel 2 Economy pseudo slider effects
+# Source-verified keys only: add_treasury, add_investment_pool, add_modifier, remove_modifier, gold_reserves_limit
+
+sakuya_b2_money_limit_n50 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = -1000000000
+        }
+    }
+}
+ 
+sakuya_b2_money_limit_n20 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = -100000
+        }
+    }
+}
+
+sakuya_b2_money_limit_n10 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = -1000
+        }
+    }
+}
+
+sakuya_b2_money_limit_n5 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = -100
+        }
+    }
+}
+
+sakuya_b2_money_limit_z0 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_tax_income
+        # zero notch: clear treasury (tax-income) modifier
+    }
+}
+
+sakuya_b2_money_limit_p10 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = 100
+        }
+    }
+}
+
+sakuya_b2_money_limit_p25 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = 1000
+        }
+    }
+}
+
+sakuya_b2_money_limit_p50 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = 10000
+        }
+    }
+}
+
+sakuya_b2_money_limit_p100 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = 100000
+        }
+    }
+}
+
+sakuya_b2_money_limit_p300 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = 1000000
+        }
+    }
+}
+
+sakuya_b2_money_limit_p1000 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+                add_modifier = {
+            name = sakuya_cheat_tax_income
+            multiplier = 1000000000
+        }
+    }
+}
+
+sakuya_b2_money_surplus_n50 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = -999.99
+        }
+    }
+}
+
+sakuya_b2_money_surplus_n20 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = -3
+        }
+    }
+}
+
+sakuya_b2_money_surplus_n10 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = -0.5
+        }
+    }
+}
+
+sakuya_b2_money_surplus_n5 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = -0.1
+        }
+    }
+}
+
+sakuya_b2_money_surplus_z0 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        # zero notch: no change
+    }
+}
+
+sakuya_b2_money_surplus_p10 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = 0.1
+        }
+    }
+}
+
+sakuya_b2_money_surplus_p25 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = 0.25
+        }
+    }
+}
+
+sakuya_b2_money_surplus_p50 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = 0.5
+        }
+    }
+}
+
+sakuya_b2_money_surplus_p100 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = 1
+        }
+    }
+}
+
+sakuya_b2_money_surplus_p300 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = 50
+        }
+    }
+}
+
+sakuya_b2_money_surplus_p1000 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_treasury = {
+            value = gold_reserves_limit
+            multiply = 999.99
+        }
+    }
+}
+
+sakuya_b2_money_surplus_n50_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_n50
+    }
+}
+
+sakuya_b2_money_surplus_n20_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_n20
+    }
+}
+
+sakuya_b2_money_surplus_n10_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_n10
+    }
+}
+
+sakuya_b2_money_surplus_n5_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_n5
+    }
+}
+
+sakuya_b2_money_surplus_z0_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        # zero notch: no change
+    }
+}
+
+sakuya_b2_money_surplus_p10_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_p10
+    }
+}
+
+sakuya_b2_money_surplus_p25_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_p25
+    }
+}
+
+sakuya_b2_money_surplus_p50_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_p50
+    }
+}
+
+sakuya_b2_money_surplus_p100_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_p100
+    }
+}
+
+sakuya_b2_money_surplus_p300_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_p300
+    }
+}
+
+sakuya_b2_money_surplus_p1000_investment_pool = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_investment_pool = sakuya_b2_gold_reserves_limit_p1000
+    }
+}
+
+sakuya_b2_money_cap_n50 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = -0.5
+        }
+    }
+}
+
+sakuya_b2_money_cap_n20 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = -0.2
+        }
+    }
+}
+
+sakuya_b2_money_cap_n10 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = -0.1
+        }
+    }
+}
+
+sakuya_b2_money_cap_n5 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = -0.05
+        }
+    }
+}
+
+sakuya_b2_money_cap_z0 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        # zero notch: clear cap modifier
+    }
+}
+
+sakuya_b2_money_cap_p10 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = 0.1
+        }
+    }
+}
+
+sakuya_b2_money_cap_p25 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = 0.25
+        }
+    }
+}
+
+sakuya_b2_money_cap_p50 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = 0.5
+        }
+    }
+}
+
+sakuya_b2_money_cap_p100 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = 1
+        }
+    }
+}
+
+sakuya_b2_money_cap_p300 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = 3
+        }
+    }
+}
+
+sakuya_b2_money_cap_p1000 = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_treasury_cap
+        add_modifier = {
+            name = sakuya_cheat_treasury_cap
+            multiplier = 10
+        }
+    }
+}
+
+# ============================================================
+# Panel 2 - Income & Expense (9 modifier buttons)
+# Rules: left baseline, shift x1000/x100, ctrl opposite, alt 1/10
+# ============================================================
+
+# --- 1. Government Dividends Efficiency ---
+sakuya_b2_tax_income_check = {
+	scope = country
+	is_shown = { has_variable = sakuya_b2_tax_income_active }
+}
+
+sakuya_b2_tax_income_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = 0.2 }
+		set_variable = sakuya_b2_tax_income_active
+	}
+}
+
+sakuya_b2_tax_income_add_shift = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = 200 }
+		set_variable = sakuya_b2_tax_income_active
+	}
+}
+
+sakuya_b2_tax_income_add_alt = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = 0.05 }
+		set_variable = sakuya_b2_tax_income_active
+	}
+}
+
+sakuya_b2_tax_income_sub = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = -0.2 }
+		set_variable = sakuya_b2_tax_income_active
+	}
+}
+
+sakuya_b2_tax_income_clear = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		remove_modifier = sakuya_cheat_b2_tax_income
+		remove_modifier = sakuya_cheat_b2_tax_income_shift
+		remove_modifier = sakuya_cheat_b2_tax_income_alt
+		remove_modifier = sakuya_cheat_b2_tax_income_ctrl
+		remove_variable = sakuya_b2_tax_income_mult
+		remove_variable = sakuya_b2_tax_income_active
+	}
+}
+
+# --- 2. Minting ---
+sakuya_b2_minting_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_minting_active }
+}
+
+sakuya_b2_minting_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+            set_variable = { name = sakuya_b2_minting_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_minting_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_minting
+        add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+        set_variable = sakuya_b2_minting_active
+    }
+}
+
+sakuya_b2_minting_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+            set_variable = { name = sakuya_b2_minting_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_minting_mult add = 200 }
+        remove_modifier = sakuya_cheat_b2_minting
+        add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+        set_variable = sakuya_b2_minting_active
+    }
+}
+
+sakuya_b2_minting_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+            set_variable = { name = sakuya_b2_minting_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_minting_mult add = 0.05 }
+        remove_modifier = sakuya_cheat_b2_minting
+        add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+        set_variable = sakuya_b2_minting_active
+    }
+}
+
+sakuya_b2_minting_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+            set_variable = { name = sakuya_b2_minting_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_minting_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_minting
+        if = {
+            limit = { has_variable = sakuya_b2_minting_mult }
+            add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+            set_variable = sakuya_b2_minting_active
+        }
+        if = {
+            limit = { var:sakuya_b2_minting_mult = 0 }
+            remove_variable = sakuya_b2_minting_mult
+            remove_variable = sakuya_b2_minting_active
+        }
+    }
+}
+
+sakuya_b2_minting_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_minting
+        remove_variable = sakuya_b2_minting_mult
+        remove_variable = sakuya_b2_minting_active
+    }
+}
+
+# --- 3. Government Expenses ---
+sakuya_b2_expenses_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_expenses_active }
+}
+
+sakuya_b2_expenses_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+            set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_expenses_mult add = -10000 }
+        remove_modifier = sakuya_cheat_b2_expenses
+        add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+        set_variable = sakuya_b2_expenses_active
+    }
+}
+
+sakuya_b2_expenses_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+            set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_expenses_mult add = -10000000 }
+        remove_modifier = sakuya_cheat_b2_expenses
+        add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+        set_variable = sakuya_b2_expenses_active
+    }
+}
+
+sakuya_b2_expenses_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+            set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_expenses_mult add = -1000 }
+        remove_modifier = sakuya_cheat_b2_expenses
+        add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+        set_variable = sakuya_b2_expenses_active
+    }
+}
+
+sakuya_b2_expenses_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+            set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_expenses_mult add = 10000 }
+        remove_modifier = sakuya_cheat_b2_expenses
+        if = {
+            limit = { has_variable = sakuya_b2_expenses_mult }
+            add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+            set_variable = sakuya_b2_expenses_active
+        }
+        if = {
+            limit = { var:sakuya_b2_expenses_mult = 0 }
+            remove_variable = sakuya_b2_expenses_mult
+            remove_variable = sakuya_b2_expenses_active
+        }
+    }
+}
+
+sakuya_b2_expenses_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_expenses
+        remove_variable = sakuya_b2_expenses_mult
+        remove_variable = sakuya_b2_expenses_active
+    }
+}
+
+# --- 4. Construction Goods Cost ---
+sakuya_b2_construction_cost_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_construction_cost_active }
+}
+
+sakuya_b2_construction_cost_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+            set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_construction_cost_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_construction_cost
+        add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+        set_variable = sakuya_b2_construction_cost_active
+    }
+}
+
+sakuya_b2_construction_cost_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+            set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_construction_cost_mult add = -200 }
+        remove_modifier = sakuya_cheat_b2_construction_cost
+        add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+        set_variable = sakuya_b2_construction_cost_active
+    }
+}
+
+sakuya_b2_construction_cost_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+            set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_construction_cost_mult add = -0.05 }
+        remove_modifier = sakuya_cheat_b2_construction_cost
+        add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+        set_variable = sakuya_b2_construction_cost_active
+    }
+}
+
+sakuya_b2_construction_cost_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+            set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_construction_cost_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_construction_cost
+        if = {
+            limit = { has_variable = sakuya_b2_construction_cost_mult }
+            add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+            set_variable = sakuya_b2_construction_cost_active
+        }
+        if = {
+            limit = { var:sakuya_b2_construction_cost_mult = 0 }
+            remove_variable = sakuya_b2_construction_cost_mult
+            remove_variable = sakuya_b2_construction_cost_active
+        }
+    }
+}
+
+sakuya_b2_construction_cost_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_construction_cost
+        remove_variable = sakuya_b2_construction_cost_mult
+        remove_variable = sakuya_b2_construction_cost_active
+    }
+}
+
+# --- 5. Government Wages ---
+sakuya_b2_government_wages_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_government_wages_active }
+}
+
+sakuya_b2_government_wages_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+            set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_government_wages_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_government_wages
+        add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+        set_variable = sakuya_b2_government_wages_active
+    }
+}
+
+sakuya_b2_government_wages_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+            set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_government_wages_mult add = -200 }
+        remove_modifier = sakuya_cheat_b2_government_wages
+        add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+        set_variable = sakuya_b2_government_wages_active
+    }
+}
+
+sakuya_b2_government_wages_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+            set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_government_wages_mult add = -0.05 }
+        remove_modifier = sakuya_cheat_b2_government_wages
+        add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+        set_variable = sakuya_b2_government_wages_active
+    }
+}
+
+sakuya_b2_government_wages_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+            set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_government_wages_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_government_wages
+        if = {
+            limit = { has_variable = sakuya_b2_government_wages_mult }
+            add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+            set_variable = sakuya_b2_government_wages_active
+        }
+        if = {
+            limit = { var:sakuya_b2_government_wages_mult = 0 }
+            remove_variable = sakuya_b2_government_wages_mult
+            remove_variable = sakuya_b2_government_wages_active
+        }
+    }
+}
+
+sakuya_b2_government_wages_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_government_wages
+        remove_variable = sakuya_b2_government_wages_mult
+        remove_variable = sakuya_b2_government_wages_active
+    }
+}
+
+# --- 6. Military Wages ---
+sakuya_b2_military_wages_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_military_wages_active }
+}
+
+sakuya_b2_military_wages_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+            set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_military_wages_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_military_wages
+        add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+        set_variable = sakuya_b2_military_wages_active
+    }
+}
+
+sakuya_b2_military_wages_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+            set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_military_wages_mult add = -200 }
+        remove_modifier = sakuya_cheat_b2_military_wages
+        add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+        set_variable = sakuya_b2_military_wages_active
+    }
+}
+
+sakuya_b2_military_wages_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+            set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_military_wages_mult add = -0.05 }
+        remove_modifier = sakuya_cheat_b2_military_wages
+        add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+        set_variable = sakuya_b2_military_wages_active
+    }
+}
+
+sakuya_b2_military_wages_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+            set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_military_wages_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_military_wages
+        if = {
+            limit = { has_variable = sakuya_b2_military_wages_mult }
+            add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+            set_variable = sakuya_b2_military_wages_active
+        }
+        if = {
+            limit = { var:sakuya_b2_military_wages_mult = 0 }
+            remove_variable = sakuya_b2_military_wages_mult
+            remove_variable = sakuya_b2_military_wages_active
+        }
+    }
+}
+
+sakuya_b2_military_wages_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_military_wages
+        remove_variable = sakuya_b2_military_wages_mult
+        remove_variable = sakuya_b2_military_wages_active
+    }
+}
+
+# --- 7. Loan Interest ---
+sakuya_b2_loan_interest_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_loan_interest_active }
+}
+
+sakuya_b2_loan_interest_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+            set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_loan_interest_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_loan_interest
+        add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+        set_variable = sakuya_b2_loan_interest_active
+    }
+}
+
+sakuya_b2_loan_interest_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+            set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_loan_interest_mult add = -200 }
+        remove_modifier = sakuya_cheat_b2_loan_interest
+        add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+        set_variable = sakuya_b2_loan_interest_active
+    }
+}
+
+sakuya_b2_loan_interest_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+            set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_loan_interest_mult add = -0.05 }
+        remove_modifier = sakuya_cheat_b2_loan_interest
+        add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+        set_variable = sakuya_b2_loan_interest_active
+    }
+}
+
+sakuya_b2_loan_interest_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+            set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_loan_interest_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_loan_interest
+        if = {
+            limit = { has_variable = sakuya_b2_loan_interest_mult }
+            add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+            set_variable = sakuya_b2_loan_interest_active
+        }
+        if = {
+            limit = { var:sakuya_b2_loan_interest_mult = 0 }
+            remove_variable = sakuya_b2_loan_interest_mult
+            remove_variable = sakuya_b2_loan_interest_active
+        }
+    }
+}
+
+sakuya_b2_loan_interest_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_loan_interest
+        remove_variable = sakuya_b2_loan_interest_mult
+        remove_variable = sakuya_b2_loan_interest_active
+    }
+}
+
+# --- 8. Consumption Tax Cost ---
+sakuya_b2_consumption_tax_cost_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_consumption_tax_cost_active }
+}
+
+sakuya_b2_consumption_tax_cost_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+            set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+        add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+        set_variable = sakuya_b2_consumption_tax_cost_active
+    }
+}
+
+sakuya_b2_consumption_tax_cost_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+            set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = -200 }
+        remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+        add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+        set_variable = sakuya_b2_consumption_tax_cost_active
+    }
+}
+
+sakuya_b2_consumption_tax_cost_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+            set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = -0.05 }
+        remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+        add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+        set_variable = sakuya_b2_consumption_tax_cost_active
+    }
+}
+
+sakuya_b2_consumption_tax_cost_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+            set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+        if = {
+            limit = { has_variable = sakuya_b2_consumption_tax_cost_mult }
+            add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+            set_variable = sakuya_b2_consumption_tax_cost_active
+        }
+        if = {
+            limit = { var:sakuya_b2_consumption_tax_cost_mult = 0 }
+            remove_variable = sakuya_b2_consumption_tax_cost_mult
+            remove_variable = sakuya_b2_consumption_tax_cost_active
+        }
+    }
+}
+
+sakuya_b2_consumption_tax_cost_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+        remove_variable = sakuya_b2_consumption_tax_cost_mult
+        remove_variable = sakuya_b2_consumption_tax_cost_active
+    }
+}
+
+# --- 9. Private Construction Allocation ---
+sakuya_b2_private_construction_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_private_construction_active }
+}
+
+sakuya_b2_private_construction_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+            set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_private_construction_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_private_construction
+        add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+        set_variable = sakuya_b2_private_construction_active
+    }
+}
+
+sakuya_b2_private_construction_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+            set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_private_construction_mult add = 200 }
+        remove_modifier = sakuya_cheat_b2_private_construction
+        add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+        set_variable = sakuya_b2_private_construction_active
+    }
+}
+
+sakuya_b2_private_construction_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+            set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_private_construction_mult add = 0.05 }
+        remove_modifier = sakuya_cheat_b2_private_construction
+        add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+        set_variable = sakuya_b2_private_construction_active
+    }
+}
+
+sakuya_b2_private_construction_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+            set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_private_construction_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_private_construction
+        if = {
+            limit = { has_variable = sakuya_b2_private_construction_mult }
+            add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+            set_variable = sakuya_b2_private_construction_active
+        }
+        if = {
+            limit = { var:sakuya_b2_private_construction_mult = 0 }
+            remove_variable = sakuya_b2_private_construction_mult
+            remove_variable = sakuya_b2_private_construction_active
+        }
+    }
+}
+
+sakuya_b2_private_construction_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_private_construction
+        remove_variable = sakuya_b2_private_construction_mult
+        remove_variable = sakuya_b2_private_construction_active
+    }
+}
+
+# --- 10. Disable Investment Pool (bool) ---
+sakuya_b2_invest_pool_disable_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_invest_pool_disable }
+}
+
+sakuya_b2_invest_pool_disable_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    }
+}
+
+sakuya_b2_invest_pool_disable_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    }
+}
+
+sakuya_b2_invest_pool_disable_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    }
+}
+
+sakuya_b2_invest_pool_disable_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    }
+}
+
+sakuya_b2_invest_pool_disable_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_invest_pool_disable
+    }
+}
+
+# --- 11. Government Dividends Reinvestment ---
+sakuya_b2_div_reinvestment_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_div_reinvestment_active }
+}
+
+sakuya_b2_div_reinvestment_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+            set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_reinvestment_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+        add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+        set_variable = sakuya_b2_div_reinvestment_active
+    }
+}
+
+sakuya_b2_div_reinvestment_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+            set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_reinvestment_mult add = 200 }
+        remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+        add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+        set_variable = sakuya_b2_div_reinvestment_active
+    }
+}
+
+sakuya_b2_div_reinvestment_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+            set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_reinvestment_mult add = 0.05 }
+        remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+        add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+        set_variable = sakuya_b2_div_reinvestment_active
+    }
+}
+
+sakuya_b2_div_reinvestment_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+            set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_reinvestment_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+        if = {
+            limit = { has_variable = sakuya_b2_div_reinvestment_mult }
+            add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+            set_variable = sakuya_b2_div_reinvestment_active
+        }
+        if = {
+            limit = { var:sakuya_b2_div_reinvestment_mult = 0 }
+            remove_variable = sakuya_b2_div_reinvestment_mult
+            remove_variable = sakuya_b2_div_reinvestment_active
+        }
+    }
+}
+
+sakuya_b2_div_reinvestment_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+        remove_variable = sakuya_b2_div_reinvestment_mult
+        remove_variable = sakuya_b2_div_reinvestment_active
+    }
+}
+
+# --- 12. Government Dividends Waste ---
+sakuya_b2_div_waste_check = {
+    scope = country
+    is_shown = { has_variable = sakuya_b2_div_waste_active }
+}
+
+sakuya_b2_div_waste_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+            set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_waste_mult add = -0.2 }
+        remove_modifier = sakuya_cheat_b2_dividend_waste
+        add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+        set_variable = sakuya_b2_div_waste_active
+    }
+}
+
+sakuya_b2_div_waste_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+            set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_waste_mult add = -200 }
+        remove_modifier = sakuya_cheat_b2_dividend_waste
+        add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+        set_variable = sakuya_b2_div_waste_active
+    }
+}
+
+sakuya_b2_div_waste_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+            set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_waste_mult add = -0.05 }
+        remove_modifier = sakuya_cheat_b2_dividend_waste
+        add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+        set_variable = sakuya_b2_div_waste_active
+    }
+}
+
+sakuya_b2_div_waste_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        if = {
+            limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+            set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+        }
+        change_variable = { name = sakuya_b2_div_waste_mult add = 0.2 }
+        remove_modifier = sakuya_cheat_b2_dividend_waste
+        if = {
+            limit = { has_variable = sakuya_b2_div_waste_mult }
+            add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+            set_variable = sakuya_b2_div_waste_active
+        }
+        if = {
+            limit = { var:sakuya_b2_div_waste_mult = 0 }
+            remove_variable = sakuya_b2_div_waste_mult
+            remove_variable = sakuya_b2_div_waste_active
+        }
+    }
+}
+
+sakuya_b2_div_waste_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_dividend_waste
+        remove_variable = sakuya_b2_div_waste_mult
+        remove_variable = sakuya_b2_div_waste_active
+    }
+}
+
+# --- 12E. Nationalize All Buildings (event-based, no modifier state) ---
+sakuya_b2_nationalize_all_buildings_check = {
+    scope = country
+    is_shown = { always = no }
+}
+
+sakuya_b2_nationalize_all_buildings_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.1 }
+    }
+}
+
+sakuya_b2_nationalize_all_buildings_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.2 }
+    }
+}
+
+sakuya_b2_nationalize_all_buildings_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.3 }
+    }
+}
+
+sakuya_b2_nationalize_all_buildings_sub = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.4 }
+    }
+}
+
+sakuya_b2_nationalize_all_buildings_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = { }
+}
+
+# --- 12F. Bankruptcy (event-based, no modifier state) ---
+sakuya_b2_bankruptcy_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.5 }
+    }
+}
+
+sakuya_b2_bankruptcy_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.6 }
+    }
+}
+
+sakuya_b2_bankruptcy_add_alt = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.7 }
+    }
+}
+
+sakuya_b2_bankruptcy_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.8 }
+    }
+}
+
+# --- 12G. Debt Clear (event-based, no modifier state) ---
+sakuya_b2_clear_debt_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.9 }
+    }
+}
+
+sakuya_b2_clear_debt_add_shift = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        trigger_event = { id = sakuya_b2_event.10 }
+    }
+}
+
+# --- Ownership bool buttons (left add, right clear) ---
+sakuya_b2_own_force_privatization_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_own_force_privatization }
+}
+
+sakuya_b2_own_force_privatization_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_own_force_privatization }
+    }
+} 
+
+sakuya_b2_own_force_privatization_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_own_force_privatization
+    }
+}
+
+sakuya_b2_own_foreign_collectivization_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_own_foreign_collectivization }
+}
+
+sakuya_b2_own_foreign_collectivization_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_own_foreign_collectivization }
+    }
+}
+
+sakuya_b2_own_foreign_collectivization_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_own_foreign_collectivization
+    }
+}
+
+sakuya_b2_own_disable_non_company_privatization_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_own_disable_non_company_privatization }
+}
+
+sakuya_b2_own_disable_non_company_privatization_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_own_disable_non_company_privatization }
+    }
+}
+
+sakuya_b2_own_disable_non_company_privatization_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_own_disable_non_company_privatization
+    }
+}
+
+sakuya_b2_own_disable_nationalization_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_own_disable_nationalization }
+}
+
+sakuya_b2_own_disable_nationalization_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_own_disable_nationalization }
+    }
+}
+
+sakuya_b2_own_disable_nationalization_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_own_disable_nationalization
+    }
+}
+
+sakuya_b2_own_disable_no_comp_nationalization_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_own_disable_nationalization_without_compensation }
+}
+
+sakuya_b2_own_disable_no_comp_nationalization_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_own_disable_nationalization_without_compensation }
+    }
+}
+
+sakuya_b2_own_disable_no_comp_nationalization_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_own_disable_nationalization_without_compensation
+    }
+}
+
+sakuya_b2_own_government_buildings_protected_check = {
+    scope = country
+    is_shown = { has_modifier = sakuya_cheat_b2_own_government_buildings_protected }
+}
+
+sakuya_b2_own_government_buildings_protected_add = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        add_modifier = { name = sakuya_cheat_b2_own_government_buildings_protected }
+    }
+}
+
+sakuya_b2_own_government_buildings_protected_clear = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = {
+        remove_modifier = sakuya_cheat_b2_own_government_buildings_protected
+    }
+}
+
+# === B2 marked-country right-click wrappers ===
+sakuya_b2_money_limit_n50_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = -1000000000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_n20_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = -100000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_n10_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = -1000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_n5_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = -100
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_z0_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_tax_income
+                # zero notch: clear treasury (tax-income) modifier
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_p10_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = 100
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_p25_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = 1000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_p50_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = 10000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_p100_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = 100000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_p300_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = 1000000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_limit_p1000_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                                add_modifier = {
+                    name = sakuya_cheat_tax_income
+                    multiplier = 1000000000
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n50_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = -999.99
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n20_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = -3
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n10_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = -0.5
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n5_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = -0.1
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_z0_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                # zero notch: no change
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p10_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 0.1
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p25_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 0.25
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p50_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 0.5
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p100_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 1
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p300_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 50
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p1000_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_treasury = {
+                    value = gold_reserves_limit
+                    multiply = 999.99
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n50_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_n50
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n20_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_n20
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n10_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_n10
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_n5_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_n5
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_z0_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                # zero notch: no change
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p10_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_p10
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p25_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_p25
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p50_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_p50
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p100_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_p100
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p300_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_p300
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_surplus_p1000_target_investment_pool = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_investment_pool = sakuya_b2_gold_reserves_limit_p1000
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_n50_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = -0.5
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_n20_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = -0.2
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_n10_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = -0.1
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_n5_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = -0.05
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_z0_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                # zero notch: clear cap modifier
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_p10_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = 0.1
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_p25_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = 0.25
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_p50_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = 0.5
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_p100_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = 1
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_p300_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = 3
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_money_cap_p1000_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_treasury_cap
+                add_modifier = {
+                    name = sakuya_cheat_treasury_cap
+                    multiplier = 10
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_tax_income_add_target = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		any_country = { has_variable = sakuya_mark_country_target }
+	}
+	effect = {
+		clear_saved_scope = sakuya_b2_marked_country_scope
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			save_scope_as = sakuya_b2_marked_country_scope
+		}
+		if = {
+			limit = { exists = scope:sakuya_b2_marked_country_scope }
+			scope:sakuya_b2_marked_country_scope = {
+				add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = 0.2 }
+				set_variable = sakuya_b2_tax_income_active
+			}
+		}
+		clear_saved_scope = sakuya_b2_marked_country_scope
+	}
+}
+sakuya_b2_tax_income_add_shift_target = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		any_country = { has_variable = sakuya_mark_country_target }
+	}
+	effect = {
+		clear_saved_scope = sakuya_b2_marked_country_scope
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			save_scope_as = sakuya_b2_marked_country_scope
+		}
+		if = {
+			limit = { exists = scope:sakuya_b2_marked_country_scope }
+			scope:sakuya_b2_marked_country_scope = {
+				add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = 200 }
+				set_variable = sakuya_b2_tax_income_active
+			}
+		}
+		clear_saved_scope = sakuya_b2_marked_country_scope
+	}
+}
+sakuya_b2_tax_income_add_alt_target = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		any_country = { has_variable = sakuya_mark_country_target }
+	}
+	effect = {
+		clear_saved_scope = sakuya_b2_marked_country_scope
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			save_scope_as = sakuya_b2_marked_country_scope
+		}
+		if = {
+			limit = { exists = scope:sakuya_b2_marked_country_scope }
+			scope:sakuya_b2_marked_country_scope = {
+				add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = 0.05 }
+				set_variable = sakuya_b2_tax_income_active
+			}
+		}
+		clear_saved_scope = sakuya_b2_marked_country_scope
+	}
+}
+sakuya_b2_tax_income_sub_target = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		any_country = { has_variable = sakuya_mark_country_target }
+	}
+	effect = {
+		clear_saved_scope = sakuya_b2_marked_country_scope
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			save_scope_as = sakuya_b2_marked_country_scope
+		}
+		if = {
+			limit = { exists = scope:sakuya_b2_marked_country_scope }
+			scope:sakuya_b2_marked_country_scope = {
+				add_modifier = { name = sakuya_cheat_b2_tax_income multiplier = -0.2 }
+				set_variable = sakuya_b2_tax_income_active
+			}
+		}
+		clear_saved_scope = sakuya_b2_marked_country_scope
+	}
+}
+sakuya_b2_tax_income_clear_target = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		any_country = { has_variable = sakuya_mark_country_target }
+	}
+	effect = {
+		clear_saved_scope = sakuya_b2_marked_country_scope
+		every_country = {
+			limit = { has_variable = sakuya_mark_country_target }
+			save_scope_as = sakuya_b2_marked_country_scope
+		}
+		if = {
+			limit = { exists = scope:sakuya_b2_marked_country_scope }
+			scope:sakuya_b2_marked_country_scope = {
+				remove_modifier = sakuya_cheat_b2_tax_income
+				remove_modifier = sakuya_cheat_b2_tax_income_shift
+				remove_modifier = sakuya_cheat_b2_tax_income_alt
+				remove_modifier = sakuya_cheat_b2_tax_income_ctrl
+				remove_variable = sakuya_b2_tax_income_mult
+				remove_variable = sakuya_b2_tax_income_active
+			}
+		}
+		clear_saved_scope = sakuya_b2_marked_country_scope
+	}
+}
+sakuya_b2_minting_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+                    set_variable = { name = sakuya_b2_minting_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_minting_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_minting
+                add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+                set_variable = sakuya_b2_minting_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_minting_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+                    set_variable = { name = sakuya_b2_minting_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_minting_mult add = 200 }
+                remove_modifier = sakuya_cheat_b2_minting
+                add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+                set_variable = sakuya_b2_minting_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_minting_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+                    set_variable = { name = sakuya_b2_minting_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_minting_mult add = 0.05 }
+                remove_modifier = sakuya_cheat_b2_minting
+                add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+                set_variable = sakuya_b2_minting_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_minting_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_minting_mult } }
+                    set_variable = { name = sakuya_b2_minting_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_minting_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_minting
+                if = {
+                    limit = { has_variable = sakuya_b2_minting_mult }
+                    add_modifier = { name = sakuya_cheat_b2_minting multiplier = var:sakuya_b2_minting_mult }
+                    set_variable = sakuya_b2_minting_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_minting_mult = 0 }
+                    remove_variable = sakuya_b2_minting_mult
+                    remove_variable = sakuya_b2_minting_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_minting_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_minting
+                remove_variable = sakuya_b2_minting_mult
+                remove_variable = sakuya_b2_minting_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_expenses_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+                    set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_expenses_mult add = -10000 }
+                remove_modifier = sakuya_cheat_b2_expenses
+                add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+                set_variable = sakuya_b2_expenses_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_expenses_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+                    set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_expenses_mult add = -10000000 }
+                remove_modifier = sakuya_cheat_b2_expenses
+                add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+                set_variable = sakuya_b2_expenses_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_expenses_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+                    set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_expenses_mult add = -1000 }
+                remove_modifier = sakuya_cheat_b2_expenses
+                add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+                set_variable = sakuya_b2_expenses_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_expenses_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_expenses_mult } }
+                    set_variable = { name = sakuya_b2_expenses_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_expenses_mult add = 10000 }
+                remove_modifier = sakuya_cheat_b2_expenses
+                if = {
+                    limit = { has_variable = sakuya_b2_expenses_mult }
+                    add_modifier = { name = sakuya_cheat_b2_expenses multiplier = var:sakuya_b2_expenses_mult }
+                    set_variable = sakuya_b2_expenses_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_expenses_mult = 0 }
+                    remove_variable = sakuya_b2_expenses_mult
+                    remove_variable = sakuya_b2_expenses_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_expenses_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_expenses
+                remove_variable = sakuya_b2_expenses_mult
+                remove_variable = sakuya_b2_expenses_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_construction_cost_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+                    set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_construction_cost_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_construction_cost
+                add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+                set_variable = sakuya_b2_construction_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_construction_cost_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+                    set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_construction_cost_mult add = -200 }
+                remove_modifier = sakuya_cheat_b2_construction_cost
+                add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+                set_variable = sakuya_b2_construction_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_construction_cost_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+                    set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_construction_cost_mult add = -0.05 }
+                remove_modifier = sakuya_cheat_b2_construction_cost
+                add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+                set_variable = sakuya_b2_construction_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_construction_cost_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_construction_cost_mult } }
+                    set_variable = { name = sakuya_b2_construction_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_construction_cost_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_construction_cost
+                if = {
+                    limit = { has_variable = sakuya_b2_construction_cost_mult }
+                    add_modifier = { name = sakuya_cheat_b2_construction_cost multiplier = var:sakuya_b2_construction_cost_mult }
+                    set_variable = sakuya_b2_construction_cost_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_construction_cost_mult = 0 }
+                    remove_variable = sakuya_b2_construction_cost_mult
+                    remove_variable = sakuya_b2_construction_cost_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_construction_cost_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_construction_cost
+                remove_variable = sakuya_b2_construction_cost_mult
+                remove_variable = sakuya_b2_construction_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_government_wages_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+                    set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_government_wages_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_government_wages
+                add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+                set_variable = sakuya_b2_government_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_government_wages_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+                    set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_government_wages_mult add = -200 }
+                remove_modifier = sakuya_cheat_b2_government_wages
+                add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+                set_variable = sakuya_b2_government_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_government_wages_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+                    set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_government_wages_mult add = -0.05 }
+                remove_modifier = sakuya_cheat_b2_government_wages
+                add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+                set_variable = sakuya_b2_government_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_government_wages_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_government_wages_mult } }
+                    set_variable = { name = sakuya_b2_government_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_government_wages_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_government_wages
+                if = {
+                    limit = { has_variable = sakuya_b2_government_wages_mult }
+                    add_modifier = { name = sakuya_cheat_b2_government_wages multiplier = var:sakuya_b2_government_wages_mult }
+                    set_variable = sakuya_b2_government_wages_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_government_wages_mult = 0 }
+                    remove_variable = sakuya_b2_government_wages_mult
+                    remove_variable = sakuya_b2_government_wages_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_government_wages_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_government_wages
+                remove_variable = sakuya_b2_government_wages_mult
+                remove_variable = sakuya_b2_government_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_military_wages_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+                    set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_military_wages_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_military_wages
+                add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+                set_variable = sakuya_b2_military_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_military_wages_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+                    set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_military_wages_mult add = -200 }
+                remove_modifier = sakuya_cheat_b2_military_wages
+                add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+                set_variable = sakuya_b2_military_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_military_wages_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+                    set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_military_wages_mult add = -0.05 }
+                remove_modifier = sakuya_cheat_b2_military_wages
+                add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+                set_variable = sakuya_b2_military_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_military_wages_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_military_wages_mult } }
+                    set_variable = { name = sakuya_b2_military_wages_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_military_wages_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_military_wages
+                if = {
+                    limit = { has_variable = sakuya_b2_military_wages_mult }
+                    add_modifier = { name = sakuya_cheat_b2_military_wages multiplier = var:sakuya_b2_military_wages_mult }
+                    set_variable = sakuya_b2_military_wages_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_military_wages_mult = 0 }
+                    remove_variable = sakuya_b2_military_wages_mult
+                    remove_variable = sakuya_b2_military_wages_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_military_wages_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_military_wages
+                remove_variable = sakuya_b2_military_wages_mult
+                remove_variable = sakuya_b2_military_wages_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_loan_interest_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+                    set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_loan_interest_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_loan_interest
+                add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+                set_variable = sakuya_b2_loan_interest_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_loan_interest_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+                    set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_loan_interest_mult add = -200 }
+                remove_modifier = sakuya_cheat_b2_loan_interest
+                add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+                set_variable = sakuya_b2_loan_interest_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_loan_interest_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+                    set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_loan_interest_mult add = -0.05 }
+                remove_modifier = sakuya_cheat_b2_loan_interest
+                add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+                set_variable = sakuya_b2_loan_interest_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_loan_interest_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_loan_interest_mult } }
+                    set_variable = { name = sakuya_b2_loan_interest_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_loan_interest_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_loan_interest
+                if = {
+                    limit = { has_variable = sakuya_b2_loan_interest_mult }
+                    add_modifier = { name = sakuya_cheat_b2_loan_interest multiplier = var:sakuya_b2_loan_interest_mult }
+                    set_variable = sakuya_b2_loan_interest_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_loan_interest_mult = 0 }
+                    remove_variable = sakuya_b2_loan_interest_mult
+                    remove_variable = sakuya_b2_loan_interest_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_loan_interest_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_loan_interest
+                remove_variable = sakuya_b2_loan_interest_mult
+                remove_variable = sakuya_b2_loan_interest_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_consumption_tax_cost_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+                    set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+                add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+                set_variable = sakuya_b2_consumption_tax_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_consumption_tax_cost_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+                    set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = -200 }
+                remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+                add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+                set_variable = sakuya_b2_consumption_tax_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_consumption_tax_cost_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+                    set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = -0.05 }
+                remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+                add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+                set_variable = sakuya_b2_consumption_tax_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_consumption_tax_cost_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_consumption_tax_cost_mult } }
+                    set_variable = { name = sakuya_b2_consumption_tax_cost_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_consumption_tax_cost_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+                if = {
+                    limit = { has_variable = sakuya_b2_consumption_tax_cost_mult }
+                    add_modifier = { name = sakuya_cheat_b2_consumption_tax_cost multiplier = var:sakuya_b2_consumption_tax_cost_mult }
+                    set_variable = sakuya_b2_consumption_tax_cost_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_consumption_tax_cost_mult = 0 }
+                    remove_variable = sakuya_b2_consumption_tax_cost_mult
+                    remove_variable = sakuya_b2_consumption_tax_cost_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_consumption_tax_cost_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_consumption_tax_cost
+                remove_variable = sakuya_b2_consumption_tax_cost_mult
+                remove_variable = sakuya_b2_consumption_tax_cost_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_private_construction_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+                    set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_private_construction_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_private_construction
+                add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+                set_variable = sakuya_b2_private_construction_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_private_construction_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+                    set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_private_construction_mult add = 200 }
+                remove_modifier = sakuya_cheat_b2_private_construction
+                add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+                set_variable = sakuya_b2_private_construction_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_private_construction_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+                    set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_private_construction_mult add = 0.05 }
+                remove_modifier = sakuya_cheat_b2_private_construction
+                add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+                set_variable = sakuya_b2_private_construction_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_private_construction_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_private_construction_mult } }
+                    set_variable = { name = sakuya_b2_private_construction_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_private_construction_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_private_construction
+                if = {
+                    limit = { has_variable = sakuya_b2_private_construction_mult }
+                    add_modifier = { name = sakuya_cheat_b2_private_construction multiplier = var:sakuya_b2_private_construction_mult }
+                    set_variable = sakuya_b2_private_construction_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_private_construction_mult = 0 }
+                    remove_variable = sakuya_b2_private_construction_mult
+                    remove_variable = sakuya_b2_private_construction_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_private_construction_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_private_construction
+                remove_variable = sakuya_b2_private_construction_mult
+                remove_variable = sakuya_b2_private_construction_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_invest_pool_disable_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_invest_pool_disable_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_invest_pool_disable_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_invest_pool_disable_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_invest_pool_disable }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_invest_pool_disable_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_invest_pool_disable
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_reinvestment_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+                    set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_reinvestment_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+                add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+                set_variable = sakuya_b2_div_reinvestment_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_reinvestment_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+                    set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_reinvestment_mult add = 200 }
+                remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+                add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+                set_variable = sakuya_b2_div_reinvestment_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_reinvestment_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+                    set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_reinvestment_mult add = 0.05 }
+                remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+                add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+                set_variable = sakuya_b2_div_reinvestment_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_reinvestment_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_reinvestment_mult } }
+                    set_variable = { name = sakuya_b2_div_reinvestment_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_reinvestment_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+                if = {
+                    limit = { has_variable = sakuya_b2_div_reinvestment_mult }
+                    add_modifier = { name = sakuya_cheat_b2_dividend_reinvestment multiplier = var:sakuya_b2_div_reinvestment_mult }
+                    set_variable = sakuya_b2_div_reinvestment_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_div_reinvestment_mult = 0 }
+                    remove_variable = sakuya_b2_div_reinvestment_mult
+                    remove_variable = sakuya_b2_div_reinvestment_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_reinvestment_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_dividend_reinvestment
+                remove_variable = sakuya_b2_div_reinvestment_mult
+                remove_variable = sakuya_b2_div_reinvestment_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_waste_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+                    set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_waste_mult add = -0.2 }
+                remove_modifier = sakuya_cheat_b2_dividend_waste
+                add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+                set_variable = sakuya_b2_div_waste_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_waste_add_shift_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+                    set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_waste_mult add = -200 }
+                remove_modifier = sakuya_cheat_b2_dividend_waste
+                add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+                set_variable = sakuya_b2_div_waste_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_waste_add_alt_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+                    set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_waste_mult add = -0.05 }
+                remove_modifier = sakuya_cheat_b2_dividend_waste
+                add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+                set_variable = sakuya_b2_div_waste_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_waste_sub_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                if = {
+                    limit = { NOT = { has_variable = sakuya_b2_div_waste_mult } }
+                    set_variable = { name = sakuya_b2_div_waste_mult value = 0 }
+                }
+                change_variable = { name = sakuya_b2_div_waste_mult add = 0.2 }
+                remove_modifier = sakuya_cheat_b2_dividend_waste
+                if = {
+                    limit = { has_variable = sakuya_b2_div_waste_mult }
+                    add_modifier = { name = sakuya_cheat_b2_dividend_waste multiplier = var:sakuya_b2_div_waste_mult }
+                    set_variable = sakuya_b2_div_waste_active
+                }
+                if = {
+                    limit = { var:sakuya_b2_div_waste_mult = 0 }
+                    remove_variable = sakuya_b2_div_waste_mult
+                    remove_variable = sakuya_b2_div_waste_active
+                }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_div_waste_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_dividend_waste
+                remove_variable = sakuya_b2_div_waste_mult
+                remove_variable = sakuya_b2_div_waste_active
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_force_privatization_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_own_force_privatization }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_force_privatization_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_own_force_privatization
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_foreign_collectivization_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_own_foreign_collectivization }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_foreign_collectivization_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_own_foreign_collectivization
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_disable_non_company_privatization_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_own_disable_non_company_privatization }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_disable_non_company_privatization_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_own_disable_non_company_privatization
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_disable_nationalization_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_own_disable_nationalization }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_disable_nationalization_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_own_disable_nationalization
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_disable_no_comp_nationalization_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_own_disable_nationalization_without_compensation }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_disable_no_comp_nationalization_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_own_disable_nationalization_without_compensation
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_government_buildings_protected_add_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                add_modifier = { name = sakuya_cheat_b2_own_government_buildings_protected }
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}
+sakuya_b2_own_government_buildings_protected_clear_target = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        any_country = { has_variable = sakuya_mark_country_target }
+    }
+    effect = {
+        clear_saved_scope = sakuya_b2_marked_country_scope
+        every_country = {
+            limit = { has_variable = sakuya_mark_country_target }
+            save_scope_as = sakuya_b2_marked_country_scope
+        }
+        if = {
+            limit = { exists = scope:sakuya_b2_marked_country_scope }
+            scope:sakuya_b2_marked_country_scope = {
+                remove_modifier = sakuya_cheat_b2_own_government_buildings_protected
+    
+            }
+        }
+        clear_saved_scope = sakuya_b2_marked_country_scope
+    }
+}

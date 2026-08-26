@@ -1,0 +1,67 @@
+﻿# Sakuya Cheat Menu Pro - Marking System Character Interactions
+# 标记自有角色（变量）
+
+sakuya_mark_character = {
+	icon = "gfx/interface/sakuya/choosechar.dds"
+
+	potential = {
+		not = { has_variable = sakuya_mark_character_target }
+	}
+
+	possible = {
+	}
+
+	show_requirements = yes
+
+	effect = {
+		# 清除旧标记
+		every_country = {
+			every_scope_character = {
+				limit = { has_variable = sakuya_mark_character_target }
+				remove_variable = sakuya_mark_character_target
+			}
+		}
+		every_character_in_exile_pool = {
+			limit = { has_variable = sakuya_mark_character_target }
+			remove_variable = sakuya_mark_character_target
+		}
+		# 标记新角色
+		this = {
+			set_variable = sakuya_mark_character_target
+		}
+		every_country = {
+			limit = { is_player = yes }
+			set_variable = sakuya_b3_marked_character_cached
+		}
+	}
+}
+
+sakuya_mark_character_clear = {
+	icon = "gfx/interface/sakuya/choosechar_false.dds"
+
+	potential = {
+		has_variable = sakuya_mark_character_target
+	}
+
+	possible = {
+	}
+
+	show_requirements = yes
+
+	effect = {
+		every_country = {
+			every_scope_character = {
+				limit = { has_variable = sakuya_mark_character_target }
+				remove_variable = sakuya_mark_character_target
+			}
+		}
+		every_character_in_exile_pool = {
+			limit = { has_variable = sakuya_mark_character_target }
+			remove_variable = sakuya_mark_character_target
+		}
+		every_country = {
+			limit = { is_player = yes }
+			remove_variable = sakuya_b3_marked_character_cached
+		}
+	}
+}
